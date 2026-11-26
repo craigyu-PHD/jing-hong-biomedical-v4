@@ -39,7 +39,7 @@ python3 -m http.server 8765
 
 ## 部署
 
-GitHub Pages 由 `main` 分支根目錄提供，無需建置。v8／v9／v10 已分別取得確認後推送；v11 本機完成，**待使用者確認後才推送**。
+GitHub Pages 由 `main` 分支根目錄提供，無需建置。v8／v9／v10／v11 已分別取得確認後推送；v11 commit `229f567`，Pages 已驗證上線。
 
 ## 免責
 
