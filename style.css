@@ -787,3 +787,80 @@ section[id]{scroll-margin-top:92px}
   .nav-links .btn{padding:8px 11px;font-size:12px}
   .nav-links .btn-contact{padding:8px 11px}
 }
+
+/* ================= v12：時間軸 · 下拉 · 数据在線條 · 商城浮動購物車／雙幣別 ================= */
+
+/* 下拉：更小、更整齊、無圖示，僅功能名稱＋按鍵 */
+.dropdown{width:168px;padding:6px;gap:1px;border-radius:12px}
+.dropdown-title{padding:3px 7px 6px;margin-bottom:3px;font-size:8.5px;letter-spacing:.14em}
+.dropdown-title small{display:none}
+.dropdown a{gap:0;padding:5px 8px;border-radius:8px;font-size:12px;font-weight:600;line-height:1.3}
+.dropdown a .dd-num,.dropdown a .dd-thumb{display:none}
+.dropdown a .dd-label{padding:0}
+.dropdown a .dd-arrow{font-size:11px;color:var(--silver);margin-left:auto;opacity:.75}
+
+/* 公司沿革：一列一事，年份大字在左，預設可見 */
+.history{padding:50px 0 44px}
+.timeline{display:block;padding:0;max-width:860px;margin:26px auto 0}
+.timeline-line{display:none}
+.tl-row{position:relative;display:grid;grid-template-columns:96px 28px 1fr;gap:10px;align-items:start;padding:0 0 20px;opacity:1;transform:none}
+.tl-row:last-child{padding-bottom:0}
+.tl-year{font-size:clamp(24px,2.4vw,34px);font-weight:800;letter-spacing:-.05em;color:var(--sage-dark);line-height:1.1;text-align:right;font-variant-numeric:tabular-nums}
+.tl-track{position:relative;justify-self:center;width:2px;height:100%;background:linear-gradient(180deg,rgba(63,141,127,.45),rgba(63,141,127,.12))}
+.tl-row:last-child .tl-track{background:linear-gradient(180deg,rgba(63,141,127,.35),transparent)}
+.tl-dot{position:absolute;top:6px;left:50%;width:12px;height:12px;transform:translateX(-50%);border-radius:50%;background:#fff;border:3px solid var(--sage);box-shadow:0 0 0 5px rgba(63,141,127,.10);transition:transform .35s,border-color .35s,box-shadow .35s}
+.tl-row:hover .tl-dot{transform:translateX(-50%) scale(1.3);border-color:var(--clay);box-shadow:0 0 0 8px rgba(210,106,76,.14)}
+.tl-content{padding:2px 0 0}
+.tl-content h3{font-size:15px;margin:0 0 4px;color:var(--ink);font-weight:700}
+.tl-content p{font-size:12.5px;line-height:1.75;color:var(--muted);margin:0}
+.history.in-view .tl-row{animation:tlIn .6s cubic-bezier(.16,1,.3,1) both}
+.history.in-view .tl-row:nth-child(1){animation-delay:0s}.history.in-view .tl-row:nth-child(2){animation-delay:.08s}
+.history.in-view .tl-row:nth-child(3){animation-delay:.16s}.history.in-view .tl-row:nth-child(4){animation-delay:.24s}
+.history.in-view .tl-row:nth-child(5){animation-delay:.32s}.history.in-view .tl-row:nth-child(6){animation-delay:.4s}
+@keyframes tlIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hist-note{margin-top:24px;text-align:center;font-size:11px;color:var(--silver)}
+
+/* 首页四數字：精緻数据列，不再是大卡 */
+.stats{display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:6px 0}
+.stat{flex:1 1 0;min-width:150px;display:flex;align-items:baseline;justify-content:center;gap:9px;padding:12px 14px;text-decoration:none;color:inherit;border-right:1px solid var(--line);position:relative;transition:background .3s}
+.stat:last-child{border-right:0}
+.stat b{font-size:clamp(26px,2.2vw,34px);font-weight:800;letter-spacing:-.05em;color:var(--sage-dark);line-height:1;font-variant-numeric:tabular-nums}
+.stat span[data-i18n]{font-size:12px;color:var(--muted);white-space:nowrap}
+.stat.pet b{color:var(--clay-dark)}
+.stat-go{position:static;font-size:12px;color:var(--silver);opacity:0;transform:translate(-3px,3px);transition:opacity .3s,transform .3s,color .3s}
+.stat:hover{background:rgba(63,141,127,.045)}
+.stat:hover .stat-go{opacity:1;transform:none;color:var(--clay)}
+
+/* 商城工具列：分類＋幣別 */
+.shop-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:18px 0 4px}
+.currency-switch{display:inline-flex;align-items:center;gap:6px}
+.currency-switch button{border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 14px;font-size:12px;font-weight:700;color:var(--muted);cursor:pointer;transition:all .25s}
+.currency-switch button.active{background:var(--sage);color:#fff;border-color:var(--sage);box-shadow:0 5px 14px rgba(47,122,112,.2)}
+.currency-switch span{font-size:10.5px;color:var(--silver);margin-left:4px}
+.sc-add{text-decoration:none;display:inline-block}
+
+/* 浮動購物車 */
+.cart-float{position:fixed;right:20px;bottom:20px;z-index:60}
+.cart-float-btn{border:0;border-radius:999px;padding:12px 18px;background:linear-gradient(135deg,#4b9a8d,#2f7a70);color:#fff;font-size:13px;font-weight:700;cursor:pointer;box-shadow:0 12px 30px rgba(31,72,64,.3);display:flex;align-items:center;gap:9px}
+.cart-float-btn b{min-width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.25);font-size:11px}
+.cart-float-panel{position:absolute;right:0;bottom:58px;width:min(360px,calc(100vw - 32px));background:rgba(255,255,255,.98);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border:1px solid rgba(63,141,127,.18);border-radius:18px;box-shadow:var(--shadow-lg);overflow:hidden;transform:translateY(10px) scale(.97);opacity:0;visibility:hidden;transition:all .3s cubic-bezier(.16,1,.3,1)}
+.cart-float-panel.open{transform:none;opacity:1;visibility:visible}
+.cart-float-panel .cart-head{padding:14px 16px;border-bottom:1px solid var(--line)}
+.cart-float-panel .cart-head h3{font-size:15px;margin:0}
+.cart-float-panel .cart-head button{border:0;background:transparent;cursor:pointer;color:var(--muted);font-size:15px}
+.cart-float-panel .cart-body{padding:8px 16px;max-height:300px;overflow:auto}
+.cart-float-panel .cart-foot{padding:13px 16px 16px;background:var(--soft);border-top:1px solid var(--line)}
+
+@media(max-width:1000px){
+  .tl-row{grid-template-columns:78px 24px 1fr;gap:8px}
+  .tl-year{font-size:24px}
+  .stat{flex:1 1 45%;border-right:0;border-bottom:1px solid var(--line)}
+}
+@media(max-width:560px){
+  .tl-row{grid-template-columns:62px 20px 1fr;gap:6px}
+  .tl-year{font-size:20px}
+  .tl-content h3{font-size:14px}
+  .tl-content p{font-size:12px}
+  .stat{min-width:44%}
+  .cart-float{right:14px;bottom:14px}
+}

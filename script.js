@@ -1,4 +1,4 @@
-/* 精鴻生醫 v11 — 沿革時間軸、購物商城、立體貓咪視覺、暖陶 CTA、客服雙造型、真實世界地圖 */
+/* 精鴻生醫 v12 — 時間軸一列一事、精簡下拉、精緻数据列、商城雙幣別＋浮動購物車、立體貓咪 */
 (function () {
   'use strict';
 
@@ -213,6 +213,7 @@
       'shop.a1': '本站為設計提案樣板，品項、照片與價格摘錄自公開通路資料並作示意；實際成分、劑量、效期、價格與庫存以公司核准文件為準。',
       'shop.q2': '可以到貨付款或大量訂購嗎？', 'shop.a2': '結帳流程目前為前端示範，尚未串接金流。大量訂購、企業送禮與批發需求請使用訂單系統或洽詢表單，由專人對接。',
       'shop.disclaimer': '本站不作疾病診斷、治療或預防之宣稱；寵物產品請依獸醫師指示使用。',
+      'shop.inquire': '洽詢', 'shop.curNote': '示意匯率 1 USD ≈ 32 TWD',
       'op.register': '註冊新帳號', 'reg.title': '註冊會員帳號', 'reg.hint': '示範表單：資料僅在瀏覽器內驗證，不會傳送至伺服器。',
       'reg.name': '姓名／公司', 'reg.email': '電子郵件', 'reg.human': '我不是機器人', 'reg.challenge': '請計算：',
       'reg.submit': '送出註冊', 'reg.ok': '註冊成功（示範）：已通過人機驗證。', 'reg.fail': '請勾選人機驗證並輸入正確的計算結果。',
@@ -428,6 +429,7 @@
       'shop.a1': 'This is a design sample. Items, photos and prices are illustrative from public sources; actual ingredients, dosage, shelf life, pricing and inventory are subject to company documents.',
       'shop.q2': 'Can I pay on delivery or order in bulk?', 'shop.a2': 'Checkout is a front-end demo with no payment gateway. For bulk orders, gifting and wholesale, use the Order Portal or inquiry form for dedicated support.',
       'shop.disclaimer': 'This site makes no claims of diagnosing, treating or preventing disease; pet products should be used as directed by a veterinarian.',
+      'shop.inquire': 'Inquire', 'shop.curNote': 'Illustrative rate: 1 USD ≈ 32 TWD',
       'op.register': 'Create account', 'reg.title': 'Member registration', 'reg.hint': 'Demo form: validated in-browser only, no data is sent.',
       'reg.name': 'Name / Company', 'reg.email': 'Email', 'reg.human': 'I am not a robot', 'reg.challenge': 'Please solve:',
       'reg.submit': 'Submit registration', 'reg.ok': 'Registration successful (demo): human verification passed.', 'reg.fail': 'Please confirm you are human and enter the correct answer.',
@@ -461,6 +463,7 @@
       var el = nodes[i], key = el.getAttribute('data-i18n'), val = t(key);
       if (HTML_KEYS[key]) el.innerHTML = val; else el.textContent = val;
     }
+    if (typeof window.jhCurrencyRefresh === 'function') window.jhCurrencyRefresh(lang);
     var ph = document.querySelectorAll('[data-i18n-ph]');
     for (var j = 0; j < ph.length; j++) ph[j].setAttribute('placeholder', t(ph[j].getAttribute('data-i18n-ph')));
     var btns = document.querySelectorAll('[data-lang]');
@@ -520,7 +523,7 @@
       for (var di = 0; di < items.length; di++) {
         var link = document.createElement('a');
         link.href = items[di][1];
-        link.innerHTML = '<span class="dd-num">0' + (di + 1) + '</span><span class="dd-label"><b data-i18n="' + items[di][0] + '">' + items[di][0] + '</b></span><span class="dd-arrow">↗</span>';
+        link.innerHTML = '<span class="dd-label"><b data-i18n="' + items[di][0] + '">' + t(items[di][0]) + '</b></span><span class="dd-arrow">›</span>';
         dd.appendChild(link);
       }
       item.appendChild(dd);
@@ -737,114 +740,98 @@
     });
   }
 
-  /* ---------- 購物商城：產品列表、購物車、結帳示範 ---------- */
-  var SHOP_PRODUCTS = [
-    { id:'h1', line:'human', tag:'CAPSULE / 膠囊', name:'p.h1n', desc:'p.h1d', img:'assets/product-real-pack.jpg', price:1280 },
-    { id:'h2', line:'human', tag:'FORMULA / 複方', name:'p.h2n', desc:'p.h2d', img:'assets/product-capsule.jpg', price:1080 },
-    { id:'h3', line:'human', tag:'FORMULA / 複方', name:'p.h3n', desc:'p.h3d', img:'assets/product-formula.jpg', price:1180 },
-    { id:'h4', line:'human', tag:'EXTRACT / 晶萃', name:'p.h4n', desc:'p.h4d', img:'assets/product-extract.jpg', price:1480 },
-    { id:'h5', line:'human', tag:'FORMULA / 複方', name:'p.h5n', desc:'p.h5d', img:'assets/product-natural.jpg', price:980 },
-    { id:'h6', line:'human', tag:'SERVICE / 服務', name:'p.h6n', desc:'p.h6d', img:'assets/lab.jpg', price:0 },
-    { id:'p1', line:'pet', tag:'CAT / 泌尿', name:'p.p1n', desc:'p.p1d', img:'assets/pet-cat.jpg', price:880 },
-    { id:'p2', line:'pet', tag:'CAT / 呵護', name:'p.p2n', desc:'p.p2d', img:'assets/pet-cat2.jpg', price:920 },
-    { id:'p3', line:'pet', tag:'DOG & CAT / 防護', name:'p.p3n', desc:'p.p3d', img:'assets/pet-dog.jpg', price:860 },
-    { id:'p4', line:'pet', tag:'DOG & CAT / 泌尿', name:'p.p4n', desc:'p.p4d', img:'assets/pet-puppy.jpg', price:760 },
-    { id:'p5', line:'pet', tag:'EYE / 眼部', name:'p.p5n', desc:'p.p5d', img:'assets/product-extract.jpg', price:690 },
-    { id:'p6', line:'pet', tag:'EYE / 眼部', name:'p.p6n', desc:'p.p6d', img:'assets/quality.jpg', price:690 },
-    { id:'p7', line:'pet', tag:'SKIN / 外用', name:'p.p7n', desc:'p.p7d', img:'assets/nature.jpg', price:580 },
-    { id:'p8', line:'pet', tag:'SKIN / 外用', name:'p.p8n', desc:'p.p8d', img:'assets/forest.jpg', price:580 },
-    { id:'p9', line:'pet', tag:'SKIN / 外用', name:'p.p9n', desc:'p.p9d', img:'assets/product-natural.jpg', price:520 }
-  ];
+  /* ---------- 購物商城：靜態產品卡＋雙幣別＋浮動購物車 ---------- */
   var shopList = document.getElementById('shopList');
   if (shopList) {
+    var RATE = 32; // 示意匯率：1 USD ≈ 32 TWD
+    var currency = 'TWD';
+    try { currency = localStorage.getItem('jh-currency') === 'USD' ? 'USD' : (currentLang === 'en' ? 'USD' : 'TWD'); } catch (e) { currency = currentLang === 'en' ? 'USD' : 'TWD'; }
+    function money(n) {
+      return currency === 'USD' ? 'USD ' + (Number(n) / RATE).toFixed(2) : 'NT$ ' + Number(n).toLocaleString('en-US');
+    }
+    function setCurrency(cur) {
+      currency = cur === 'USD' ? 'USD' : 'TWD';
+      try { localStorage.setItem('jh-currency', currency); } catch (e) {}
+      var cb = document.querySelectorAll('[data-cur]');
+      for (var i = 0; i < cb.length; i++) cb[i].classList.toggle('active', cb[i].getAttribute('data-cur') === currency);
+      renderPrices(); renderCart();
+    }
+    function renderPrices() {
+      var cards = shopList.querySelectorAll('.shop-card');
+      for (var i = 0; i < cards.length; i++) {
+        var p = cards[i].querySelector('.sc-price');
+        if (p) { var v = Number(cards[i].getAttribute('data-price')); p.textContent = v ? money(v) : t('shop.inquire'); }
+      }
+    }
     var cart = [];
     try { cart = JSON.parse(localStorage.getItem('jh-cart') || '[]') || []; } catch (e) { cart = []; }
     var cartBody = document.getElementById('cartBody');
     var cartCount = document.getElementById('cartCount');
     var cartTotal = document.getElementById('cartTotal');
-
-    function money(n) { return 'TWD ' + Number(n).toLocaleString('en-US'); }
     function saveCart() { try { localStorage.setItem('jh-cart', JSON.stringify(cart)); } catch (e) {} }
+    function productById(id) {
+      var cards = shopList.querySelectorAll('.shop-card');
+      for (var i = 0; i < cards.length; i++) if (cards[i].getAttribute('data-id') === id) return cards[i];
+      return null;
+    }
     function renderCart() {
       if (!cartBody) return;
       var count = 0, total = 0;
       for (var i = 0; i < cart.length; i++) { count += cart[i].qty; total += cart[i].qty * cart[i].price; }
       cartCount.textContent = String(count);
       cartTotal.textContent = money(total);
-      if (!cart.length) { cartBody.innerHTML = '<p class="cart-empty" data-i18n="shop.empty"></p>'; applyLang(currentLang); return; }
+      if (!cart.length) { cartBody.innerHTML = '<p class="cart-empty" data-i18n="shop.empty">' + t('shop.empty') + '</p>'; return; }
       var html = '';
       for (var j = 0; j < cart.length; j++) {
-        var row = cart[j], prod = null;
-        for (var k = 0; k < SHOP_PRODUCTS.length; k++) if (SHOP_PRODUCTS[k].id === row.id) prod = SHOP_PRODUCTS[k];
-        if (!prod) continue;
-        html += '<div class="cart-item"><div><b data-i18n="' + prod.name + '">' + t(prod.name) + '</b><small>' + money(prod.price) + ' · ' + t('shop.total') + ' ' + money(prod.price * row.qty) + '</small></div>' +
-          '<div class="cart-qty"><button type="button" data-cart-dec="' + row.id + '" aria-label="减少">−</button><span>' + row.qty + '</span><button type="button" data-cart-inc="' + row.id + '" aria-label="增加">＋</button></div></div>';
+        var row = cart[j], card = productById(row.id), name = row.id;
+        if (card) { var h = card.querySelector('h3'); if (h) name = h.textContent; }
+        html += '<div class="cart-item"><div><b>' + name + '</b><small>' + money(row.price) + ' × ' + row.qty + ' = ' + money(row.price * row.qty) + '</small></div>' +
+          '<div class="cart-qty"><button type="button" data-cart-dec="' + row.id + '" aria-label="−">−</button><span>' + row.qty + '</span><button type="button" data-cart-inc="' + row.id + '" aria-label="＋">＋</button></div></div>';
       }
       cartBody.innerHTML = html;
-      applyLang(currentLang);
     }
     function addToCart(id) {
-      var prod = null;
-      for (var i = 0; i < SHOP_PRODUCTS.length; i++) if (SHOP_PRODUCTS[i].id === id) prod = SHOP_PRODUCTS[i];
-      if (!prod || !prod.price) return;
+      var card = productById(id);
+      if (!card || !Number(card.getAttribute('data-price'))) return;
+      var price = Number(card.getAttribute('data-price'));
       var found = false;
       for (var j = 0; j < cart.length; j++) if (cart[j].id === id) { cart[j].qty++; found = true; break; }
-      if (!found) cart.push({ id: id, qty: 1, price: prod.price });
-      saveCart(); renderCart();
-      var st = document.getElementById('cartStatus'); if (st) st.textContent = t('shop.added') + '：' + t(prod.name);
+      if (!found) cart.push({ id: id, qty: 1, price: price });
+      saveCart(); renderCart(); openCart(true);
+      var st = document.getElementById('cartStatus'); if (st) st.textContent = t('shop.added');
     }
-    function renderProducts(filter) {
-      var html = '';
-      for (var i = 0; i < SHOP_PRODUCTS.length; i++) {
-        var p = SHOP_PRODUCTS[i];
-        if (filter && filter !== 'all' && p.line !== filter) continue;
-        var priceLabel = p.price ? money(p.price) : t('shop.toOrder');
-        html += '<article class="shop-card reveal"><div class="sc-media"><img src="' + p.img + '" alt="" loading="lazy"></div><div class="sc-body">' +
-          '<span class="sc-tag">' + p.tag + '</span><h3 data-i18n="' + p.name + '">' + t(p.name) + '</h3>' +
-          '<p class="sc-desc" data-i18n="' + p.desc + '">' + t(p.desc) + '</p>' +
-          '<div class="sc-row"><span class="sc-price">' + priceLabel + '</span>' +
-          (p.price ? '<button class="sc-add" type="button" data-add-cart="' + p.id + '">+ ' + t('shop.cart') + '</button>' : '') +
-          '</div></div></article>';
-      }
-      shopList.innerHTML = html;
-      applyLang(currentLang);
-      var adds = shopList.querySelectorAll('[data-add-cart]');
-      for (var a = 0; a < adds.length; a++) adds[a].addEventListener('click', function () { addToCart(this.getAttribute('data-add-cart')); });
-      if ('IntersectionObserver' in window) {
-        var ro = new IntersectionObserver(function (entries) {
-          for (var r = 0; r < entries.length; r++) if (entries[r].isIntersecting) { entries[r].target.classList.add('visible'); ro.unobserve(entries[r].target); }
-        }, { threshold: .08 });
-        var cards = shopList.querySelectorAll('.reveal');
-        for (var c = 0; c < cards.length; c++) ro.observe(cards[c]);
-      } else {
-        var cards2 = shopList.querySelectorAll('.reveal');
-        for (var c2 = 0; c2 < cards2.length; c2++) cards2[c2].classList.add('visible');
-      }
+    function openCart(open) {
+      var panel = document.getElementById('cartPanel');
+      if (panel) panel.classList.toggle('open', !!open);
     }
-    renderProducts('all'); renderCart();
-    var shopFilters = document.querySelectorAll('[data-shop-filter]');
-    for (var sf = 0; sf < shopFilters.length; sf++) {
-      shopFilters[sf].addEventListener('click', function () {
-        for (var x = 0; x < shopFilters.length; x++) shopFilters[x].classList.toggle('active', shopFilters[x] === this);
-        renderProducts(this.getAttribute('data-shop-filter'));
-      });
-    }
+    window.jhCurrencyRefresh = function (lang) {
+      var saved = null; try { saved = localStorage.getItem('jh-currency'); } catch (e) {}
+      if (!saved) setCurrency(lang === 'en' ? 'USD' : 'TWD'); else { renderPrices(); renderCart(); }
+    };
+    renderPrices(); renderCart(); setCurrency(currency);
+    var adds = shopList.querySelectorAll('[data-add-cart]');
+    for (var ai = 0; ai < adds.length; ai++) adds[ai].addEventListener('click', function () { addToCart(this.getAttribute('data-add-cart')); });
+    var filters = document.querySelectorAll('[data-shop-filter]');
+    for (var fi = 0; fi < filters.length; fi++) filters[fi].addEventListener('click', function () {
+      for (var x = 0; x < filters.length; x++) filters[x].classList.toggle('active', filters[x] === this);
+      var want = this.getAttribute('data-shop-filter'), cards2 = shopList.querySelectorAll('.shop-card');
+      for (var y = 0; y < cards2.length; y++) cards2[y].style.display = (!want || want === 'all' || cards2[y].getAttribute('data-line') === want) ? '' : 'none';
+    });
+    var curs = document.querySelectorAll('[data-cur]');
+    for (var ci = 0; ci < curs.length; ci++) curs[ci].addEventListener('click', function () { setCurrency(this.getAttribute('data-cur')); });
     cartBody.addEventListener('click', function (e) {
       var inc = e.target.getAttribute('data-cart-inc'), dec = e.target.getAttribute('data-cart-dec');
       if (!inc && !dec) return;
       var id = inc || dec;
-      for (var i = 0; i < cart.length; i++) if (cart[i].id === id) {
-        cart[i].qty += inc ? 1 : -1;
-        if (cart[i].qty <= 0) cart.splice(i, 1);
-        break;
-      }
+      for (var i = 0; i < cart.length; i++) if (cart[i].id === id) { cart[i].qty += inc ? 1 : -1; if (cart[i].qty <= 0) cart.splice(i, 1); break; }
       saveCart(); renderCart();
     });
+    var floatBtn = document.getElementById('cartFloatBtn');
+    if (floatBtn) floatBtn.addEventListener('click', function () { openCart(!document.getElementById('cartPanel').classList.contains('open')); });
+    var closeBtn = document.getElementById('cartClose');
+    if (closeBtn) closeBtn.addEventListener('click', function () { openCart(false); });
     var checkout = document.getElementById('cartCheckout');
-    if (checkout) checkout.addEventListener('click', function () {
-      var st = document.getElementById('cartStatus');
-      if (st) st.textContent = t('shop.checkoutOk');
-    });
+    if (checkout) checkout.addEventListener('click', function () { var st = document.getElementById('cartStatus'); if (st) st.textContent = t('shop.checkoutOk'); });
   }
 
   /* ---------- 客服機器人：狗狗形象，預留 API／轉真人 ---------- */

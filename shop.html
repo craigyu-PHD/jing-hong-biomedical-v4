@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#f6f9f8">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Crect width='44' height='44' rx='12' fill='%23100d0c'/%3E%3Cpath d='M14 32V13M30 32V13' stroke='%23faf8f5' stroke-width='3.2' stroke-linecap='round'/%3E%3Cpath d='M14 23c5-8 11 8 16 0' stroke='%23a75743' stroke-width='3.2' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='30' cy='13' r='2.4' fill='%23a19c65'/%3E%3C/svg%3E">
 <title>購物商城｜精鴻生醫</title>
-<meta name="description" content="精鴻生醫購物商城展示版：人用保健與 ANUBIS 寵物保健全系列選購、購物車與結帳示意。">
+<meta name="description" content="精鴻生醫購物商城展示版：人用保健與 ANUBIS 寵物保健全系列選購、台幣／美金報價與購物車示意。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;800&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -34,47 +34,56 @@
 </div></header>
 
 <main id="top">
-<section class="page-hero"><div class="wrap"><div class="eyebrow">SHOP / 購物商城</div><h1 data-i18n="shop.h1">把安心，<br>放進購物車。</h1><p data-i18n="shop.sub">人用保健與 ANUBIS 寵物保健全系列，散戶朋友可直接選購加入購物車。本頁為前端展示樣板，價格與結帳流程為示意，正式上線前需串接金流、庫存與物流。</p><div class="shop-hero-actions"><a class="btn btn-contact" href="#shopGrid" data-i18n="shop.cta">開始選購 →</a><a class="btn btn-ghost" href="order.html" data-i18n="shop.toOrder">我是批發／大型會員 →</a></div></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">SHOP / 購物商城</div><h1 data-i18n="shop.h1">把安心，<br>放進購物車。</h1><p data-i18n="shop.sub">人用保健與 ANUBIS 寵物保健全系列，散戶朋友可直接選購加入購物車。本頁為前端展示樣板，報價與結帳流程為示意。</p><div class="shop-hero-actions"><a class="btn btn-contact" href="#shopGrid" data-i18n="shop.cta">開始選購 →</a><a class="btn btn-ghost" href="order.html" data-i18n="shop.toOrder">我是批發／大型會員 →</a></div></div></section>
 
-<section class="section" id="shopGrid"><div class="wrap shop-layout">
-  <div>
-    <div class="section-head reveal"><div class="eyebrow">ALL PRODUCTS</div><h2 data-i18n="shop.title">所有產品</h2><p data-i18n="shop.sub2">品項與價格摘錄自公開資料，實際標示、價格與庫存以公司核准資訊為準。</p></div>
-    <div class="filters reveal" role="group" aria-label="商城分類">
-      <button type="button" class="pill active" data-shop-filter="all" data-i18n="filter.all">全部</button>
-      <button type="button" class="pill" data-shop-filter="human" data-i18n="shop.fHuman">人用保健</button>
-      <button type="button" class="pill" data-shop-filter="pet" data-i18n="shop.fPet">ANUBIS 寵物</button>
-    </div>
-    <div class="shop-grid" id="shopList"></div>
+<section class="section" id="shopGrid"><div class="wrap">
+  <div class="section-head reveal"><div class="eyebrow">ALL PRODUCTS</div><h2 data-i18n="shop.title">所有產品</h2><p data-i18n="shop.sub2">品項與價格摘錄自公開資料，實際標示、價格與庫存以公司核准資訊為準。</p></div>
+  <div class="shop-toolbar">
+    <div class="filters" role="group" aria-label="商城分類"><button type="button" class="pill active" data-shop-filter="all" data-i18n="filter.all">全部</button><button type="button" class="pill" data-shop-filter="human" data-i18n="shop.fHuman">人用保健</button><button type="button" class="pill" data-shop-filter="pet" data-i18n="shop.fPet">ANUBIS 寵物</button></div>
+    <div class="currency-switch" role="group" aria-label="Currency"><button type="button" class="active" data-cur="TWD">NT$</button><button type="button" data-cur="USD">USD</button><span data-i18n="shop.curNote">示意匯率 1 USD ≈ 32 TWD</span></div>
   </div>
 
-  <aside class="cart reveal d1" id="cart">
-    <div class="cart-head"><h3 data-i18n="shop.cart">購物車</h3><span class="cart-count" id="cartCount">0</span></div>
-    <div class="cart-body" id="cartBody"><p class="cart-empty" data-i18n="shop.empty">還沒有商品，點選「加入購物車」開始選購。</p></div>
-    <div class="cart-foot"><div class="cart-total"><span data-i18n="shop.total">小計</span><b id="cartTotal">TWD 0</b></div><p class="cart-note" data-i18n="shop.cartNote">價格與結帳為示意，不代表實際交易。</p><button class="btn btn-contact" type="button" id="cartCheckout" data-i18n="shop.checkout">前往結帳（示意） →</button><div class="status" id="cartStatus" role="status"></div></div>
-  </aside>
-</div></section>
-
-<section class="section white"><div class="wrap">
-  <div class="section-head reveal"><div class="eyebrow">SHOP vs ORDER</div><h2 data-i18n="shop.diffTitle">兩個入口，各取所需。</h2></div>
-  <div class="service-grid">
-    <div class="service reveal"><div class="num">01 / SHOP</div><h4 data-i18n="shop.d1t">購物商城</h4><p data-i18n="shop.d1">所有人皆可瀏覽全系列產品，直接加入購物車選購，適合散戶與少量購買。</p></div>
-    <div class="service reveal d1"><div class="num">02 / ORDER</div><h4 data-i18n="shop.d2t">訂單系統</h4><p data-i18n="shop.d2">偏向批發商與大型會員，提供身份識別、專屬價格、訂單追蹤與大量訂購服務。</p></div>
+  <div class="shop-grid" id="shopList">
+    <article class="shop-card" data-line="human" data-id="h1" data-price="1280"><div class="sc-media"><img src="assets/product-real-pack.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">CAPSULE</span><h3 data-i18n="p.h1n">牛樟椴木子實體專利膠囊</h3><p class="sc-desc" data-i18n="p.h1d">椴木子實體搭配靈芝與草本複方，日常體質調整的入門選擇。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="h1">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
+    <article class="shop-card" data-line="human" data-id="h2" data-price="1080"><div class="sc-media"><img src="assets/product-capsule.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">FORMULA</span><h3 data-i18n="p.h2n">順暢養神 牛樟芝益生菌</h3><p class="sc-desc" data-i18n="p.h2d">牛樟芝與益生菌複方，為忙碌生活設計的日常節奏。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="h2">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
+    <article class="shop-card" data-line="human" data-id="h3" data-price="1180"><div class="sc-media"><img src="assets/product-formula.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">FORMULA</span><h3 data-i18n="p.h3n">牛樟芝睡飽寶膠囊</h3><p class="sc-desc" data-i18n="p.h3d">公開展出的牛樟芝複方膠囊，適合夜間保養規劃。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="h3">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
+    <article class="shop-card" data-line="human" data-id="h4" data-price="1480"><div class="sc-media"><img src="assets/product-extract.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">EXTRACT</span><h3 data-i18n="p.h4n">牛樟椴木子實體晶萃</h3><p class="sc-desc" data-i18n="p.h4d">以椴木子實體為名的濃縮晶萃，保留原料的細膩層次。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="h4">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
+    <article class="shop-card" data-line="human" data-id="h5" data-price="980"><div class="sc-media"><img src="assets/product-natural.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">FORMULA</span><h3 data-i18n="p.h5n">牛樟芝清氣順</h3><p class="sc-desc" data-i18n="p.h5d">牛樟芝系列公開參展品項，適合日常保養搭配。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="h5">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
+    <article class="shop-card" data-line="human" data-id="h6" data-price="0"><div class="sc-media"><img src="assets/lab.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">SERVICE</span><h3 data-i18n="p.h6n">OEM / ODM 代工開發</h3><p class="sc-desc" data-i18n="p.h6d">從配方、劑型到包裝與文件，陪品牌把想法做成商品。</p><div class="sc-row"><span class="sc-price"></span><a class="sc-add" href="index.html#contact" data-i18n="shop.inquire">洽詢</a></div></div></article>
+    <article class="shop-card" data-line="pet" data-id="p1" data-price="880"><div class="sc-media"><img src="assets/pet-cat.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">CAT / 泌尿</span><h3 data-i18n="p.p1n">優利貓 尿道保健膠囊</h3><p class="sc-desc" data-i18n="p.p1d">貓用草本保養膠囊，30 粒裝；公開通路標示為每日一次、飯後食用。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="p1">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
+    <article class="shop-card" data-line="pet" data-id="p2" data-price="920"><div class="sc-media"><img src="assets/pet-cat2.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">CAT / 呵護</span><h3 data-i18n="p.p2n">安芯貓 心血管日常保健</h3><p class="sc-desc" data-i18n="p.p2d">公開通路列為貓用心血管日常保養品項，配方細節待官方文件確認。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="p2">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
+    <article class="shop-card" data-line="pet" data-id="p3" data-price="860"><div class="sc-media"><img src="assets/pet-dog.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">DOG & CAT / 防護</span><h3 data-i18n="p.p3n">安敏口服膠囊 Enhance-Immunity</h3><p class="sc-desc" data-i18n="p.p3d">犬貓適用之口服保養膠囊，公開品名標示為 Enhance-Immunity。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="p3">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
+    <article class="shop-card" data-line="pet" data-id="p4" data-price="760"><div class="sc-media"><img src="assets/pet-puppy.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">DOG & CAT / 泌尿</span><h3 data-i18n="p.p4n">優利威腸溶圓粒</h3><p class="sc-desc" data-i18n="p.p4d">15 包裝；公開成分包含化石草、紅石榴、車前草、茯苓、決明子、蔓越莓等萃取。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="p4">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
+    <article class="shop-card" data-line="pet" data-id="p5" data-price="690"><div class="sc-media"><img src="assets/product-extract.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">EYE / 眼部</span><h3 data-i18n="p.p5n">千力光 護眼液 10ml</h3><p class="sc-desc" data-i18n="p.p5d">犬貓適用眼部日常保養液，公開通路標示 10ml、可作為日常保養。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="p5">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
+    <article class="shop-card" data-line="pet" data-id="p6" data-price="690"><div class="sc-media"><img src="assets/quality.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">EYE / 眼部</span><h3 data-i18n="p.p6n">晶漾 眼部保養液 10ml</h3><p class="sc-desc" data-i18n="p.p6d">以玻尿酸與尿囊素為核心成分，專注眼睛保濕與日常眼部保養。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="p6">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
+    <article class="shop-card" data-line="pet" data-id="p7" data-price="580"><div class="sc-media"><img src="assets/nature.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">SKIN / 外用</span><h3 data-i18n="p.p7n">華康寵物理膚噴劑 50ml</h3><p class="sc-desc" data-i18n="p.p7d">犬貓皆可使用之天然草本外用噴劑，50ml 瓶裝；建議依獸醫師指示使用。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="p7">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
+    <article class="shop-card" data-line="pet" data-id="p8" data-price="580"><div class="sc-media"><img src="assets/forest.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">SKIN / 外用</span><h3 data-i18n="p.p8n">恩菲斯寵物外用噴劑 50ml</h3><p class="sc-desc" data-i18n="p.p8d">天然草本萃取外用噴劑，公開通路標示每日 2 至 4 次、按壓噴灑於患處。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="p8">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
+    <article class="shop-card" data-line="pet" data-id="p9" data-price="520"><div class="sc-media"><img src="assets/product-natural.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">SKIN / 外用</span><h3 data-i18n="p.p9n">傷妥立外用粉劑 10g</h3><p class="sc-desc" data-i18n="p.p9d">選用中藥天然素材，維持患部乾爽；10gm 瓶裝，建議由獸醫師指示使用。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="p9">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
   </div>
 </div></section>
 
 <section class="section soft"><div class="wrap narrow">
   <div class="section-head reveal"><div class="eyebrow">NOTE</div><h2 data-i18n="shop.noteTitle">選購前，請先了解</h2></div>
-  <details class="faq reveal"><summary data-i18n="shop.q1">商品資訊是否為正式資料？</summary><p data-i18n="shop.a1">本站為設計提案樣板，品項、照片與價格摘錄自公開通路資料並作示意；實際成分、劑量、效期、價格與庫存以公司核准文件為準。</p></div>
+  <details class="faq reveal"><summary data-i18n="shop.q1">商品資訊是否為正式資料？</summary><p data-i18n="shop.a1">本站為設計提案樣板，品項、照片與價格摘錄自公開通路資料並作示意；實際成分、劑量、效期、價格與庫存以公司核准文件為準。</p></details>
   <details class="faq reveal"><summary data-i18n="shop.q2">可以到貨付款或大量訂購嗎？</summary><p data-i18n="shop.a2">結帳流程目前為前端示範，尚未串接金流。大量訂購、企業送禮與批發需求請使用訂單系統或洽詢表單，由專人對接。</p></details>
   <p class="hist-note" data-i18n="shop.disclaimer">本站不作疾病診斷、治療或預防之宣稱；寵物產品請依獸醫師指示使用。</p>
 </div></section>
+
+<aside class="cart-float" id="cart">
+  <button type="button" class="cart-float-btn" id="cartFloatBtn" aria-label="購物車"><span data-i18n="shop.cart">購物車</span> <b id="cartCount">0</b></button>
+  <div class="cart-float-panel" id="cartPanel">
+    <div class="cart-head"><h3 data-i18n="shop.cart">購物車</h3><button type="button" id="cartClose" aria-label="關閉">✕</button></div>
+    <div class="cart-body" id="cartBody"><p class="cart-empty" data-i18n="shop.empty">還沒有商品，點選「加入購物車」開始選購。</p></div>
+    <div class="cart-foot"><div class="cart-total"><span data-i18n="shop.total">小計</span><b id="cartTotal">NT$ 0</b></div><p class="cart-note" data-i18n="shop.cartNote">價格與結帳為示意，不代表實際交易。</p><button class="btn btn-contact" type="button" id="cartCheckout" data-i18n="shop.checkout">前往結帳（示意） →</button><div class="status" id="cartStatus" role="status"></div></div>
+  </div>
+</aside>
 </main>
 
 <footer class="footer"><div class="wrap"><div class="footer-grid">
   <div><a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="44" rx="12" fill="#100d0c"/><path d="M14 32V13" stroke="#faf8f5" stroke-width="3.2" stroke-linecap="round"/><path d="M30 32V13" stroke="#faf8f5" stroke-width="3.2" stroke-linecap="round"/><path d="M14 23c5-8 11 8 16 0" stroke="#a75743" stroke-width="3.2" stroke-linecap="round" fill="none"/><circle cx="30" cy="13" r="2.4" fill="#a19c65"/></svg></span><span><b>精鴻生醫</b><small>JING HONG BIOMEDICAL</small></span></a><p style="margin-top:12px" data-i18n="foot.about">自然，值得被精準對待。本站為設計提案樣板，內容與數據部分為示意，正式發布前請逐項確認。</p></div>
   <div><h4 data-i18n="foot.links">快速連結</h4><div class="footer-links tech"><a href="index.html#story" data-i18n="nav.story">品牌理念</a><a href="index.html#news" data-i18n="nav.news">最新消息</a><a href="index.html#products" data-i18n="nav.products">產品系列</a><a href="cases.html" data-i18n="nav.cases">實例分享</a><a href="shop.html" data-i18n="nav.shop">購物商城</a><a href="order.html" data-i18n="nav.order">訂單系統</a></div></div>
   <div><h4 data-i18n="foot.disclaimer">資料與免責</h4><p data-i18n="foot.text">公司與產品資訊參考公開商工登記、公開通路與展覽資料整理；示意照片來自 Unsplash。實際成分、規格、檢驗與聯絡資訊以公司核准文件為準。本站不作疾病診斷、治療或預防之宣稱。</p></div>
-</div><div class="footer-bottom"><span>© 2026 精鴻生醫 · 設計提案 v11</span><a href="#top" data-i18n="foot.top">回到頂端 ↑</a></div></div></footer>
+</div><div class="footer-bottom"><span>© 2026 精鴻生醫 · 設計提案 v12</span><a href="#top" data-i18n="foot.top">回到頂端 ↑</a></div></div></footer>
 <script src="script.js"></script>
 </body>
 </html>
