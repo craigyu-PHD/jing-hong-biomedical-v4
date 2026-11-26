@@ -491,14 +491,14 @@
 
   /* ---------- 客服機器人：狗狗形象，預留 API／轉真人 ---------- */
   var DOG_SVG = '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' +
-    '<ellipse cx="12" cy="15" rx="7" ry="9" fill="#2f6bff" transform="rotate(-18 12 15)"/>' +
-    '<ellipse cx="36" cy="15" rx="7" ry="9" fill="#2f6bff" transform="rotate(18 36 15)"/>' +
-    '<rect x="8" y="10" width="32" height="31" rx="14" fill="#fff" stroke="#dbe4f2" stroke-width="1.5"/>' +
-    '<circle class="cb-eye" cx="19" cy="25" r="2.4" fill="#12161f"/>' +
-    '<circle class="cb-eye" cx="29" cy="25" r="2.4" fill="#12161f"/>' +
-    '<ellipse cx="24" cy="32" rx="3.4" ry="2.6" fill="#12161f"/>' +
-    '<path d="M24 34.6v2M24 36.6c-2 2-5 2-6 0M24 36.6c2 2 5 2 6 0" stroke="#12161f" stroke-width="1.3" fill="none" stroke-linecap="round"/>' +
-    '<circle cx="14.5" cy="31" r="2" fill="#ffb3a0"/><circle cx="33.5" cy="31" r="2" fill="#ffb3a0"/>' +
+    '<ellipse cx="12" cy="15" rx="7" ry="9" fill="#a75743" transform="rotate(-18 12 15)"/>' +
+    '<ellipse cx="36" cy="15" rx="7" ry="9" fill="#a75743" transform="rotate(18 36 15)"/>' +
+    '<rect x="8" y="10" width="32" height="31" rx="14" fill="#fff" stroke="#e6d8d0" stroke-width="1.5"/>' +
+    '<circle class="cb-eye" cx="19" cy="25" r="2.4" fill="#100d0c"/>' +
+    '<circle class="cb-eye" cx="29" cy="25" r="2.4" fill="#100d0c"/>' +
+    '<ellipse cx="24" cy="32" rx="3.4" ry="2.6" fill="#100d0c"/>' +
+    '<path d="M24 34.6v2M24 36.6c-2 2-5 2-6 0M24 36.6c2 2 5 2 6 0" stroke="#100d0c" stroke-width="1.3" fill="none" stroke-linecap="round"/>' +
+    '<circle cx="14.5" cy="31" r="2" fill="#d9b9ad"/><circle cx="33.5" cy="31" r="2" fill="#d9b9ad"/>' +
     '</svg>';
 
   var chatHTML = '<aside class="chatbot collapsed" id="jhChatbot" aria-label="客服助手">' +
@@ -569,7 +569,7 @@
   for (var qb = 0; qb < qBtns.length; qb++) qBtns[qb].addEventListener('click', function () { replyChat(this.getAttribute('data-chat-q')); });
   if (cbForm) cbForm.addEventListener('submit', function (e) { e.preventDefault(); replyChat(0); });
 
-  /* ---------- Hero 生技粒子動畫 ---------- */
+  /* ---------- Hero 3D 分子網絡（Protera-style molecular visual） ---------- */
   var canvas = document.getElementById('bioCanvas');
   if (canvas && canvas.getContext && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var ctx = canvas.getContext('2d');
@@ -581,49 +581,74 @@
       w = Math.max(rect.width, 1); h = Math.max(rect.height, 1);
       canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      var count = w < 700 ? 26 : 58;
+      var count = w < 700 ? 34 : 72;
       pts = [];
-      for (var i = 0; i < count; i++) pts.push({
-        x: Math.random() * w, y: Math.random() * h,
-        vx: (Math.random() - .5) * .28, vy: (Math.random() - .5) * .28,
-        r: Math.random() * 1.7 + 1, pet: i % 7 === 0
-      });
+      for (var i = 0; i < count; i++) {
+        var theta = Math.random() * Math.PI * 2;
+        var phi = Math.acos(2 * Math.random() - 1);
+        var r = Math.random() * .78 + .22;
+        pts.push({
+          x: r * Math.sin(phi) * Math.cos(theta),
+          y: r * Math.sin(phi) * Math.sin(theta),
+          z: r * Math.cos(phi),
+          spin: (Math.random() - .5) * .00028,
+          tint: i % 7
+        });
+      }
     }
 
     function draw() {
       if (!visible) { raf = window.requestAnimationFrame(draw); return; }
       ctx.clearRect(0, 0, w, h);
-      var i, j, p, q, dx, dy, dist2, max = 150 * 150;
+      var t = Date.now();
+      var a = t * .00013;
+      var cos = Math.cos(a), sin = Math.sin(a);
+      var radius = Math.min(w, h) * .40;
+      var cx = w * (w < 900 ? .5 : .74), cy = h * .5;
+      var sx = [], sy = [], sz = [], i, j;
+
       for (i = 0; i < pts.length; i++) {
-        p = pts[i];
-        p.x += p.vx; p.y += p.vy;
-        if (p.x < 0 || p.x > w) p.vx *= -1;
-        if (p.y < 0 || p.y > h) p.vy *= -1;
+        var p = pts[i];
+        var yaw = a + p.z * 1.6;
+        var X = p.x * Math.cos(yaw) - p.z * Math.sin(yaw);
+        var Z = p.x * Math.sin(yaw) + p.z * Math.cos(yaw);
+        var Y = p.y * Math.cos(p.z * .8) - p.z * Math.sin(p.z * .8);
+        var scale = 2.4 / (2.9 + Z);
+        sx[i] = cx + X * radius * scale;
+        sy[i] = cy + Y * radius * scale;
+        sz[i] = Z;
       }
+
+      // 鍵結：3D 距離相近的原子相連，透明玻璃感
       for (i = 0; i < pts.length; i++) for (j = i + 1; j < pts.length; j++) {
-        p = pts[i]; q = pts[j]; dx = p.x - q.x; dy = p.y - q.y; dist2 = dx * dx + dy * dy;
-        if (dist2 < max) {
-          ctx.strokeStyle = 'rgba(47,107,255,' + (0.13 * (1 - dist2 / max)).toFixed(3) + ')';
+        var dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y, dz = pts[i].z - pts[j].z;
+        var d2 = dx * dx + dy * dy + dz * dz;
+        if (d2 < .22) {
+          var alpha = .16 * (1 - d2 / .22);
+          ctx.strokeStyle = 'rgba(112,128,126,' + alpha.toFixed(3) + ')';
           ctx.lineWidth = 1;
-          ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
+          ctx.beginPath(); ctx.moveTo(sx[i], sy[i]); ctx.lineTo(sx[j], sy[j]); ctx.stroke();
         }
       }
+
+      // 原子：陶土／鼠尾草／苔綠三色，透視決定大小與亮度
       for (i = 0; i < pts.length; i++) {
-        p = pts[i];
-        ctx.fillStyle = p.pet ? 'rgba(240,99,69,.38)' : 'rgba(47,107,255,.34)';
-        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+        var depth = (sz[i] + 1) / 2;
+        var r2 = (1.1 + depth * 2.1);
+        ctx.fillStyle = pts[i].tint === 0 ? 'rgba(167,87,67,' + (.30 + depth * .38).toFixed(3) + ')'
+          : pts[i].tint === 1 ? 'rgba(161,156,101,' + (.26 + depth * .36).toFixed(3) + ')'
+          : 'rgba(112,128,126,' + (.22 + depth * .34).toFixed(3) + ')';
+        ctx.beginPath(); ctx.arc(sx[i], sy[i], r2, 0, Math.PI * 2); ctx.fill();
       }
-      // 生物螺旋意象：兩條低對比正弦波
-      var t = Date.now() * 0.0004;
-      for (var s = 0; s < 2; s++) {
-        ctx.beginPath();
-        for (var x = 0; x <= w; x += 12) {
-          var y = h * 0.52 + Math.sin(x * 0.006 + t + s * Math.PI) * (h * 0.12) + (s ? 34 : -34);
-          if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
-        }
-        ctx.strokeStyle = s ? 'rgba(240,99,69,.10)' : 'rgba(47,107,255,.12)';
-        ctx.lineWidth = 1.4; ctx.stroke();
-      }
+
+      // 核心光暈：緩慢呼吸
+      var pulse = .06 + .03 * Math.sin(t * .0009);
+      var g = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius * .95);
+      g.addColorStop(0, 'rgba(167,87,67,' + pulse.toFixed(3) + ')');
+      g.addColorStop(1, 'rgba(167,87,67,0)');
+      ctx.fillStyle = g;
+      ctx.beginPath(); ctx.arc(cx, cy, radius * .95, 0, Math.PI * 2); ctx.fill();
+
       raf = window.requestAnimationFrame(draw);
     }
 
