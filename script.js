@@ -1,4 +1,4 @@
-/* 精鴻生醫 v12 — 時間軸一列一事、精簡下拉、精緻数据列、商城雙幣別＋浮動購物車、立體貓咪 */
+/* 精鴻生醫 v13 — 橫式時間軸、暖色正面貓咪、橫式狗狗、即時匯率、結帳頁、Q&A */
 (function () {
   'use strict';
 
@@ -86,7 +86,7 @@
       'contact.title': '讓我們從一句話開始。', 'contact.sub': '產品詢價、通路合作、代工開發或企業送禮，留下需求，我們會盡快回覆。',
       'contact.company': '公司', 'contact.tel': '電話', 'contact.addr': '地址',
       'contact.note': '本站為老闆審閱用樣板；照片為 Unsplash 示意圖，非正式產品實拍。',
-      'form.person': '聯絡人', 'form.personPh': '姓名或單位名稱', 'form.company': '公司 / 單位',
+      'form.person': '聯絡人', 'form.email': 'Email', 'form.personPh': '姓名或單位名稱', 'form.company': '公司 / 單位',
       'form.companyPh': '公司名稱', 'form.topic': '洽詢主題', 'form.t1': '產品詢價', 'form.t2': '通路合作',
       'form.t3': 'OEM / ODM 代工', 'form.t4': '企業送禮', 'form.t5': '其他', 'form.msg': '需求說明',
       'form.msgPh': '請簡述合作需求', 'form.submit': '產生詢問稿',
@@ -213,7 +213,24 @@
       'shop.a1': '本站為設計提案樣板，品項、照片與價格摘錄自公開通路資料並作示意；實際成分、劑量、效期、價格與庫存以公司核准文件為準。',
       'shop.q2': '可以到貨付款或大量訂購嗎？', 'shop.a2': '結帳流程目前為前端示範，尚未串接金流。大量訂購、企業送禮與批發需求請使用訂單系統或洽詢表單，由專人對接。',
       'shop.disclaimer': '本站不作疾病診斷、治療或預防之宣稱；寵物產品請依獸醫師指示使用。',
-      'shop.inquire': '洽詢', 'shop.curNote': '示意匯率 1 USD ≈ 32 TWD',
+      'shop.inquire': '洽詢', 'shop.curNote': '匯率載入中…',
+      'nav.faq': '常見問題', 'faq.more': '查看常見問題 →',
+      'faq.title': '常見問題，一次說清楚。', 'faq.sub': '從選購、價格、付款到合作流程，先整理幾個最常被問到的問題。',
+      'faq.q1': '網站上的產品資訊是正式資料嗎？', 'faq.a1': '本站為老闆審閱用設計提案，品項、照片與價格摘錄自公開通路並作示意；實際成分、劑量、效期、價格與庫存皆以公司核准文件為準。',
+      'faq.q2': '散戶要如何選購？批發要從哪裡進入？', 'faq.a2': '散戶朋友請使用「購物商城」；批發商、大型會員與企業送禮請使用「訂單系統」，由專人對接身份驗證與報價。',
+      'faq.q3': '商城的價格可以用哪些幣別？', 'faq.a3': '目前提供新台幣（NT$）與美金（USD）切換。匯率會自動向公開匯率服務更新並四捨五入至小數點後兩位；實際交易幣別與金額以正式訂單為準。',
+      'faq.q4': '線上結帳提供哪些付款方式？', 'faq.a4': '結帳頁示範信用卡刷卡（Visa）與 LINE Pay 兩種常見即時支付選項，預設為 Visa。金流尚未正式串接，請勿在示範頁輸入真實卡片資訊。',
+      'faq.q5': '公司沿革的年份與事件可以引用嗎？', 'faq.a5': '時間軸採橫式動畫呈現，年份與事件為版面示意，正式對外前請以公司核准的沿革資料替換。',
+      'faq.q6': '毛孩保健產品需要獸醫師指示嗎？', 'faq.a6': '本站不作疾病診斷、治療或預防之宣稱；寵物品項請依獸醫師指示與正式產品標示使用。',
+      'hist.dogTag': 'ANUBIS / 日常的活力', 'hist.dogTitle': '把照護，帶進每一次奔跑。', 'hist.dogText': '從原料到日常保養，讓毛孩的每一步都有清楚依據。（示意照片）',
+      'shop.checkoutGo': '正在前往結帳…',
+      'co.h1': '最後一步，<br>把安心帶回家。', 'co.sub': '請確認訂單內容與付款方式。本頁為前端示範，尚未串接金流與物流，請勿輸入真實卡片資訊。',
+      'co.backShop': '← 回購物商城', 'co.contactTitle': '聯絡與配送', 'co.emailPh': 'name@example.com', 'co.phone': '聯絡電話', 'co.phonePh': '09xx-xxx-xxx',
+      'co.addr': '配送地址', 'co.addrPh': '請輸入完整配送地址', 'co.payTitle': '付款方式', 'co.payHint': '示範提供兩種常見即時支付管道，預設為 Visa 信用卡。',
+      'co.payVisa': '信用卡刷卡（Visa）', 'co.payVisaD': '即時授權示範 · 請勿輸入真實卡號', 'co.payLine': 'LINE Pay', 'co.payLineD': '轉導支付頁示範 · 尚未串接',
+      'co.cardNum': '卡號（示範）', 'co.cardHint': '正式上線前將串接金流 SDK；此欄位僅供版面展示。', 'co.submit': '確認訂單（示範） →',
+      'co.doneTitle': '訂單草稿已產生（示範）', 'co.doneText': '未進行任何實際扣款。正式上線後，系統會依選擇的支付管道導向完成畫面。',
+      'co.summary': '訂單摘要', 'co.note': '價格與付款為示意，不代表實際交易。', 'co.continue': '繼續選購 →', 'co.empty': '購物車還沒有商品，請先回商城選購。',
       'op.register': '註冊新帳號', 'reg.title': '註冊會員帳號', 'reg.hint': '示範表單：資料僅在瀏覽器內驗證，不會傳送至伺服器。',
       'reg.name': '姓名／公司', 'reg.email': '電子郵件', 'reg.human': '我不是機器人', 'reg.challenge': '請計算：',
       'reg.submit': '送出註冊', 'reg.ok': '註冊成功（示範）：已通過人機驗證。', 'reg.fail': '請勾選人機驗證並輸入正確的計算結果。',
@@ -302,7 +319,7 @@
       'contact.title': 'Start with one sentence.', 'contact.sub': 'Product pricing, retail partnership, OEM development or corporate gifting — tell us what you need.',
       'contact.company': 'Company', 'contact.tel': 'Tel', 'contact.addr': 'Address',
       'contact.note': 'This is a design sample for review. Photos are Unsplash illustrations, not actual product shots.',
-      'form.person': 'Contact person', 'form.personPh': 'Name or organization', 'form.company': 'Company / organization',
+      'form.person': 'Contact person', 'form.email': 'Email', 'form.personPh': 'Name or organization', 'form.company': 'Company / organization',
       'form.companyPh': 'Company name', 'form.topic': 'Topic', 'form.t1': 'Product inquiry', 'form.t2': 'Retail partnership',
       'form.t3': 'OEM / ODM', 'form.t4': 'Corporate gifting', 'form.t5': 'Other', 'form.msg': 'Message',
       'form.msgPh': 'Briefly describe your request', 'form.submit': 'Generate inquiry draft',
@@ -420,8 +437,8 @@
       'shop.sub2': 'Items and prices are drawn from public sources; actual labeling, pricing and inventory are subject to company confirmation.',
       'shop.fHuman': 'Human Wellness', 'shop.fPet': 'ANUBIS Pet', 'shop.cart': 'Cart',
       'shop.empty': 'No items yet. Tap “Add to cart” to start.', 'shop.total': 'Subtotal',
-      'shop.cartNote': 'Prices and checkout are illustrative; no real transaction occurs.', 'shop.checkout': 'Checkout (demo) →',
-      'shop.checkoutOk': 'Shopping list generated (demo). No payment gateway connected — do not make any real payment.',
+      'shop.cartNote': 'Prices and checkout are illustrative; no real transaction occurs.', 'shop.checkout': 'Go to checkout →',
+      'shop.checkoutOk': 'Shopping list generated (demo). Redirecting to checkout.',
       'shop.added': 'Added to cart', 'shop.diffTitle': 'Two entrances, each for its purpose.',
       'shop.d1t': 'Online Shop', 'shop.d1': 'Everyone can browse the full range and add items to the cart — ideal for retail and small purchases.',
       'shop.d2t': 'Order Portal', 'shop.d2': 'For wholesalers and large members: identity verification, exclusive pricing, order tracking and bulk orders.',
@@ -429,7 +446,24 @@
       'shop.a1': 'This is a design sample. Items, photos and prices are illustrative from public sources; actual ingredients, dosage, shelf life, pricing and inventory are subject to company documents.',
       'shop.q2': 'Can I pay on delivery or order in bulk?', 'shop.a2': 'Checkout is a front-end demo with no payment gateway. For bulk orders, gifting and wholesale, use the Order Portal or inquiry form for dedicated support.',
       'shop.disclaimer': 'This site makes no claims of diagnosing, treating or preventing disease; pet products should be used as directed by a veterinarian.',
-      'shop.inquire': 'Inquire', 'shop.curNote': 'Illustrative rate: 1 USD ≈ 32 TWD',
+      'shop.inquire': 'Inquire', 'shop.curNote': 'Loading rate…',
+      'nav.faq': 'FAQ', 'faq.more': 'Read FAQ →',
+      'faq.title': 'Questions, answered clearly.', 'faq.sub': 'Shopping, pricing, payment and cooperation — the questions we hear most.',
+      'faq.q1': 'Are product details on this site official?', 'faq.a1': 'This is a design sample for review. Items, photos and prices are illustrative from public sources; actual ingredients, dosage, shelf life, pricing and inventory follow approved company documents.',
+      'faq.q2': 'How do retail buyers shop? Where do wholesalers go?', 'faq.a2': 'Retail buyers use the Online Shop. Wholesalers, bulk members and corporate gifting use the Order Portal, where identity verification and quotations are handled by a dedicated contact.',
+      'faq.q3': 'Which currencies does the shop support?', 'faq.a3': 'Taiwan dollars (NT$) and US dollars (USD). Rates refresh automatically from a public rate service and are rounded to two decimals; actual transaction currency and amount follow the formal order.',
+      'faq.q4': 'What payment options are available at checkout?', 'faq.a4': 'The checkout demo offers Visa credit card and LINE Pay, with Visa selected by default. No gateway is connected — do not enter real card details on this demo.',
+      'faq.q5': 'Can the history dates and events be cited?', 'faq.a5': 'The horizontal timeline is illustrative. Dates and events are layout samples and must be replaced with approved company history before publication.',
+      'faq.q6': 'Should pet products be used under veterinary guidance?', 'faq.a6': 'This site makes no claims of diagnosing, treating or preventing disease; pet items should be used as directed by a veterinarian and per official labeling.',
+      'hist.dogTag': 'ANUBIS / Everyday vitality', 'hist.dogTitle': 'Care that goes with every run.', 'hist.dogText': 'From ingredients to daily care, every step is backed by clear information. (Illustrative photo)',
+      'shop.checkoutGo': 'Redirecting to checkout…',
+      'co.h1': 'One last step,<br>bring peace of mind home.', 'co.sub': 'Review your order and payment method. This is a front-end demo with no payment or logistics gateway — do not enter real card details.',
+      'co.backShop': '← Back to shop', 'co.contactTitle': 'Contact & delivery', 'co.emailPh': 'name@example.com', 'co.phone': 'Phone', 'co.phonePh': '09xx-xxx-xxx',
+      'co.addr': 'Delivery address', 'co.addrPh': 'Enter the full delivery address', 'co.payTitle': 'Payment method', 'co.payHint': 'Two common instant-payment options are shown for demo; Visa is selected by default.',
+      'co.payVisa': 'Credit card (Visa)', 'co.payVisaD': 'Instant authorization demo · do not enter a real card', 'co.payLine': 'LINE Pay', 'co.payLineD': 'Redirect demo · not connected',
+      'co.cardNum': 'Card number (demo)', 'co.cardHint': 'A payment SDK will be integrated before launch; this field is for layout only.', 'co.submit': 'Place order (demo) →',
+      'co.doneTitle': 'Order draft created (demo)', 'co.doneText': 'No real charge was made. After launch, the chosen payment method will lead to the completion screen.',
+      'co.summary': 'Order summary', 'co.note': 'Prices and payment are illustrative; no real transaction occurs.', 'co.continue': 'Continue shopping →', 'co.empty': 'Your cart is empty. Please return to the shop first.',
       'op.register': 'Create account', 'reg.title': 'Member registration', 'reg.hint': 'Demo form: validated in-browser only, no data is sent.',
       'reg.name': 'Name / Company', 'reg.email': 'Email', 'reg.human': 'I am not a robot', 'reg.challenge': 'Please solve:',
       'reg.submit': 'Submit registration', 'reg.ok': 'Registration successful (demo): human verification passed.', 'reg.fail': 'Please confirm you are human and enter the correct answer.',
@@ -443,11 +477,21 @@
     'cp.h1': 1, 'op.h1': 1, 'hist.title': 1, 'shop.h1': 1,
     'c1.ch': 1, 'c1.do': 1, 'c1.r': 1, 'c2.ch': 1, 'c2.do': 1, 'c2.r': 1,
     'c3.ch': 1, 'c3.do': 1, 'c3.r': 1, 'c4.ch': 1, 'c4.do': 1, 'c4.r': 1,
+    'co.h1': 1,
     'c5.ch': 1, 'c5.do': 1, 'c5.r': 1, 'c6.ch': 1, 'c6.do': 1, 'c6.r': 1
   };
 
   var currentLang = 'zh';
   try { currentLang = localStorage.getItem('jh-lang') === 'en' ? 'en' : 'zh'; } catch (e) {}
+
+  var isHomePage = /(^|\/)index\.html$/.test(location.pathname) || /\/$/.test(location.pathname);
+  var homePrefix = isHomePage ? '' : 'index.html';
+  var HOME_IDS = { story: 1, news: 1, products: 1, craft: 1, contact: 1, history: 1, faq: 1 };
+  var homeAnchors = document.querySelectorAll('a[href^="#"]');
+  for (var ha = 0; ha < homeAnchors.length; ha++) {
+    var hh = homeAnchors[ha].getAttribute('href').slice(1);
+    if (!isHomePage && HOME_IDS[hh]) homeAnchors[ha].setAttribute('href', 'index.html#' + hh);
+  }
 
   function t(key) {
     var v = DICT[currentLang] && DICT[currentLang][key];
@@ -522,7 +566,7 @@
       dd.appendChild(dtitle);
       for (var di = 0; di < items.length; di++) {
         var link = document.createElement('a');
-        link.href = items[di][1];
+        link.href = homePrefix + items[di][1];
         link.innerHTML = '<span class="dd-label"><b data-i18n="' + items[di][0] + '">' + t(items[di][0]) + '</b></span><span class="dd-arrow">›</span>';
         dd.appendChild(link);
       }
@@ -555,6 +599,26 @@
     }, { threshold: .18 });
     histObs.observe(histSec);
   } else if (histSec) { histSec.classList.add('in-view'); }
+
+  var tlStrip = document.getElementById('tlStrip');
+  if (tlStrip) {
+    var tlNodes = tlStrip.querySelectorAll('.tl-node');
+    var tlProgress = document.querySelector('.tl-progress i');
+    function tlUpdate() {
+      var max = tlStrip.scrollWidth - tlStrip.clientWidth;
+      var idx = max > 0 ? Math.round(tlStrip.scrollLeft / max * (tlNodes.length - 1)) : 0;
+      if (tlProgress) tlProgress.style.transform = 'translateX(' + (idx * 100) + '%)';
+    }
+    tlStrip.addEventListener('scroll', tlUpdate, { passive: true });
+    var tlBtns = document.querySelectorAll('[data-tl]');
+    for (var tbi = 0; tbi < tlBtns.length; tbi++) tlBtns[tbi].addEventListener('click', function () {
+      var dir = this.getAttribute('data-tl') === 'next' ? 1 : -1;
+      var step = tlNodes.length ? tlNodes[0].getBoundingClientRect().width + 14 : 200;
+      tlStrip.scrollBy({ left: dir * step, behavior: 'smooth' });
+    });
+    window.addEventListener('resize', tlUpdate, { passive: true });
+    tlUpdate();
+  }
 
   /* ---------- 選單／捲動 ---------- */
   var nav = document.getElementById('siteNav');
@@ -740,29 +804,72 @@
     });
   }
 
-  /* ---------- 購物商城：靜態產品卡＋雙幣別＋浮動購物車 ---------- */
+  /* ---------- 雙幣別與即時匯率（TWD / USD） ---------- */
+  var JH_RATE = 32.92, JH_RATE_TIME = '', JH_CUR = 'TWD';
+  try {
+    var cachedRate = JSON.parse(localStorage.getItem('jh-rate') || 'null');
+    if (cachedRate && Number(cachedRate.rate) > 0) { JH_RATE = Number(cachedRate.rate); JH_RATE_TIME = cachedRate.time || ''; }
+  } catch (e) {}
+  try { JH_CUR = localStorage.getItem('jh-currency') === 'USD' ? 'USD' : (currentLang === 'en' ? 'USD' : 'TWD'); } catch (e) { JH_CUR = currentLang === 'en' ? 'USD' : 'TWD'; }
+
+  function jhMoney(n, cur) {
+    var v = Number(n) || 0, c = cur || JH_CUR;
+    if (c === 'USD') return 'USD ' + (v / JH_RATE).toFixed(2);
+    return 'NT$ ' + v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  function jhRateText() {
+    var head = currentLang === 'en' ? 'Live rate 1 USD = ' : '即時匯率 1 USD = ';
+    return head + JH_RATE.toFixed(2) + ' TWD' + (JH_RATE_TIME ? ' · ' + JH_RATE_TIME : '');
+  }
+  function jhRenderRateLabels() {
+    var els = document.querySelectorAll('#rateInfo,#checkoutRateInfo');
+    for (var i = 0; i < els.length; i++) els[i].textContent = jhRateText();
+  }
+  function jhSyncCurrencyButtons() {
+    var cb = document.querySelectorAll('[data-cur]');
+    for (var i = 0; i < cb.length; i++) cb[i].classList.toggle('active', cb[i].getAttribute('data-cur') === JH_CUR);
+  }
+  function jhRateApplied() {
+    jhRenderRateLabels();
+    if (typeof window.jhRateChanged === 'function') window.jhRateChanged();
+  }
+  function jhFetchRate() {
+    if (typeof fetch !== 'function') { jhRateApplied(); return; }
+    fetch('https://open.er-api.com/v6/latest/USD?cb=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('rate'); return r.json(); })
+      .then(function (d) {
+        if (d && d.result === 'success' && d.rates && Number(d.rates.TWD) > 0) {
+          JH_RATE = Number(d.rates.TWD);
+          JH_RATE_TIME = d.time_last_update_utc || '';
+          try { localStorage.setItem('jh-rate', JSON.stringify({ rate: JH_RATE, time: JH_RATE_TIME, ts: Date.now() })); } catch (e) {}
+        }
+        jhRateApplied();
+      })
+      .catch(function () { jhRateApplied(); });
+  }
+  function jhSetCurrency(cur) {
+    JH_CUR = cur === 'USD' ? 'USD' : 'TWD';
+    try { localStorage.setItem('jh-currency', JH_CUR); } catch (e) {}
+    jhSyncCurrencyButtons();
+    jhRateApplied();
+  }
+  window.jhCurrencyRefresh = function (lang) {
+    var saved = null; try { saved = localStorage.getItem('jh-currency'); } catch (e) {}
+    if (!saved) jhSetCurrency(lang === 'en' ? 'USD' : 'TWD');
+    else { jhSyncCurrencyButtons(); jhRateApplied(); }
+  };
+  var curBtnsAll = document.querySelectorAll('[data-cur]');
+  for (var cba = 0; cba < curBtnsAll.length; cba++) curBtnsAll[cba].addEventListener('click', function () { jhSetCurrency(this.getAttribute('data-cur')); });
+  var rateBtn = document.getElementById('rateRefresh');
+  if (rateBtn) rateBtn.addEventListener('click', jhFetchRate);
+  jhSyncCurrencyButtons();
+  jhRenderRateLabels();
+  jhFetchRate();
+  window.setInterval(jhFetchRate, 30 * 60 * 1000);
+
+  /* ---------- 購物商城：靜態產品卡＋浮動購物車 ---------- */
   var shopList = document.getElementById('shopList');
   if (shopList) {
-    var RATE = 32; // 示意匯率：1 USD ≈ 32 TWD
-    var currency = 'TWD';
-    try { currency = localStorage.getItem('jh-currency') === 'USD' ? 'USD' : (currentLang === 'en' ? 'USD' : 'TWD'); } catch (e) { currency = currentLang === 'en' ? 'USD' : 'TWD'; }
-    function money(n) {
-      return currency === 'USD' ? 'USD ' + (Number(n) / RATE).toFixed(2) : 'NT$ ' + Number(n).toLocaleString('en-US');
-    }
-    function setCurrency(cur) {
-      currency = cur === 'USD' ? 'USD' : 'TWD';
-      try { localStorage.setItem('jh-currency', currency); } catch (e) {}
-      var cb = document.querySelectorAll('[data-cur]');
-      for (var i = 0; i < cb.length; i++) cb[i].classList.toggle('active', cb[i].getAttribute('data-cur') === currency);
-      renderPrices(); renderCart();
-    }
-    function renderPrices() {
-      var cards = shopList.querySelectorAll('.shop-card');
-      for (var i = 0; i < cards.length; i++) {
-        var p = cards[i].querySelector('.sc-price');
-        if (p) { var v = Number(cards[i].getAttribute('data-price')); p.textContent = v ? money(v) : t('shop.inquire'); }
-      }
-    }
     var cart = [];
     try { cart = JSON.parse(localStorage.getItem('jh-cart') || '[]') || []; } catch (e) { cart = []; }
     var cartBody = document.getElementById('cartBody');
@@ -774,41 +881,46 @@
       for (var i = 0; i < cards.length; i++) if (cards[i].getAttribute('data-id') === id) return cards[i];
       return null;
     }
+    function renderPrices() {
+      var cards = shopList.querySelectorAll('.shop-card');
+      for (var i = 0; i < cards.length; i++) {
+        var p = cards[i].querySelector('.sc-price');
+        if (p) { var v = Number(cards[i].getAttribute('data-price')); p.textContent = v ? jhMoney(v) : t('shop.inquire'); }
+      }
+    }
     function renderCart() {
-      if (!cartBody) return;
+      if (!cartBody || !cartCount || !cartTotal) return;
       var count = 0, total = 0;
       for (var i = 0; i < cart.length; i++) { count += cart[i].qty; total += cart[i].qty * cart[i].price; }
       cartCount.textContent = String(count);
-      cartTotal.textContent = money(total);
+      cartTotal.textContent = jhMoney(total);
       if (!cart.length) { cartBody.innerHTML = '<p class="cart-empty" data-i18n="shop.empty">' + t('shop.empty') + '</p>'; return; }
       var html = '';
       for (var j = 0; j < cart.length; j++) {
-        var row = cart[j], card = productById(row.id), name = row.id;
+        var row = cart[j], card = productById(row.id), name = row.name || row.id;
         if (card) { var h = card.querySelector('h3'); if (h) name = h.textContent; }
-        html += '<div class="cart-item"><div><b>' + name + '</b><small>' + money(row.price) + ' × ' + row.qty + ' = ' + money(row.price * row.qty) + '</small></div>' +
+        html += '<div class="cart-item"><div><b>' + name + '</b><small>' + jhMoney(row.price) + ' × ' + row.qty + ' = ' + jhMoney(row.price * row.qty) + '</small></div>' +
           '<div class="cart-qty"><button type="button" data-cart-dec="' + row.id + '" aria-label="−">−</button><span>' + row.qty + '</span><button type="button" data-cart-inc="' + row.id + '" aria-label="＋">＋</button></div></div>';
       }
       cartBody.innerHTML = html;
-    }
-    function addToCart(id) {
-      var card = productById(id);
-      if (!card || !Number(card.getAttribute('data-price'))) return;
-      var price = Number(card.getAttribute('data-price'));
-      var found = false;
-      for (var j = 0; j < cart.length; j++) if (cart[j].id === id) { cart[j].qty++; found = true; break; }
-      if (!found) cart.push({ id: id, qty: 1, price: price });
-      saveCart(); renderCart(); openCart(true);
-      var st = document.getElementById('cartStatus'); if (st) st.textContent = t('shop.added');
     }
     function openCart(open) {
       var panel = document.getElementById('cartPanel');
       if (panel) panel.classList.toggle('open', !!open);
     }
-    window.jhCurrencyRefresh = function (lang) {
-      var saved = null; try { saved = localStorage.getItem('jh-currency'); } catch (e) {}
-      if (!saved) setCurrency(lang === 'en' ? 'USD' : 'TWD'); else { renderPrices(); renderCart(); }
-    };
-    renderPrices(); renderCart(); setCurrency(currency);
+    function addToCart(id) {
+      var card = productById(id);
+      if (!card || !Number(card.getAttribute('data-price'))) return;
+      var price = Number(card.getAttribute('data-price')), h = card.querySelector('h3'), name = h ? h.textContent : id;
+      var found = false;
+      for (var j = 0; j < cart.length; j++) if (cart[j].id === id) { cart[j].qty++; found = true; break; }
+      if (!found) cart.push({ id: id, qty: 1, price: price, name: name });
+      saveCart(); renderCart(); openCart(true);
+      var st = document.getElementById('cartStatus'); if (st) st.textContent = t('shop.added');
+    }
+    window.jhRateChanged = function () { renderPrices(); renderCart(); };
+    renderPrices(); renderCart(); jhSyncCurrencyButtons(); jhRenderRateLabels();
+
     var adds = shopList.querySelectorAll('[data-add-cart]');
     for (var ai = 0; ai < adds.length; ai++) adds[ai].addEventListener('click', function () { addToCart(this.getAttribute('data-add-cart')); });
     var filters = document.querySelectorAll('[data-shop-filter]');
@@ -817,8 +929,6 @@
       var want = this.getAttribute('data-shop-filter'), cards2 = shopList.querySelectorAll('.shop-card');
       for (var y = 0; y < cards2.length; y++) cards2[y].style.display = (!want || want === 'all' || cards2[y].getAttribute('data-line') === want) ? '' : 'none';
     });
-    var curs = document.querySelectorAll('[data-cur]');
-    for (var ci = 0; ci < curs.length; ci++) curs[ci].addEventListener('click', function () { setCurrency(this.getAttribute('data-cur')); });
     cartBody.addEventListener('click', function (e) {
       var inc = e.target.getAttribute('data-cart-inc'), dec = e.target.getAttribute('data-cart-dec');
       if (!inc && !dec) return;
@@ -831,7 +941,57 @@
     var closeBtn = document.getElementById('cartClose');
     if (closeBtn) closeBtn.addEventListener('click', function () { openCart(false); });
     var checkout = document.getElementById('cartCheckout');
-    if (checkout) checkout.addEventListener('click', function () { var st = document.getElementById('cartStatus'); if (st) st.textContent = t('shop.checkoutOk'); });
+    if (checkout) checkout.addEventListener('click', function () {
+      var st = document.getElementById('cartStatus'); if (st) st.textContent = t('shop.checkoutGo');
+      window.location.href = 'checkout.html';
+    });
+  }
+
+  /* ---------- 結帳頁：訂單摘要＋Visa / LINE Pay 支付示範 ---------- */
+  var coForm = document.getElementById('checkoutForm');
+  if (coForm) {
+    var coItems = document.getElementById('checkoutItems');
+    var coTotal = document.getElementById('checkoutTotal');
+    var payRadios = document.querySelectorAll('input[name="pay"]');
+    var cardDemo = document.getElementById('cardDemo');
+    function coCart() { try { return JSON.parse(localStorage.getItem('jh-cart') || '[]') || []; } catch (e) { return []; } }
+    function coRender() {
+      if (!coItems || !coTotal) return;
+      var items = coCart(), total = 0, html = '';
+      if (!items.length) coItems.innerHTML = '<p class="co-empty">' + t('co.empty') + '</p>';
+      else {
+        for (var i = 0; i < items.length; i++) {
+          var row = items[i], line = row.qty * row.price;
+          total += line;
+          html += '<div class="co-item"><div><b>' + (row.name || row.id) + '</b><small>' + jhMoney(row.price) + ' × ' + row.qty + '</small></div><span>' + jhMoney(line) + '</span></div>';
+        }
+        coItems.innerHTML = html;
+      }
+      coTotal.textContent = jhMoney(total);
+    }
+    function syncPay() {
+      var pay = 'visa';
+      for (var i = 0; i < payRadios.length; i++) {
+        var on = payRadios[i].checked;
+        payRadios[i].parentNode.classList.toggle('selected', on);
+        if (on) pay = payRadios[i].value;
+      }
+      if (cardDemo) cardDemo.style.opacity = pay === 'visa' ? '1' : '.42';
+    }
+    for (var pi = 0; pi < payRadios.length; pi++) payRadios[pi].addEventListener('change', syncPay);
+    window.jhRateChanged = coRender;
+    coRender(); jhSyncCurrencyButtons(); jhRenderRateLabels(); syncPay();
+    coForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!coCart().length) { var empty = document.getElementById('checkoutStatus'); if (empty) empty.textContent = t('co.empty'); return; }
+      var pay = 'visa';
+      for (var i = 0; i < payRadios.length; i++) if (payRadios[i].checked) pay = payRadios[i].value;
+      var st = document.getElementById('checkoutStatus');
+      if (st) st.textContent = t('co.doneTitle') + ' · ' + (pay === 'visa' ? 'Visa' : 'LINE Pay');
+      var done = document.getElementById('checkoutDone'); if (done) done.hidden = false;
+      try { localStorage.removeItem('jh-cart'); } catch (e2) {}
+      coRender();
+    });
   }
 
   /* ---------- 客服機器人：狗狗形象，預留 API／轉真人 ---------- */
@@ -1017,32 +1177,17 @@
   for (var qb = 0; qb < qBtns.length; qb++) qBtns[qb].addEventListener('click', function () { replyChat(this.getAttribute('data-chat-q')); });
   if (cbForm) cbForm.addEventListener('submit', function (e) { e.preventDefault(); replyChat(0); });
 
-  /* ---------- Hero 立體貓咪（線條＋節點，隨滑鼠開合旋轉） ---------- */
+  /* ---------- Hero 暖色正面貓咪：微幅跟隨，不翻面 ---------- */
   var catCanvas = document.getElementById('bioCanvas');
-  if (catCanvas && catCanvas.getContext && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (catCanvas && catCanvas.getContext) {
     var cc = catCanvas.getContext('2d');
     var cw = 0, ch = 0, cdpr = 1, craf = 0, cvisible = true;
-    var cmx = 0, cmy = 0, ctmx = 0, ctmy = 0;
+    var cmx = 0, cmy = 0, tmx = 0, tmy = 0;
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     window.addEventListener('pointermove', function (e) {
-      ctmx = (e.clientX / window.innerWidth - .5) * 2;
-      ctmy = (e.clientY / window.innerHeight - .5) * 2;
+      tmx = Math.max(-1, Math.min(1, (e.clientX / window.innerWidth - .5) * 2));
+      tmy = Math.max(-1, Math.min(1, (e.clientY / window.innerHeight - .5) * 2));
     }, { passive: true });
-
-    var CAT_V = [
-      [-.86,-.14,.02],[-.80,-.50,.04],[-.54,-.80,.06],[-.22,-.94,.08],[.22,-.94,.08],[.54,-.80,.06],
-      [.80,-.50,.04],[.86,-.14,.02],[.74,.34,.02],[.40,.68,.06],[0,.82,.10],[-.40,.68,.06],[-.74,.34,.02],
-      [-.74,-1.08,.00],[-.44,-.74,.12],[.74,-1.08,.00],[.44,-.74,.12],
-      [-.34,-.18,.44],[.34,-.18,.44],[0,.16,.58],[0,.36,.50],
-      [-.58,.12,.18],[.58,.12,.18],[-1.28,.30,.02],[-1.20,.54,.02],[1.28,.30,.02],[1.20,.54,.02],
-      [-.28,-.24,.52],[.40,-.24,.52]
-    ];
-    var CAT_E = [];
-    for (var ei = 0; ei < 12; ei++) CAT_E.push([ei, ei + 1]);
-    CAT_E.push([12, 0]);
-    CAT_E.push([2, 13], [13, 14], [14, 3], [5, 15], [15, 16], [16, 4]);
-    CAT_E.push([14, 17], [16, 18], [17, 19], [18, 19], [19, 20], [20, 21], [20, 22], [17, 21], [18, 22]);
-    CAT_E.push([21, 23], [21, 24], [22, 25], [22, 26]);
-
     function catResize() {
       var rect = catCanvas.getBoundingClientRect();
       cdpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -1053,82 +1198,80 @@
     function catDraw() {
       if (!cvisible) { craf = window.requestAnimationFrame(catDraw); return; }
       cc.clearRect(0, 0, cw, ch);
-      var now = Date.now();
-      cmx += (ctmx - cmx) * .055; cmy += (ctmy - cmy) * .055;
-      var yaw = now * .00010 + cmx * 1.15;
-      var pitch = cmy * .62;
-      var cy1 = Math.cos(yaw), sy1 = Math.sin(yaw), cp = Math.cos(pitch), sp = Math.sin(pitch);
-      var open = 1 + cmx * .26;
-      var ear = 1 + cmx * .55;
-      var wh = 1 + cmx * .90;
-      var cx = cw * .5 + cmx * 22, cy = ch * .52 + cmy * 18;
-      var radius = Math.min(cw * .30, ch * .46);
-      var px = [], py = [], pz = [];
+      var now = reduceMotion ? 0 : Date.now();
+      cmx += (tmx - cmx) * .045; cmy += (tmy - cmy) * .045;
+      var bob = reduceMotion ? 0 : Math.sin(now * .0012) * 4;
+      var idle = reduceMotion ? 0 : Math.sin(now * .00055) * .035;
+      var yaw = cmx * .16 + idle, pitch = cmy * .10;
+      var s = Math.min(cw * .30, ch * .44) / 150;
+      var cx = cw * .5 + cmx * 12, cy = ch * .50 + bob;
 
-      for (var i = 0; i < CAT_V.length; i++) {
-        var v = CAT_V[i], x = v[0], y = v[1], z = v[2];
-        if (i === 13) { x *= ear; y = y * (1 + cmy * .35); }
-        if (i === 15) { x *= ear; y = y * (1 + cmy * .35); }
-        if (i === 14) { x *= ear; }
-        if (i === 16) { x *= ear; }
-        if (i === 23 || i === 24) { x *= wh; y = y * (1 - cmy * .25); }
-        if (i === 25 || i === 26) { x *= wh; y = y * (1 - cmy * .25); }
-        x *= open; y *= open;
-        var x1 = x * cy1 - z * sy1, z1 = x * sy1 + z * cy1;
-        var y1 = y * cp - z1 * sp, z2 = y * sp + z1 * cp;
-        var persp = 2.7 / (3.0 + z2);
-        px[i] = cx + x1 * radius * persp;
-        py[i] = cy + y1 * radius * persp;
-        pz[i] = z2;
+      cc.save();
+      cc.translate(cx, cy);
+      cc.scale(s, s);
+      cc.transform(1, pitch * .07, yaw * .05, 1, 0, 0);
+
+      var halo = cc.createRadialGradient(0, 0, 10, 0, 0, 150);
+      halo.addColorStop(0, 'rgba(255,238,222,.18)');
+      halo.addColorStop(1, 'rgba(255,238,222,0)');
+      cc.fillStyle = halo; cc.beginPath(); cc.arc(0, 0, 150, 0, Math.PI * 2); cc.fill();
+
+      cc.fillStyle = '#fff4e8';
+      cc.beginPath(); cc.ellipse(0, 104, 72, 46, 0, 0, Math.PI * 2); cc.fill();
+      cc.strokeStyle = 'rgba(196,140,116,.30)'; cc.lineWidth = 2; cc.stroke();
+      cc.fillStyle = '#ffe6d2';
+      cc.beginPath(); cc.ellipse(-38, 132, 25, 15, 0, 0, Math.PI * 2); cc.fill();
+      cc.beginPath(); cc.ellipse(38, 132, 25, 15, 0, 0, Math.PI * 2); cc.fill();
+
+      cc.fillStyle = '#fff4e8'; cc.strokeStyle = 'rgba(196,140,116,.45)'; cc.lineWidth = 2;
+      cc.beginPath(); cc.moveTo(-78, -58); cc.lineTo(-62, -128); cc.lineTo(-20, -78); cc.closePath(); cc.fill(); cc.stroke();
+      cc.beginPath(); cc.moveTo(78, -58); cc.lineTo(62, -128); cc.lineTo(20, -78); cc.closePath(); cc.fill(); cc.stroke();
+      cc.fillStyle = '#f6b8b0';
+      cc.beginPath(); cc.moveTo(-66, -70); cc.lineTo(-58, -112); cc.lineTo(-32, -78); cc.closePath(); cc.fill();
+      cc.beginPath(); cc.moveTo(66, -70); cc.lineTo(58, -112); cc.lineTo(32, -78); cc.closePath(); cc.fill();
+
+      var g = cc.createLinearGradient(0, -100, 0, 96);
+      g.addColorStop(0, '#fffaf3'); g.addColorStop(1, '#ffe8d6');
+      cc.fillStyle = g;
+      cc.beginPath(); cc.ellipse(0, -4, 92, 84, 0, 0, Math.PI * 2); cc.fill();
+      cc.strokeStyle = 'rgba(196,140,116,.38)'; cc.lineWidth = 2.4; cc.stroke();
+
+      cc.fillStyle = 'rgba(246,158,150,.45)';
+      cc.beginPath(); cc.ellipse(-57, 22, 19, 11, 0, 0, Math.PI * 2); cc.fill();
+      cc.beginPath(); cc.ellipse(57, 22, 19, 11, 0, 0, Math.PI * 2); cc.fill();
+
+      cc.fillStyle = '#2b2724';
+      cc.beginPath(); cc.ellipse(-36, -12, 11, 15, 0, 0, Math.PI * 2); cc.fill();
+      cc.beginPath(); cc.ellipse(36, -12, 11, 15, 0, 0, Math.PI * 2); cc.fill();
+      cc.fillStyle = 'rgba(255,255,255,.92)';
+      cc.beginPath(); cc.arc(-33, -18, 3.6, 0, Math.PI * 2); cc.fill();
+      cc.beginPath(); cc.arc(39, -18, 3.6, 0, Math.PI * 2); cc.fill();
+      cc.beginPath(); cc.arc(-40, -6, 1.6, 0, Math.PI * 2); cc.fill();
+      cc.beginPath(); cc.arc(32, -6, 1.6, 0, Math.PI * 2); cc.fill();
+
+      cc.fillStyle = '#d2694d';
+      cc.beginPath(); cc.moveTo(0, 12); cc.lineTo(-8, 4); cc.lineTo(8, 4); cc.closePath(); cc.fill();
+      cc.strokeStyle = '#9c6a53'; cc.lineWidth = 2.2; cc.lineCap = 'round';
+      cc.beginPath(); cc.moveTo(0, 12); cc.lineTo(0, 19); cc.moveTo(0, 19); cc.quadraticCurveTo(-9, 29, -17, 20); cc.moveTo(0, 19); cc.quadraticCurveTo(9, 29, 17, 20); cc.stroke();
+      cc.strokeStyle = 'rgba(156,106,83,.42)'; cc.lineWidth = 1.6;
+      cc.beginPath(); cc.moveTo(-58, 12); cc.lineTo(-108, 4); cc.moveTo(-58, 18); cc.lineTo(-106, 24);
+      cc.moveTo(58, 12); cc.lineTo(108, 4); cc.moveTo(58, 18); cc.lineTo(106, 24); cc.stroke();
+      cc.strokeStyle = 'rgba(210,106,76,.32)'; cc.lineWidth = 3;
+      cc.beginPath(); cc.moveTo(-12, -62); cc.quadraticCurveTo(0, -52, 12, -62); cc.stroke();
+      cc.restore();
+
+      for (var d = 0; d < 5; d++) {
+        var a = .05 + .03 * Math.sin(now * .0007 + d);
+        var dx = cx + Math.sin(now * .00035 + d * 1.7) * s * (95 + d * 13);
+        var dy = cy + Math.cos(now * .00042 + d * 1.3) * s * (105 + d * 9);
+        cc.fillStyle = d % 2 ? 'rgba(255,214,196,' + a.toFixed(3) + ')' : 'rgba(255,255,255,' + a.toFixed(3) + ')';
+        cc.beginPath(); cc.arc(dx, dy, 2 + d * .6, 0, Math.PI * 2); cc.fill();
       }
-
-      // 連線：薄荷／苔綠玻璃線，深度決定亮度
-      for (var e = 0; e < CAT_E.length; e++) {
-        var u = CAT_E[e][0], v2 = CAT_E[e][1];
-        var depth = (pz[u] + pz[v2] + 2) / 4;
-        var alpha = (.10 + depth * .42).toFixed(3);
-        cc.strokeStyle = e >= 24 && e <= 27 ? 'rgba(63,141,127,' + (.16 + depth * .40).toFixed(3) + ')'
-          : 'rgba(63,141,127,' + alpha + ')';
-        cc.lineWidth = e >= 24 && e <= 27 ? 1.1 : 1.5;
-        cc.beginPath(); cc.moveTo(px[u], py[u]); cc.lineTo(px[v2], py[v2]); cc.stroke();
-      }
-
-      // 節點：前面大而亮，後面小而淡
-      for (var n = 0; n < CAT_V.length; n++) {
-        var d = (pz[n] + 1) / 2;
-        var r = Math.max(.6, 1.6 + d * 3.2);
-        cc.fillStyle = (n === 19) ? 'rgba(210,106,76,' + (.55 + d * .4).toFixed(3) + ')'
-          : 'rgba(63,141,127,' + (.24 + d * .58).toFixed(3) + ')';
-        cc.beginPath(); cc.arc(px[n], py[n], r, 0, Math.PI * 2); cc.fill();
-      }
-
-      // 眼睛：深色橢圓＋高光
-      for (var q = 0; q < 2; q++) {
-        var ee = q === 0 ? 17 : 18, hi = q === 0 ? 27 : 28;
-        var ed = (pz[ee] + 1) / 2, er = Math.max(2.4, 5 + ed * 5);
-        cc.fillStyle = 'rgba(31,45,42,' + (.55 + ed * .42).toFixed(3) + ')';
-        cc.beginPath(); cc.ellipse(px[ee], py[ee], er * .82, er, 0, 0, Math.PI * 2); cc.fill();
-        cc.fillStyle = 'rgba(255,255,255,.9)';
-        cc.beginPath(); cc.arc(px[hi], py[hi], Math.max(1, 1.8 + ed * 1.6), 0, Math.PI * 2); cc.fill();
-      }
-
-      // 鼻子：暖陶三角
-      cc.fillStyle = 'rgba(210,106,76,.86)';
-      cc.beginPath(); cc.moveTo(px[19], py[19] - 3);
-      cc.lineTo(px[19] - 5, py[19] + 3); cc.lineTo(px[19] + 5, py[19] + 3); cc.closePath(); cc.fill();
-
-      // 核心呼吸光暈
-      var pulse = .07 + .035 * Math.sin(now * .0008);
-      var g = cc.createRadialGradient(cx, cy, 0, cx, cy, radius * 1.35);
-      g.addColorStop(0, 'rgba(63,141,127,' + pulse.toFixed(3) + ')');
-      g.addColorStop(1, 'rgba(63,141,127,0)');
-      cc.fillStyle = g; cc.beginPath(); cc.arc(cx, cy, radius * 1.35, 0, Math.PI * 2); cc.fill();
-
-      craf = window.requestAnimationFrame(catDraw);
+      if (!reduceMotion) craf = window.requestAnimationFrame(catDraw);
     }
     catResize(); catDraw();
     window.addEventListener('resize', catResize, { passive: true });
-    if ('IntersectionObserver' in window) {
+    if ('IntersectionObserver' in window && !reduceMotion) {
       var cio = new IntersectionObserver(function (entries) { cvisible = entries[0].isIntersecting; }, { threshold: .01 });
       cio.observe(catCanvas);
     }

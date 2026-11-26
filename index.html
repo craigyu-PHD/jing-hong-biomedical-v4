@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;800&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=12">
+<link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
 
@@ -79,24 +79,29 @@
         <div><b>2</b><span data-i18n="hero.p3">清晰產品線</span></div>
       </div>
     </div>
-    <div class="hero-visual">
-      
-      <div class="hero-photo"><img class="photo-main" src="assets/pet-dog.jpg" alt="狗與自然生活意象示意照片"></div>
-      <div class="hero-card"><b data-i18n="hero.card1">ANUBIS 寵物保健</b><span data-i18n="hero.card2">草本萃取 · 犬貓日常保養</span></div>
-    </div>
+    <div class="hero-visual" aria-hidden="true"></div>
   </div>
   <div class="scroll-hint">SCROLL</div>
 </section>
 
 <section class="history" id="history"><div class="wrap">
   <div class="history-head"><div class="eyebrow">MILESTONES / 公司沿革</div><h2 data-i18n="hist.title">一路走來，<br>把照護做得更清楚。</h2><p data-i18n="hist.sub">從一個原料起點，到兩條產品線。以下時程為示意，正式資料待公司確認。</p></div>
-  <div class="timeline">
-    <div class="tl-row"><div class="tl-year">2003</div><div class="tl-track"><span class="tl-dot"></span></div><div class="tl-content"><h3 data-i18n="hist.y1">品牌起步</h3><p data-i18n="hist.d1">以牛樟芝與草本素材為起點，建立原料選購的第一步。</p></div></div>
-    <div class="tl-row"><div class="tl-year">2008</div><div class="tl-track"><span class="tl-dot"></span></div><div class="tl-content"><h3 data-i18n="hist.y2">產品線成形</h3><p data-i18n="hist.d2">膠囊、複方與晶萃系列陸續整理，確立人用保健主軸。</p></div></div>
-    <div class="tl-row"><div class="tl-year">2013</div><div class="tl-track"><span class="tl-dot"></span></div><div class="tl-content"><h3 data-i18n="hist.y3">代工服務</h3><p data-i18n="hist.d3">從配方到包裝，開始提供 OEM / ODM 開發支援。</p></div></div>
-    <div class="tl-row"><div class="tl-year">2018</div><div class="tl-track"><span class="tl-dot"></span></div><div class="tl-content"><h3 data-i18n="hist.y4">ANUBIS 寵物保健</h3><p data-i18n="hist.d4">將照護延伸到犬貓，建立泌尿、心血管與眼部品項。</p></div></div>
-    <div class="tl-row"><div class="tl-year">2022</div><div class="tl-track"><span class="tl-dot"></span></div><div class="tl-content"><h3 data-i18n="hist.y5">品質文件化</h3><p data-i18n="hist.d5">原料溯源、三萜類標示與第三方檢驗資料逐步完備。</p></div></div>
-    <div class="tl-row"><div class="tl-year">2026</div><div class="tl-track"><span class="tl-dot"></span></div><div class="tl-content"><h3 data-i18n="hist.y6">雙語官網</h3><p data-i18n="hist.d6">人用與寵物分區呈現，商城與訂單系統分流通路。</p></div></div>
+  <div class="timeline" aria-label="公司沿革時間軸">
+    <div class="tl-rail" aria-hidden="true"><span class="tl-rail-fill"></span></div>
+    <div class="tl-strip" id="tlStrip">
+      <article class="tl-node"><span class="tl-node-dot"></span><time>2003</time><h3 data-i18n="hist.y1">品牌起步</h3><p data-i18n="hist.d1">以牛樟芝與草本素材為起點，建立原料選購的第一步。</p></article>
+      <article class="tl-node"><span class="tl-node-dot"></span><time>2008</time><h3 data-i18n="hist.y2">產品線成形</h3><p data-i18n="hist.d2">膠囊、複方與晶萃系列陸續整理，確立人用保健主軸。</p></article>
+      <article class="tl-node"><span class="tl-node-dot"></span><time>2013</time><h3 data-i18n="hist.y3">代工服務</h3><p data-i18n="hist.d3">從配方到包裝，開始提供 OEM / ODM 開發支援。</p></article>
+      <article class="tl-node"><span class="tl-node-dot"></span><time>2018</time><h3 data-i18n="hist.y4">ANUBIS 寵物保健</h3><p data-i18n="hist.d4">將照護延伸到犬貓，建立泌尿、心血管與眼部品項。</p></article>
+      <article class="tl-node"><span class="tl-node-dot"></span><time>2022</time><h3 data-i18n="hist.y5">品質文件化</h3><p data-i18n="hist.d5">原料溯源、三萜類標示與第三方檢驗資料逐步完備。</p></article>
+      <article class="tl-node"><span class="tl-node-dot"></span><time>2026</time><h3 data-i18n="hist.y6">雙語官網</h3><p data-i18n="hist.d6">人用與寵物分區呈現，商城與訂單系統分流通路。</p></article>
+    </div>
+    <div class="tl-controls"><button type="button" data-tl="prev" aria-label="上一段">←</button><span class="tl-progress"><i></i></span><button type="button" data-tl="next" aria-label="下一段">→</button></div>
+  </div>
+  <div class="history-dog reveal">
+    <img src="assets/dog-running.jpg" alt="狗狗奔跑的橫式示意照片" loading="lazy">
+    <span class="hd-overlay" aria-hidden="true"></span>
+    <div class="hd-copy"><span data-i18n="hist.dogTag">ANUBIS / 日常的活力</span><b data-i18n="hist.dogTitle">把照護，帶進每一次奔跑。</b><p data-i18n="hist.dogText">從原料到日常保養，讓毛孩的每一步都有清楚依據。（示意照片）</p></div>
   </div>
   <p class="hist-note" data-i18n="hist.note">以上年份與事件為版面示意，正式沿革以公司核准資料為準。</p>
 </div></section>
@@ -204,6 +209,18 @@
   <div class="glass reveal d1"><h4 data-i18n="portal.h">PORTAL FEATURES</h4><ul><li><b>01</b><span data-i18n="portal.f1">商城散戶選購／訂單會員身份識別</span></li><li><b>02</b><span data-i18n="portal.f2">線上訂購與價格試算</span></li><li><b>03</b><span data-i18n="portal.f3">出貨進度與物流追蹤</span></li><li><b>04</b><span data-i18n="portal.f4">售後申請與客服訊息</span></li></ul></div>
 </div></section>
 
+<section class="section soft" id="faq"><div class="wrap narrow">
+  <div class="section-head reveal"><div class="eyebrow">Q&A / 常見問題</div><h2 data-i18n="faq.title">常見問題，一次說清楚。</h2><p data-i18n="faq.sub">從選購、價格、付款到合作流程，先整理幾個最常被問到的問題。</p></div>
+  <div class="faq-list">
+    <details class="faq reveal"><summary data-i18n="faq.q1">網站上的產品資訊是正式資料嗎？</summary><p data-i18n="faq.a1">本站為老闆審閱用設計提案，品項、照片與價格摘錄自公開通路並作示意；實際成分、劑量、效期、價格與庫存皆以公司核准文件為準。</p></details>
+    <details class="faq reveal"><summary data-i18n="faq.q2">散戶要如何選購？批發要從哪裡進入？</summary><p data-i18n="faq.a2">散戶朋友請使用「購物商城」；批發商、大型會員與企業送禮請使用「訂單系統」，由專人對接身份驗證與報價。</p></details>
+    <details class="faq reveal"><summary data-i18n="faq.q3">商城的價格可以用哪些幣別？</summary><p data-i18n="faq.a3">目前提供新台幣（NT$）與美金（USD）切換。匯率會自動向公開匯率服務更新四捨五入至小數點後兩位；實際交易幣別與金額以正式訂單為準。</p></details>
+    <details class="faq reveal"><summary data-i18n="faq.q4">線上結帳提供哪些付款方式？</summary><p data-i18n="faq.a4">結帳頁示範信用卡刷卡（Visa）與 LINE Pay 兩種常見即時支付選項，預設為 Visa。金流尚未正式串接，請勿在示範頁輸入真實卡片資訊。</p></details>
+    <details class="faq reveal"><summary data-i18n="faq.q5">公司沿革的年份與事件可以引用嗎？</summary><p data-i18n="faq.a5">時間軸採橫式動畫呈現，年份與事件為版面示意，正式對外前請以公司核准的沿革資料替換。</p></details>
+    <details class="faq reveal"><summary data-i18n="faq.q6">毛孩保健產品需要獸醫師指示嗎？</summary><p data-i18n="faq.a6">本站不作疾病診斷、治療或預防之宣稱；寵物品項請依獸醫師指示與正式產品標示使用。</p></details>
+  </div>
+</div></section>
+
 <section class="section" id="contact"><div class="wrap">
   <div class="section-head reveal"><div class="eyebrow">CONTACT / 07</div><h2 data-i18n="contact.title">讓我們從一句話開始。</h2><p data-i18n="contact.sub">產品詢價、通路合作、代工開發或企業送禮，留下需求，我們會盡快回覆。</p></div>
   <div class="contact-grid">
@@ -215,9 +232,9 @@
 
 <footer class="footer"><div class="wrap"><div class="footer-grid">
   <div><a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="44" rx="12" fill="#100d0c"/><path d="M14 32V13" stroke="#faf8f5" stroke-width="3.2" stroke-linecap="round"/><path d="M30 32V13" stroke="#faf8f5" stroke-width="3.2" stroke-linecap="round"/><path d="M14 23c5-8 11 8 16 0" stroke="#a75743" stroke-width="3.2" stroke-linecap="round" fill="none"/><circle cx="30" cy="13" r="2.4" fill="#a19c65"/></svg></span><span><b>精鴻生醫</b><small>JING HONG BIOMEDICAL</small></span></a><p style="margin-top:12px" data-i18n="foot.about">自然，值得被精準對待。本站為設計提案樣板，內容與數據部分為示意，正式發布前請逐項確認。</p></div>
-  <div><h4 data-i18n="foot.links">快速連結</h4><div class="footer-links tech"><a href="#story" data-i18n="nav.story">品牌理念</a><a href="#news" data-i18n="nav.news">最新消息</a><a href="#products" data-i18n="nav.products">產品系列</a><a href="cases.html" data-i18n="nav.cases">實例分享</a><a href="shop.html" data-i18n="nav.shop">購物商城</a><a href="order.html" data-i18n="nav.order">訂單系統</a></div></div>
+  <div><h4 data-i18n="foot.links">快速連結</h4><div class="footer-links tech"><a href="#story" data-i18n="nav.story">品牌理念</a><a href="#news" data-i18n="nav.news">最新消息</a><a href="#products" data-i18n="nav.products">產品系列</a><a href="cases.html" data-i18n="nav.cases">實例分享</a><a href="shop.html" data-i18n="nav.shop">購物商城</a><a href="order.html" data-i18n="nav.order">訂單系統</a><a href="#faq" data-i18n="nav.faq">常見問題</a></div></div>
   <div><h4 data-i18n="foot.disclaimer">資料與免責</h4><p data-i18n="foot.text">公司與產品資訊參考公開商工登記、公開通路與展覽資料整理；示意照片來自 Unsplash。實際成分、規格、檢驗與聯絡資訊以公司核准文件為準。本站不作疾病診斷、治療或預防之宣稱。</p></div>
-</div><div class="footer-bottom"><span>© 2026 精鴻生醫 · 設計提案 v12</span><a href="#top" data-i18n="foot.top">回到頂端 ↑</a></div></div></footer>
-<script src="script.js?v=12"></script>
+</div><div class="footer-bottom"><span>© 2026 精鴻生醫 · 設計提案 v13</span><a href="#top" data-i18n="foot.top">回到頂端 ↑</a></div></div></footer>
+<script src="script.js?v=13"></script>
 </body>
 </html>
