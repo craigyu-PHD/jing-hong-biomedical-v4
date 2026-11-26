@@ -2,7 +2,7 @@
 
 依老闆第八輪回饋修正貓咪造型、時間軸、手機視覺與手機功能。公開網址不變：`https://craigyu-PHD.github.io/jing-hong-biomedical-v4/`。
 
-> v14 本機 QA 全綠，使用者已明確授權直接部署；部署完成後本段改為上線狀態。
+> v14 已於 2026-11-26 經使用者授權直接部署，commit `07dac66`，Pages 50 秒建置完成；公開五頁與素材皆回 200，線上 smoke 全綠。
 
 ## 本輪改造（v14）
 
@@ -41,7 +41,7 @@ python3 -m http.server 8765
 
 ## 部署
 
-GitHub Pages 由 `main` 分支根目錄提供，無需建置。v8–v13 已推送；v14 由使用者明確授權直接部署，commit 與 Pages 驗證狀態記於 `006_陳董/handoff.md`。
+GitHub Pages 由 `main` 分支根目錄提供，無需建置。v8–v14 已分別推送；v14 commit `07dac66`，Pages 50 秒建置完成，五頁／CSS／JS／狗照皆 200，線上驗證見 `006_陳董/handoff.md`。
 
 ## 免責
 
