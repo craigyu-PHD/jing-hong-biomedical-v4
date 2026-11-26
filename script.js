@@ -1,4 +1,4 @@
-/* 精鴻生醫 v13 — 橫式時間軸、暖色正面貓咪、橫式狗狗、即時匯率、結帳頁、Q&A */
+/* 精鴻生醫 v14 — 線點貓咪、連續橫向沿革、手機導覽與背景、即時匯率、結帳頁、Q&A */
 (function () {
   'use strict';
 
@@ -600,26 +600,6 @@
     histObs.observe(histSec);
   } else if (histSec) { histSec.classList.add('in-view'); }
 
-  var tlStrip = document.getElementById('tlStrip');
-  if (tlStrip) {
-    var tlNodes = tlStrip.querySelectorAll('.tl-node');
-    var tlProgress = document.querySelector('.tl-progress i');
-    function tlUpdate() {
-      var max = tlStrip.scrollWidth - tlStrip.clientWidth;
-      var idx = max > 0 ? Math.round(tlStrip.scrollLeft / max * (tlNodes.length - 1)) : 0;
-      if (tlProgress) tlProgress.style.transform = 'translateX(' + (idx * 100) + '%)';
-    }
-    tlStrip.addEventListener('scroll', tlUpdate, { passive: true });
-    var tlBtns = document.querySelectorAll('[data-tl]');
-    for (var tbi = 0; tbi < tlBtns.length; tbi++) tlBtns[tbi].addEventListener('click', function () {
-      var dir = this.getAttribute('data-tl') === 'next' ? 1 : -1;
-      var step = tlNodes.length ? tlNodes[0].getBoundingClientRect().width + 14 : 200;
-      tlStrip.scrollBy({ left: dir * step, behavior: 'smooth' });
-    });
-    window.addEventListener('resize', tlUpdate, { passive: true });
-    tlUpdate();
-  }
-
   /* ---------- 選單／捲動 ---------- */
   var nav = document.getElementById('siteNav');
   var toggle = document.querySelector('.nav-toggle');
@@ -1177,7 +1157,7 @@
   for (var qb = 0; qb < qBtns.length; qb++) qBtns[qb].addEventListener('click', function () { replyChat(this.getAttribute('data-chat-q')); });
   if (cbForm) cbForm.addEventListener('submit', function (e) { e.preventDefault(); replyChat(0); });
 
-  /* ---------- Hero 暖色正面貓咪：微幅跟隨，不翻面 ---------- */
+  /* ---------- Hero 貓咪：回歸線條＋節點，微幅呼吸不翻面 ---------- */
   var catCanvas = document.getElementById('bioCanvas');
   if (catCanvas && catCanvas.getContext) {
     var cc = catCanvas.getContext('2d');
@@ -1188,6 +1168,22 @@
       tmx = Math.max(-1, Math.min(1, (e.clientX / window.innerWidth - .5) * 2));
       tmy = Math.max(-1, Math.min(1, (e.clientY / window.innerHeight - .5) * 2));
     }, { passive: true });
+
+    var CAT_V = [
+      [-.86,-.14,.02],[-.80,-.50,.04],[-.54,-.80,.06],[-.22,-.94,.08],[.22,-.94,.08],[.54,-.80,.06],
+      [.80,-.50,.04],[.86,-.14,.02],[.74,.34,.02],[.40,.68,.06],[0,.82,.10],[-.40,.68,.06],[-.74,.34,.02],
+      [-.74,-1.08,.00],[-.44,-.74,.12],[.74,-1.08,.00],[.44,-.74,.12],
+      [-.34,-.18,.44],[.34,-.18,.44],[0,.16,.58],[0,.36,.50],
+      [-.58,.12,.18],[.58,.12,.18],[-1.28,.30,.02],[-1.20,.54,.02],[1.28,.30,.02],[1.20,.54,.02],
+      [-.28,-.24,.52],[.40,-.24,.52]
+    ];
+    var CAT_E = [];
+    for (var ei = 0; ei < 12; ei++) CAT_E.push([ei, ei + 1]);
+    CAT_E.push([12, 0]);
+    CAT_E.push([2, 13], [13, 14], [14, 3], [5, 15], [15, 16], [16, 4]);
+    CAT_E.push([14, 17], [16, 18], [17, 19], [18, 19], [19, 20], [20, 21], [20, 22], [17, 21], [18, 22]);
+    CAT_E.push([21, 23], [21, 24], [22, 25], [22, 26]);
+
     function catResize() {
       var rect = catCanvas.getBoundingClientRect();
       cdpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -1196,77 +1192,81 @@
       cc.setTransform(cdpr, 0, 0, cdpr, 0, 0);
     }
     function catDraw() {
-      if (!cvisible) { craf = window.requestAnimationFrame(catDraw); return; }
+      if (!cvisible && !reduceMotion) { craf = window.requestAnimationFrame(catDraw); return; }
       cc.clearRect(0, 0, cw, ch);
       var now = reduceMotion ? 0 : Date.now();
-      cmx += (tmx - cmx) * .045; cmy += (tmy - cmy) * .045;
-      var bob = reduceMotion ? 0 : Math.sin(now * .0012) * 4;
-      var idle = reduceMotion ? 0 : Math.sin(now * .00055) * .035;
-      var yaw = cmx * .16 + idle, pitch = cmy * .10;
-      var s = Math.min(cw * .30, ch * .44) / 150;
-      var cx = cw * .5 + cmx * 12, cy = ch * .50 + bob;
+      cmx += (tmx - cmx) * .05; cmy += (tmy - cmy) * .05;
+      var yaw = cmx * .30 + (reduceMotion ? 0 : Math.sin(now * .00035) * .10);
+      var pitch = -cmy * .22 + (reduceMotion ? 0 : Math.sin(now * .00052) * .05);
+      var cyaw = Math.cos(yaw), syaw = Math.sin(yaw), cp = Math.cos(pitch), sp = Math.sin(pitch);
+      var breath = reduceMotion ? 1 : 1 + Math.sin(now * .0009) * .018;
+      var cx = cw * .5 + cmx * 10, cy = ch * .52 - cmy * 8;
+      var radius = Math.min(cw * .30, ch * .46) * breath;
+      var px = [], py = [], pz = [];
 
-      cc.save();
-      cc.translate(cx, cy);
-      cc.scale(s, s);
-      cc.transform(1, pitch * .07, yaw * .05, 1, 0, 0);
-
-      var halo = cc.createRadialGradient(0, 0, 10, 0, 0, 150);
-      halo.addColorStop(0, 'rgba(255,238,222,.18)');
-      halo.addColorStop(1, 'rgba(255,238,222,0)');
-      cc.fillStyle = halo; cc.beginPath(); cc.arc(0, 0, 150, 0, Math.PI * 2); cc.fill();
-
-      cc.fillStyle = '#fff4e8';
-      cc.beginPath(); cc.ellipse(0, 104, 72, 46, 0, 0, Math.PI * 2); cc.fill();
-      cc.strokeStyle = 'rgba(196,140,116,.30)'; cc.lineWidth = 2; cc.stroke();
-      cc.fillStyle = '#ffe6d2';
-      cc.beginPath(); cc.ellipse(-38, 132, 25, 15, 0, 0, Math.PI * 2); cc.fill();
-      cc.beginPath(); cc.ellipse(38, 132, 25, 15, 0, 0, Math.PI * 2); cc.fill();
-
-      cc.fillStyle = '#fff4e8'; cc.strokeStyle = 'rgba(196,140,116,.45)'; cc.lineWidth = 2;
-      cc.beginPath(); cc.moveTo(-78, -58); cc.lineTo(-62, -128); cc.lineTo(-20, -78); cc.closePath(); cc.fill(); cc.stroke();
-      cc.beginPath(); cc.moveTo(78, -58); cc.lineTo(62, -128); cc.lineTo(20, -78); cc.closePath(); cc.fill(); cc.stroke();
-      cc.fillStyle = '#f6b8b0';
-      cc.beginPath(); cc.moveTo(-66, -70); cc.lineTo(-58, -112); cc.lineTo(-32, -78); cc.closePath(); cc.fill();
-      cc.beginPath(); cc.moveTo(66, -70); cc.lineTo(58, -112); cc.lineTo(32, -78); cc.closePath(); cc.fill();
-
-      var g = cc.createLinearGradient(0, -100, 0, 96);
-      g.addColorStop(0, '#fffaf3'); g.addColorStop(1, '#ffe8d6');
-      cc.fillStyle = g;
-      cc.beginPath(); cc.ellipse(0, -4, 92, 84, 0, 0, Math.PI * 2); cc.fill();
-      cc.strokeStyle = 'rgba(196,140,116,.38)'; cc.lineWidth = 2.4; cc.stroke();
-
-      cc.fillStyle = 'rgba(246,158,150,.45)';
-      cc.beginPath(); cc.ellipse(-57, 22, 19, 11, 0, 0, Math.PI * 2); cc.fill();
-      cc.beginPath(); cc.ellipse(57, 22, 19, 11, 0, 0, Math.PI * 2); cc.fill();
-
-      cc.fillStyle = '#2b2724';
-      cc.beginPath(); cc.ellipse(-36, -12, 11, 15, 0, 0, Math.PI * 2); cc.fill();
-      cc.beginPath(); cc.ellipse(36, -12, 11, 15, 0, 0, Math.PI * 2); cc.fill();
-      cc.fillStyle = 'rgba(255,255,255,.92)';
-      cc.beginPath(); cc.arc(-33, -18, 3.6, 0, Math.PI * 2); cc.fill();
-      cc.beginPath(); cc.arc(39, -18, 3.6, 0, Math.PI * 2); cc.fill();
-      cc.beginPath(); cc.arc(-40, -6, 1.6, 0, Math.PI * 2); cc.fill();
-      cc.beginPath(); cc.arc(32, -6, 1.6, 0, Math.PI * 2); cc.fill();
-
-      cc.fillStyle = '#d2694d';
-      cc.beginPath(); cc.moveTo(0, 12); cc.lineTo(-8, 4); cc.lineTo(8, 4); cc.closePath(); cc.fill();
-      cc.strokeStyle = '#9c6a53'; cc.lineWidth = 2.2; cc.lineCap = 'round';
-      cc.beginPath(); cc.moveTo(0, 12); cc.lineTo(0, 19); cc.moveTo(0, 19); cc.quadraticCurveTo(-9, 29, -17, 20); cc.moveTo(0, 19); cc.quadraticCurveTo(9, 29, 17, 20); cc.stroke();
-      cc.strokeStyle = 'rgba(156,106,83,.42)'; cc.lineWidth = 1.6;
-      cc.beginPath(); cc.moveTo(-58, 12); cc.lineTo(-108, 4); cc.moveTo(-58, 18); cc.lineTo(-106, 24);
-      cc.moveTo(58, 12); cc.lineTo(108, 4); cc.moveTo(58, 18); cc.lineTo(106, 24); cc.stroke();
-      cc.strokeStyle = 'rgba(210,106,76,.32)'; cc.lineWidth = 3;
-      cc.beginPath(); cc.moveTo(-12, -62); cc.quadraticCurveTo(0, -52, 12, -62); cc.stroke();
-      cc.restore();
-
-      for (var d = 0; d < 5; d++) {
-        var a = .05 + .03 * Math.sin(now * .0007 + d);
-        var dx = cx + Math.sin(now * .00035 + d * 1.7) * s * (95 + d * 13);
-        var dy = cy + Math.cos(now * .00042 + d * 1.3) * s * (105 + d * 9);
-        cc.fillStyle = d % 2 ? 'rgba(255,214,196,' + a.toFixed(3) + ')' : 'rgba(255,255,255,' + a.toFixed(3) + ')';
-        cc.beginPath(); cc.arc(dx, dy, 2 + d * .6, 0, Math.PI * 2); cc.fill();
+      for (var i = 0; i < CAT_V.length; i++) {
+        var v = CAT_V[i], x = v[0], y = v[1], z = v[2];
+        if (i === 13 || i === 15) { x *= 1 + cmy * .08; y *= 1 + cmy * .12; }
+        if (i === 14 || i === 16) x *= 1 + cmy * .06;
+        if (i === 23 || i === 24 || i === 25 || i === 26) x *= 1 + cmx * .10;
+        var x1 = x * cyaw - z * syaw, z1 = x * syaw + z * cyaw;
+        var y1 = y * cp - z1 * sp, z2 = y * sp + z1 * cp;
+        var persp = 2.7 / (3.0 + z2);
+        px[i] = cx + x1 * radius * persp;
+        py[i] = cy + y1 * radius * persp;
+        pz[i] = z2;
       }
+
+      var glow = cc.createRadialGradient(cx, cy, radius * .1, cx, cy, radius * 1.35);
+      glow.addColorStop(0, 'rgba(63,141,127,.10)');
+      glow.addColorStop(.62, 'rgba(161,156,101,.05)');
+      glow.addColorStop(1, 'rgba(63,141,127,0)');
+      cc.fillStyle = glow; cc.beginPath(); cc.arc(cx, cy, radius * 1.35, 0, Math.PI * 2); cc.fill();
+
+      cc.lineCap = 'round'; cc.lineJoin = 'round';
+      for (var pass = 0; pass < 2; pass++) {
+        for (var e = 0; e < CAT_E.length; e++) {
+          var u = CAT_E[e][0], v2 = CAT_E[e][1];
+          var depth = (pz[u] + pz[v2] + 2) / 4;
+          var whisker = e >= CAT_E.length - 4;
+          if (pass === 0) {
+            cc.strokeStyle = 'rgba(63,141,127,' + (.05 + depth * .10).toFixed(3) + ')';
+            cc.lineWidth = whisker ? 4.5 : 5.5;
+          } else {
+            cc.strokeStyle = whisker
+              ? 'rgba(210,106,76,' + (.18 + depth * .42).toFixed(3) + ')'
+              : 'rgba(63,141,127,' + (.12 + depth * .50).toFixed(3) + ')';
+            cc.lineWidth = whisker ? 1 : 1.7;
+          }
+          cc.beginPath(); cc.moveTo(px[u], py[u]); cc.lineTo(px[v2], py[v2]); cc.stroke();
+        }
+      }
+
+      for (var n = 0; n < CAT_V.length; n++) {
+        var d = (pz[n] + 1) / 2;
+        var r = Math.max(.8, 1.5 + d * 3.4);
+        var nose = n === 19;
+        cc.fillStyle = nose
+          ? 'rgba(210,106,76,' + (.65 + d * .35).toFixed(3) + ')'
+          : 'rgba(63,141,127,' + (.25 + d * .60).toFixed(3) + ')';
+        cc.shadowColor = nose ? 'rgba(210,106,76,.5)' : 'rgba(63,141,127,.45)';
+        cc.shadowBlur = d > .55 ? 8 : 0;
+        cc.beginPath(); cc.arc(px[n], py[n], r, 0, Math.PI * 2); cc.fill();
+        cc.shadowBlur = 0;
+      }
+
+      for (var q = 0; q < 2; q++) {
+        var ee = q === 0 ? 17 : 18, hi = q === 0 ? 27 : 28;
+        var ed = (pz[ee] + 1) / 2, er = Math.max(2.2, 4.5 + ed * 4.5);
+        cc.fillStyle = 'rgba(31,45,42,' + (.60 + ed * .38).toFixed(3) + ')';
+        cc.beginPath(); cc.ellipse(px[ee], py[ee], er * .82, er, 0, 0, Math.PI * 2); cc.fill();
+        cc.fillStyle = 'rgba(255,255,255,.92)';
+        cc.beginPath(); cc.arc(px[hi], py[hi], Math.max(1, 1.6 + ed * 1.5), 0, Math.PI * 2); cc.fill();
+      }
+
+      cc.fillStyle = 'rgba(210,106,76,.9)';
+      cc.beginPath(); cc.moveTo(px[19], py[19] - 3);
+      cc.lineTo(px[19] - 5, py[19] + 3); cc.lineTo(px[19] + 5, py[19] + 3); cc.closePath(); cc.fill();
       if (!reduceMotion) craf = window.requestAnimationFrame(catDraw);
     }
     catResize(); catDraw();
@@ -1280,7 +1280,8 @@
 
   /* ---------- Hero 真實點陣世界地圖（多邊形大陸＋連線） ---------- */
   var mapCanvas = document.getElementById('globalMap');
-  if (mapCanvas && mapCanvas.getContext && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (mapCanvas && mapCanvas.getContext) {
+    var mapReduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var mctx = mapCanvas.getContext('2d');
     var mw = 0, mh = 0, mdpr = 1, mapLayer = document.createElement('canvas');
     var mraf = 0, mvisible = true;
@@ -1353,10 +1354,10 @@
       buildMap();
     }
     function drawMap() {
-      if (!mvisible) { mraf = window.requestAnimationFrame(drawMap); return; }
+      if (!mvisible && !mapReduce) { mraf = window.requestAnimationFrame(drawMap); return; }
       mctx.clearRect(0, 0, mw, mh);
       mctx.drawImage(mapLayer, 0, 0, mw, mh);
-      var t = Date.now() * .00030;
+      var t = mapReduce ? .2 : Date.now() * .00030;
       var hub = project(nodes[0][0], nodes[0][1]);
       for (var i = 1; i < nodes.length; i++) {
         var p = project(nodes[i][0], nodes[i][1]);
@@ -1379,7 +1380,7 @@
         mctx.strokeStyle = n === 0 ? 'rgba(210,106,76,.4)' : 'rgba(47,122,112,.3)';
         mctx.beginPath(); mctx.arc(q[0], q[1], 4 + pulse, 0, Math.PI * 2); mctx.stroke();
       }
-      mraf = window.requestAnimationFrame(drawMap);
+      if (!mapReduce) mraf = window.requestAnimationFrame(drawMap);
     }
     resizeMap(); drawMap();
     window.addEventListener('resize', resizeMap, { passive: true });
