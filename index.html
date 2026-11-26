@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;800&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=16">
+<link rel="stylesheet" href="style.css?v=17">
 </head>
 <body>
 
@@ -68,16 +68,16 @@
   <div class="wrap">
     <div>
       <div class="eyebrow" data-i18n="hero.eyebrow">NATURE × SCIENCE × LIFE</div>
-      <h1><span data-i18n="hero.l1">自然的力量，</span><br><em data-i18n="hero.l2">用 science 精準照護</em><br><span class="pet" data-i18n="hero.l3">每一個生命。</span></h1>
+      <h1 class="visible"><span class="text-reveal"><span data-i18n="hero.l1">自然的力量，</span></span><br><span class="text-reveal"><em data-i18n="hero.l2">用 science 精準照護</em></span><br><span class="text-reveal"><span class="pet" data-i18n="hero.l3">每一個生命。</span></span></h1>
       <p class="lead" data-i18n="hero.lead">從人用保健到毛孩的日常照護，精鴻生醫把原料、配方與檢驗，做成一套能被看見、能被信任的標準。</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#products" data-i18n="hero.cta1">探索產品系列 →</a>
         <a class="btn btn-ghost" href="cases.html" data-i18n="hero.cta2">查看合作實例</a>
       </div>
       <div class="hero-proof">
-        <div><b>2003</b><span data-i18n="hero.p1">品牌起步年份</span></div>
-        <div><b>14+</b><span data-i18n="hero.p2">人用與寵物品項</span></div>
-        <div><b>2</b><span data-i18n="hero.p3">清晰產品線</span></div>
+        <div><b data-count="2003">2003</b><span data-i18n="hero.p1">品牌起步年份（示意）</span></div>
+        <div><b data-count="15" data-suffix="+">15+</b><span data-i18n="hero.p2">人用與寵物品項</span></div>
+        <div><b data-count="2">2</b><span data-i18n="hero.p3">清晰產品線</span></div>
       </div>
     </div>
     <div class="hero-visual" aria-hidden="true"></div>
@@ -96,7 +96,16 @@
 </nav>
 
 <section class="history" id="history"><div class="wrap">
-  <div class="history-head"><div class="eyebrow">MILESTONES / 公司沿革</div><h2 data-i18n="hist.title">一路走來，<br>把照護做得更清楚。</h2><p data-i18n="hist.sub">從一個原料起點，到兩條產品線。以下時程為示意，正式資料待公司確認。</p></div>
+  <div class="history-head"><div class="eyebrow">MILESTONES / 公司沿革</div><h2 data-i18n="hist.title">一路走來，<br>把照護做得更清楚。</h2><p data-i18n="hist.sub">從一個原料起點，到兩條產品線。以下時程為示意，正式資料待公司核准確認。</p>
+    <div class="tl-chapters" role="tablist" aria-label="沿革章節切換">
+      <button type="button" class="tl-ch-btn active" data-tl-ch="0">2003 起步</button>
+      <button type="button" class="tl-ch-btn" data-tl-ch="1">2008 成形</button>
+      <button type="button" class="tl-ch-btn" data-tl-ch="2">2013 代工</button>
+      <button type="button" class="tl-ch-btn" data-tl-ch="3">2018 寵物</button>
+      <button type="button" class="tl-ch-btn" data-tl-ch="4">2022 溯源</button>
+      <button type="button" class="tl-ch-btn" data-tl-ch="5">2026 全球</button>
+    </div>
+  </div>
   <div class="timeline" aria-label="公司沿革時間軸">
     <div class="tl-track" id="tlTrack">
       <div class="tl-line" aria-hidden="true"><span class="tl-line-fill"></span><span class="tl-comet"></span></div>
@@ -140,10 +149,17 @@
   </div>
 </div></section>
 
-<section class="section white" id="story"><div class="wrap feature"><div class="feature-media reveal"><img src="assets/nature.jpg" alt="自然原料與森林意象示意照片" loading="lazy"></div>
-  <div class="reveal d1"><div class="eyebrow">OUR STORY / 02</div><h2 data-i18n="story.title">把「天然」，<br>做成看得懂的科學。</h2><p data-i18n="story.p1">精鴻生醫以牛樟芝與草本素材為起點，逐步拓展到犬貓日常保健。我們相信好的照護不靠形容，而靠資料說話。</p><p data-i18n="story.p2">從 2003 年起步，到建立人用與 ANUBIS 寵物兩條產品線，我們把來源、配方、劑型與文件，變成可以被查閱的標準。</p>
+<section class="section white" id="story"><div class="wrap feature"><div class="feature-media reveal"><img src="assets/nature.jpg" alt="自然原料與森林意象示意照片" loading="lazy" data-parallax></div>
+  <div class="reveal d1"><div class="eyebrow">OUR STORY / 02</div><h2 data-i18n="story.title">把「天然」，<br>做成看得懂的科學。</h2><p data-i18n="story.p1">精鴻生醫以牛樟芝與草本素材為起點，逐步拓展到犬貓日常保健。我們相信好的照護不靠形容，而靠資料說話。</p><p data-i18n="story.p2">從 2003 年起步（年份示意待核准），到建立人用與 ANUBIS 寵物兩條產品線，我們把來源、配方、劑型與文件，變成可以被查閱的標準。</p>
     <ul class="checks"><li><span>✓</span><span data-i18n="story.c1">來源清楚的原料與品項標示</span></li><li><span>✓</span><span data-i18n="story.c2">膠囊、粉劑、噴劑與眼部保養多元劑型</span></li><li><span>✓</span><span data-i18n="story.c3">通路與代工所需的規格文件支援</span></li></ul>
     <div style="margin-top:20px"><a class="btn btn-ghost" href="#craft" data-i18n="story.cta">了解我們的作法 →</a></div>
+  </div>
+</div>
+<div class="wrap">
+  <div class="pillar-grid">
+    <article class="pillar-card tilt-card glow-hover reveal"><span class="pillar-num">01 / VISION</span><h3 data-i18n="about.vTitle">願景｜讓自然照護可被驗證</h3><p data-i18n="about.vDesc">成為亞洲值得信賴的雙線生醫保健品牌，讓每一份原料與配方都能以透明文件回應期待。（企業敘事示意）</p></article>
+    <article class="pillar-card tilt-card glow-hover reveal d1"><span class="pillar-num">02 / MISSION</span><h3 data-i18n="about.mTitle">使命｜人用與毛孩各自獨立照護</h3><p data-i18n="about.mDesc">嚴格區隔人用保健與 ANUBIS 寵物線之成分、劑量與合規標示，以科學製程守護日常健康節奏。</p></article>
+    <article class="pillar-card tilt-card glow-hover reveal d2"><span class="pillar-num">03 / VALUES</span><h3 data-i18n="about.cTitle">核心價值｜溯源・合規・共好</h3><p data-i18n="about.cDesc">不誇大療效、不混用宣稱；以第三方檢驗、批次追蹤與永續採購作為長期品牌承諾。</p></article>
   </div>
 </div></section>
 
@@ -153,6 +169,7 @@
     <button type="button" class="active" data-line-tab="human" role="tab" aria-selected="true" data-i18n="products.tabHuman">人用保健</button>
     <button type="button" data-line-tab="pet" role="tab" aria-selected="false" data-i18n="products.tabPet">ANUBIS 寵物保健</button>
   </div>
+  <div class="snap-toggle-row"><button type="button" class="btn btn-ghost btn-sm" id="toggleSnapGallery" data-i18n="products.snapBtn">切換水平吸附畫廊 ⇄</button></div>
   <div class="line-note" id="lineNoteHuman"><i></i><span data-i18n="products.noteHuman">人用系列｜牛樟芝、複方、益生菌與代工服務</span></div>
   <div class="line-note pet" id="lineNotePet" hidden><i></i><span data-i18n="products.notePet">寵物系列｜犬貓泌尿、心血管、皮膚、眼部與外用護理</span></div>
 
@@ -200,8 +217,56 @@
 
 <section class="section white" id="craft"><div class="wrap">
   <div class="section-head reveal"><div class="eyebrow">OUR CRAFT / 04</div><h2 data-i18n="craft.title">看不見的地方，<br>我們最接近。</h2><p data-i18n="craft.sub">好的產品，是每一個細節都被認真對待的結果。</p></div>
-  <div class="feature reveal"><div class="feature-media"><img src="assets/lab.jpg" alt="研究室檢測意象示意照片" loading="lazy"></div><div><div class="eyebrow">01 / <span data-i18n="craft.e1">素材溯源</span></div><h3 data-i18n="craft.h1">從源頭就開始講究</h3><p data-i18n="craft.p1">優先選用來源清楚的牛樟芝與草本素材，標示素材類型與品項，讓每一批原料都有跡可循。</p><ul class="checks"><li><span>✓</span><span data-i18n="craft.c1">原料類型與來源標示</span></li><li><span>✓</span><span data-i18n="craft.c2">公開品項與包裝資訊對照</span></li></ul></div></div>
-  <div class="feature reverse reveal" style="margin-top:24px"><div class="feature-media"><img src="assets/quality.jpg" alt="品質檢驗意象示意照片" loading="lazy"></div><div><div class="eyebrow pet">02 / <span data-i18n="craft.e2">科學配方</span></div><h3 data-i18n="craft.h2">把感受，變成資料</h3><p data-i18n="craft.p2">三萜類標示、劑型設計與穩定性規劃，用具體資料取代模糊形容；正式檢驗報告與專利文件待公司授權後補上。</p><ul class="checks"><li><span>✓</span><span data-i18n="craft.c3">膠囊、圓粒、噴劑、眼部保養多元劑型</span></li><li><span>✓</span><span data-i18n="craft.c4">通路與代工文件準備</span></li></ul></div></div>
+  <div class="feature reveal"><div class="feature-media"><img src="assets/lab.jpg" alt="研究室檢測意象示意照片" loading="lazy" data-parallax></div><div><div class="eyebrow">01 / <span data-i18n="craft.e1">素材溯源</span></div><h3 data-i18n="craft.h1">從源頭就開始講究</h3><p data-i18n="craft.p1">優先選用來源清楚的牛樟芝與草本素材，標示素材類型與品項，讓每一批原料都有跡可循。</p><ul class="checks"><li><span>✓</span><span data-i18n="craft.c1">原料類型與來源標示</span></li><li><span>✓</span><span data-i18n="craft.c2">公開品項與包裝資訊對照</span></li></ul></div></div>
+  <div class="feature reverse reveal" style="margin-top:24px"><div class="feature-media"><img src="assets/quality.jpg" alt="品質檢驗意象示意照片" loading="lazy" data-parallax></div><div><div class="eyebrow pet">02 / <span data-i18n="craft.e2">科學配方</span></div><h3 data-i18n="craft.h2">把感受，變成資料</h3><p data-i18n="craft.p2">三萜類標示、劑型設計與穩定性規劃，用具體資料取代模糊形容；正式檢驗報告與專利文件待公司授權後補上。</p><ul class="checks"><li><span>✓</span><span data-i18n="craft.c3">膠囊、圓粒、噴劑、眼部保養多元劑型</span></li><li><span>✓</span><span data-i18n="craft.c4">通路與代工文件準備</span></li></ul></div></div>
+
+  <div class="qa-pipeline">
+    <article class="qa-step reveal"><svg class="svg-draw" viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5.5 3.4 10.3 8 12 4.6-1.7 8-6.5 8-12V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg><h4 data-i18n="qa.s1t">01 原料溯源</h4><p data-i18n="qa.s1d">產地、菌種與栽培方式建檔，進料前完成文件核對。（示意）</p></article>
+    <article class="qa-step reveal d1"><svg class="svg-draw" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg><h4 data-i18n="qa.s2t">02 標準製程</h4><p data-i18n="qa.s2d">依劑型規劃溫控萃取、膠囊充填與防潮封裝流程。（示意）</p></article>
+    <article class="qa-step reveal d2"><svg class="svg-draw" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12h8M8 16h5M8 8h8"/></svg><h4 data-i18n="qa.s3t">03 第三方檢驗</h4><p data-i18n="qa.s3d">重金屬、農殘、微生物與指標成分逐批送檢，待公司補齊報告。</p></article>
+    <article class="qa-step reveal d3"><svg class="svg-draw" viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg><h4 data-i18n="qa.s4t">04 批次追蹤</h4><p data-i18n="qa.s4d">獨立批號與效期控管，支援通路查核與售後溯源。（合規預留）</p></article>
+  </div>
+</div></section>
+
+<section class="section soft" id="team"><div class="wrap">
+  <div class="section-head reveal"><div class="eyebrow">EXPERTISE &amp; ESG / 專業團隊與永續</div><h2 data-i18n="team.title">跨領域專業把關，與環境共生</h2><p data-i18n="team.sub">團隊職能與永續行動為企業全景架構示意，正式人員名單與數據待公司核准後公開。</p></div>
+  <div class="team-grid">
+    <article class="team-card tilt-card reveal"><span class="team-role" data-i18n="team.r1">R&amp;D 研發顧問</span><h3 data-i18n="team.n1">生物科技與萃取專家</h3><p data-i18n="team.d1">負責牛樟芝與草本複方之活性指標研究與劑型穩定度規劃。（示意角色）</p></article>
+    <article class="team-card tilt-card reveal d1"><span class="team-role" data-i18n="team.r2">QA &amp; 法規事務</span><h3 data-i18n="team.n2">品質與合規審查組</h3><p data-i18n="team.d2">確保產品標示、批號效期與多市場法規文案獨立控管、不越線。（合規防呆）</p></article>
+    <article class="team-card tilt-card reveal d2"><span class="team-role" data-i18n="team.r3">ANUBIS 獸醫顧問</span><h3 data-i18n="team.n3">犬貓營養與照護團隊</h3><p data-i18n="team.d3">專注寵物生理需求與適口性設計，與人用線完全獨立區隔。（示意角色）</p></article>
+    <article class="team-card tilt-card reveal d3"><span class="team-role" data-i18n="team.r4">OEM / 通路專案</span><h3 data-i18n="team.n4">商業開發與供應鏈</h3><p data-i18n="team.d4">對接連鎖藥局、寵物通路及海外 OEM/ODM 夥伴之交期與文件。（示意角色）</p></article>
+  </div>
+  <div class="esg-grid" id="sustainability">
+    <article class="esg-card reveal"><h3 data-i18n="esg.t1">合法段木復育與永續採購</h3><p data-i18n="esg.d1">堅持來源合法且可追溯之牛樟椴木與植物原料，降低山林生態衝擊。（示意承諾）</p></article>
+    <article class="esg-card reveal d1"><h3 data-i18n="esg.t2">減塑包材與透明標示</h3><p data-i18n="esg.d2">逐步導入可回收外盒與大豆油墨印刷，清楚揭示成分與保存條件。（示意承諾）</p></article>
+    <article class="esg-card reveal d2"><h3 data-i18n="esg.t3">動物友善與無不實宣稱</h3><p data-i18n="esg.d3">拒絕過度包裝與誇大行銷，落實保健食品與寵物照護之法規倫理。</p></article>
+  </div>
+</div></section>
+
+<section class="section white" id="global-presence"><div class="wrap">
+  <div class="section-head reveal"><div class="eyebrow">GLOBAL FOOTPRINT / 全球據點與合作通路</div><h2 data-i18n="gp.title">從台灣出發，連結亞洲與國際通路</h2><p data-i18n="gp.sub">點選地圖光點或右側區域卡片，檢視各市場合作架構與合規原則（目前為示意架構，待公司核准）。</p></div>
+  <div class="global-presence">
+    <div class="gp-map-box reveal">
+      <svg class="gp-svg" viewBox="0 0 600 260" aria-label="全球據點互動地圖">
+        <rect width="600" height="260" rx="12" fill="none"/>
+        <path d="M70,80 Q130,50 185,95 T260,115 T380,85 T490,110" fill="none" stroke="rgba(167,87,67,.25)" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <path d="M430,120 Q360,70 290,90" fill="none" stroke="rgba(112,128,126,.3)" stroke-width="1.5"/>
+        <path d="M430,120 Q495,95 520,105" fill="none" stroke="rgba(176,139,79,.45)" stroke-width="1.5"/>
+        <path d="M430,120 Q420,165 405,180" fill="none" stroke="rgba(112,128,126,.4)" stroke-width="1.5"/>
+        <g class="gp-dot active" data-gp="tw"><circle cx="430" cy="122" r="14" fill="rgba(167,87,67,.18)"/><circle cx="430" cy="122" r="6" fill="var(--clay)"/><text x="430" y="146" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor">TAIWAN HQ</text></g>
+        <g class="gp-dot" data-gp="jp"><circle cx="485" cy="96" r="12" fill="rgba(176,139,79,.18)"/><circle cx="485" cy="96" r="5" fill="var(--moss)"/><text x="485" y="80" text-anchor="middle" font-size="10" font-weight="700" fill="currentColor">JAPAN</text></g>
+        <g class="gp-dot" data-gp="sea"><circle cx="402" cy="176" r="12" fill="rgba(112,128,126,.18)"/><circle cx="402" cy="176" r="5" fill="var(--sage)"/><text x="402" y="200" text-anchor="middle" font-size="10" font-weight="700" fill="currentColor">SE ASIA</text></g>
+        <g class="gp-dot" data-gp="global"><circle cx="150" cy="95" r="12" fill="rgba(112,128,126,.18)"/><circle cx="150" cy="95" r="5" fill="var(--sage-dark)"/><text x="150" y="78" text-anchor="middle" font-size="10" font-weight="700" fill="currentColor">US / EU OEM</text></g>
+      </svg>
+      <div class="gp-detail" id="gpDetail" data-i18n="gp.twDetail">台灣總部（高雄）：品牌研發核心、品質文件中心、連鎖藥局與動物醫院示範通路。（地址為公開登記資訊，通路數據待確認）</div>
+    </div>
+    <div class="gp-cards reveal d1">
+      <button type="button" class="gp-card active" data-gp="tw"><b data-i18n="gp.twName">台灣總部與核心通路</b><span data-i18n="gp.twMeta">人用 TWD 商城・ANUBIS 寵物專區・批發訂單中心</span></button>
+      <button type="button" class="gp-card" data-gp="jp"><b data-i18n="gp.jpName">日本與東北亞市場（預留）</b><span data-i18n="gp.jpMeta">獨立日文合規標示・JPY 報價試算・跨境文件</span></button>
+      <button type="button" class="gp-card" data-gp="sea"><b data-i18n="gp.seaName">東南亞合作通路（預留）</b><span data-i18n="gp.seaMeta">經銷授權驗證・清真與當地食安法規獨立審核</span></button>
+      <button type="button" class="gp-card" data-gp="global"><b data-i18n="gp.globalName">北美與歐洲 OEM / ODM（預留）</b><span data-i18n="gp.globalMeta">USD / EUR 報價・COA 與英文出口裝箱單支援</span></button>
+    </div>
+  </div>
 </div></section>
 
 <section class="section soft" id="cases"><div class="wrap">
@@ -246,7 +311,7 @@
   <div><a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="44" rx="12" fill="#100d0c"/><path d="M14 32V13" stroke="#faf8f5" stroke-width="3.2" stroke-linecap="round"/><path d="M30 32V13" stroke="#faf8f5" stroke-width="3.2" stroke-linecap="round"/><path d="M14 23c5-8 11 8 16 0" stroke="#a75743" stroke-width="3.2" stroke-linecap="round" fill="none"/><circle cx="30" cy="13" r="2.4" fill="#a19c65"/></svg></span><span><b>精鴻生醫</b><small>JING HONG BIOMEDICAL</small></span></a><p style="margin-top:12px" data-i18n="foot.about">自然，值得被精準對待。本站為設計提案樣板，內容與數據部分為示意，正式發布前請逐項確認。</p></div>
   <div><h4 data-i18n="foot.links">快速連結</h4><div class="footer-links tech"><a href="#story" data-i18n="nav.story">品牌理念</a><a href="#news" data-i18n="nav.news">最新消息</a><a href="#products" data-i18n="nav.products">產品系列</a><a href="cases.html" data-i18n="nav.cases">實例分享</a><a href="shop.html" data-i18n="nav.shop">購物商城</a><a href="order.html" data-i18n="nav.order">訂單系統</a><a href="#faq" data-i18n="nav.faq">常見問題</a></div></div>
   <div><h4 data-i18n="foot.disclaimer">資料與免責</h4><p data-i18n="foot.text">公司與產品資訊參考公開商工登記、公開通路與展覽資料整理；示意照片來自 Unsplash。實際成分、規格、檢驗與聯絡資訊以公司核准文件為準。本站不作疾病診斷、治療或預防之宣稱。</p></div>
-</div><div class="footer-bottom"><span>© 2026 精鴻生醫 · 設計提案 v16</span><span><a href="privacy.html" data-i18n="foot.privacy">隱私權與個資告知</a> · <a href="#top" data-i18n="foot.top">回到頂端 ↑</a></span></div></div></footer>
-<script src="script.js?v=16"></script>
+</div><div class="footer-bottom"><span>© 2026 精鴻生醫 · 設計提案 v17</span><span><a href="privacy.html" data-i18n="foot.privacy">隱私權與個資告知</a> · <a href="#top" data-i18n="foot.top">回到頂端 ↑</a></span></div></div></footer>
+<script src="script.js?v=17"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@
 <meta name="description" content="精鴻生醫購物商城展示版：人用保健與 ANUBIS 寵物保健全系列選購、台幣／美金報價與購物車示意。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;800&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=16">
+<link rel="stylesheet" href="style.css?v=17">
 </head>
 <body>
 <div class="topbar"><div class="wrap">
@@ -43,6 +43,16 @@
     <div class="filters" role="group" aria-label="商城分類"><button type="button" class="pill active" data-shop-filter="all" data-i18n="filter.all">全部</button><button type="button" class="pill" data-shop-filter="human" data-i18n="shop.fHuman">人用保健</button><button type="button" class="pill" data-shop-filter="pet" data-i18n="shop.fPet">ANUBIS 寵物</button></div>
     <div class="currency-switch" role="group" aria-label="Currency"><button type="button" class="active" data-cur="TWD">NT$</button><button type="button" data-cur="USD">USD</button><span class="rate-note" id="rateInfo" data-i18n="shop.curNote">匯率載入中…</span><button type="button" class="rate-refresh" id="rateRefresh" aria-label="更新匯率">↻</button></div>
   </div>
+  <div class="shop-adv-filters" aria-label="進階產品篩選">
+    <label><span data-i18n="shop.fltTarget">對象</span><select id="fltTarget"><option value="all" data-i18n="filter.all">全部</option><option value="adult" data-i18n="shop.tAdult">成人</option><option value="cat" data-i18n="shop.tCat">貓用</option><option value="dog-cat" data-i18n="shop.tDogCat">犬貓適用</option><option value="oem" data-i18n="shop.tOem">OEM/ODM</option></select></label>
+    <label><span data-i18n="shop.fltForm">劑型</span><select id="fltForm"><option value="all" data-i18n="filter.all">全部</option><option value="capsule" data-i18n="filter.capsule">膠囊</option><option value="powder" data-i18n="shop.fPowder">粉劑／圓粒</option><option value="extract" data-i18n="filter.extract">晶萃</option><option value="drops" data-i18n="shop.fDrops">滴劑</option><option value="spray" data-i18n="shop.fSpray">噴劑</option><option value="service" data-i18n="filter.service">服務</option></select></label>
+    <label><span data-i18n="shop.fltPurpose">用途</span><select id="fltPurpose"><option value="all" data-i18n="filter.all">全部</option><option value="daily" data-i18n="shop.pDaily">日常保養</option><option value="night" data-i18n="shop.pNight">夜間規劃</option><option value="urinary" data-i18n="filter.urinary">泌尿保健</option><option value="cardio" data-i18n="shop.pCardio">心血管保養</option><option value="immunity" data-i18n="shop.pImmunity">日常防護</option><option value="eye" data-i18n="filter.eye">眼部保養</option><option value="skin" data-i18n="filter.skin">皮膚外用</option><option value="oem" data-i18n="shop.tOem">OEM/ODM</option></select></label>
+    <label><span data-i18n="shop.fltCert">認證／標示</span><select id="fltCert"><option value="all" data-i18n="filter.all">全部</option><option value="patent" data-i18n="shop.cPatent">專利標示</option><option value="triterpene" data-i18n="shop.cTrit">三萜類指標</option><option value="thirdparty" data-i18n="shop.c3rd">第三方檢驗預留</option><option value="vet-guide" data-i18n="shop.cVet">獸醫師指示</option></select></label>
+  </div>
+  <div class="compare-bar" id="compareBar" hidden>
+    <span><b id="compareCount">0</b>/3 <span data-i18n="shop.cmpSelected">已選比較項目</span></span>
+    <div class="compare-bar-actions"><button type="button" class="btn btn-primary btn-sm" id="openCompareBtn" data-i18n="shop.cmpOpen">並排比較 →</button><button type="button" class="btn btn-ghost btn-sm" id="clearCompareBtn" data-i18n="shop.cmpClear">清除</button></div>
+  </div>
 
   <div class="shop-grid" id="shopList">
     <article class="shop-card" data-line="human" data-id="h1" data-price="1280"><div class="sc-media"><img src="assets/product-real-pack.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">CAPSULE</span><h3 data-i18n="p.h1n">牛樟椴木子實體專利膠囊</h3><p class="sc-desc" data-i18n="p.h1d">椴木子實體搭配靈芝與草本複方，日常體質調整的入門選擇。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="h1">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
@@ -60,6 +70,15 @@
     <article class="shop-card" data-line="pet" data-id="p7" data-price="580"><div class="sc-media"><img src="assets/nature.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">SKIN / 外用</span><h3 data-i18n="p.p7n">華康寵物理膚噴劑 50ml</h3><p class="sc-desc" data-i18n="p.p7d">犬貓皆可使用之天然草本外用噴劑，50ml 瓶裝；建議依獸醫師指示使用。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="p7">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
     <article class="shop-card" data-line="pet" data-id="p8" data-price="580"><div class="sc-media"><img src="assets/forest.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">SKIN / 外用</span><h3 data-i18n="p.p8n">恩菲斯寵物外用噴劑 50ml</h3><p class="sc-desc" data-i18n="p.p8d">天然草本萃取外用噴劑，公開通路標示每日 2 至 4 次、按壓噴灑於患處。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="p8">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
     <article class="shop-card" data-line="pet" data-id="p9" data-price="520"><div class="sc-media"><img src="assets/product-natural.jpg" alt="" loading="lazy"></div><div class="sc-body"><span class="sc-tag">SKIN / 外用</span><h3 data-i18n="p.p9n">傷妥立外用粉劑 10g</h3><p class="sc-desc" data-i18n="p.p9d">選用中藥天然素材，維持患部乾爽；10gm 瓶裝，建議由獸醫師指示使用。</p><div class="sc-row"><span class="sc-price"></span><button class="sc-add" type="button" data-add-cart="p9">+ <span data-i18n="shop.cart">購物車</span></button></div></div></article>
+  </div>
+</div></section>
+
+<section class="section white" id="downloads"><div class="wrap">
+  <div class="section-head reveal"><div class="eyebrow">DOWNLOADS / 下載專區</div><h2 data-i18n="dl.title">型錄、檢驗與核准文案範本</h2><p data-i18n="dl.sub">以下為合規文件下載架構示範，正式文件須經公司品質與法規部門核准後上傳替換。</p></div>
+  <div class="dl-grid">
+    <article class="dl-card reveal"><span class="dl-tag">CATALOG</span><h3 data-i18n="dl.c1t">2026 雙線產品型錄摘要</h3><p data-i18n="dl.c1d">含人用保健與 ANUBIS 寵物線 SKU、劑型與規格對照（示意稿）。</p><button type="button" class="btn btn-ghost btn-sm" data-download-doc="catalog" data-i18n="dl.btn">下載示意文件 ↓</button></article>
+    <article class="dl-card reveal d1"><span class="dl-tag">LAB COA</span><h3 data-i18n="dl.c2t">第三方檢驗報告範本</h3><p data-i18n="dl.c2d">重金屬、農殘、微生物與批號追蹤欄位標準格式（待補正式報告）。</p><button type="button" class="btn btn-ghost btn-sm" data-download-doc="coa" data-i18n="dl.btn">下載示意文件 ↓</button></article>
+    <article class="dl-card reveal d2"><span class="dl-tag">COMPLIANCE</span><h3 data-i18n="dl.c3t">核准文案與多市場檢核表</h3><p data-i18n="dl.c3d">TW / JP / US-EU 獨立宣稱規範與禁忌詞防呆清單（合規參考）。</p><button type="button" class="btn btn-ghost btn-sm" data-download-doc="compliance" data-i18n="dl.btn">下載示意文件 ↓</button></article>
   </div>
 </div></section>
 
@@ -85,7 +104,23 @@
   <div><a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="44" rx="12" fill="#100d0c"/><path d="M14 32V13" stroke="#faf8f5" stroke-width="3.2" stroke-linecap="round"/><path d="M30 32V13" stroke="#faf8f5" stroke-width="3.2" stroke-linecap="round"/><path d="M14 23c5-8 11 8 16 0" stroke="#a75743" stroke-width="3.2" stroke-linecap="round" fill="none"/><circle cx="30" cy="13" r="2.4" fill="#a19c65"/></svg></span><span><b>精鴻生醫</b><small>JING HONG BIOMEDICAL</small></span></a><p style="margin-top:12px" data-i18n="foot.about">自然，值得被精準對待。本站為設計提案樣板，內容與數據部分為示意，正式發布前請逐項確認。</p></div>
   <div><h4 data-i18n="foot.links">快速連結</h4><div class="footer-links tech"><a href="index.html#story" data-i18n="nav.story">品牌理念</a><a href="index.html#news" data-i18n="nav.news">最新消息</a><a href="index.html#products" data-i18n="nav.products">產品系列</a><a href="cases.html" data-i18n="nav.cases">實例分享</a><a href="shop.html" data-i18n="nav.shop">購物商城</a><a href="order.html" data-i18n="nav.order">訂單系統</a><a href="index.html#faq" data-i18n="nav.faq">常見問題</a></div></div>
   <div><h4 data-i18n="foot.disclaimer">資料與免責</h4><p data-i18n="foot.text">公司與產品資訊參考公開商工登記、公開通路與展覽資料整理；示意照片來自 Unsplash。實際成分、規格、檢驗與聯絡資訊以公司核准文件為準。本站不作疾病診斷、治療或預防之宣稱。</p></div>
-</div><div class="footer-bottom"><span>© 2026 精鴻生醫 · 設計提案 v16</span><span><a href="privacy.html" data-i18n="foot.privacy">隱私權與個資告知</a> · <a href="#top" data-i18n="foot.top">回到頂端 ↑</a></span></div></div></footer>
-<script src="script.js?v=16"></script>
+</div><div class="footer-bottom"><span>© 2026 精鴻生醫 · 設計提案 v17</span><span><a href="privacy.html" data-i18n="foot.privacy">隱私權與個資告知</a> · <a href="#top" data-i18n="foot.top">回到頂端 ↑</a></span></div></div></footer>
+<div class="modal" id="productDetailModal" role="dialog" aria-modal="true" aria-labelledby="pdTitle">
+  <div class="modal-card modal-wide">
+    <button class="modal-close" type="button" id="closePdModal" aria-label="關閉">✕</button>
+    <div id="pdContent"></div>
+  </div>
+</div>
+<div class="modal" id="productCompareModal" role="dialog" aria-modal="true" aria-labelledby="pcTitle">
+  <div class="modal-card modal-wide">
+    <button class="modal-close" type="button" id="closePcModal" aria-label="關閉">✕</button>
+    <div class="eyebrow">COMPARE / 產品並排比較</div>
+    <h3 id="pcTitle" data-i18n="shop.cmpTitle">產品規格並排比較</h3>
+    <p class="hint" data-i18n="shop.cmpHint">最多同時比較 3 項產品；人用與寵物線嚴格標示區隔。</p>
+    <div class="compare-table-wrap" id="pcContent"></div>
+  </div>
+</div>
+<script src="products-data.js?v=17"></script>
+<script src="script.js?v=17"></script>
 </body>
 </html>

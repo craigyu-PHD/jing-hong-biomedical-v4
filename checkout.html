@@ -10,7 +10,7 @@
 <meta name="description" content="精鴻生醫購物商城結帳示範：新台幣／美金計價、Visa 信用卡與 LINE Pay 支付選項。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;800&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=16">
+<link rel="stylesheet" href="style.css?v=17">
 </head>
 <body>
 <div class="topbar"><div class="wrap">
@@ -40,10 +40,19 @@
 <section class="section"><div class="wrap checkout-grid">
   <form class="checkout-form" id="checkoutForm">
     <div class="checkout-panel reveal">
-      <div class="eyebrow">01 / CONTACT</div><h2 data-i18n="co.contactTitle">聯絡與配送</h2>
+      <div class="eyebrow">01 / CONTACT &amp; SHIPPING</div><h2 data-i18n="co.contactTitle">聯絡與配送</h2>
       <div class="form-grid"><label class="field"><span data-i18n="form.person">聯絡人</span><input name="person" data-i18n-ph="form.personPh" placeholder="姓名或單位名稱" required></label><label class="field"><span data-i18n="form.email">Email</span><input name="email" type="email" data-i18n-ph="co.emailPh" placeholder="name@example.com" required></label></div>
-      <label class="field"><span data-i18n="co.phone">聯絡電話</span><input name="phone" data-i18n-ph="co.phonePh" placeholder="09xx-xxx-xxx"></label>
+      <div class="form-grid">
+        <label class="field"><span data-i18n="co.phone">聯絡電話</span><input name="phone" data-i18n-ph="co.phonePh" placeholder="09xx-xxx-xxx" required></label>
+        <label class="field"><span data-i18n="co.market">配送市場／區域</span><select name="market" id="coMarket"><option value="TW">台灣本島（滿 NT$1,500 免運）</option><option value="TW_ISLAND">台灣離島（NT$220）</option><option value="JP">日本市場（獨立合規文案·待審）</option><option value="US">北美市場（獨立合規文案·待審）</option><option value="EU">歐洲市場（獨立合規文案·待審）</option></select></label>
+      </div>
+      <div class="form-grid">
+        <label class="field"><span data-i18n="co.shipMethod">運送方式</span><select name="shipMethod" id="coShipMethod"><option value="home">宅配到府</option><option value="cvs">超商取貨（台灣本島）</option><option value="intl">國際快遞（DHL/FedEx 示意）</option></select></label>
+        <label class="field"><span data-i18n="co.invoiceType">發票類型</span><select name="invoiceType" id="coInvoiceType"><option value="personal">個人電子發票</option><option value="company">公司三聯式發票（需填統編）</option></select></label>
+      </div>
+      <label class="field" id="coTaxWrap" hidden><span data-i18n="co.taxId">統一編號</span><input name="taxId" maxlength="8" placeholder="8 碼統一編號"></label>
       <label class="field"><span data-i18n="co.addr">配送地址</span><textarea name="addr" data-i18n-ph="co.addrPh" placeholder="請輸入完整配送地址" required></textarea></label>
+      <p class="co-hint" id="coMarketCompliance">合規防呆設計：台灣市場（TW）文案獨立控管；跨市場不共用療效宣稱。</p>
     </div>
 
     <div class="checkout-panel reveal d1">
@@ -57,9 +66,14 @@
     </div>
 
     <div class="checkout-panel reveal d1">
+      <label class="consent"><input type="checkbox" name="consent" required><span><span data-i18n="consent.text">我已閱讀並同意</span> <a href="privacy.html" data-i18n="foot.privacy">隱私權與個資告知</a>（版本 v17.0）</span></label>
       <button class="btn btn-contact co-submit" type="submit" data-i18n="co.submit">確認訂單（示範） →</button>
       <div class="status" id="checkoutStatus" role="status"></div>
-      <div class="co-done" id="checkoutDone" hidden><b data-i18n="co.doneTitle">訂單草稿已產生（示範）</b><p data-i18n="co.doneText">未進行任何實際扣款。正式上線後，系統會依選擇的支付管道導向完成畫面。</p></div>
+      <div class="co-done" id="checkoutDone" hidden>
+        <b data-i18n="co.doneTitle">訂單草稿已產生（示範）</b>
+        <p data-i18n="co.doneText">未進行任何實際扣款。訂單已寫入本機示範紀錄，並產生 Email 通知草稿。</p>
+        <pre class="email-draft" id="coEmailDraft"></pre>
+      </div>
     </div>
   </form>
 
@@ -67,7 +81,14 @@
     <div class="co-summary-head"><h2 data-i18n="co.summary">訂單摘要</h2><div class="currency-switch" role="group" aria-label="Currency"><button type="button" class="active" data-cur="TWD">NT$</button><button type="button" data-cur="USD">USD</button></div></div>
     <div class="rate-note" id="checkoutRateInfo" data-i18n="shop.curNote">匯率載入中…</div>
     <div class="co-items" id="checkoutItems"></div>
-    <div class="co-total"><span data-i18n="shop.total">小計</span><b id="checkoutTotal">NT$ 0.00</b></div>
+    <div class="co-coupon-row"><input type="text" id="coCouponInput" placeholder="優惠券代碼（例：JH100 / ANUBIS10）"><button type="button" class="btn btn-ghost btn-sm" id="coCouponBtn">套用</button></div>
+    <div class="status" id="coCouponStatus" style="margin-bottom:8px"></div>
+    <div class="co-breakdown">
+      <div><span>商品小計</span><b id="checkoutSub">NT$ 0</b></div>
+      <div><span>優惠折抵</span><b id="checkoutDisc">-NT$ 0</b></div>
+      <div><span>運費</span><b id="checkoutShip">NT$ 0</b></div>
+    </div>
+    <div class="co-total"><span data-i18n="shop.total">應付總計</span><b id="checkoutTotal">NT$ 0.00</b></div>
     <p class="cart-note" data-i18n="co.note">價格與付款為示意，不代表實際交易。</p>
     <a class="btn btn-ghost co-continue" href="shop.html" data-i18n="co.continue">繼續選購 →</a>
   </aside>
@@ -78,7 +99,8 @@
   <div><a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="44" rx="12" fill="#100d0c"/><path d="M14 32V13" stroke="#faf8f5" stroke-width="3.2" stroke-linecap="round"/><path d="M30 32V13" stroke="#faf8f5" stroke-width="3.2" stroke-linecap="round"/><path d="M14 23c5-8 11 8 16 0" stroke="#a75743" stroke-width="3.2" stroke-linecap="round" fill="none"/><circle cx="30" cy="13" r="2.4" fill="#a19c65"/></svg></span><span><b>精鴻生醫</b><small>JING HONG BIOMEDICAL</small></span></a><p style="margin-top:12px" data-i18n="foot.about">自然，值得被精準對待。本站為設計提案樣板，內容與數據部分為示意，正式發布前請逐項確認。</p></div>
   <div><h4 data-i18n="foot.links">快速連結</h4><div class="footer-links tech"><a href="index.html#story" data-i18n="nav.story">品牌理念</a><a href="index.html#news" data-i18n="nav.news">最新消息</a><a href="index.html#products" data-i18n="nav.products">產品系列</a><a href="cases.html" data-i18n="nav.cases">實例分享</a><a href="shop.html" data-i18n="nav.shop">購物商城</a><a href="order.html" data-i18n="nav.order">訂單系統</a><a href="index.html#faq" data-i18n="nav.faq">常見問題</a></div></div>
   <div><h4 data-i18n="foot.disclaimer">資料與免責</h4><p data-i18n="foot.text">公司與產品資訊參考公開商工登記、公開通路與展覽資料整理；示意照片來自 Unsplash。實際成分、規格、檢驗與聯絡資訊以公司核准文件為準。本站不作疾病診斷、治療或預防之宣稱。</p></div>
-</div><div class="footer-bottom"><span>© 2026 精鴻生醫 · 設計提案 v16</span><span><a href="privacy.html" data-i18n="foot.privacy">隱私權與個資告知</a> · <a href="#top" data-i18n="foot.top">回到頂端 ↑</a></span></div></div></footer>
-<script src="script.js?v=16"></script>
+</div><div class="footer-bottom"><span>© 2026 精鴻生醫 · 設計提案 v17</span><span><a href="privacy.html" data-i18n="foot.privacy">隱私權與個資告知</a> · <a href="#top" data-i18n="foot.top">回到頂端 ↑</a></span></div></div></footer>
+<script src="products-data.js?v=17"></script>
+<script src="script.js?v=17"></script>
 </body>
 </html>

@@ -102,35 +102,42 @@
       'cp.back': '回到首頁', 'cp.cta': '洽談類似專案 →', 'cp.note': '案例中的數字與成果均為示意，不代表實際成效或客戶背書。',
       'cp.foot': '案例為示範內容，照片來自 Unsplash，非正式客戶專案。',
       'c1.side': '通路合作 · 2025 · 北部', 'c1.n': '連鎖藥局上架專案',
-      'c1.ch': '<strong>挑戰：</strong>門市人員對牛樟芝素材與劑型不熟悉，需要快速可懂的銷售邏輯。',
-      'c1.do': '<strong>做法：</strong>建立三層教育訓練、貨架說明卡與首波試用活動。',
-      'c1.r': '<strong>成果：</strong>三個月完成 12 間門市上架，回購表現穩定。（示範數字）',
+      'c1.ch': '<strong>問題：</strong>門市人員對牛樟芝素材與劑型不熟悉，需要快速可懂的銷售邏輯。',
+      'c1.do': '<strong>方法：</strong>建立三層教育訓練、貨架說明卡與首波試用活動。',
+      'c1.r': '<strong>結果：</strong>三個月完成 12 間門市上架，回購表現穩定。（示範數字）',
+      'c1.w': '<strong>見證（示意）：</strong>「分區卡與規格表讓門市人員能在 30 秒內說清楚差異。」—— 通路主管示意語錄，待真實授權。',
       'c1.tag': '12 間門市 · 3 個月',
       'c2.side': 'OEM / ODM · 2025 · 西部', 'c2.n': '新創品牌首款膠囊開發',
-      'c2.ch': '<strong>挑戰：</strong>客戶有品牌與通路，但缺乏產品開發與文件準備經驗。',
-      'c2.do': '<strong>做法：</strong>規劃複方膠囊配方、膠囊殼與包裝，整理成分規格與檢驗文件。',
-      'c2.r': '<strong>成果：</strong>產品順利上市，後續追加第二款複方開發。（示範情境）',
+      'c2.ch': '<strong>問題：</strong>客戶有品牌與通路，但缺乏產品開發與文件準備經驗。',
+      'c2.do': '<strong>方法：</strong>規劃複方膠囊配方、膠囊殼與包裝，整理成分規格與檢驗文件。',
+      'c2.r': '<strong>結果：</strong>產品順利上市，後續追加第二款複方開發。（示範情境）',
+      'c2.w': '<strong>見證（示意）：</strong>「從配方打樣到文件齊備都有明確節點。」—— 品牌創辦人示意語錄，待真實授權。',
       'c2.tag': '從 0 到上市 · 2 款產品',
       'c3.side': 'ANUBIS 寵物保健 · 2025 · 中部', 'c3.n': '毛孩保健通路推廣',
-      'c3.ch': '<strong>挑戰：</strong>飼主對泌尿道與眼部保養的差異不清楚，貨架說明不易理解。',
-      'c3.do': '<strong>做法：</strong>依人用／寵物分區呈現，建立犬貓適用對象與劑型對照說明。',
-      'c3.r': '<strong>成果：</strong>門市詢問更加聚焦，通路陳列更清楚。（示範情境）',
+      'c3.ch': '<strong>問題：</strong>飼主對泌尿道與眼部保養的差異不清楚，貨架說明不易理解。',
+      'c3.do': '<strong>方法：</strong>依人用／寵物分區呈現，建立犬貓適用對象與劑型對照說明。',
+      'c3.r': '<strong>結果：</strong>門市詢問更加聚焦，通路陳列更清楚。（示範情境）',
+      'c3.w': '<strong>見證（示意）：</strong>「犬貓分級與成分表讓飼主更容易向獸醫師諮詢。」—— 合作店鋪示意語錄，待真實授權。',
       'c3.tag': '2 條產品線 · 清晰的選購路徑',
       'c4.side': 'ANUBIS 寵物保健 · 2024 · 會展', 'c4.n': '寵物市集品牌溝通',
-      'c4.ch': '<strong>挑戰：</strong>現場人流多，需要在短時間內說清楚品牌與品項差異。',
-      'c4.do': '<strong>做法：</strong>設計毛孩友好攤位、產品分類卡與互動諮詢流程。',
-      'c4.r': '<strong>成果：</strong>完成首波粉絲溝通與名單蒐集。（示範情境）',
+      'c4.ch': '<strong>問題：</strong>現場人流多，需要在短時間內說清楚品牌與品項差異。',
+      'c4.do': '<strong>方法：</strong>設計毛孩友好攤位、產品分類卡與互動諮詢流程。',
+      'c4.r': '<strong>結果：</strong>完成首波粉絲溝通與名單蒐集。（示範情境）',
+      'c4.w': '<strong>見證（示意）：</strong>「現場能直接查閱保存條件與使用方式，信任感高。」—— 活動參與者示意語錄，待真實授權。',
       'c4.tag': '現場活動 · 品牌溝通',
       'c5.side': '數位轉型 · 2026 · 官網', 'c5.n': '品牌形象官網改版',
-      'c5.ch': '<strong>挑戰：</strong>舊頁資訊分散，客戶難以快速找到產品與聯絡方式。',
-      'c5.do': '<strong>做法：</strong>重建品牌、最新消息、雙產品線、實例與訂單入口五大區塊。',
-      'c5.r': '<strong>成果：</strong>洽詢路徑清晰化，訂單入口成為經銷夥伴常用工具。（本頁即為示範）',
+      'c5.ch': '<strong>問題：</strong>舊頁資訊分散，客戶難以快速找到產品與聯絡方式。',
+      'c5.do': '<strong>方法：</strong>重建品牌、最新消息、雙產品線、實例與訂單入口五大區塊。',
+      'c5.r': '<strong>結果：</strong>洽詢路徑清晰化，訂單入口成為經銷夥伴常用工具。（本頁即為示範）',
+      'c5.w': '<strong>見證（示意）：</strong>「雙語與雙幣別讓海外夥伴也能直接試算。」—— 內部專案示意回饋，待真實授權。',
       'c5.tag': '5 大區塊 · 中英文切換',
       'c6.side': '通路合作 · 2024 · 電商', 'c6.n': '產品頁選購指南優化',
-      'c6.ch': '<strong>挑戰：</strong>消費者對「子實體與菌絲體差異」缺乏理解。',
-      'c6.do': '<strong>做法：</strong>補充選購指南、三萜類標示說明與常見問題。',
-      'c6.r': '<strong>成果：</strong>頁面停留時間增加，客服重複問題減少。（示範數據）',
+      'c6.ch': '<strong>問題：</strong>消費者對「子實體與菌絲體差異」缺乏理解。',
+      'c6.do': '<strong>方法：</strong>補充選購指南、三萜類標示說明與常見問題。',
+      'c6.r': '<strong>結果：</strong>頁面停留時間增加，客服重複問題減少。（示範數據）',
+      'c6.w': '<strong>見證（示意）：</strong>「透明的 Q&amp;A 減少了很多重複詢問。」—— 電商營運示意回饋，待真實授權。',
       'c6.tag': '轉換率 +38%（示意）',
+      'case.unauth': '示意案例 · 未授權，不得轉為真實見證',
       'op.h1': '一個入口，<br>掌握所有訂單。',
       'op.sub': '此頁為前端展示樣板，功能元件已預先建置；正式上線前需串接後端會員、庫存、金流與物流系統。',
       'op.menu': 'QUICK MENU', 'op.m1': '會員登入', 'op.m2': '訂單查詢', 'op.m3': '訂購流程',
@@ -177,6 +184,51 @@
       'privacy.h3': '安全與隔離', 'privacy.p3': '合規防呆設計：全程 HTTPS、欄位遮罩、角色權限控管（RBAC）與操作紀錄（Audit Log）；AI 對話與檢索按使用者／Session 隔離，禁止跨帳號洩漏。',
       'privacy.h4': '風險提醒', 'privacy.p4': '目前為前端展示版，尚未串接後端與金流。請勿輸入真實卡片資訊、病歷或可識別的敏感健康資料；正式對外前須完成法規審查。',
       'privacy.back': '返回首頁 →',
+      'about.vTitle': '願景｜讓自然照護可被驗證', 'about.vDesc': '成為亞洲值得信賴的雙線生醫保健品牌，讓每一份原料與配方都能以透明文件回應期待。（企業敘事示意）',
+      'about.mTitle': '使命｜人用與毛孩各自獨立照護', 'about.mDesc': '嚴格區隔人用保健與 ANUBIS 寵物線之成分、劑量與合規標示，以科學製程守護日常健康節奏。',
+      'about.cTitle': '核心價值｜溯源・合規・共好', 'about.cDesc': '不誇大療效、不混用宣稱；以第三方檢驗、批次追蹤與永續採購作為長期品牌承諾。',
+      'products.snapBtn': '切換水平吸附畫廊 ⇄',
+      'qa.s1t': '01 原料溯源', 'qa.s1d': '產地、菌種與栽培方式建檔，進料前完成文件核對。（示意）',
+      'qa.s2t': '02 標準製程', 'qa.s2d': '依劑型規劃溫控萃取、膠囊充填與防潮封裝流程。（示意）',
+      'qa.s3t': '03 第三方檢驗', 'qa.s3d': '重金屬、農殘、微生物與指標成分逐批送檢，待公司補齊報告。',
+      'qa.s4t': '04 批次追蹤', 'qa.s4d': '獨立批號與效期控管，支援通路查核與售後溯源。（合規預留）',
+      'team.title': '跨領域專業把關，與環境共生', 'team.sub': '團隊職能與永續行動為企業全景架構示意，正式人員名單與數據待公司核准後公開。',
+      'team.r1': 'R&D 研發顧問', 'team.n1': '生物科技與萃取專家', 'team.d1': '負責牛樟芝與草本複方之活性指標研究與劑型穩定度規劃。（示意角色）',
+      'team.r2': 'QA & 法規事務', 'team.n2': '品質與合規審查組', 'team.d2': '確保產品標示、批號效期與多市場法規文案獨立控管、不越線。（合規防呆）',
+      'team.r3': 'ANUBIS 獸醫顧問', 'team.n3': '犬貓營養與照護團隊', 'team.d3': '專注寵物生理需求與適口性設計，與人用線完全獨立區隔。（示意角色）',
+      'team.r4': 'OEM / 通路專案', 'team.n4': '商業開發與供應鏈', 'team.d4': '對接連鎖藥局、寵物通路及海外 OEM/ODM 夥伴之交期與文件。（示意角色）',
+      'esg.t1': '合法段木復育與永續採購', 'esg.d1': '堅持來源合法且可追溯之牛樟椴木與植物原料，降低山林生態衝擊。（示意承諾）',
+      'esg.t2': '減塑包材與透明標示', 'esg.d2': '逐步導入可回收外盒與大豆油墨印刷，清楚揭示成分與保存條件。（示意承諾）',
+      'esg.t3': '動物友善與無不實宣稱', 'esg.d3': '拒絕過度包裝與誇大行銷，落實保健食品與寵物照護之法規倫理。',
+      'gp.title': '從台灣出發，連結亞洲與國際通路', 'gp.sub': '點選地圖光點或右側區域卡片，檢視各市場合作架構與合規原則（目前為示意架構，待公司核准）。',
+      'gp.twName': '台灣總部與核心通路', 'gp.twMeta': '人用 TWD 商城・ANUBIS 寵物專區・批發訂單中心',
+      'gp.twDetail': '台灣總部（高雄）：品牌研發核心、品質文件中心、連鎖藥局與動物醫院示範通路。（地址為公開登記資訊，通路數據待確認）',
+      'gp.jpName': '日本與東北亞市場（預留）', 'gp.jpMeta': '獨立日文合規標示・JPY 報價試算・跨境文件',
+      'gp.jpDetail': '日本與東北亞（預留）：依當地機能性表示食品與寵物法規獨立審核文案，不跨市場套用宣稱。（示意）',
+      'gp.seaName': '東南亞合作通路（預留）', 'gp.seaMeta': '經銷授權驗證・清真與當地食安法規獨立審核',
+      'gp.seaDetail': '東南亞通路（預留）：經銷商需完成公司授權驗證與人工審核後方可出貨。（示意）',
+      'gp.globalName': '北美與歐洲 OEM / ODM（預留）', 'gp.globalMeta': 'USD / EUR 報價・COA 與英文出口裝箱單支援',
+      'gp.globalDetail': 'North America & Europe (Reserved): English spec sheets, COA templates, and multi-currency quoting framework. (Demo)',
+      'case.unauth': 'Demo Case · Unauthorized — Do Not Use as Real Endorsement',
+      'c1.w': '<strong>Testimonial (Demo):</strong> "Zone cards and spec sheets help staff explain differences in 30 seconds." — Demo quote, pending authorization.',
+      'c2.w': '<strong>Testimonial (Demo):</strong> "Clear milestones from formulation sampling to compliance docs." — Demo quote, pending authorization.',
+      'c3.w': '<strong>Testimonial (Demo):</strong> "Cat/dog labeling helps owners consult veterinarians clearly." — Demo quote, pending authorization.',
+      'c4.w': '<strong>Testimonial (Demo):</strong> "On-site access to storage and usage guides built trust." — Demo quote, pending authorization.',
+      'c5.w': '<strong>Testimonial (Demo):</strong> "Bilingual & dual-currency quoting helps overseas partners." — Demo quote, pending authorization.',
+      'c6.w': '<strong>Testimonial (Demo):</strong> "Transparent Q&amp;A reduced repetitive inquiries." — Demo quote, pending authorization.',
+      'shop.fltTarget': 'Target', 'shop.fltForm': 'Dosage Form', 'shop.fltPurpose': 'Purpose', 'shop.fltCert': 'Label / Cert',
+      'shop.tAdult': 'Adults', 'shop.tCat': 'Cats', 'shop.tDogCat': 'Dogs & Cats', 'shop.tOem': 'OEM/ODM',
+      'shop.fPowder': 'Powder / Pellets', 'shop.fDrops': 'Drops', 'shop.fSpray': 'Spray',
+      'shop.pDaily': 'Daily Care', 'shop.pNight': 'Night Routine', 'shop.pCardio': 'Cardio Care', 'shop.pImmunity': 'Daily Defense',
+      'shop.cPatent': 'Patent Label', 'shop.cTrit': 'Triterpenoids', 'shop.c3rd': '3rd-Party COA', 'shop.cVet': 'Vet Guidance',
+      'shop.cmpSelected': 'Selected to Compare', 'shop.cmpOpen': 'Compare Side-by-Side →', 'shop.cmpClear': 'Clear',
+      'shop.cmpTitle': 'Product Spec Comparison', 'shop.cmpHint': 'Compare up to 3 items; human and pet lines remain strictly separated.',
+      'dl.title': 'Catalog, Lab COA & Approved Copy Templates', 'dl.sub': 'Compliance download demo; official files require QA & regulatory approval before publishing.',
+      'dl.c1t': '2026 Dual-Line Catalog Summary', 'dl.c1d': 'Human & ANUBIS pet SKUs, dosage forms, and spec overview (Demo).',
+      'dl.c2t': '3rd-Party Lab COA Template', 'dl.c2d': 'Heavy metals, pesticides, microbes, and batch tracking fields (Pending official COA).',
+      'dl.c3t': 'Approved Copy & Multi-Market Checklist', 'dl.c3d': 'Independent TW / JP / US-EU claims & restricted-term guardrails.',
+      'dl.btn': 'Download Demo File ↓',
+      'co.market': 'Market / Region', 'co.shipMethod': 'Shipping Method', 'co.invoiceType': 'Invoice Type', 'co.taxId': 'Tax ID',
       'chat.placeholder': '輸入你的問題…', 'chat.open': '開啟客服助手', 'chat.close': '關閉客服助手',
       'chat.send': '送出訊息',
       'dd.s1': '品牌故事', 'dd.s2': '原料溯源', 'dd.s3': '品質承諾',
@@ -420,6 +472,51 @@
       'privacy.h3': 'Security & isolation', 'privacy.p3': 'Compliance by design: HTTPS, field masking, role-based access control and audit logs. AI chat and retrieval are isolated per user and session; cross-account leakage is prohibited.',
       'privacy.h4': 'Risk notice', 'privacy.p4': 'This is a front-end demo with no back end or payment gateway connected. Do not enter real card details, medical records or identifiable health data. Legal review is required before launch.',
       'privacy.back': 'Back to home →',
+      'about.vTitle': 'Vision | Verifiable Natural Care', 'about.vDesc': 'To become a trusted dual-line biomedical brand in Asia where every ingredient and formula is backed by transparent documentation. (Demo narrative)',
+      'about.mTitle': 'Mission | Separate Human & Pet Care', 'about.mDesc': 'Strictly separate human supplements and the ANUBIS pet line across ingredients, dosages, and compliant labeling.',
+      'about.cTitle': 'Values | Traceability & Compliance', 'about.cDesc': 'No medical claims or cross-line mixing; committed to 3rd-party testing, batch tracking, and sustainable sourcing.',
+      'products.snapBtn': 'Toggle Horizontal Snap Gallery ⇄',
+      'qa.s1t': '01 Traceability', 'qa.s1d': 'Origin, strain, and cultivation records verified prior to intake. (Demo)',
+      'qa.s2t': '02 Standard Process', 'qa.s2d': 'Temperature-controlled extraction, encapsulation, and moisture-barrier packaging. (Demo)',
+      'qa.s3t': '03 3rd-Party Lab', 'qa.s3d': 'Batch testing for heavy metals, pesticides, microbes, and active markers (pending company files).',
+      'qa.s4t': '04 Batch Tracking', 'qa.s4d': 'Independent lot numbers and expiry controls supporting channel audit and after-sales traceability.',
+      'team.title': 'Multidisciplinary Expertise & Sustainability', 'team.sub': 'Organizational roles and ESG commitments shown as corporate architecture demo; subject to company verification.',
+      'team.r1': 'R&D Advisors', 'team.n1': 'Biotech & Extraction Specialists', 'team.d1': 'Lead active-marker research and dosage-form stability for Antrodia and herbal formulas. (Demo role)',
+      'team.r2': 'QA & Regulatory', 'team.n2': 'Quality & Compliance Review', 'team.d2': 'Enforce independent labeling, lot/expiry control, and market-specific claim compliance.',
+      'team.r3': 'ANUBIS Vet Advisors', 'team.n3': 'Companion Animal Nutrition', 'team.d3': 'Focus on feline/canine physiology and palatability, strictly isolated from the human line. (Demo role)',
+      'team.r4': 'OEM & Channels', 'team.n4': 'Commercial & Supply Chain', 'team.d4': 'Coordinate pharmacy, pet retail, and overseas OEM/ODM documentation and lead times. (Demo role)',
+      'esg.t1': 'Sustainable Basswood Sourcing', 'esg.d1': 'Prioritize legal, traceable Antrodia basswood and botanical materials to reduce forest impact. (Demo)',
+      'esg.t2': 'Plastic Reduction & Clarity', 'esg.d2': 'Adopt recyclable cartons, soy-ink printing, and clear storage/ingredient disclosure. (Demo)',
+      'esg.t3': 'Pet-Friendly & Honest Claims', 'esg.d3': 'Avoid excessive packaging and exaggerated claims; uphold regulatory ethics for human and pet care.',
+      'gp.title': 'From Taiwan to Asian & Global Channels', 'gp.sub': 'Select a map hotspot or regional card to inspect market rules and compliance setup (demo framework, pending approval).',
+      'gp.twName': 'Taiwan HQ & Core Channels', 'gp.twMeta': 'Human TWD Shop · ANUBIS Pet Line · Wholesale Portal',
+      'gp.twDetail': 'Taiwan HQ (Kaohsiung): Core R&D, QA documentation center, and demo pharmacy/vet channels. (Registered address; channel metrics pending)',
+      'gp.jpName': 'Japan & Northeast Asia (Reserved)', 'gp.jpMeta': 'Independent JP Compliance Copy · JPY Quote · Cross-Border Docs',
+      'gp.jpDetail': 'Japan & NE Asia (Reserved): Market-specific regulatory review before launch; no cross-market claims applied. (Demo)',
+      'gp.seaName': 'Southeast Asia Partners (Reserved)', 'gp.seaMeta': 'Distributor Verification · Local Food Safety & Halal Review',
+      'gp.seaDetail': 'Southeast Asia (Reserved): Distributors require authorization verification and manual approval prior to shipping. (Demo)',
+      'gp.globalName': 'North America & Europe OEM (Reserved)', 'gp.globalMeta': 'USD / EUR Quotes · COA & English Packing List Support',
+      'gp.globalDetail': 'North America & Europe (Reserved): English spec sheets, COA templates, and multi-currency quoting framework. (Demo)',
+      'case.unauth': 'Demo Case · Unauthorized — Do Not Use as Real Endorsement',
+      'c1.w': '<strong>Testimonial (Demo):</strong> "Zone cards and spec sheets help staff explain differences in 30 seconds." — Demo quote, pending authorization.',
+      'c2.w': '<strong>Testimonial (Demo):</strong> "Clear milestones from formulation sampling to compliance docs." — Demo quote, pending authorization.',
+      'c3.w': '<strong>Testimonial (Demo):</strong> "Cat/dog labeling helps owners consult veterinarians clearly." — Demo quote, pending authorization.',
+      'c4.w': '<strong>Testimonial (Demo):</strong> "On-site access to storage and usage guides built trust." — Demo quote, pending authorization.',
+      'c5.w': '<strong>Testimonial (Demo):</strong> "Bilingual & dual-currency quoting helps overseas partners." — Demo quote, pending authorization.',
+      'c6.w': '<strong>Testimonial (Demo):</strong> "Transparent Q&amp;A reduced repetitive inquiries." — Demo quote, pending authorization.',
+      'shop.fltTarget': 'Target', 'shop.fltForm': 'Dosage Form', 'shop.fltPurpose': 'Purpose', 'shop.fltCert': 'Label / Cert',
+      'shop.tAdult': 'Adults', 'shop.tCat': 'Cats', 'shop.tDogCat': 'Dogs & Cats', 'shop.tOem': 'OEM/ODM',
+      'shop.fPowder': 'Powder / Pellets', 'shop.fDrops': 'Drops', 'shop.fSpray': 'Spray',
+      'shop.pDaily': 'Daily Care', 'shop.pNight': 'Night Routine', 'shop.pCardio': 'Cardio Care', 'shop.pImmunity': 'Daily Defense',
+      'shop.cPatent': 'Patent Label', 'shop.cTrit': 'Triterpenoids', 'shop.c3rd': '3rd-Party COA', 'shop.cVet': 'Vet Guidance',
+      'shop.cmpSelected': 'Selected to Compare', 'shop.cmpOpen': 'Compare Side-by-Side →', 'shop.cmpClear': 'Clear',
+      'shop.cmpTitle': 'Product Spec Comparison', 'shop.cmpHint': 'Compare up to 3 items; human and pet lines remain strictly separated.',
+      'dl.title': 'Catalog, Lab COA & Approved Copy Templates', 'dl.sub': 'Compliance download demo; official files require QA & regulatory approval before publishing.',
+      'dl.c1t': '2026 Dual-Line Catalog Summary', 'dl.c1d': 'Human & ANUBIS pet SKUs, dosage forms, and spec overview (Demo).',
+      'dl.c2t': '3rd-Party Lab COA Template', 'dl.c2d': 'Heavy metals, pesticides, microbes, and batch tracking fields (Pending official COA).',
+      'dl.c3t': 'Approved Copy & Multi-Market Checklist', 'dl.c3d': 'Independent TW / JP / US-EU claims & restricted-term guardrails.',
+      'dl.btn': 'Download Demo File ↓',
+      'co.market': 'Market / Region', 'co.shipMethod': 'Shipping Method', 'co.invoiceType': 'Invoice Type', 'co.taxId': 'Tax ID',
       'chat.placeholder': 'Type your question...', 'chat.open': 'Open assistant', 'chat.close': 'Close assistant',
       'chat.send': 'Send message',
       'dd.s1': 'Our story', 'dd.s2': 'Traceability', 'dd.s3': 'Quality commitment',
@@ -681,11 +778,147 @@
         entries[i].target.classList.add('visible'); io.unobserve(entries[i].target);
       }
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-    var reveals = document.querySelectorAll('.reveal');
+    var reveals = document.querySelectorAll('.reveal, .svg-draw');
     for (var r = 0; r < reveals.length; r++) io.observe(reveals[r]);
   } else {
-    var all = document.querySelectorAll('.reveal');
+    var all = document.querySelectorAll('.reveal, .svg-draw');
     for (var q = 0; q < all.length; q++) all[q].classList.add('visible');
+  }
+
+  /* ---------- v17 動態系統：Count-up、Parallax、微互動、章節與地圖連動 ---------- */
+  var v17Reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var countEls = document.querySelectorAll('[data-count]');
+  if (countEls.length && !v17Reduce && 'IntersectionObserver' in window) {
+    var cioCount = new IntersectionObserver(function (entries) {
+      for (var i = 0; i < entries.length; i++) {
+        if (!entries[i].isIntersecting) continue;
+        var el = entries[i].target; cioCount.unobserve(el);
+        (function (node) {
+          var target = parseInt(node.getAttribute('data-count'), 10) || 0;
+          var suffix = node.getAttribute('data-suffix') || '';
+          var start = Math.max(0, target > 100 ? target - 30 : 0);
+          var t0 = performance.now(), dur = 650;
+          function step(now) {
+            var p = Math.min(1, (now - t0) / dur);
+            var eased = 1 - Math.pow(1 - p, 3);
+            node.textContent = Math.round(start + (target - start) * eased) + suffix;
+            if (p < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        })(el);
+      }
+    }, { threshold: .3 });
+    for (var ci = 0; ci < countEls.length; ci++) cioCount.observe(countEls[ci]);
+  }
+
+  if (!v17Reduce) {
+    // 限速限幅度圖片 Parallax (±14px)
+    var pxImgs = document.querySelectorAll('img[data-parallax]');
+    if (pxImgs.length) {
+      var pxTick = false;
+      window.addEventListener('scroll', function () {
+        if (pxTick) return; pxTick = true;
+        requestAnimationFrame(function () {
+          var vh = window.innerHeight || 800;
+          for (var i = 0; i < pxImgs.length; i++) {
+            var r = pxImgs[i].getBoundingClientRect();
+            if (r.bottom < 0 || r.top > vh) continue;
+            var offset = ((r.top + r.height / 2) / vh - 0.5) * -22;
+            pxImgs[i].style.transform = 'translate3d(0,' + Math.max(-14, Math.min(14, offset)).toFixed(1) + 'px,0) scale(1.04)';
+          }
+          pxTick = false;
+        });
+      }, { passive: true });
+    }
+    // 按鈕漣漪
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('.btn');
+      if (!btn) return;
+      var rect = btn.getBoundingClientRect();
+      var s = document.createElement('span');
+      s.className = 'btn-ripple';
+      var size = Math.max(rect.width, rect.height);
+      s.style.width = s.style.height = size + 'px';
+      s.style.left = (e.clientX - rect.left - size / 2) + 'px';
+      s.style.top = (e.clientY - rect.top - size / 2) + 'px';
+      btn.appendChild(s);
+      setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 600);
+    });
+    // 3D Tilt (<=5deg) 與 Hover 光暈
+    var tiltCards = document.querySelectorAll('.tilt-card, .glow-hover');
+    for (var tc = 0; tc < tiltCards.length; tc++) {
+      (function (card) {
+        card.addEventListener('pointermove', function (e) {
+          var r = card.getBoundingClientRect();
+          var x = (e.clientX - r.left) / Math.max(r.width, 1);
+          var y = (e.clientY - r.top) / Math.max(r.height, 1);
+          card.style.setProperty('--mx', (x * 100).toFixed(1) + '%');
+          card.style.setProperty('--my', (y * 100).toFixed(1) + '%');
+          if (card.classList.contains('tilt-card')) {
+            var rx = ((0.5 - y) * 8).toFixed(2);
+            var ry = ((x - 0.5) * 8).toFixed(2);
+            card.style.transform = 'perspective(700px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) translateY(-2px)';
+          }
+        }, { passive: true });
+        card.addEventListener('pointerleave', function () {
+          if (card.classList.contains('tilt-card')) card.style.transform = '';
+        });
+      })(tiltCards[tc]);
+    }
+    // 頁面淡出轉場
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a[href]');
+      if (!link || link.target === '_blank' || e.metaKey || e.ctrlKey || e.shiftKey) return;
+      var href = link.getAttribute('href') || '';
+      if (!href || href.charAt(0) === '#' || href.indexOf('http') === 0 || href.indexOf('mailto:') === 0) return;
+      if (href.indexOf('.html') !== -1 && href.split('#')[0] !== location.pathname.split('/').pop()) {
+        e.preventDefault();
+        document.body.classList.add('jh-leaving');
+        setTimeout(function () { location.href = href; }, 190);
+      }
+    });
+  }
+
+  // 沿革章節切換
+  var tlChBtns = document.querySelectorAll('[data-tl-ch]');
+  var tlSteps = document.querySelectorAll('#tlTrack .tl-step');
+  if (tlChBtns.length && tlSteps.length) {
+    for (var ti = 0; ti < tlChBtns.length; ti++) {
+      tlChBtns[ti].addEventListener('click', function () {
+        var idx = parseInt(this.getAttribute('data-tl-ch'), 10) || 0;
+        for (var j = 0; j < tlChBtns.length; j++) tlChBtns[j].classList.toggle('active', tlChBtns[j] === this);
+        for (var k = 0; k < tlSteps.length; k++) tlSteps[k].classList.toggle('is-active', k === idx);
+        if (tlSteps[idx] && tlSteps[idx].scrollIntoView) {
+          tlSteps[idx].scrollIntoView({ behavior: v17Reduce ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
+        }
+      });
+    }
+  }
+
+  // 全球據點地圖光點與卡片連動
+  var gpDots = document.querySelectorAll('.gp-dot[data-gp]');
+  var gpCards = document.querySelectorAll('.gp-card[data-gp]');
+  var gpDetail = document.getElementById('gpDetail');
+  function selectGp(id) {
+    for (var i = 0; i < gpDots.length; i++) gpDots[i].classList.toggle('active', gpDots[i].getAttribute('data-gp') === id);
+    for (var j = 0; j < gpCards.length; j++) gpCards[j].classList.toggle('active', gpCards[j].getAttribute('data-gp') === id);
+    if (gpDetail) {
+      var key = 'gp.' + id + 'Detail';
+      gpDetail.setAttribute('data-i18n', key);
+      gpDetail.textContent = t(key);
+    }
+  }
+  for (var gd = 0; gd < gpDots.length; gd++) gpDots[gd].addEventListener('click', function () { selectGp(this.getAttribute('data-gp')); });
+  for (var gc = 0; gc < gpCards.length; gc++) gpCards[gc].addEventListener('click', function () { selectGp(this.getAttribute('data-gp')); });
+
+  // 產品線水平吸附畫廊切換
+  var snapBtn = document.getElementById('toggleSnapGallery');
+  if (snapBtn) {
+    snapBtn.addEventListener('click', function () {
+      var g1 = document.getElementById('gridHuman'), g2 = document.getElementById('gridPet');
+      if (g1) g1.classList.toggle('snap-gallery');
+      if (g2) g2.classList.toggle('snap-gallery');
+    });
   }
 
   /* ---------- 產品線與篩選 ---------- */
@@ -786,7 +1019,14 @@
   if (order) order.addEventListener('submit', function (e) {
     e.preventDefault();
     var f = new FormData(order);
-    document.getElementById('orderStatus').textContent = f.get('orderNo') + t('msg.orderOk');
+    var no = String(f.get('orderNo') || '').trim();
+    var list = jhGetOrders(), found = null;
+    for (var i = 0; i < list.length; i++) if (list[i].id === no) { found = list[i]; break; }
+    document.getElementById('orderStatus').textContent = no + t('msg.orderOk');
+    var sum = document.getElementById('orderSummaryBox');
+    if (sum && found) {
+      sum.innerHTML = '<div><span>訂單編號</span><b>' + found.id + '</b></div><div><span>狀態</span><b>' + found.status + '</b></div><div><span>品項</span><b>' + found.items + '</b></div>';
+    }
   });
 
 
@@ -973,30 +1213,270 @@
       var st = document.getElementById('cartStatus'); if (st) st.textContent = t('shop.checkoutGo');
       window.location.href = 'checkout.html';
     });
+
+    /* ---------- Phase 2: 深度產品卡片增強、多維篩選、詳情彈窗、並排比較、下載專區 ---------- */
+    var products = window.JH_PRODUCTS || [];
+    var pMap = {};
+    for (var pi = 0; pi < products.length; pi++) pMap[products[pi].id] = products[pi];
+    var compareIds = [];
+    var shopCards = document.querySelectorAll('#shopList .shop-card');
+
+    for (var sci = 0; sci < shopCards.length; sci++) {
+      var sc = shopCards[sci], pid = sc.getAttribute('data-id'), pdata = pMap[pid];
+      if (!pdata) continue;
+      sc.setAttribute('data-target', pdata.target);
+      sc.setAttribute('data-form', pdata.form);
+      sc.setAttribute('data-purpose', pdata.purpose);
+      sc.setAttribute('data-cert', pdata.cert);
+      var body = sc.querySelector('.sc-body');
+      if (body && !body.querySelector('.sc-meta-row')) {
+        var meta = document.createElement('div');
+        meta.className = 'sc-meta-row';
+        meta.innerHTML = '<span class="sc-sku">' + pdata.sku + '</span><span class="sc-stock">' + (pdata.priceTwd ? ('庫存 ' + pdata.stock + ' · 上限 ' + pdata.limit) : '專案議定') + '</span>';
+        body.insertBefore(meta, body.firstChild);
+        var extra = document.createElement('div');
+        extra.className = 'sc-actions-extra';
+        extra.innerHTML = '<button type="button" data-open-detail="' + pid + '">詳情／規格</button><button type="button" data-compare-id="' + pid + '">+ 比較</button>';
+        body.appendChild(extra);
+      }
+    }
+
+    function applyShopAdvFilters() {
+      var activeLineBtn = document.querySelector('[data-shop-filter].active');
+      var line = activeLineBtn ? activeLineBtn.getAttribute('data-shop-filter') : 'all';
+      var tg = (document.getElementById('fltTarget') || {}).value || 'all';
+      var fm = (document.getElementById('fltForm') || {}).value || 'all';
+      var pp = (document.getElementById('fltPurpose') || {}).value || 'all';
+      var ct = (document.getElementById('fltCert') || {}).value || 'all';
+      for (var i = 0; i < shopCards.length; i++) {
+        var c = shopCards[i];
+        var ok = (line === 'all' || c.getAttribute('data-line') === line) &&
+                 (tg === 'all' || c.getAttribute('data-target') === tg) &&
+                 (fm === 'all' || c.getAttribute('data-form') === fm) &&
+                 (pp === 'all' || c.getAttribute('data-purpose') === pp) &&
+                 (ct === 'all' || c.getAttribute('data-cert') === ct);
+        c.hidden = !ok;
+      }
+    }
+    ['fltTarget', 'fltForm', 'fltPurpose', 'fltCert'].forEach(function (fid) {
+      var sel = document.getElementById(fid);
+      if (sel) sel.addEventListener('change', applyShopAdvFilters);
+    });
+    var shopLineBtns = document.querySelectorAll('[data-shop-filter]');
+    for (var slb = 0; slb < shopLineBtns.length; slb++) {
+      shopLineBtns[slb].addEventListener('click', function () {
+        setTimeout(applyShopAdvFilters, 0);
+      });
+    }
+
+    var pdModal = document.getElementById('productDetailModal');
+    var pdContent = document.getElementById('pdContent');
+    function openProductDetail(pid) {
+      var p = pMap[pid]; if (!p || !pdModal || !pdContent) return;
+      var loc = currentLang === 'en' ? p.en : p.zh;
+      var lineLabel = p.line === 'pet' ? (currentLang === 'en' ? 'ANUBIS Pet Care (Independent Line)' : 'ANUBIS 寵物保健（獨立產品線）') : (currentLang === 'en' ? 'Human Wellness (Independent Line)' : '人用保健（獨立產品線）');
+      var qaHtml = '';
+      for (var q = 0; q < loc.qa.length; q++) {
+        qaHtml += '<div class="pd-qa-item"><b>Q: ' + loc.qa[q].q + '</b><br><span>A: ' + loc.qa[q].a + '</span></div>';
+      }
+      var relHtml = '';
+      for (var r = 0; r < p.related.length; r++) {
+        var rp = pMap[p.related[r]];
+        if (rp) relHtml += '<button type="button" class="btn btn-ghost btn-sm" data-open-detail="' + rp.id + '">' + (currentLang === 'en' ? rp.en.name : rp.zh.name) + '</button>';
+      }
+      pdContent.innerHTML =
+        '<div class="pd-header">' +
+          '<img src="' + p.img + '" alt="' + loc.name + '">' +
+          '<div>' +
+            '<div class="eyebrow">' + p.sku + ' · ' + lineLabel + '</div>' +
+            '<h3 id="pdTitle">' + loc.name + '</h3>' +
+            '<p style="margin:6px 0;font-size:13px">' + loc.spec + '</p>' +
+            '<p style="font-size:12px;color:var(--muted)">批號：' + p.batch + ' ｜ 效期：' + p.expiry + ' ｜ 版本：' + p.version + '</p>' +
+            '<div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">' +
+              (p.priceTwd ? '<button type="button" class="btn btn-contact btn-sm" data-add-cart="' + p.id + '">+ 加入購物車 (' + jhMoney(p.priceTwd) + ')</button>' : '') +
+              '<a class="btn btn-ghost btn-sm" href="index.html#contact">合作／索取檢驗文件 →</a>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+        '<table class="pd-table">' +
+          '<tr><th>完整成分與含量</th><td>' + loc.ingredients + '</td></tr>' +
+          '<tr><th>建議使用方式</th><td>' + loc.usage + '</td></tr>' +
+          '<tr><th>保存條件</th><td>' + loc.storage + '</td></tr>' +
+          '<tr><th>核准字號／日期</th><td>' + loc.approvalNo + '（' + loc.approvalDate + '）</td></tr>' +
+          '<tr><th>第三方檢驗報告</th><td>' + loc.labReport + '</td></tr>' +
+          '<tr><th>適用對象與注意</th><td>' + loc.audience + '</td></tr>' +
+        '</table>' +
+        '<div class="pd-qa"><b>常見問題 Q&amp;A</b>' + qaHtml + '</div>' +
+        '<div style="margin-top:14px"><b>同線相關產品（嚴禁跨線混用）</b><div class="pd-related">' + relHtml + '</div></div>';
+      pdModal.classList.add('open');
+    }
+
+    var pcModal = document.getElementById('productCompareModal');
+    var pcContent = document.getElementById('pcContent');
+    var cmpBar = document.getElementById('compareBar');
+    var cmpCount = document.getElementById('compareCount');
+    function syncCompareUI() {
+      if (cmpBar) cmpBar.hidden = compareIds.length === 0;
+      if (cmpCount) cmpCount.textContent = String(compareIds.length);
+      var btns = document.querySelectorAll('[data-compare-id]');
+      for (var i = 0; i < btns.length; i++) {
+        var id = btns[i].getAttribute('data-compare-id');
+        var on = compareIds.indexOf(id) !== -1;
+        btns[i].classList.toggle('active', on);
+        btns[i].textContent = on ? '✓ 已選比較' : '+ 比較';
+      }
+    }
+
+    document.addEventListener('click', function (e) {
+      var det = e.target.closest('[data-open-detail]');
+      if (det) { openProductDetail(det.getAttribute('data-open-detail')); return; }
+      var cmp = e.target.closest('[data-compare-id]');
+      if (cmp) {
+        var id = cmp.getAttribute('data-compare-id'), idx = compareIds.indexOf(id);
+        if (idx !== -1) compareIds.splice(idx, 1);
+        else if (compareIds.length < 3) compareIds.push(id);
+        syncCompareUI();
+        return;
+      }
+      var dl = e.target.closest('[data-download-doc]');
+      if (dl) {
+        var kind = dl.getAttribute('data-download-doc');
+        var bodyMap = {
+          catalog: '精鴻生醫 2026 雙線產品型錄摘要（示意，待公司核准）\n\n' + products.map(function (x) { return x.sku + ' | ' + x.line.toUpperCase() + ' | ' + x.zh.name + ' | ' + x.zh.spec; }).join('\n'),
+          coa: '精鴻生醫 第三方檢驗報告（COA 範本預留，待補正式報告）\n欄位：批號 / 效期 / 重金屬(Pb, As, Cd, Hg) / 農藥殘留 / 微生物 / 指標成分定量',
+          compliance: '精鴻生醫 多市場合規檢核表（TW / JP / US-EU）\n1. 禁醫療效能、疾病治療/預防/改善宣稱\n2. 人用保健與 ANUBIS 寵物線完全獨立\n3. 批號、效期與核准文案版本控管'
+        };
+        try {
+          var blob = new Blob([bodyMap[kind] || 'Demo'], { type: 'text/plain;charset=utf-8' });
+          var url = URL.createObjectURL(blob);
+          var a = document.createElement('a'); a.href = url; a.download = 'jinghong-' + kind + '-demo.txt'; a.click();
+          setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+        } catch (err) {}
+      }
+    });
+
+    var openCmpBtn = document.getElementById('openCompareBtn');
+    if (openCmpBtn) openCmpBtn.addEventListener('click', function () {
+      if (!pcModal || !pcContent || !compareIds.length) return;
+      var cols = compareIds.map(function (id) { return pMap[id]; }).filter(Boolean);
+      var rows = [
+        ['產品線', function (x) { return x.line === 'pet' ? 'ANUBIS 寵物線' : '人用保健線'; }],
+        ['SKU / 批號', function (x) { return x.sku + ' / ' + x.batch; }],
+        ['價格 (示範)', function (x) { return x.priceTwd ? jhMoney(x.priceTwd) : '專案報價'; }],
+        ['規格劑型', function (x) { return (currentLang === 'en' ? x.en : x.zh).spec; }],
+        ['成分摘要', function (x) { return (currentLang === 'en' ? x.en : x.zh).ingredients; }],
+        ['使用方式', function (x) { return (currentLang === 'en' ? x.en : x.zh).usage; }],
+        ['檢驗與核准', function (x) { return (currentLang === 'en' ? x.en : x.zh).labReport; }]
+      ];
+      var html = '<table class="compare-table"><thead><tr><th>比較項目</th>' + cols.map(function (x) { return '<th>' + (currentLang === 'en' ? x.en.name : x.zh.name) + '</th>'; }).join('') + '</tr></thead><tbody>';
+      for (var r = 0; r < rows.length; r++) {
+        html += '<tr><th>' + rows[r][0] + '</th>' + cols.map(function (x) { return '<td>' + rows[r][1](x) + '</td>'; }).join('') + '</tr>';
+      }
+      html += '</tbody></table>';
+      pcContent.innerHTML = html;
+      pcModal.classList.add('open');
+    });
+    var clearCmpBtn = document.getElementById('clearCompareBtn');
+    if (clearCmpBtn) clearCmpBtn.addEventListener('click', function () { compareIds = []; syncCompareUI(); });
+    var closePd = document.getElementById('closePdModal');
+    if (closePd && pdModal) closePd.addEventListener('click', function () { pdModal.classList.remove('open'); });
+    var closePc = document.getElementById('closePcModal');
+    if (closePc && pcModal) closePc.addEventListener('click', function () { pcModal.classList.remove('open'); });
   }
 
-  /* ---------- 結帳頁：訂單摘要＋Visa / LINE Pay 支付示範 ---------- */
+  /* ---------- 結帳頁：優惠券、區域運費、三聯發票、訂單生命週期與 Email 草稿 ---------- */
+  function jhAudit(action, detail) {
+    try {
+      var logs = JSON.parse(localStorage.getItem('jh-audit-log') || '[]') || [];
+      logs.unshift({ ts: new Date().toISOString().slice(0, 19).replace('T', ' '), action: action, detail: detail });
+      localStorage.setItem('jh-audit-log', JSON.stringify(logs.slice(0, 40)));
+    } catch (e) {}
+  }
+  function jhGetOrders() {
+    try {
+      var list = JSON.parse(localStorage.getItem('jh-orders') || '[]') || [];
+      if (!list.length) {
+        list = [{ id: 'JH20261126001', phone: '0912345678', person: '王小明（示意）', items: '牛樟椴木子實體專利膠囊 × 2', total: 2560, status: '已出貨', market: 'TW', role: 'member', authDoc: '', ts: '2026-11-26 10:00:00' }];
+      }
+      return list;
+    } catch (e) { return []; }
+  }
+  function jhSaveOrders(list) { try { localStorage.setItem('jh-orders', JSON.stringify(list)); } catch (e) {} }
+
   var coForm = document.getElementById('checkoutForm');
   if (coForm) {
     var coItems = document.getElementById('checkoutItems');
+    var coSub = document.getElementById('checkoutSub');
+    var coDisc = document.getElementById('checkoutDisc');
+    var coShip = document.getElementById('checkoutShip');
     var coTotal = document.getElementById('checkoutTotal');
+    var coMarket = document.getElementById('coMarket');
+    var coInvoiceType = document.getElementById('coInvoiceType');
+    var coTaxWrap = document.getElementById('coTaxWrap');
+    var coMarketComp = document.getElementById('coMarketCompliance');
+    var coCouponInput = document.getElementById('coCouponInput');
+    var coCouponBtn = document.getElementById('coCouponBtn');
+    var coCouponStatus = document.getElementById('coCouponStatus');
     var payRadios = document.querySelectorAll('input[name="pay"]');
     var cardDemo = document.getElementById('cardDemo');
+    var activeCoupon = '';
+    var MARKET_COPY = {
+      TW: '合規防呆設計：台灣市場（TW）文案獨立控管；滿 NT$1,500 免運，未滿收 NT$120。',
+      TW_ISLAND: '合規防呆設計：台灣離島運費 NT$220（示意）；文案依台灣標準控管。',
+      JP: '合規防呆設計：日本市場（JP）採獨立日文機能性標示審核，不跨市場套用；國際運費 NT$680（示意）。',
+      US: '合規防呆設計：北美市場（US）須經獨立結構功能宣稱審查，不作疾病治療宣稱；國際運費 NT$980（示意）。',
+      EU: '合規防呆設計：歐洲市場（EU）須依 EFSA 規範獨立審核；國際運費 NT$980（示意）。'
+    };
+
     function coCart() { try { return JSON.parse(localStorage.getItem('jh-cart') || '[]') || []; } catch (e) { return []; } }
+    function coCalc(sub) {
+      var disc = 0;
+      if (activeCoupon === 'JH100' && sub >= 500) disc = 100;
+      else if (activeCoupon === 'ANUBIS10') disc = Math.round(sub * 0.1);
+      var m = coMarket ? coMarket.value : 'TW';
+      var ship = 0;
+      if (sub > 0) {
+        if (m === 'TW') ship = sub >= 1500 ? 0 : 120;
+        else if (m === 'TW_ISLAND') ship = 220;
+        else if (m === 'JP') ship = 680;
+        else ship = 980;
+      }
+      return { sub: sub, disc: disc, ship: ship, total: Math.max(0, sub - disc) + ship };
+    }
     function coRender() {
       if (!coItems || !coTotal) return;
-      var items = coCart(), total = 0, html = '';
+      var items = coCart(), sub = 0, html = '';
       if (!items.length) coItems.innerHTML = '<p class="co-empty">' + t('co.empty') + '</p>';
       else {
         for (var i = 0; i < items.length; i++) {
           var row = items[i], line = row.qty * row.price;
-          total += line;
+          sub += line;
           html += '<div class="co-item"><div><b>' + (row.name || row.id) + '</b><small>' + jhMoney(row.price) + ' × ' + row.qty + '</small></div><span>' + jhMoney(line) + '</span></div>';
         }
         coItems.innerHTML = html;
       }
-      coTotal.textContent = jhMoney(total);
+      var calc = coCalc(sub);
+      if (coSub) coSub.textContent = jhMoney(calc.sub);
+      if (coDisc) coDisc.textContent = '-' + jhMoney(calc.disc);
+      if (coShip) coShip.textContent = jhMoney(calc.ship);
+      coTotal.textContent = jhMoney(calc.total);
+      if (coMarketComp && coMarket) coMarketComp.textContent = MARKET_COPY[coMarket.value] || MARKET_COPY.TW;
     }
+    if (coCouponBtn && coCouponInput) coCouponBtn.addEventListener('click', function () {
+      var code = (coCouponInput.value || '').trim().toUpperCase();
+      if (code === 'JH100' || code === 'ANUBIS10') {
+        activeCoupon = code;
+        if (coCouponStatus) coCouponStatus.textContent = '已套用優惠券：' + code;
+      } else {
+        activeCoupon = '';
+        if (coCouponStatus) coCouponStatus.textContent = '無效代碼（可用示範：JH100 或 ANUBIS10）';
+      }
+      coRender();
+    });
+    if (coMarket) coMarket.addEventListener('change', coRender);
+    if (coInvoiceType && coTaxWrap) coInvoiceType.addEventListener('change', function () {
+      coTaxWrap.hidden = coInvoiceType.value !== 'company';
+    });
     function syncPay() {
       var pay = 'visa';
       for (var i = 0; i < payRadios.length; i++) {
@@ -1011,15 +1491,177 @@
     coRender(); jhSyncCurrencyButtons(); jhRenderRateLabels(); syncPay();
     coForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (!coCart().length) { var empty = document.getElementById('checkoutStatus'); if (empty) empty.textContent = t('co.empty'); return; }
+      var items = coCart();
+      if (!items.length) { var empty = document.getElementById('checkoutStatus'); if (empty) empty.textContent = t('co.empty'); return; }
+      var consentEl = coForm.querySelector('[name="consent"]');
+      if (consentEl && !consentEl.checked) { document.getElementById('checkoutStatus').textContent = t('msg.consentRequired'); return; }
+      var f = new FormData(coForm), sub = 0;
+      for (var i = 0; i < items.length; i++) sub += items[i].qty * items[i].price;
+      var calc = coCalc(sub);
       var pay = 'visa';
-      for (var i = 0; i < payRadios.length; i++) if (payRadios[i].checked) pay = payRadios[i].value;
+      for (var j = 0; j < payRadios.length; j++) if (payRadios[j].checked) pay = payRadios[j].value;
+      var orderId = 'JH' + new Date().toISOString().slice(0, 10).replace(/-/g, '') + String(Math.floor(100 + Math.random() * 899));
+      var orders = jhGetOrders();
+      orders.unshift({
+        id: orderId, phone: String(f.get('phone') || ''), person: String(f.get('person') || ''),
+        items: items.map(function (x) { return (x.name || x.id) + ' × ' + x.qty; }).join('、'),
+        total: calc.total, status: '待審核', market: String(f.get('market') || 'TW'),
+        role: 'member', authDoc: '', ts: new Date().toISOString().slice(0, 19).replace('T', ' ')
+      });
+      jhSaveOrders(orders);
+      jhAudit('ORDER_CREATE', orderId + ' · ' + calc.total + ' TWD · 待審核');
       var st = document.getElementById('checkoutStatus');
-      if (st) st.textContent = t('co.doneTitle') + ' · ' + (pay === 'visa' ? 'Visa' : 'LINE Pay');
+      if (st) st.textContent = t('co.doneTitle') + ' · ' + orderId + ' (' + (pay === 'visa' ? 'Visa' : 'LINE Pay') + ')';
       var done = document.getElementById('checkoutDone'); if (done) done.hidden = false;
+      var draftEl = document.getElementById('coEmailDraft');
+      if (draftEl) {
+        draftEl.textContent =
+          '主旨：【精鴻生醫】訂單確認通知（示範） #' + orderId + '\n' +
+          '收件人：' + f.get('email') + '\n' +
+          '訂單狀態：待審核（確認後進入揀貨與出貨）\n' +
+          '市場別：' + f.get('market') + '｜付款方式：' + (pay === 'visa' ? 'Visa 示範' : 'LINE Pay 示範') + '\n' +
+          '應付總計：' + jhMoney(calc.total) + '\n' +
+          '合規提醒：本通知為前端示範草稿，未進行實際扣款。';
+      }
       try { localStorage.removeItem('jh-cart'); } catch (e2) {}
       coRender();
     });
+  }
+
+  /* ---------- Phase 3: 會員中心、RBAC、欄位遮罩、Audit Log、生命週期與售後 ---------- */
+  var mpBox = document.getElementById('memberPortal');
+  if (mpBox) {
+    function maskStr(s, head, tail) {
+      s = String(s || ''); if (s.length <= head + tail) return s.replace(/./g, '*');
+      return s.slice(0, head) + '***' + s.slice(-tail);
+    }
+    function getSession() { try { return JSON.parse(localStorage.getItem('jh-session') || 'null'); } catch (e) { return null; } }
+    function setSession(s) {
+      try { if (s) localStorage.setItem('jh-session', JSON.stringify(s)); else localStorage.removeItem('jh-session'); } catch (e) {}
+      window.dispatchEvent(new CustomEvent('jhsessionchange'));
+    }
+    var NEXT_STATUS = { '待審核': '已核准', '已核准': '揀貨中', '揀貨中': '已出貨', '已出貨': '已完成' };
+
+    function renderMemberPortal() {
+      var s = getSession();
+      mpBox.hidden = !s;
+      if (!s) return;
+      document.getElementById('mpUserTitle').textContent = '會員：' + s.account;
+      document.getElementById('mpRoleBadge').textContent = 'RBAC: ' + s.role;
+      document.getElementById('mpVerifyBadge').textContent = s.verified ? 'Email 已驗證 ✓' : 'Email 待驗證';
+      document.getElementById('mpMaskedInfo').innerHTML =
+        '<span><b>Email：</b>' + maskStr(s.email || 'demo@example.com', 2, 10) + '</span>' +
+        '<span><b>電話：</b>' + maskStr(s.phone || '0912345678', 2, 3) + '</span>' +
+        '<span><b>證照／統編：</b>' + (s.license ? maskStr(s.license, 2, 2) : '未填寫') + '</span>';
+
+      var orders = jhGetOrders(), qEl = document.getElementById('mpOrderQueue');
+      if (qEl) {
+        qEl.innerHTML = orders.map(function (o, idx) {
+          var canApprove = s.role === 'reviewer' || s.role === 'distributor';
+          var next = NEXT_STATUS[o.status];
+          return '<div class="mp-order-row"><div><b>' + o.id + '</b> · ' + o.status + ' · ' + o.market + '<br><small>' + o.items + ' (' + o.total + ' TWD)</small></div>' +
+            '<div style="display:flex;gap:6px;flex-wrap:wrap">' +
+            (next && canApprove ? '<button type="button" class="btn btn-primary btn-sm" data-adv-order="' + idx + '">推進至 ' + next + '</button>' : '') +
+            (o.status !== '已取消' && o.status !== '已退款' ? '<button type="button" class="btn btn-ghost btn-sm" data-cancel-order="' + idx + '">取消</button>' : '') +
+            '</div></div>';
+        }).join('');
+      }
+      var logs = [];
+      try { logs = JSON.parse(localStorage.getItem('jh-audit-log') || '[]') || []; } catch (e) {}
+      var aEl = document.getElementById('mpAuditLog');
+      if (aEl) aEl.innerHTML = logs.slice(0, 12).map(function (l) { return '[' + l.ts + '] ' + l.action + ' — ' + l.detail; }).join('<br>') || '尚無紀錄';
+      var vEl = document.getElementById('mpVersionLog');
+      if (vEl) vEl.innerHTML = '[v17.0-2026-11-26] 全系列 15 項產品深度規格與庫存基線建立（示意，待核准）<br>[v16.0-2026-11-26] 價格與雙幣別匯率模組上線';
+    }
+
+    var loginForm = document.getElementById('loginForm');
+    if (loginForm) loginForm.addEventListener('submit', function () {
+      var f = new FormData(loginForm);
+      var role = String(f.get('role') || 'member');
+      setSession({ account: String(f.get('account') || 'demo'), role: role, email: 'demo@jhbiomedical.example', phone: '0912345678', license: '', authDoc: '', verified: false });
+      jhAudit('LOGIN', String(f.get('account') || 'demo') + ' (' + role + ')');
+      renderMemberPortal();
+    });
+    var forgotBtn = document.getElementById('forgotPwBtn');
+    if (forgotBtn) forgotBtn.addEventListener('click', function () {
+      var st = document.getElementById('loginStatus');
+      if (st) st.textContent = '已寄送密碼重設驗證連結至遮罩 Email（示範流程，請勿輸入真實敏感資料）。';
+      jhAudit('PASSWORD_RESET_REQ', 'demo');
+    });
+    var mpVerifyBtn = document.getElementById('mpVerifyBtn');
+    if (mpVerifyBtn) mpVerifyBtn.addEventListener('click', function () {
+      var s = getSession(); if (!s) return;
+      s.verified = true; setSession(s); jhAudit('EMAIL_VERIFIED', s.account); renderMemberPortal();
+    });
+    var mpLogoutBtn = document.getElementById('mpLogoutBtn');
+    if (mpLogoutBtn) mpLogoutBtn.addEventListener('click', function () {
+      var s = getSession(); if (s) jhAudit('LOGOUT_ISOLATE', s.account);
+      setSession(null); renderMemberPortal();
+    });
+    var mpProfileForm = document.getElementById('mpProfileForm');
+    if (mpProfileForm) mpProfileForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var s = getSession(); if (!s) return;
+      var f = new FormData(mpProfileForm);
+      if (f.get('phone')) s.phone = String(f.get('phone'));
+      if (f.get('email')) s.email = String(f.get('email'));
+      if (f.get('license')) s.license = String(f.get('license'));
+      if (f.get('authDoc')) s.authDoc = String(f.get('authDoc'));
+      setSession(s);
+      jhAudit('PROFILE_UPDATE', s.account + ' · license=' + maskStr(s.license, 2, 2));
+      document.getElementById('mpStatus').textContent = '資料已更正並寫入 Audit Log（欄位已遮罩）。';
+      renderMemberPortal();
+    });
+    var mpDeact = document.getElementById('mpDeactivateBtn');
+    if (mpDeact) mpDeact.addEventListener('click', function () {
+      var s = getSession(); if (!s) return;
+      jhAudit('ACCOUNT_DEACTIVATE', s.account);
+      document.getElementById('mpStatus').textContent = '已送出停用申請（示範），Audit Log 已留存。';
+      renderMemberPortal();
+    });
+    var mpDel = document.getElementById('mpDeleteBtn');
+    if (mpDel) mpDel.addEventListener('click', function () {
+      var s = getSession(); if (!s) return;
+      jhAudit('DATA_DELETE_REQ', s.account);
+      setSession(null);
+      document.getElementById('loginStatus').textContent = '已送出個資刪除申請並清除本機 Session（示範）。';
+      renderMemberPortal();
+    });
+    mpBox.addEventListener('click', function (e) {
+      var adv = e.target.closest('[data-adv-order]');
+      if (adv) {
+        var idx = parseInt(adv.getAttribute('data-adv-order'), 10), orders = jhGetOrders();
+        if (orders[idx] && NEXT_STATUS[orders[idx].status]) {
+          var prev = orders[idx].status;
+          orders[idx].status = NEXT_STATUS[prev];
+          jhSaveOrders(orders);
+          jhAudit('ORDER_LIFECYCLE', orders[idx].id + ': ' + prev + ' -> ' + orders[idx].status);
+          renderMemberPortal();
+        }
+      }
+      var can = e.target.closest('[data-cancel-order]');
+      if (can) {
+        var idx2 = parseInt(can.getAttribute('data-cancel-order'), 10), orders2 = jhGetOrders();
+        if (orders2[idx2]) {
+          orders2[idx2].status = '已取消';
+          jhSaveOrders(orders2);
+          jhAudit('ORDER_CANCEL', orders2[idx2].id);
+          renderMemberPortal();
+        }
+      }
+    });
+    var rmaForm = document.getElementById('rmaForm');
+    if (rmaForm) rmaForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = new FormData(rmaForm);
+      jhAudit('RMA_REQUEST', String(f.get('rmaOrder')) + ' · ' + String(f.get('rmaType')));
+      document.getElementById('rmaStatus').textContent = '售後／退換貨申請已受理（示範），單號：RMA-' + Date.now().toString().slice(-6);
+    });
+    var openChatBtn = document.getElementById('openChatFromOrder');
+    if (openChatBtn) openChatBtn.addEventListener('click', function () {
+      var tg = document.getElementById('chatToggle'); if (tg) tg.click();
+    });
+    renderMemberPortal();
   }
 
   /* ---------- 客服機器人：狗狗形象，預留 API／轉真人 ---------- */
@@ -1098,6 +1740,11 @@
   var cbInput = document.getElementById('chatInput');
   var cbBody = document.getElementById('chatBody');
   var cbForm = document.getElementById('chatForm');
+  /* 合規防呆設計：AI 對話與檢索按使用者／Session 隔離，切換或登出時重置對話容器 */
+  window.addEventListener('jhsessionchange', function () {
+    if (!cbBody) return;
+    cbBody.innerHTML = '<div class="chat-msg bot" data-i18n="chat.welcome">' + t('chat.welcome') + '</div>';
+  });
 
   function setChatOpen(open) {
     cb.classList.toggle('collapsed', !open);
@@ -1256,8 +1903,11 @@
       catCanvas.width = Math.round(cw * cdpr); catCanvas.height = Math.round(ch * cdpr);
       cc.setTransform(cdpr, 0, 0, cdpr, 0, 0);
     }
-    function catDraw() {
-      if (!cvisible && !reduceMotion) { craf = window.requestAnimationFrame(catDraw); return; }
+    var cLastDraw = 0;
+    function catDraw(ts) {
+      if (ts && (!cvisible || document.hidden)) { craf = 0; return; }
+      if (!reduceMotion && ts && ts - cLastDraw < 22) { craf = window.requestAnimationFrame(catDraw); return; }
+      cLastDraw = ts || 0;
       cc.clearRect(0, 0, cw, ch);
       var now = reduceMotion ? 0 : Date.now();
       cmx += (tmx - cmx) * .035; cmy += (tmy - cmy) * .035;
@@ -1369,11 +2019,17 @@
     }
     catResize(); catDraw();
     window.addEventListener('resize', catResize, { passive: true });
-    window.addEventListener('jhthemechange', function () { catResize(); if (reduceMotion) catDraw(); });
+    window.addEventListener('jhthemechange', function () { catResize(); catDraw(); });
     if ('IntersectionObserver' in window && !reduceMotion) {
-      var cio = new IntersectionObserver(function (entries) { cvisible = entries[0].isIntersecting; }, { threshold: .01 });
+      var cio = new IntersectionObserver(function (entries) {
+        var was = cvisible; cvisible = entries[0].isIntersecting;
+        if (cvisible && !was && !craf) craf = window.requestAnimationFrame(catDraw);
+      }, { threshold: .01 });
       cio.observe(catCanvas);
     }
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden && cvisible && !reduceMotion && !craf) craf = window.requestAnimationFrame(catDraw);
+    });
     window.addEventListener('beforeunload', function () { window.cancelAnimationFrame(craf); });
   }
 
@@ -1468,8 +2124,11 @@
       mctx.setTransform(mdpr, 0, 0, mdpr, 0, 0);
       buildMap();
     }
-    function drawMap() {
-      if (!mvisible && !mapReduce) { mraf = window.requestAnimationFrame(drawMap); return; }
+    var mLastDraw = 0;
+    function drawMap(ts) {
+      if (ts && (!mvisible || document.hidden)) { mraf = 0; return; }
+      if (!mapReduce && ts && ts - mLastDraw < 22) { mraf = window.requestAnimationFrame(drawMap); return; }
+      mLastDraw = ts || 0;
       mctx.clearRect(0, 0, mw, mh);
       mctx.drawImage(mapLayer, 0, 0, mw, mh);
       var t = mapReduce ? .2 : Date.now() * .00030;
@@ -1507,9 +2166,15 @@
     window.addEventListener('resize', resizeMap, { passive: true });
     window.addEventListener('jhthemechange', function () { resizeMap(); drawMap(); });
     if ('IntersectionObserver' in window) {
-      var mio = new IntersectionObserver(function (entries) { mvisible = entries[0].isIntersecting; }, { threshold: .01 });
+      var mio = new IntersectionObserver(function (entries) {
+        var was = mvisible; mvisible = entries[0].isIntersecting;
+        if (mvisible && !was && !mraf && !mapReduce) mraf = window.requestAnimationFrame(drawMap);
+      }, { threshold: .01 });
       mio.observe(mapCanvas);
     }
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden && mvisible && !mapReduce && !mraf) mraf = window.requestAnimationFrame(drawMap);
+    });
     window.addEventListener('beforeunload', function () { window.cancelAnimationFrame(mraf); });
   }
 })();
