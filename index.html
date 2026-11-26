@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<script>(function(){try{var t=localStorage.getItem("jh-theme");if(t!=="light"&&t!=="dark")t="light";document.documentElement.setAttribute("data-theme",t)}catch(e){document.documentElement.setAttribute("data-theme","light")}})()</script>
 <meta name="theme-color" content="#100d0c">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Crect width='44' height='44' rx='12' fill='%23100d0c'/%3E%3Cpath d='M14 32V13M30 32V13' stroke='%23faf8f5' stroke-width='3.2' stroke-linecap='round'/%3E%3Cpath d='M14 23c5-8 11 8 16 0' stroke='%23a75743' stroke-width='3.2' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='30' cy='13' r='2.4' fill='%23a19c65'/%3E%3C/svg%3E">
 <title>精鴻生醫｜自然與科學，照護每一個生命</title>
@@ -10,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;800&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=14">
+<link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
 
@@ -74,7 +75,7 @@
         <a class="btn btn-ghost" href="cases.html" data-i18n="hero.cta2">查看合作實例</a>
       </div>
       <div class="hero-proof">
-        <div><b>2003</b><a href="#history" data-i18n="hero.p1">品牌起步年份</a></div>
+        <div><b>2003</b><span data-i18n="hero.p1">品牌起步年份</span></div>
         <div><b>14+</b><span data-i18n="hero.p2">人用與寵物品項</span></div>
         <div><b>2</b><span data-i18n="hero.p3">清晰產品線</span></div>
       </div>
@@ -83,6 +84,16 @@
   </div>
   <div class="scroll-hint">SCROLL</div>
 </section>
+
+<nav class="quick-nav" aria-label="首頁快速導覽">
+  <a href="#story"><i>01</i><span data-i18n="nav.story">品牌理念</span></a>
+  <a href="#news"><i>02</i><span data-i18n="nav.news">最新消息</span></a>
+  <a href="#products"><i>03</i><span data-i18n="nav.products">產品系列</span></a>
+  <a href="#craft"><i>04</i><span data-i18n="nav.craft">技術與品質</span></a>
+  <a href="cases.html"><i>05</i><span data-i18n="nav.cases">實例分享</span></a>
+  <a href="shop.html"><i>06</i><span data-i18n="nav.shop">購物商城</span></a>
+  <a href="order.html"><i>07</i><span data-i18n="nav.order">訂單系統</span></a>
+</nav>
 
 <section class="history" id="history"><div class="wrap">
   <div class="history-head"><div class="eyebrow">MILESTONES / 公司沿革</div><h2 data-i18n="hist.title">一路走來，<br>把照護做得更清楚。</h2><p data-i18n="hist.sub">從一個原料起點，到兩條產品線。以下時程為示意，正式資料待公司確認。</p></div>
@@ -183,6 +194,7 @@
       <article class="card reveal d2" data-cat="skin"><div class="card-media"><img src="assets/product-natural.jpg" alt="外用粉劑意象示意照片" loading="lazy"></div><div class="card-body pet"><div class="tag">SKIN / 外用</div><h3 data-i18n="p.p9n">傷妥立外用粉劑 10g</h3><p data-i18n="p.p9d">選用中藥天然素材，維持患部乾爽；10gm 瓶裝，建議由獸醫師指示使用。</p><div class="chips"><span data-i18n="p.p9c1">10g</span><span data-i18n="p.p9c2">中藥素材</span></div></div></article>
     </div>
   </div>
+  <!-- 合規防呆設計：品項／批號／效期／核准文案獨立管理與版本控管；不得跨市場套用宣稱 -->
   <p style="font-size:11px;margin-top:18px" data-i18n="products.disclaimer">上述品項與成分摘錄自公開通路資料，實際成分、劑量、效期與標示以公司核准文件及獸醫師指示為準；本站不作疾病診斷、治療或預防之宣稱。</p>
 </div></section>
 
@@ -223,7 +235,9 @@
   <div class="section-head reveal"><div class="eyebrow">CONTACT / 07</div><h2 data-i18n="contact.title">讓我們從一句話開始。</h2><p data-i18n="contact.sub">產品詢價、通路合作、代工開發或企業送禮，留下需求，我們會盡快回覆。</p></div>
   <div class="contact-grid">
     <div class="reveal"><div class="info-line"><b data-i18n="contact.company">公司</b><span>精鴻生醫 JING HONG BIOMEDICAL</span></div><div class="info-line"><b data-i18n="contact.tel">電話</b><span>08-000 0000（示意，待確認）</span></div><div class="info-line"><b>Email</b><span>hello@jhbiomedical.example（示意）</span></div><div class="info-line"><b data-i18n="contact.addr">地址</b><span>高雄市小港區岐山一路 14 號（公開登記地址，待確認）</span></div><p style="font-size:11px;margin-top:14px" data-i18n="contact.note">本站為老闆審閱用樣板；照片為 Unsplash 示意圖，非正式產品實拍。</p></div>
-    <form class="form reveal d1" id="inquiryForm"><div class="form-grid"><label class="field"><span data-i18n="form.person">聯絡人</span><input name="person" data-i18n-ph="form.personPh" placeholder="姓名或單位名稱" required></label><label class="field"><span data-i18n="form.company">公司 / 單位</span><input name="company" data-i18n-ph="form.companyPh" placeholder="公司名稱"></label></div><label class="field"><span data-i18n="form.topic">洽詢主題</span><select name="topic"><option data-i18n="form.t1">產品詢價</option><option data-i18n="form.t2">通路合作</option><option data-i18n="form.t3">OEM / ODM 代工</option><option data-i18n="form.t4">企業送禮</option><option data-i18n="form.t5">其他</option></select></label><label class="field"><span data-i18n="form.msg">需求說明</span><textarea name="message" data-i18n-ph="form.msgPh" placeholder="請簡述合作需求" required></textarea></label><button class="btn btn-primary" type="submit" data-i18n="form.submit">產生詢問稿</button><div class="status" id="inquiryStatus" role="status"></div></form>
+    <form class="form reveal d1" id="inquiryForm"><div class="form-grid"><label class="field"><span data-i18n="form.person">聯絡人</span><input name="person" data-i18n-ph="form.personPh" placeholder="姓名或單位名稱" required></label><label class="field"><span data-i18n="form.company">公司 / 單位</span><input name="company" data-i18n-ph="form.companyPh" placeholder="公司名稱"></label></div><label class="field"><span data-i18n="form.topic">洽詢主題</span><select name="topic"><option data-i18n="form.t1">產品詢價</option><option data-i18n="form.t2">通路合作</option><option data-i18n="form.t3">OEM / ODM 代工</option><option data-i18n="form.t4">企業送禮</option><option data-i18n="form.t5">其他</option></select></label><label class="field"><span data-i18n="form.msg">需求說明</span><textarea name="message" data-i18n-ph="form.msgPh" placeholder="請簡述合作需求" required></textarea></label><!-- 合規防呆設計：個資蒐集告知須明確勾選；風險提醒：請勿填寫真實敏感健康資料 -->
+    <label class="consent"><input type="checkbox" name="consent" required><span><span data-i18n="consent.text">我已閱讀並同意</span> <a href="privacy.html" data-i18n="foot.privacy">隱私權與個資告知</a></span></label>
+    <button class="btn btn-primary" type="submit" data-i18n="form.submit">產生詢問稿</button><div class="status" id="inquiryStatus" role="status"></div></form>
   </div>
 </div></section>
 </main>
@@ -232,7 +246,7 @@
   <div><a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="44" rx="12" fill="#100d0c"/><path d="M14 32V13" stroke="#faf8f5" stroke-width="3.2" stroke-linecap="round"/><path d="M30 32V13" stroke="#faf8f5" stroke-width="3.2" stroke-linecap="round"/><path d="M14 23c5-8 11 8 16 0" stroke="#a75743" stroke-width="3.2" stroke-linecap="round" fill="none"/><circle cx="30" cy="13" r="2.4" fill="#a19c65"/></svg></span><span><b>精鴻生醫</b><small>JING HONG BIOMEDICAL</small></span></a><p style="margin-top:12px" data-i18n="foot.about">自然，值得被精準對待。本站為設計提案樣板，內容與數據部分為示意，正式發布前請逐項確認。</p></div>
   <div><h4 data-i18n="foot.links">快速連結</h4><div class="footer-links tech"><a href="#story" data-i18n="nav.story">品牌理念</a><a href="#news" data-i18n="nav.news">最新消息</a><a href="#products" data-i18n="nav.products">產品系列</a><a href="cases.html" data-i18n="nav.cases">實例分享</a><a href="shop.html" data-i18n="nav.shop">購物商城</a><a href="order.html" data-i18n="nav.order">訂單系統</a><a href="#faq" data-i18n="nav.faq">常見問題</a></div></div>
   <div><h4 data-i18n="foot.disclaimer">資料與免責</h4><p data-i18n="foot.text">公司與產品資訊參考公開商工登記、公開通路與展覽資料整理；示意照片來自 Unsplash。實際成分、規格、檢驗與聯絡資訊以公司核准文件為準。本站不作疾病診斷、治療或預防之宣稱。</p></div>
-</div><div class="footer-bottom"><span>© 2026 精鴻生醫 · 設計提案 v14</span><a href="#top" data-i18n="foot.top">回到頂端 ↑</a></div></div></footer>
-<script src="script.js?v=14"></script>
+</div><div class="footer-bottom"><span>© 2026 精鴻生醫 · 設計提案 v16</span><span><a href="privacy.html" data-i18n="foot.privacy">隱私權與個資告知</a> · <a href="#top" data-i18n="foot.top">回到頂端 ↑</a></span></div></div></footer>
+<script src="script.js?v=16"></script>
 </body>
 </html>

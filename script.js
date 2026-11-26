@@ -1,4 +1,6 @@
-/* 精鴻生醫 v14 — 線點貓咪、連續橫向沿革、手機導覽與背景、即時匯率、結帳頁、Q&A */
+/* 精鴻生醫 v16 — 明亮／暗黑主題、3D 客服、金色沿革、編集式產品卡、商城縮頁首
+   合規防呆設計：不宣稱醫療效能；高風險健康提問轉真人；會員／Session 隔離；
+   風險提醒：本檔為前端展示樣板，正式對外前須完成法規審查與後端權限／稽核實作。 */
 (function () {
   'use strict';
 
@@ -165,6 +167,16 @@
       'chat.a3': '歡迎留下需求：產品詢價、通路合作、OEM / ODM 或企業送禮，我們會盡快回覆。\n（示範回覆 · 未來可接入 API）',
       'chat.a4': '已記錄轉接需求。正式上線後可於此轉接真人客服，目前為示範模式。\n（示範回覆 · 未來可串接客服系統）',
       'chat.unknown': '收到！這則訊息先記錄下來。正式上線後可透過 API 自動問答或轉接真人處理。\n（示範回覆）',
+      'chat.compliance': '這個問題涉及健康或醫療判斷，我不能自行評估。請先向醫師、藥師或獸醫師諮詢；本站僅提供產品規格、批號、效期與核准文案資訊。我已為你標記轉接真人需求。',
+      'chat.disclaimer': '風險提醒：本站不作疾病診斷、治療或預防宣稱；高風險健康問題自動標記轉接真人。',
+      'theme.toggle': '切換明亮／暗黑版', 'foot.privacy': '隱私權與個資告知',
+      'consent.text': '我已閱讀並同意', 'msg.consentRequired': '請先勾選同意隱私權政策與個資蒐集告知。',
+      'privacy.title': '隱私權政策與個資告知', 'privacy.lead': '本站為設計提案樣板；以下為正式上線前的資料處理架構預留，實際內容以公司核准與法規審查版本為準。',
+      'privacy.h1': '我們蒐集的資料', 'privacy.p1': '僅蒐集洽詢所需的聯絡資訊、訂單查詢所需的會員帳號與訂單編號，以及讓網站正常運作的技術紀錄。示範流程不應輸入真實敏感資料。',
+      'privacy.h2': '你的權利', 'privacy.p2': '正式上線後提供會員資料查詢、更正、刪除與停用流程；提出需求時須完成身份驗證，避免他人冒用。',
+      'privacy.h3': '安全與隔離', 'privacy.p3': '合規防呆設計：全程 HTTPS、欄位遮罩、角色權限控管（RBAC）與操作紀錄（Audit Log）；AI 對話與檢索按使用者／Session 隔離，禁止跨帳號洩漏。',
+      'privacy.h4': '風險提醒', 'privacy.p4': '目前為前端展示版，尚未串接後端與金流。請勿輸入真實卡片資訊、病歷或可識別的敏感健康資料；正式對外前須完成法規審查。',
+      'privacy.back': '返回首頁 →',
       'chat.placeholder': '輸入你的問題…', 'chat.open': '開啟客服助手', 'chat.close': '關閉客服助手',
       'chat.send': '送出訊息',
       'dd.s1': '品牌故事', 'dd.s2': '原料溯源', 'dd.s3': '品質承諾',
@@ -190,12 +202,12 @@
       'global.btn': '產生國際訂購稿 →', 'global.ok': '已產生國際訂購稿（示範），請透過正式管道送出。',
       'global.currency': '顯示幣別',
       'dd.more': '深入瞭解', 'chat.max': '放大', 'chat.min': '縮小',
-      'hist.title': '一路走來，<br>把照護做得更清楚。', 'hist.sub': '從一個原料起點，到兩條產品線。以下時程為示意，正式資料待公司確認。',
-      'hist.y1': '品牌起步', 'hist.d1': '以牛樟芝與草本素材為起點，建立原料選購的第一步。',
-      'hist.y2': '產品線成形', 'hist.d2': '膠囊、複方與晶萃系列陸續整理，確立人用保健主軸。',
-      'hist.y3': '代工服務', 'hist.d3': '從配方到包裝，開始提供 OEM / ODM 開發支援。',
-      'hist.y4': 'ANUBIS 寵物保健', 'hist.d4': '將照護延伸到犬貓，建立泌尿、心血管與眼部品項。',
-      'hist.y5': '品質文件化', 'hist.d5': '原料溯源、三萜類標示與第三方檢驗資料逐步完備。',
+      'hist.title': '時間留下的，<br>是看得見的用心。', 'hist.sub': '六個節點，一段把原料、製程與照護慢慢累積的過程；以下時程為示意，正式資料待公司確認。',
+      'hist.y1': '品牌起步', 'hist.d1': '從原料選擇起步，建立可追溯的第一步。',
+      'hist.y2': '產品線成形', 'hist.d2': '膠囊、複方與晶萃逐一成形，人用產品線更完整。',
+      'hist.y3': '代工服務', 'hist.d3': '配方、包裝與製程經驗累積，開始提供開發支援。',
+      'hist.y4': 'ANUBIS 寵物保健', 'hist.d4': '照護延伸到犬貓，建立日常保養品項。',
+      'hist.y5': '品質文件化', 'hist.d5': '原料溯源、標示與檢驗文件逐步完備。',
       'hist.y6': '雙語官網', 'hist.d6': '人用與寵物分區呈現，商城與訂單系統分流通路。',
       'hist.note': '以上年份與事件為版面示意，正式沿革以公司核准資料為準。',
       'portal.shop': '前往購物商城 →',
@@ -398,6 +410,16 @@
       'chat.a3': 'Leave your request: product enquiry, retail partnership, OEM / ODM or corporate gifting. We will get back to you.\n(Demo reply - API ready to connect)',
       'chat.a4': 'Your handoff request is noted. A live agent can be connected here after launch; this is demo mode.\n(Demo reply - agent handoff ready)',
       'chat.unknown': 'Got it. This message is recorded for now. After launch, API answers or a live agent can handle it.\n(Demo reply)',
+      'chat.compliance': 'This touches health or medical judgement. I cannot assess it myself. Please consult a physician, pharmacist or veterinarian. This site only provides specifications, batch numbers, expiry dates and approved copy. I have flagged a live-agent handoff.',
+      'chat.disclaimer': 'Risk notice: no diagnosis, treatment or prevention claims. High-risk health questions are flagged for a live agent.',
+      'theme.toggle': 'Toggle light / dark theme', 'foot.privacy': 'Privacy & personal data notice',
+      'consent.text': 'I have read and agree to the', 'msg.consentRequired': 'Please agree to the Privacy Policy and Personal Data Notice first.',
+      'privacy.title': 'Privacy Policy & Personal Data Notice', 'privacy.lead': 'This is a design proposal. The following is a reserved framework for the pre-launch review; the approved, legally reviewed version prevails.',
+      'privacy.h1': 'What we collect', 'privacy.p1': 'Only contact details needed for enquiries, account and order numbers for order lookup, and technical logs required to run the site. Do not enter real sensitive data in this demo.',
+      'privacy.h2': 'Your rights', 'privacy.p2': 'After launch, members can request access, correction, deletion and deactivation, subject to identity verification to prevent impersonation.',
+      'privacy.h3': 'Security & isolation', 'privacy.p3': 'Compliance by design: HTTPS, field masking, role-based access control and audit logs. AI chat and retrieval are isolated per user and session; cross-account leakage is prohibited.',
+      'privacy.h4': 'Risk notice', 'privacy.p4': 'This is a front-end demo with no back end or payment gateway connected. Do not enter real card details, medical records or identifiable health data. Legal review is required before launch.',
+      'privacy.back': 'Back to home →',
       'chat.placeholder': 'Type your question...', 'chat.open': 'Open assistant', 'chat.close': 'Close assistant',
       'chat.send': 'Send message',
       'dd.s1': 'Our story', 'dd.s2': 'Traceability', 'dd.s3': 'Quality commitment',
@@ -423,12 +445,12 @@
       'global.btn': 'Generate global order draft →', 'global.ok': 'Global order draft generated (demo); send it through the official channel.',
       'global.currency': 'Display currency',
       'dd.more': 'Explore more', 'chat.max': 'Maximize', 'chat.min': 'Minimize',
-      'hist.title': 'The journey so far,<br>made clearer.', 'hist.sub': 'From one ingredient to two product lines. Dates below are illustrative and pending company confirmation.',
-      'hist.y1': 'The beginning', 'hist.d1': 'Started with Antrodia cinnamomea and botanical ingredients.',
-      'hist.y2': 'Product lines take shape', 'hist.d2': 'Capsules, formulas and extracts established the human wellness line.',
-      'hist.y3': 'OEM / ODM services', 'hist.d3': 'From formulation to packaging, contract development began.',
-      'hist.y4': 'ANUBIS pet care', 'hist.d4': 'Care extended to dogs and cats with urinary, cardiac and eye items.',
-      'hist.y5': 'Quality documentation', 'hist.d5': 'Traceability, triterpenoid labeling and third-party testing completed.',
+      'hist.title': 'What time leaves behind,<br>is care you can see.', 'hist.sub': 'Six milestones in a steady accumulation of ingredients, process and care. Dates are illustrative and pending company confirmation.',
+      'hist.y1': 'The beginning', 'hist.d1': 'Began with careful ingredient sourcing and traceability.',
+      'hist.y2': 'Product lines take shape', 'hist.d2': 'Capsules, formulas and extracts shaped the human wellness line.',
+      'hist.y3': 'OEM / ODM services', 'hist.d3': 'Formulation, packaging and process experience enabled development support.',
+      'hist.y4': 'ANUBIS pet care', 'hist.d4': 'Care extended to dogs and cats through everyday wellness items.',
+      'hist.y5': 'Quality documentation', 'hist.d5': 'Traceability, labeling and testing documents became complete.',
       'hist.y6': 'Bilingual website', 'hist.d6': 'Human and pet lines separated; shop and order portals split.',
       'hist.note': 'Years and events are illustrative; official history is subject to company approval.',
       'portal.shop': 'Go to Online Shop →',
@@ -591,6 +613,30 @@
   }
   applyLang(currentLang);
 
+  /* ---------- v16 明亮／暗黑主題：inline script 先定 data-theme，這裡接手切換 ---------- */
+  var JH_DARK = document.documentElement.getAttribute('data-theme') === 'dark';
+  var JH_LIGHT_P = { line:'90,111,156', gold:'176,139,79', clay:'182,96,74', eye:'31,45,42', fill:'255,255,255', text:'92,99,114' };
+  var JH_DARK_P  = { line:'127,155,209', gold:'216,184,120', clay:'224,143,112', eye:'238,241,246', fill:'26,32,43', text:'169,178,193' };
+  var P = JH_DARK ? JH_DARK_P : JH_LIGHT_P;
+  (function () {
+    var navWrap = document.querySelector('.nav .wrap'), navBtn = document.querySelector('.nav-toggle');
+    if (!navWrap || !navBtn || document.getElementById('themeToggle')) return;
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.id = 'themeToggle'; btn.className = 'theme-toggle';
+    btn.textContent = JH_DARK ? '☾' : '☀';
+    btn.setAttribute('aria-label', t('theme.toggle'));
+    btn.setAttribute('aria-pressed', String(JH_DARK));
+    navWrap.insertBefore(btn, navBtn);
+    btn.addEventListener('click', function () {
+      JH_DARK = !JH_DARK; P = JH_DARK ? JH_DARK_P : JH_LIGHT_P;
+      document.documentElement.setAttribute('data-theme', JH_DARK ? 'dark' : 'light');
+      try { localStorage.setItem('jh-theme', JH_DARK ? 'dark' : 'light'); } catch (e) {}
+      btn.textContent = JH_DARK ? '☾' : '☀';
+      btn.setAttribute('aria-pressed', String(JH_DARK));
+      window.dispatchEvent(new CustomEvent('jhthemechange'));
+    });
+  })();
+
   /* ---------- 公司沿革時間軸動畫 ---------- */
   var histSec = document.getElementById('history');
   if (histSec && 'IntersectionObserver' in window) {
@@ -675,11 +721,13 @@
     for (var j = 0; j < items.length; j++) items[j].hidden = f !== 'all' && items[j].getAttribute('data-case') !== f;
   });
 
-  /* ---------- 表單示範 ---------- */
+  /* ---------- 表單示範（合規防呆設計：個資告知須勾選） ---------- */
   var inquiry = document.getElementById('inquiryForm');
   if (inquiry) inquiry.addEventListener('submit', function (e) {
     e.preventDefault();
     var f = new FormData(inquiry);
+    var consentEl = inquiry.querySelector('[name="consent"]');
+    if (consentEl && !consentEl.checked) { document.getElementById('inquiryStatus').textContent = t('msg.consentRequired'); return; }
     var langTag = currentLang === 'en' ? 'Jing Hong enquiry' : '精鴻生醫 合作洽詢';
     var labels = currentLang === 'en'
       ? ['Contact', 'Company', 'Topic', 'Message'] : ['聯絡人', '公司', '主題', '需求'];
@@ -977,15 +1025,16 @@
   /* ---------- 客服機器人：狗狗形象，預留 API／轉真人 ---------- */
   function dogSVG(kind, u) {
     var defs = '<defs>' +
-      '<linearGradient id="' + u + 'Fur" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe3b4"/><stop offset=".55" stop-color="#f2c583"/><stop offset="1" stop-color="#d99f59"/></linearGradient>' +
+      '<linearGradient id="' + u + 'Fur" x1="0" y1="0" x2=".35" y2="1"><stop stop-color="#fff3dc"/><stop offset=".42" stop-color="#f4cd91"/><stop offset=".78" stop-color="#dba55f"/><stop offset="1" stop-color="#b77b3f"/></linearGradient>' +
       '<linearGradient id="' + u + 'Fur2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7d29a"/><stop offset="1" stop-color="#c88945"/></linearGradient>' +
-      '<radialGradient id="' + u + 'Cheek"><stop stop-color="#f3a7a0" stop-opacity=".85"/><stop offset="1" stop-color="#f3a7a0" stop-opacity="0"/></radialGradient>' +
+      '<radialGradient id="' + u + 'Cheek"><stop stop-color="#f3a7a0" stop-opacity=".9"/><stop offset="1" stop-color="#f3a7a0" stop-opacity="0"/></radialGradient>' +
+      '<radialGradient id="' + u + 'Shade" cx=".35" cy=".28" r=".8"><stop stop-color="#fff" stop-opacity=".55"/><stop offset=".62" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#6b4426" stop-opacity=".28"/></radialGradient>' +
       '<linearGradient id="' + u + 'Collar" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#4b9a8d"/><stop offset="1" stop-color="#2f7a70"/></linearGradient>' +
     '</defs>';
     var ears = '<g class="cb-ear-l"><path d="M34 40c-13-4-21 8-18 24 2 13 11 19 18 14 6-5 6-14 4-21z" fill="url(#' + u + 'Fur2)" stroke="#c88945" stroke-width="1"/><path d="M32 47c-7 2-10 9-9 17" stroke="#c88945" stroke-width="1.2" fill="none" opacity=".5"/></g>' +
       '<g class="cb-ear-r"><path d="M94 40c13-4 21 8 18 24-2 13-11 19-18 14-6-5-6-14-4-21z" fill="url(#' + u + 'Fur2)" stroke="#c88945" stroke-width="1"/><path d="M96 47c7 2 10 9 9 17" stroke="#c88945" stroke-width="1.2" fill="none" opacity=".5"/></g>';
     var face = '<path d="M48 24q16-11 32 0l-5 10H53z" fill="url(#' + u + 'Fur2)"/>' +
-      '<ellipse cx="64" cy="54" rx="35" ry="32" fill="url(#' + u + 'Fur)"/>' + ears +
+      '<ellipse cx="64" cy="54" rx="35" ry="32" fill="url(#' + u + 'Fur)"/><ellipse cx="64" cy="54" rx="35" ry="32" fill="url(#' + u + 'Shade)"/>' + ears +
       '<ellipse cx="64" cy="68" rx="22" ry="16" fill="#fff4de"/>' +
       '<circle cx="39" cy="62" r="11" fill="url(#' + u + 'Cheek)"/><circle cx="89" cy="62" r="11" fill="url(#' + u + 'Cheek)"/>' +
       '<circle class="cb-eye" cx="50" cy="51" r="5.6" fill="#3b2b23"/><circle class="cb-eye" cx="78" cy="51" r="5.6" fill="#3b2b23"/>' +
@@ -998,7 +1047,7 @@
     var body;
     if (kind === 'sit') {
       body = '<g class="cb-tail"><path d="M92 106c16-2 24-14 20-26-2-6-9-7-12-3 6 4 7 10 2 14-5 4-10 4-14 3z" fill="url(#' + u + 'Fur2)" stroke="#c88945" stroke-width="1"/></g>' +
-        '<g class="cb-body"><ellipse cx="64" cy="98" rx="31" ry="28" fill="url(#' + u + 'Fur)"/>' +
+        '<g class="cb-body"><ellipse cx="64" cy="98" rx="31" ry="28" fill="url(#' + u + 'Fur)"/><ellipse cx="64" cy="98" rx="31" ry="28" fill="url(#' + u + 'Shade)"/>' +
         '<ellipse cx="64" cy="106" rx="21" ry="21" fill="#fff0d4"/>' +
         '<ellipse cx="47" cy="121" rx="12" ry="8" fill="url(#' + u + 'Fur2)"/><ellipse cx="81" cy="121" rx="12" ry="8" fill="url(#' + u + 'Fur2)"/>' +
         '<ellipse cx="47" cy="124" rx="7" ry="4" fill="#fff0d4"/><ellipse cx="81" cy="124" rx="7" ry="4" fill="#fff0d4"/>' +
@@ -1009,7 +1058,7 @@
         '<path d="M64 71v3" stroke="#3b2b23" stroke-width="1.4"/>' + sparkle + '</g>';
     } else {
       body = '<g class="cb-tail"><path d="M92 88c14-8 22-22 16-33-3-5-10-5-12-1 7 4 8 11 3 16-5 5-11 6-17 5z" fill="url(#' + u + 'Fur2)" stroke="#c88945" stroke-width="1"/></g>' +
-        '<g class="cb-body"><ellipse cx="64" cy="92" rx="32" ry="24" fill="url(#' + u + 'Fur)"/>' +
+        '<g class="cb-body"><ellipse cx="64" cy="92" rx="32" ry="24" fill="url(#' + u + 'Fur)"/><ellipse cx="64" cy="92" rx="32" ry="24" fill="url(#' + u + 'Shade)"/>' +
         '<ellipse cx="64" cy="98" rx="21" ry="16" fill="#fff0d4"/>' +
         '<rect x="38" y="104" width="13" height="26" rx="6.5" fill="url(#' + u + 'Fur2)"/><rect x="55" y="106" width="13" height="24" rx="6.5" fill="url(#' + u + 'Fur)"/>' +
         '<rect x="72" y="106" width="13" height="24" rx="6.5" fill="url(#' + u + 'Fur)"/><rect x="87" y="104" width="13" height="26" rx="6.5" fill="url(#' + u + 'Fur2)"/>' +
@@ -1034,6 +1083,7 @@
         '<button type="button" data-chat-q="2" data-i18n="chat.q2"></button>' +
         '<button type="button" data-chat-q="3" data-i18n="chat.q3"></button>' +
         '<button type="button" data-chat-q="4" data-i18n="chat.q4"></button></div>' +
+      '<div class="chat-disclaimer" data-i18n="chat.disclaimer"></div>' +
       '<form class="chat-foot" id="chatForm"><input id="chatInput" type="text" autocomplete="off" data-i18n-ph="chat.placeholder" placeholder="輸入你的問題…">' +
         '<button type="submit" data-i18n-ph="chat.send" aria-label="送出訊息">➤</button></form>' +
     '</section>' +
@@ -1132,12 +1182,17 @@
   try { cbFullSaved = localStorage.getItem('jh-chat-full') === '1'; } catch (e) {}
   if (cbFullSaved) setChatFullscreen(true);
 
+  /* 合規防呆設計：高風險健康提問一律不自行評估，固定回覆＋標記轉真人 */
+  function jhHighRisk(text) {
+    return /疾病|治療|治癒|用藥|藥物|劑量|孕婦|懷孕|哺乳|嬰幼兒|新生兒|重大疾病|癌症|糖尿病|心臟病|過敏|副作用|disease|cure|treat|medication|dose|pregnan|infant|newborn|cancer|diabetes|side effect/i.test(text);
+  }
   function addChatMsg(who, text) {
     var d = document.createElement('div');
     d.className = 'chat-msg ' + who;
     d.textContent = text;
     cbBody.appendChild(d);
     cbBody.scrollTop = cbBody.scrollHeight;
+    return d;
   }
   function replyChat(qnum) {
     var question = qnum ? t('chat.q' + qnum) : cbInput.value.trim();
@@ -1146,7 +1201,8 @@
     if (qnum) addChatMsg('bot', t('chat.a' + qnum));
     else {
       var v = question.toLowerCase();
-      if (/訂單|order|查詢|track/.test(v)) addChatMsg('bot', t('chat.a2'));
+      if (jhHighRisk(question)) { var cm = addChatMsg('bot', t('chat.compliance')); if (cm) cm.classList.add('chat-compliance'); }
+      else if (/訂單|order|查詢|track/.test(v)) addChatMsg('bot', t('chat.a2'));
       else if (/產品|product|保健|寵物|pet|狗|貓/.test(v)) addChatMsg('bot', t('chat.a1'));
       else if (/合作|通路|代工|oem|送禮|gift/.test(v)) addChatMsg('bot', t('chat.a3'));
       else addChatMsg('bot', t('chat.unknown'));
@@ -1157,7 +1213,7 @@
   for (var qb = 0; qb < qBtns.length; qb++) qBtns[qb].addEventListener('click', function () { replyChat(this.getAttribute('data-chat-q')); });
   if (cbForm) cbForm.addEventListener('submit', function (e) { e.preventDefault(); replyChat(0); });
 
-  /* ---------- Hero 貓咪：回歸線條＋節點，微幅呼吸不翻面 ---------- */
+  /* ---------- Hero 右側貓咪：解剖線框＋科技 HUD，微幅呼吸不翻面 ---------- */
   var catCanvas = document.getElementById('bioCanvas');
   if (catCanvas && catCanvas.getContext) {
     var cc = catCanvas.getContext('2d');
@@ -1169,20 +1225,29 @@
       tmy = Math.max(-1, Math.min(1, (e.clientY / window.innerHeight - .5) * 2));
     }, { passive: true });
 
+    /* 0–15 頭型、16–25 耳、26–33 眼鼻口、34–39 鬍鬚、40–50 身軀與尾巴 */
     var CAT_V = [
-      [-.86,-.14,.02],[-.80,-.50,.04],[-.54,-.80,.06],[-.22,-.94,.08],[.22,-.94,.08],[.54,-.80,.06],
-      [.80,-.50,.04],[.86,-.14,.02],[.74,.34,.02],[.40,.68,.06],[0,.82,.10],[-.40,.68,.06],[-.74,.34,.02],
-      [-.74,-1.08,.00],[-.44,-.74,.12],[.74,-1.08,.00],[.44,-.74,.12],
-      [-.34,-.18,.44],[.34,-.18,.44],[0,.16,.58],[0,.36,.50],
-      [-.58,.12,.18],[.58,.12,.18],[-1.28,.30,.02],[-1.20,.54,.02],[1.28,.30,.02],[1.20,.54,.02],
-      [-.28,-.24,.52],[.40,-.24,.52]
+      [0,-.90,.08],[.32,-.86,.09],[.58,-.70,.10],[.74,-.42,.11],[.78,-.10,.12],[.70,.18,.11],
+      [.50,.38,.10],[.24,.48,.08],[0,.51,.07],[-.24,.48,.08],[-.50,.38,.10],[-.70,.18,.11],
+      [-.78,-.10,.12],[-.74,-.42,.11],[-.58,-.70,.10],[-.32,-.86,.09],
+      [-.82,-.46,.02],[-.66,-1.06,.00],[-.30,-.74,.12],[.30,-.74,.12],[.66,-1.06,.00],[.82,-.46,.02],
+      [-.66,-.58,.14],[-.46,-.70,.16],[.46,-.70,.16],[.66,-.58,.14],
+      [-.32,-.16,.20],[.32,-.16,.20],[-.28,-.22,.26],[.36,-.22,.26],
+      [0,.10,.30],[-.14,.24,.22],[.14,.24,.22],[0,.30,.24],
+      [-.56,.04,.14],[.56,.04,.14],[-1.08,-.06,.00],[-1.06,.16,.00],[1.08,-.06,.00],[1.06,.16,.00],
+      [-.46,.40,.04],[.46,.40,.04],[-.54,.78,.02],[.54,.78,.02],[0,.98,.06],[-.24,.96,.10],[.24,.96,.10],
+      [.60,.72,.00],[1.00,.56,-.02],[1.04,.18,-.04],[.86,-.02,-.02]
     ];
     var CAT_E = [];
-    for (var ei = 0; ei < 12; ei++) CAT_E.push([ei, ei + 1]);
-    CAT_E.push([12, 0]);
-    CAT_E.push([2, 13], [13, 14], [14, 3], [5, 15], [15, 16], [16, 4]);
-    CAT_E.push([14, 17], [16, 18], [17, 19], [18, 19], [19, 20], [20, 21], [20, 22], [17, 21], [18, 22]);
-    CAT_E.push([21, 23], [21, 24], [22, 25], [22, 26]);
+    for (var ei = 0; ei < 15; ei++) CAT_E.push([ei, ei + 1]);
+    CAT_E.push([15, 0]);
+    CAT_E.push([16,17],[17,18],[18,13],[21,20],[20,19],[19,3]);
+    CAT_E.push([14,22],[22,23],[23,18],[2,25],[25,24],[24,19]);
+    CAT_E.push([30,31],[31,33],[33,32],[32,30]);
+    CAT_E.push([34,36],[34,37],[35,38],[35,39]);
+    CAT_E.push([10,40],[40,42],[42,45],[45,44],[44,46],[46,43],[43,41],[41,6]);
+    CAT_E.push([40,44],[41,44],[3,26],[13,27],[26,30],[27,30]);
+    CAT_E.push([43,47],[47,48],[48,49],[49,50]);
 
     function catResize() {
       var rect = catCanvas.getBoundingClientRect();
@@ -1195,20 +1260,58 @@
       if (!cvisible && !reduceMotion) { craf = window.requestAnimationFrame(catDraw); return; }
       cc.clearRect(0, 0, cw, ch);
       var now = reduceMotion ? 0 : Date.now();
-      cmx += (tmx - cmx) * .05; cmy += (tmy - cmy) * .05;
-      var yaw = cmx * .30 + (reduceMotion ? 0 : Math.sin(now * .00035) * .10);
-      var pitch = -cmy * .22 + (reduceMotion ? 0 : Math.sin(now * .00052) * .05);
+      cmx += (tmx - cmx) * .035; cmy += (tmy - cmy) * .035;
+      var yaw = cmx * .12 + (reduceMotion ? 0 : Math.sin(now * .00028) * .055);
+      var pitch = -cmy * .10 + (reduceMotion ? 0 : Math.sin(now * .00044) * .03);
       var cyaw = Math.cos(yaw), syaw = Math.sin(yaw), cp = Math.cos(pitch), sp = Math.sin(pitch);
-      var breath = reduceMotion ? 1 : 1 + Math.sin(now * .0009) * .018;
-      var cx = cw * .5 + cmx * 10, cy = ch * .52 - cmy * 8;
-      var radius = Math.min(cw * .30, ch * .46) * breath;
+      var breath = reduceMotion ? 1 : 1 + Math.sin(now * .0009) * .014;
+      var cx = cw * .5 + cmx * 8, cy = ch * .50 - cmy * 6;
+      var radius = Math.min(cw * .36, ch * .42) * breath;
       var px = [], py = [], pz = [];
+
+      var glow = cc.createRadialGradient(cx, cy, radius * .08, cx, cy, radius * 1.45);
+      glow.addColorStop(0, 'rgba(' + P.line + ',.13)');
+      glow.addColorStop(.58, 'rgba(' + P.gold + ',.055)');
+      glow.addColorStop(1, 'rgba(' + P.line + ',0)');
+      cc.fillStyle = glow; cc.beginPath(); cc.arc(cx, cy, radius * 1.45, 0, Math.PI * 2); cc.fill();
+
+      /* 科技 HUD：外圈虚線、內圈掃描、四角定位、軌道節點 */
+      cc.save(); cc.translate(cx, cy);
+      cc.setLineDash([3, 10]); cc.lineDashOffset = reduceMotion ? 0 : -now * .008;
+      cc.strokeStyle = 'rgba(' + P.line + ',.28)'; cc.lineWidth = 1;
+      cc.beginPath(); cc.arc(0, 0, radius * 1.16, 0, Math.PI * 2); cc.stroke();
+      cc.setLineDash([]);
+      for (var a = 0; a < 2; a++) {
+        var a0 = (reduceMotion ? .4 : now * .00022) + a * Math.PI;
+        cc.strokeStyle = a ? 'rgba(' + P.clay + ',.30)' : 'rgba(' + P.line + ',.36)';
+        cc.lineWidth = 1.4;
+        cc.beginPath(); cc.arc(0, 0, radius * 1.02, a0, a0 + .72); cc.stroke();
+      }
+      var scanY = reduceMotion ? radius * .3 : Math.sin(now * .00062) * radius * .92;
+      var scan = cc.createLinearGradient(-radius, scanY, radius, scanY);
+      scan.addColorStop(0, 'rgba(' + P.line + ',0)');
+      scan.addColorStop(.5, 'rgba(' + P.line + ',.20)');
+      scan.addColorStop(1, 'rgba(' + P.line + ',0)');
+      cc.strokeStyle = scan; cc.lineWidth = 1;
+      cc.beginPath(); cc.moveTo(-radius * 1.02, scanY); cc.lineTo(radius * 1.02, scanY); cc.stroke();
+      cc.strokeStyle = 'rgba(' + P.line + ',.32)'; cc.lineWidth = 1.2;
+      var q = radius * 1.30, t = radius * .14;
+      for (var sx = -1; sx <= 1; sx += 2) for (var sy = -1; sy <= 1; sy += 2) {
+        cc.beginPath(); cc.moveTo(sx * q - sx * t, sy * q); cc.lineTo(sx * q, sy * q); cc.lineTo(sx * q, sy * q - sy * t); cc.stroke();
+      }
+      for (var o = 0; o < 3; o++) {
+        var oa = (reduceMotion ? o * 2.1 : now * .0004 + o * 2.1);
+        var ox = Math.cos(oa) * radius * 1.16, oy = Math.sin(oa) * radius * 1.16 * .86;
+        cc.fillStyle = o === 0 ? 'rgba(' + P.clay + ',.78)' : 'rgba(' + P.line + ',.62)';
+        cc.shadowColor = cc.fillStyle; cc.shadowBlur = 9;
+        cc.beginPath(); cc.arc(ox, oy, 2.4, 0, Math.PI * 2); cc.fill(); cc.shadowBlur = 0;
+      }
+      cc.restore();
 
       for (var i = 0; i < CAT_V.length; i++) {
         var v = CAT_V[i], x = v[0], y = v[1], z = v[2];
-        if (i === 13 || i === 15) { x *= 1 + cmy * .08; y *= 1 + cmy * .12; }
-        if (i === 14 || i === 16) x *= 1 + cmy * .06;
-        if (i === 23 || i === 24 || i === 25 || i === 26) x *= 1 + cmx * .10;
+        if (i === 17 || i === 20) y += reduceMotion ? 0 : Math.sin(now * .0015 + i) * .025;
+        if (i >= 47) x += reduceMotion ? 0 : Math.sin(now * .0011 + (i - 47)) * .035 * (i - 46);
         var x1 = x * cyaw - z * syaw, z1 = x * syaw + z * cyaw;
         var y1 = y * cp - z1 * sp, z2 = y * sp + z1 * cp;
         var persp = 2.7 / (3.0 + z2);
@@ -1217,26 +1320,21 @@
         pz[i] = z2;
       }
 
-      var glow = cc.createRadialGradient(cx, cy, radius * .1, cx, cy, radius * 1.35);
-      glow.addColorStop(0, 'rgba(63,141,127,.10)');
-      glow.addColorStop(.62, 'rgba(161,156,101,.05)');
-      glow.addColorStop(1, 'rgba(63,141,127,0)');
-      cc.fillStyle = glow; cc.beginPath(); cc.arc(cx, cy, radius * 1.35, 0, Math.PI * 2); cc.fill();
-
       cc.lineCap = 'round'; cc.lineJoin = 'round';
       for (var pass = 0; pass < 2; pass++) {
         for (var e = 0; e < CAT_E.length; e++) {
           var u = CAT_E[e][0], v2 = CAT_E[e][1];
           var depth = (pz[u] + pz[v2] + 2) / 4;
-          var whisker = e >= CAT_E.length - 4;
+          var whisker = e >= 32 && e < 36;
+          var fine = whisker;
           if (pass === 0) {
-            cc.strokeStyle = 'rgba(63,141,127,' + (.05 + depth * .10).toFixed(3) + ')';
-            cc.lineWidth = whisker ? 4.5 : 5.5;
+            cc.strokeStyle = 'rgba(' + P.line + ',' + (.035 + depth * .07).toFixed(3) + ')';
+            cc.lineWidth = fine ? 3.6 : 5.2;
           } else {
-            cc.strokeStyle = whisker
-              ? 'rgba(210,106,76,' + (.18 + depth * .42).toFixed(3) + ')'
-              : 'rgba(63,141,127,' + (.12 + depth * .50).toFixed(3) + ')';
-            cc.lineWidth = whisker ? 1 : 1.7;
+            cc.strokeStyle = fine
+              ? 'rgba(' + P.clay + ',' + (.24 + depth * .46).toFixed(3) + ')'
+              : 'rgba(' + P.line + ',' + (.16 + depth * .56).toFixed(3) + ')';
+            cc.lineWidth = fine ? 1 : 1.8;
           }
           cc.beginPath(); cc.moveTo(px[u], py[u]); cc.lineTo(px[v2], py[v2]); cc.stroke();
         }
@@ -1244,33 +1342,34 @@
 
       for (var n = 0; n < CAT_V.length; n++) {
         var d = (pz[n] + 1) / 2;
-        var r = Math.max(.8, 1.5 + d * 3.4);
-        var nose = n === 19;
-        cc.fillStyle = nose
-          ? 'rgba(210,106,76,' + (.65 + d * .35).toFixed(3) + ')'
-          : 'rgba(63,141,127,' + (.25 + d * .60).toFixed(3) + ')';
-        cc.shadowColor = nose ? 'rgba(210,106,76,.5)' : 'rgba(63,141,127,.45)';
-        cc.shadowBlur = d > .55 ? 8 : 0;
+        var r = Math.max(.8, 1.3 + d * 3.0);
+        var accent = n === 30 || n === 17 || n === 20;
+        cc.fillStyle = accent
+          ? 'rgba(' + P.clay + ',' + (.62 + d * .36).toFixed(3) + ')'
+          : 'rgba(' + P.line + ',' + (.30 + d * .62).toFixed(3) + ')';
+        cc.shadowColor = accent ? 'rgba(' + P.clay + ',.52)' : 'rgba(' + P.line + ',.48)';
+        cc.shadowBlur = d > .55 ? 7 : 0;
         cc.beginPath(); cc.arc(px[n], py[n], r, 0, Math.PI * 2); cc.fill();
         cc.shadowBlur = 0;
       }
 
-      for (var q = 0; q < 2; q++) {
-        var ee = q === 0 ? 17 : 18, hi = q === 0 ? 27 : 28;
-        var ed = (pz[ee] + 1) / 2, er = Math.max(2.2, 4.5 + ed * 4.5);
-        cc.fillStyle = 'rgba(31,45,42,' + (.60 + ed * .38).toFixed(3) + ')';
-        cc.beginPath(); cc.ellipse(px[ee], py[ee], er * .82, er, 0, 0, Math.PI * 2); cc.fill();
-        cc.fillStyle = 'rgba(255,255,255,.92)';
-        cc.beginPath(); cc.arc(px[hi], py[hi], Math.max(1, 1.6 + ed * 1.5), 0, Math.PI * 2); cc.fill();
+      for (var q2 = 0; q2 < 2; q2++) {
+        var ee = q2 === 0 ? 26 : 27, hi = q2 === 0 ? 28 : 29;
+        var ed = (pz[ee] + 1) / 2, er = Math.max(2.6, 5.4 + ed * 3.6);
+        cc.fillStyle = 'rgba(' + P.eye + ',' + (.62 + ed * .36).toFixed(3) + ')';
+        cc.beginPath(); cc.ellipse(px[ee], py[ee], er * .84, er, 0, 0, Math.PI * 2); cc.fill();
+        cc.fillStyle = 'rgba(255,255,255,.95)';
+        cc.beginPath(); cc.arc(px[hi], py[hi], Math.max(1.2, 1.7 + ed * 1.2), 0, Math.PI * 2); cc.fill();
       }
 
-      cc.fillStyle = 'rgba(210,106,76,.9)';
-      cc.beginPath(); cc.moveTo(px[19], py[19] - 3);
-      cc.lineTo(px[19] - 5, py[19] + 3); cc.lineTo(px[19] + 5, py[19] + 3); cc.closePath(); cc.fill();
+      cc.fillStyle = 'rgba(' + P.clay + ',.92)';
+      cc.beginPath(); cc.moveTo(px[30], py[30] - 3);
+      cc.lineTo(px[30] - 5, py[30] + 3); cc.lineTo(px[30] + 5, py[30] + 3); cc.closePath(); cc.fill();
       if (!reduceMotion) craf = window.requestAnimationFrame(catDraw);
     }
     catResize(); catDraw();
     window.addEventListener('resize', catResize, { passive: true });
+    window.addEventListener('jhthemechange', function () { catResize(); if (reduceMotion) catDraw(); });
     if ('IntersectionObserver' in window && !reduceMotion) {
       var cio = new IntersectionObserver(function (entries) { cvisible = entries[0].isIntersecting; }, { threshold: .01 });
       cio.observe(catCanvas);
@@ -1295,7 +1394,8 @@
       [[68,24],[80,22],[88,20],[82,8],[75,8]],
       [[95,15],[110,10],[120,5],[116,-6],[105,-7],[100,5]],
       [[113,-22],[130,-12],[145,-18],[150,-30],[140,-38],[120,-35],[113,-28]],
-      [[130,32],[140,36],[142,42],[137,38]]
+      [[130,32],[140,36],[142,42],[137,38]],
+      [[120.1,25.4],[121.0,25.3],[121.9,25.1],[121.8,24.0],[121.5,22.1],[120.7,21.9],[120.2,22.6],[120.1,23.6]]
     ];
     var nodes = [
       [121.5, 25], [139.7, 35.7], [103.8, 1.3], [55.3, 25.2], [8.7, 50.1],
@@ -1328,8 +1428,8 @@
           if (q === 0) lc.moveTo(pt[0], pt[1]); else lc.lineTo(pt[0], pt[1]);
         }
         lc.closePath();
-        lc.fillStyle = 'rgba(63,141,127,.07)'; lc.fill();
-        lc.strokeStyle = 'rgba(63,141,127,.16)'; lc.lineWidth = 1; lc.stroke();
+        lc.fillStyle = 'rgba(' + P.line + ',.07)'; lc.fill();
+        lc.strokeStyle = 'rgba(' + P.line + ',.20)'; lc.lineWidth = 1; lc.stroke();
       }
       var step = mw < 700 ? 9 : 7;
       for (var y = 12; y <= mh - 12; y += step) {
@@ -1337,11 +1437,26 @@
           var lon = x / mw * 360 - 180, lat = 82 - y / mh * 146;
           if (!isLand(lon, lat)) continue;
           var edge = 1 - Math.abs(x - mw / 2) / mw;
-          lc.fillStyle = 'rgba(47,122,112,' + (.46 + edge * .34).toFixed(3) + ')';
+          lc.fillStyle = 'rgba(' + P.line + ',' + (.46 + edge * .34).toFixed(3) + ')';
           lc.beginPath(); lc.arc(x, y, mw < 700 ? 1.5 : 1.9, 0, Math.PI * 2); lc.fill();
         }
       }
-      lc.strokeStyle = 'rgba(140,154,99,.12)'; lc.lineWidth = 1;
+      /* 台灣：專屬暖陶點陣與光暈，桌機／手機都能辨識 */
+      var tw = project(121, 23.8);
+      var twGlow = lc.createRadialGradient(tw[0], tw[1], 2, tw[0], tw[1], mw < 700 ? 26 : 38);
+      twGlow.addColorStop(0, 'rgba(' + P.clay + ',.32)');
+      twGlow.addColorStop(1, 'rgba(' + P.clay + ',0)');
+      lc.fillStyle = twGlow;
+      lc.beginPath(); lc.arc(tw[0], tw[1], mw < 700 ? 26 : 38, 0, Math.PI * 2); lc.fill();
+      for (var ty = 22; ty <= 25.4; ty += .42) {
+        for (var tx = 120.1; tx <= 121.9; tx += .34) {
+          if (!isLand(tx, ty)) continue;
+          var tp = project(tx, ty);
+          lc.fillStyle = 'rgba(' + P.clay + ',.95)';
+          lc.beginPath(); lc.arc(tp[0], tp[1], mw < 700 ? 1.7 : 2.2, 0, Math.PI * 2); lc.fill();
+        }
+      }
+      lc.strokeStyle = 'rgba(' + P.gold + ',.16)'; lc.lineWidth = 1;
       for (var gx = 0; gx <= 6; gx++) { var px = mw * gx / 6; lc.beginPath(); lc.moveTo(px, 0); lc.lineTo(px, mh); lc.stroke(); }
       for (var gy = 0; gy <= 4; gy++) { var py = mh * gy / 4; lc.beginPath(); lc.moveTo(0, py); lc.lineTo(mw, py); lc.stroke(); }
     }
@@ -1362,28 +1477,35 @@
       for (var i = 1; i < nodes.length; i++) {
         var p = project(nodes[i][0], nodes[i][1]);
         var mx = (hub[0] + p[0]) / 2, my = (hub[1] + p[1]) / 2 - Math.abs(p[0] - hub[0]) * .18;
-        mctx.strokeStyle = 'rgba(210,106,76,.42)'; mctx.lineWidth = 1.2;
+        mctx.strokeStyle = 'rgba(' + P.clay + ',.62)'; mctx.lineWidth = 1.5;
         mctx.beginPath(); mctx.moveTo(hub[0], hub[1]); mctx.quadraticCurveTo(mx, my, p[0], p[1]); mctx.stroke();
         var u = (t + i * .13) % 1, iu = 1 - u;
         var qx = iu * iu * hub[0] + 2 * iu * u * mx + u * u * p[0];
         var qy = iu * iu * hub[1] + 2 * iu * u * my + u * u * p[1];
-        mctx.fillStyle = 'rgba(140,154,99,.95)';
-        mctx.shadowColor = 'rgba(140,154,99,.9)'; mctx.shadowBlur = 10;
+        mctx.fillStyle = 'rgba(' + P.gold + ',.95)';
+        mctx.shadowColor = 'rgba(' + P.gold + ',.9)'; mctx.shadowBlur = 10;
         mctx.beginPath(); mctx.arc(qx, qy, 2.4, 0, Math.PI * 2); mctx.fill();
         mctx.shadowBlur = 0;
       }
       for (var n = 0; n < nodes.length; n++) {
         var q = project(nodes[n][0], nodes[n][1]);
         var pulse = 2 + Math.sin(t * 2 + n) * 1.1;
-        mctx.fillStyle = n === 0 ? 'rgba(210,106,76,.95)' : 'rgba(47,122,112,.8)';
+        mctx.fillStyle = n === 0 ? 'rgba(' + P.clay + ',.95)' : 'rgba(' + P.line + ',.8)';
         mctx.beginPath(); mctx.arc(q[0], q[1], 2.6, 0, Math.PI * 2); mctx.fill();
-        mctx.strokeStyle = n === 0 ? 'rgba(210,106,76,.4)' : 'rgba(47,122,112,.3)';
+        mctx.strokeStyle = n === 0 ? 'rgba(' + P.clay + ',.55)' : 'rgba(' + P.line + ',.38)';
         mctx.beginPath(); mctx.arc(q[0], q[1], 4 + pulse, 0, Math.PI * 2); mctx.stroke();
       }
+      mctx.setLineDash([3, 5]);
+      mctx.strokeStyle = 'rgba(' + P.clay + ',.58)'; mctx.lineWidth = 1;
+      mctx.beginPath(); mctx.arc(hub[0], hub[1], 13 + Math.sin(t * 1.6) * 2, 0, Math.PI * 2); mctx.stroke();
+      mctx.setLineDash([]);
+      mctx.fillStyle = 'rgba(' + P.clay + ',.95)'; mctx.font = '600 9px system-ui, sans-serif';
+      mctx.fillText('TAIWAN', hub[0] + 15, hub[1] - 9);
       if (!mapReduce) mraf = window.requestAnimationFrame(drawMap);
     }
     resizeMap(); drawMap();
     window.addEventListener('resize', resizeMap, { passive: true });
+    window.addEventListener('jhthemechange', function () { resizeMap(); drawMap(); });
     if ('IntersectionObserver' in window) {
       var mio = new IntersectionObserver(function (entries) { mvisible = entries[0].isIntersecting; }, { threshold: .01 });
       mio.observe(mapCanvas);
