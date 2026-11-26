@@ -1,4 +1,4 @@
-/* 精鴻生醫 v7 — 雙語、互動、懸浮下拉、3D 分子＋流光、全身拉布拉多、國際訂購 */
+/* 精鴻生醫 v8 — 雙語、浮動功能視窗、放大分子與流光、編輯級字體、完整拉布拉多、國際訂購 */
 (function () {
   'use strict';
 
@@ -189,6 +189,7 @@
       'global.note': '此為示意試算，實際價格、運費與交期以正式報價單為準。',
       'global.btn': '產生國際訂購稿 →', 'global.ok': '已產生國際訂購稿（示範），請透過正式管道送出。',
       'global.currency': '顯示幣別',
+      'nav.quick': '功能選單', 'quick.title': 'QUICK ACCESS / 快速功能', 'quick.chat': '呼叫客服',
       'msg.loginOk': '登入成功（示範）：身份已識別。', 'msg.loginFail': '示範帳號為 demo / demo123；未連接後端。',
       'msg.orderOk': '（示範）· 狀態：已出貨，配送中。', 'msg.inquiry': '已產生詢問稿（示範），請另行透過正式聯絡方式送出。'
     },
@@ -377,6 +378,7 @@
       'global.note': 'This is an illustrative estimate. Actual price, shipping and lead time follow a formal quotation.',
       'global.btn': 'Generate global order draft →', 'global.ok': 'Global order draft generated (demo); send it through the official channel.',
       'global.currency': 'Display currency',
+      'nav.quick': 'Quick menu', 'quick.title': 'QUICK ACCESS / SHORTCUTS', 'quick.chat': 'Chat with us',
       'msg.loginOk': 'Login successful (demo): role identified.', 'msg.loginFail': 'Demo account is demo / demo123; no back end connected.',
       'msg.orderOk': '(demo) · Status: shipped, in transit.', 'msg.inquiry': 'Inquiry draft generated (demo); send it through the official contact channel.'
     }
@@ -449,6 +451,10 @@
       item.appendChild(caret);
       var dd = document.createElement('div');
       dd.className = 'dropdown'; dd.setAttribute('role', 'menu');
+      var dtitle = document.createElement('div');
+      dtitle.className = 'dropdown-title';
+      dtitle.innerHTML = '<span data-i18n="' + key + '">' + key + '</span><small>MENU / 0' + items.length + '</small>';
+      dd.appendChild(dtitle);
       for (var di = 0; di < items.length; di++) {
         var link = document.createElement('a');
         link.href = items[di][1];
@@ -465,13 +471,53 @@
         parent.classList.toggle('open', willOpen);
       });
     }
+    var qBtn = document.createElement('button');
+    qBtn.type = 'button'; qBtn.className = 'nav-quick'; qBtn.id = 'quickMenuBtn';
+    qBtn.setAttribute('aria-expanded', 'false');
+    qBtn.innerHTML = '<span class="q-dots"><i></i><i></i><i></i></span><span data-i18n="nav.quick">功能選單</span><b>⌄</b>';
+    navRoot.appendChild(qBtn);
+    var qPanel = document.createElement('div');
+    qPanel.className = 'quick-panel'; qPanel.id = 'quickPanel';
+    var quickLinks = [
+      ['nav.story', 'index.html#story'], ['nav.news', 'index.html#news'],
+      ['nav.products', 'index.html#products'], ['nav.craft', 'index.html#craft'],
+      ['nav.cases', 'cases.html'], ['nav.order', 'order.html#global']
+    ];
+    var qGrid = '<div class="quick-head"><b data-i18n="quick.title">QUICK ACCESS / 快速功能</b><small>01—06</small></div><div class="quick-grid">';
+    for (var qi = 0; qi < quickLinks.length; qi++) {
+      qGrid += '<a href="' + quickLinks[qi][1] + '"><em>0' + (qi + 1) + '</em><span data-i18n="' + quickLinks[qi][0] + '">' + quickLinks[qi][0] + '</span></a>';
+    }
+    qGrid += '</div><div class="quick-foot"><div class="lang-switch" role="group" aria-label="Language switch"><button type="button" data-lang="zh" aria-pressed="true">中文</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div><button type="button" class="quick-chat" id="quickChatBtn" data-i18n="quick.chat">呼叫客服</button></div>';
+    qPanel.innerHTML = qGrid;
+    navRoot.appendChild(qPanel);
+    var qLangs = qPanel.querySelectorAll('[data-lang]');
+    for (var ql = 0; ql < qLangs.length; ql++) qLangs[ql].addEventListener('click', function () { applyLang(this.getAttribute('data-lang')); });
+    qBtn.addEventListener('click', function (e) {
+      e.preventDefault(); e.stopPropagation();
+      var open = !qPanel.classList.contains('open');
+      qPanel.classList.toggle('open', open);
+      qBtn.setAttribute('aria-expanded', String(open));
+      var opened = document.querySelectorAll('.nav-item.open');
+      for (var z = 0; z < opened.length; z++) opened[z].classList.remove('open');
+    });
+    qPanel.addEventListener('click', function (e) {
+      if (e.target.closest('a')) { qPanel.classList.remove('open'); qBtn.setAttribute('aria-expanded', 'false'); }
+    });
     document.addEventListener('click', function (e) {
       if (!e.target.closest('.nav-item')) {
         var opened = document.querySelectorAll('.nav-item.open');
         for (var i = 0; i < opened.length; i++) opened[i].classList.remove('open');
       }
+      if (!e.target.closest('.nav-quick') && !e.target.closest('.quick-panel')) {
+        qPanel.classList.remove('open'); qBtn.setAttribute('aria-expanded', 'false');
+      }
     });
   }
+  var quickChatBtn = document.getElementById('quickChatBtn');
+  if (quickChatBtn) quickChatBtn.addEventListener('click', function () {
+    var box = document.getElementById('jhChatbot');
+    if (box) { box.classList.remove('collapsed'); try { localStorage.setItem('jh-chat-open', '1'); } catch (e) {} }
+  });
   applyLang(currentLang);
 
   /* ---------- 選單／捲動 ---------- */
@@ -616,7 +662,7 @@
   });
 
   /* ---------- 客服機器人：狗狗形象，預留 API／轉真人 ---------- */
-  var DOG_SVG = '<svg viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' +
+  var DOG_SVG = '<svg viewBox="-6 4 132 136" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' +
     '<defs>' +
       '<linearGradient id="cbFur" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f0d4a3"/><stop offset=".55" stop-color="#d9a45c"/><stop offset="1" stop-color="#b57e3c"/></linearGradient>' +
       '<linearGradient id="cbFur2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8c48a"/><stop offset="1" stop-color="#a97035"/></linearGradient>' +
@@ -754,7 +800,7 @@
       var t = Date.now();
       var a = t * .00013;
       var cos = Math.cos(a), sin = Math.sin(a);
-      var radius = Math.min(w, h) * .40;
+      var radius = Math.min(w, h) * .62;
       var cx = w * (w < 900 ? .5 : .74), cy = h * .5;
       var sx = [], sy = [], sz = [], i, j;
 
@@ -774,10 +820,10 @@
       for (i = 0; i < pts.length; i++) for (j = i + 1; j < pts.length; j++) {
         var dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y, dz = pts[i].z - pts[j].z;
         var d2 = dx * dx + dy * dy + dz * dz;
-        if (d2 < .22) {
-          var alpha = .16 * (1 - d2 / .22);
+        if (d2 < .30) {
+          var alpha = .26 * (1 - d2 / .30);
           ctx.strokeStyle = 'rgba(112,128,126,' + alpha.toFixed(3) + ')';
-          ctx.lineWidth = 1;
+          ctx.lineWidth = 1.5;
           ctx.beginPath(); ctx.moveTo(sx[i], sy[i]); ctx.lineTo(sx[j], sy[j]); ctx.stroke();
         }
       }
@@ -785,7 +831,7 @@
       // 原子：陶土／鼠尾草／苔綠三色，透視決定大小與亮度
       for (i = 0; i < pts.length; i++) {
         var depth = (sz[i] + 1) / 2;
-        var r2 = (1.1 + depth * 2.1);
+        var r2 = (1.8 + depth * 3.4);
         ctx.fillStyle = pts[i].tint === 0 ? 'rgba(167,87,67,' + (.30 + depth * .38).toFixed(3) + ')'
           : pts[i].tint === 1 ? 'rgba(161,156,101,' + (.26 + depth * .36).toFixed(3) + ')'
           : 'rgba(112,128,126,' + (.22 + depth * .34).toFixed(3) + ')';
@@ -793,12 +839,12 @@
       }
 
       // 核心光暈：緩慢呼吸
-      var pulse = .06 + .03 * Math.sin(t * .0009);
-      var g = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius * .95);
+      var pulse = .11 + .05 * Math.sin(t * .0009);
+      var g = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius * 1.1);
       g.addColorStop(0, 'rgba(167,87,67,' + pulse.toFixed(3) + ')');
       g.addColorStop(1, 'rgba(167,87,67,0)');
       ctx.fillStyle = g;
-      ctx.beginPath(); ctx.arc(cx, cy, radius * .95, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.arc(cx, cy, radius * 1.1, 0, Math.PI * 2); ctx.fill();
 
       raf = window.requestAnimationFrame(draw);
     }
