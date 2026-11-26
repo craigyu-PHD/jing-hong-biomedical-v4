@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#12332f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%230e9b87'/%3E%3Cpath d='M20 31c0-9 3-15 9-19' stroke='white' stroke-width='2.4' fill='none'/%3E%3Ccircle cx='20' cy='31' r='2.6' fill='white'/%3E%3C/svg%3E">
+<title>精鴻生醫｜自然與科學，照護每一個生命</title>
+<meta name="description" content="精鴻生醫 JING HONG BIOMEDICAL — 人用保健與 ANUBIS 寵物保健雙產品線，以自然素材與科學標準，打造能被看見的安心。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="top-note"><span class="dot"></span><span data-i18n="top.note">精鴻生醫 · 自然 × 科學 × 永續</span></span>
+    <div class="ticker" aria-label="最新消息跑馬燈">
+      <div class="ticker-track">
+        <a href="#news"><span class="tag" data-i18n="ticker.tag">最新消息</span><span data-i18n="ticker.a">官網改版上線｜人用與 ANUBIS 寵物保健同步展示</span></a>
+        <a href="#news"><span class="tag" data-i18n="ticker.tag">最新消息</span><span data-i18n="ticker.b">11/26 網站樣板更新，新增雙語切換與訂單入口</span></a>
+        <a href="#news"><span class="tag" data-i18n="ticker.tag">最新消息</span><span data-i18n="ticker.c">歡迎通路、代工與企業送禮合作洽詢</span></a>
+        <a href="#news"><span class="tag" data-i18n="ticker.tag">最新消息</span><span data-i18n="ticker.d">原料溯源 · 品質文件 · 第三方檢驗</span></a>
+        <a href="#news"><span class="tag" data-i18n="ticker.tag">最新消息</span><span data-i18n="ticker.a">官網改版上線｜人用與 ANUBIS 寵物保健同步展示</span></a>
+        <a href="#news"><span class="tag" data-i18n="ticker.tag">最新消息</span><span data-i18n="ticker.b">11/26 網站樣板更新，新增雙語切換與訂單入口</span></a>
+        <a href="#news"><span class="tag" data-i18n="ticker.tag">最新消息</span><span data-i18n="ticker.c">歡迎通路、代工與企業送禮合作洽詢</span></a>
+        <a href="#news"><span class="tag" data-i18n="ticker.tag">最新消息</span><span data-i18n="ticker.d">原料溯源 · 品質文件 · 第三方檢驗</span></a>
+      </div>
+    </div>
+    <div class="lang-switch" role="group" aria-label="Language switch">
+      <button type="button" class="active" data-lang="zh" aria-pressed="true">中文</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</div>
+
+<header class="nav" id="siteNav">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="精鴻生醫首頁">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="jhGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0e9b87"/><stop offset="1" stop-color="#7ad9c3"/></linearGradient></defs>
+          <rect width="40" height="40" rx="11" fill="url(#jhGrad)"/>
+          <path d="M20 7C13 12 10 17 10 23a10 10 0 0 0 20 0c0-6-3-11-10-16Z" fill="#fff" opacity=".14"/>
+          <path d="M20 31c0-9 3-15 9-19" stroke="#fff" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+          <path d="M20 24c-3-4-6-6-10-7" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none" opacity=".9"/>
+          <circle cx="20" cy="31" r="2.4" fill="#fff"/><circle cx="29" cy="12" r="2" fill="#fff"/><circle cx="10" cy="17" r="1.8" fill="#fff" opacity=".85"/>
+        </svg>
+      </span>
+      <span><b>精鴻生醫</b><small>JING HONG BIOMEDICAL</small></span>
+    </a>
+    <nav class="nav-links" aria-label="主選單">
+      <a href="#story" data-i18n="nav.story">品牌理念</a>
+      <a href="#news" data-i18n="nav.news">最新消息</a>
+      <a href="#products" data-i18n="nav.products">產品系列</a>
+      <a href="#craft" data-i18n="nav.craft">技術與品質</a>
+      <a href="cases.html" data-i18n="nav.cases">實例分享</a>
+      <a href="order.html" data-i18n="nav.order">訂單系統</a>
+      <a class="btn btn-primary" href="#contact" data-i18n="nav.contact">合作洽詢</a>
+    </nav>
+    <button class="nav-toggle" type="button" aria-label="開啟選單" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <canvas id="bioCanvas" aria-hidden="true"></canvas>
+  <span class="glow a"></span><span class="glow b"></span>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" data-i18n="hero.eyebrow">NATURE × SCIENCE × LIFE</div>
+      <h1><span data-i18n="hero.l1">自然的力量，</span><br><em data-i18n="hero.l2">用 science 精準照護</em><br><span class="pet" data-i18n="hero.l3">每一個生命。</span></h1>
+      <p class="lead" data-i18n="hero.lead">從人用保健到毛孩的日常照護，精鴻生醫把原料、配方與檢驗，做成一套能被看見、能被信任的標準。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#products" data-i18n="hero.cta1">探索產品系列 →</a>
+        <a class="btn btn-ghost" href="cases.html" data-i18n="hero.cta2">查看合作實例</a>
+      </div>
+      <div class="hero-proof">
+        <div><b>2003</b><span data-i18n="hero.p1">品牌起步年份</span></div>
+        <div><b>14+</b><span data-i18n="hero.p2">人用與寵物品項</span></div>
+        <div><b>2</b><span data-i18n="hero.p3">清晰產品線</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <span class="orbit o1"></span><span class="orbit o2"></span>
+      <div class="hero-photo"><img src="assets/pet-dog.jpg" alt="狗與自然生活意象示意照片"></div>
+      <div class="hero-card"><b data-i18n="hero.card1">ANUBIS 寵物保健</b><span data-i18n="hero.card2">草本萃取 · 犬貓日常保養</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint">SCROLL</div>
+</section>
+
+<div class="strip"><div class="strip-track">
+  <span data-i18n="strip.a">原料溯源</span><span data-i18n="strip.b">三萜類標示</span><span data-i18n="strip.c">第三方檢驗</span><span data-i18n="strip.d">OEM / ODM</span><span data-i18n="strip.e">犬貓日常保養</span><span data-i18n="strip.f">永續與責任</span>
+  <span data-i18n="strip.a">原料溯源</span><span data-i18n="strip.b">三萜類標示</span><span data-i18n="strip.c">第三方檢驗</span><span data-i18n="strip.d">OEM / ODM</span><span data-i18n="strip.e">犬貓日常保養</span><span data-i18n="strip.f">永續與責任</span>
+</div></div>
+
+<section class="section tight"><div class="wrap">
+  <div class="stats reveal">
+    <div class="stat"><b>2003</b><span data-i18n="stat.a">創立年份</span></div>
+    <div class="stat"><b>6</b><span data-i18n="stat.b">人用產品與服務</span></div>
+    <div class="stat pet"><b>9</b><span data-i18n="stat.c">寵物保健品項</span></div>
+    <div class="stat"><b>3</b><span data-i18n="stat.d">品質把關程序</span></div>
+  </div>
+</div></section>
+
+<section class="section soft" id="news"><div class="wrap">
+  <div class="section-head reveal"><div class="eyebrow">NEWS / 01</div><h2 data-i18n="news.title">最新消息</h2><p data-i18n="news.sub">品牌、產品與合作的最新動態，第一時間在這裡。</p></div>
+  <div class="news-grid">
+    <div class="news-main reveal">
+      <div class="news-item"><time>11.26</time><div><span class="badge" data-i18n="news.b1tag">官網</span><a href="#products" data-i18n="news.b1">兩條產品線正式分區呈現</a><p data-i18n="news.d1">人用保健與 ANUBIS 寵物保健各自獨立，選購更直覺。</p></div></div>
+      <div class="news-item"><time>11.18</time><div><span class="badge pet" data-i18n="news.b2tag">產品</span><a href="#products" data-i18n="news.b2">ANUBIS 毛孩保健系列資料整理完成</a><p data-i18n="news.d2">泌尿道、心血管、皮膚與眼部日常保養品項一次看懂。</p></div></div>
+      <div class="news-item"><time>10.30</time><div><span class="badge" data-i18n="news.b3tag">知識</span><a href="#craft" data-i18n="news.b3">牛樟芝原料選購指南更新</a><p data-i18n="news.d3">子實體與菌絲體、三萜類標示與檢驗文件的差異說明。</p></div></div>
+      <div class="news-item"><time>10.12</time><div><span class="badge" data-i18n="news.b4tag">合作</span><a href="order.html" data-i18n="news.b4">訂單系統入口上線（展示版）</a><p data-i18n="news.d4">會員登入、訂單查詢與流程說明皆已預先建置。</p></div></div>
+    </div>
+    <div class="news-side reveal d1">
+      <div><div class="eyebrow">JING HONG × ANUBIS</div><h3 data-i18n="news.sideTitle">一個品牌，<br>照顧每一個你愛的生命。</h3><p data-i18n="news.sideText">人用與寵物產品分開呈現，從原料到日常使用，都給你清楚的答案。</p></div>
+      <a class="btn btn-primary" href="#contact" data-i18n="news.sideCta">索取完整產品資料 →</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="section white" id="story"><div class="wrap feature"><div class="feature-media reveal"><img src="assets/nature.jpg" alt="自然原料與森林意象示意照片" loading="lazy"></div>
+  <div class="reveal d1"><div class="eyebrow">OUR STORY / 02</div><h2 data-i18n="story.title">把「天然」，<br>做成看得懂的科學。</h2><p data-i18n="story.p1">精鴻生醫以牛樟芝與草本素材為起點，逐步拓展到犬貓日常保健。我們相信好的照護不靠形容，而靠資料說話。</p><p data-i18n="story.p2">從 2003 年起步，到建立人用與 ANUBIS 寵物兩條產品線，我們把來源、配方、劑型與文件，變成可以被查閱的標準。</p>
+    <ul class="checks"><li><span>✓</span><span data-i18n="story.c1">來源清楚的原料與品項標示</span></li><li><span>✓</span><span data-i18n="story.c2">膠囊、粉劑、噴劑與眼部保養多元劑型</span></li><li><span>✓</span><span data-i18n="story.c3">通路與代工所需的規格文件支援</span></li></ul>
+    <div style="margin-top:20px"><a class="btn btn-ghost" href="#craft" data-i18n="story.cta">了解我們的作法 →</a></div>
+  </div>
+</div></section>
+
+<section class="section" id="products"><div class="wrap">
+  <div class="section-head reveal"><div class="eyebrow">COLLECTION / 03</div><h2 data-i18n="products.title">產品系列</h2><p data-i18n="products.sub">人用保健與寵物保健分區呈現。品項與成分整理自公開資料，實際標示以公司核准文件為準。</p></div>
+  <div class="tabs reveal" role="tablist" aria-label="產品線">
+    <button type="button" class="active" data-line-tab="human" role="tab" aria-selected="true" data-i18n="products.tabHuman">人用保健</button>
+    <button type="button" data-line-tab="pet" role="tab" aria-selected="false" data-i18n="products.tabPet">ANUBIS 寵物保健</button>
+  </div>
+  <div class="line-note" id="lineNoteHuman"><i></i><span data-i18n="products.noteHuman">人用系列｜牛樟芝、複方、益生菌與代工服務</span></div>
+  <div class="line-note pet" id="lineNotePet" hidden><i></i><span data-i18n="products.notePet">寵物系列｜犬貓泌尿、心血管、皮膚、眼部與外用護理</span></div>
+
+  <div class="product-line" id="lineHuman">
+    <div class="filters" role="group" aria-label="人用產品分類">
+      <button type="button" class="pill active" data-line-filter="human" data-filter="all" data-i18n="filter.all">全部</button>
+      <button type="button" class="pill" data-line-filter="human" data-filter="capsule" data-i18n="filter.capsule">膠囊</button>
+      <button type="button" class="pill" data-line-filter="human" data-filter="formula" data-i18n="filter.formula">複方</button>
+      <button type="button" class="pill" data-line-filter="human" data-filter="extract" data-i18n="filter.extract">晶萃</button>
+      <button type="button" class="pill" data-line-filter="human" data-filter="service" data-i18n="filter.service">服務</button>
+    </div>
+    <div class="grid" id="gridHuman">
+      <article class="card reveal" data-cat="capsule"><div class="card-media"><img src="assets/product-real-pack.jpg" alt="牛樟椴木子實體專利膠囊公開包裝照片" loading="lazy"></div><div class="card-body"><div class="tag">CAPSULE / 膠囊</div><h3 data-i18n="p.h1n">牛樟椴木子實體專利膠囊</h3><p data-i18n="p.h1d">椴木子實體搭配靈芝與草本複方，日常體質調整的入門選擇。</p><div class="chips"><span data-i18n="p.h1c1">椴木子實體</span><span data-i18n="p.h1c2">靈芝複方</span><span data-i18n="p.h1c3">公開包裝照片</span></div></div></article>
+      <article class="card reveal d1" data-cat="formula"><div class="card-media"><img src="assets/product-capsule.jpg" alt="膠囊產品意象示意照片" loading="lazy"></div><div class="card-body"><div class="tag">FORMULA / 複方</div><h3 data-i18n="p.h2n">順暢養神 牛樟芝益生菌</h3><p data-i18n="p.h2d">牛樟芝與益生菌複方，為忙碌生活設計的日常節奏。</p><div class="chips"><span data-i18n="p.h2c1">益生菌</span><span data-i18n="p.h2c2">牛樟芝</span></div></div></article>
+      <article class="card reveal d2" data-cat="formula"><div class="card-media"><img src="assets/product-formula.jpg" alt="夜間保養膠囊意象示意照片" loading="lazy"></div><div class="card-body"><div class="tag">FORMULA / 複方</div><h3 data-i18n="p.h3n">牛樟芝睡飽寶膠囊</h3><p data-i18n="p.h3d">公開展出的牛樟芝複方膠囊，適合夜間保養規劃。</p><div class="chips"><span data-i18n="p.h3c1">夜間保養</span><span data-i18n="p.h3c2">複方膠囊</span></div></div></article>
+      <article class="card reveal" data-cat="extract"><div class="card-media"><img src="assets/product-extract.jpg" alt="晶萃質地意象示意照片" loading="lazy"></div><div class="card-body"><div class="tag">EXTRACT / 晶萃</div><h3 data-i18n="p.h4n">牛樟椴木子實體晶萃</h3><p data-i18n="p.h4d">以椴木子實體為名的濃縮晶萃，保留原料的細膩層次。</p><div class="chips"><span data-i18n="p.h4c1">濃縮晶萃</span><span data-i18n="p.h4c2">原料萃取</span></div></div></article>
+      <article class="card reveal d1" data-cat="formula"><div class="card-media"><img src="assets/product-natural.jpg" alt="天然草本素材意象示意照片" loading="lazy"></div><div class="card-body"><div class="tag">FORMULA / 複方</div><h3 data-i18n="p.h5n">牛樟芝清氣順</h3><p data-i18n="p.h5d">牛樟芝系列公開參展品項，適合日常保養搭配。</p><div class="chips"><span data-i18n="p.h5c1">草本複方</span><span data-i18n="p.h5c2">日常保養</span></div></div></article>
+      <article class="card reveal d2" data-cat="service"><div class="card-media"><img src="assets/lab.jpg" alt="實驗室與品質製程意象示意照片" loading="lazy"></div><div class="card-body"><div class="tag">SERVICE / 服務</div><h3 data-i18n="p.h6n">OEM / ODM 代工開發</h3><p data-i18n="p.h6d">從配方、劑型到包裝與文件，陪品牌把想法做成商品。</p><div class="chips"><span data-i18n="p.h6c1">配方設計</span><span data-i18n="p.h6c2">劑型規劃</span></div></div></article>
+    </div>
+  </div>
+
+  <div class="product-line" id="linePet" hidden>
+    <div class="filters" role="group" aria-label="寵物產品分類">
+      <button type="button" class="pill active" data-line-filter="pet" data-filter="all" data-i18n="filter.all">全部</button>
+      <button type="button" class="pill" data-line-filter="pet" data-filter="urinary" data-i18n="filter.urinary">泌尿保健</button>
+      <button type="button" class="pill" data-line-filter="pet" data-filter="care" data-i18n="filter.care">日常照護</button>
+      <button type="button" class="pill" data-line-filter="pet" data-filter="skin" data-i18n="filter.skin">皮膚外用</button>
+      <button type="button" class="pill" data-line-filter="pet" data-filter="eye" data-i18n="filter.eye">眼部保養</button>
+    </div>
+    <div class="grid" id="gridPet">
+      <article class="card reveal" data-cat="urinary"><div class="card-media"><img src="assets/pet-cat.jpg" alt="貓咪意象示意照片" loading="lazy"></div><div class="card-body pet"><div class="tag">CAT / 泌尿</div><h3 data-i18n="p.p1n">優利貓 尿道保健膠囊</h3><p data-i18n="p.p1d">貓用草本保養膠囊，30 粒裝；公開通路標示為每日一次、飯後食用。</p><div class="chips"><span data-i18n="p.p1c1">貓用</span><span data-i18n="p.p1c2">30 粒</span><span data-i18n="p.p1c3">草本萃取</span></div></div></article>
+      <article class="card reveal d1" data-cat="care"><div class="card-media"><img src="assets/pet-cat2.jpg" alt="貓咪生活意象示意照片" loading="lazy"></div><div class="card-body pet"><div class="tag">CAT / 呵護</div><h3 data-i18n="p.p2n">安芯貓 心血管日常保健</h3><p data-i18n="p.p2d">公開通路列為貓用心血管日常保養品項，配方細節待官方文件確認。</p><div class="chips"><span data-i18n="p.p2c1">貓用</span><span data-i18n="p.p2c2">日常保養</span></div></div></article>
+      <article class="card reveal d2" data-cat="care"><div class="card-media"><img src="assets/pet-dog.jpg" alt="狗狗意象示意照片" loading="lazy"></div><div class="card-body pet"><div class="tag">DOG &amp; CAT / 防護</div><h3 data-i18n="p.p3n">安敏口服膠囊 Enhance-Immunity</h3><p data-i18n="p.p3d">犬貓適用之口服保養膠囊，公開品名標示為 Enhance-Immunity。</p><div class="chips"><span data-i18n="p.p3c1">犬貓適用</span><span data-i18n="p.p3c2">口服膠囊</span></div></div></article>
+      <article class="card reveal" data-cat="urinary"><div class="card-media"><img src="assets/pet-puppy.jpg" alt="幼犬意象示意照片" loading="lazy"></div><div class="card-body pet"><div class="tag">DOG &amp; CAT / 泌尿</div><h3 data-i18n="p.p4n">優利威腸溶圓粒</h3><p data-i18n="p.p4d">15 包裝；公開成分包含化石草、紅石榴、車前草、茯苓、決明子、蔓越莓等萃取。</p><div class="chips"><span data-i18n="p.p4c1">15 包</span><span data-i18n="p.p4c2">腸溶圓粒</span><span data-i18n="p.p4c3">草本萃取</span></div></div></article>
+      <article class="card reveal d1" data-cat="eye"><div class="card-media"><img src="assets/product-extract.jpg" alt="眼部保養液意象示意照片" loading="lazy"></div><div class="card-body pet"><div class="tag">EYE / 眼部</div><h3 data-i18n="p.p5n">千力光 護眼液 10ml</h3><p data-i18n="p.p5d">犬貓適用眼部日常保養液，公開通路標示 10ml、可作為日常保養。</p><div class="chips"><span data-i18n="p.p5c1">10ml</span><span data-i18n="p.p5c2">犬貓適用</span></div></div></article>
+      <article class="card reveal d2" data-cat="eye"><div class="card-media"><img src="assets/quality.jpg" alt="品質檢驗意象示意照片" loading="lazy"></div><div class="card-body pet"><div class="tag">EYE / 眼部</div><h3 data-i18n="p.p6n">晶漾 眼部保養液 10ml</h3><p data-i18n="p.p6d">以玻尿酸與尿囊素為核心成分，專注眼睛保濕與日常眼部保養。</p><div class="chips"><span data-i18n="p.p6c1">玻尿酸</span><span data-i18n="p.p6c2">尿囊素</span></div></div></article>
+      <article class="card reveal" data-cat="skin"><div class="card-media"><img src="assets/nature.jpg" alt="草本意象示意照片" loading="lazy"></div><div class="card-body pet"><div class="tag">SKIN / 外用</div><h3 data-i18n="p.p7n">華康寵物理膚噴劑 50ml</h3><p data-i18n="p.p7d">犬貓皆可使用之天然草本外用噴劑，50ml 瓶裝；建議依獸醫師指示使用。</p><div class="chips"><span data-i18n="p.p7c1">50ml</span><span data-i18n="p.p7c2">草本萃取</span></div></div></article>
+      <article class="card reveal d1" data-cat="skin"><div class="card-media"><img src="assets/forest.jpg" alt="森林草本意象示意照片" loading="lazy"></div><div class="card-body pet"><div class="tag">SKIN / 外用</div><h3 data-i18n="p.p8n">恩菲斯寵物外用噴劑 50ml</h3><p data-i18n="p.p8d">天然草本萃取外用噴劑，公開通路標示每日 2 至 4 次、按壓噴灑於患處。</p><div class="chips"><span data-i18n="p.p8c1">50ml</span><span data-i18n="p.p8c2">外用</span></div></div></article>
+      <article class="card reveal d2" data-cat="skin"><div class="card-media"><img src="assets/product-natural.jpg" alt="外用粉劑意象示意照片" loading="lazy"></div><div class="card-body pet"><div class="tag">SKIN / 外用</div><h3 data-i18n="p.p9n">傷妥立外用粉劑 10g</h3><p data-i18n="p.p9d">選用中藥天然素材，維持患部乾爽；10gm 瓶裝，建議由獸醫師指示使用。</p><div class="chips"><span data-i18n="p.p9c1">10g</span><span data-i18n="p.p9c2">中藥素材</span></div></div></article>
+    </div>
+  </div>
+  <p style="font-size:11px;margin-top:18px" data-i18n="products.disclaimer">上述品項與成分摘錄自公開通路資料，實際成分、劑量、效期與標示以公司核准文件及獸醫師指示為準；本站不作疾病診斷、治療或預防之宣稱。</p>
+</div></section>
+
+<section class="section white" id="craft"><div class="wrap">
+  <div class="section-head reveal"><div class="eyebrow">OUR CRAFT / 04</div><h2 data-i18n="craft.title">看不見的地方，<br>我們最接近。</h2><p data-i18n="craft.sub">好的產品，是每一個細節都被認真對待的結果。</p></div>
+  <div class="feature reveal"><div class="feature-media"><img src="assets/lab.jpg" alt="研究室檢測意象示意照片" loading="lazy"></div><div><div class="eyebrow">01 / <span data-i18n="craft.e1">素材溯源</span></div><h3 data-i18n="craft.h1">從源頭就開始講究</h3><p data-i18n="craft.p1">優先選用來源清楚的牛樟芝與草本素材，標示素材類型與品項，讓每一批原料都有跡可循。</p><ul class="checks"><li><span>✓</span><span data-i18n="craft.c1">原料類型與來源標示</span></li><li><span>✓</span><span data-i18n="craft.c2">公開品項與包裝資訊對照</span></li></ul></div></div>
+  <div class="feature reverse reveal" style="margin-top:24px"><div class="feature-media"><img src="assets/quality.jpg" alt="品質檢驗意象示意照片" loading="lazy"></div><div><div class="eyebrow pet">02 / <span data-i18n="craft.e2">科學配方</span></div><h3 data-i18n="craft.h2">把感受，變成資料</h3><p data-i18n="craft.p2">三萜類標示、劑型設計與穩定性規劃，用具體資料取代模糊形容；正式檢驗報告與專利文件待公司授權後補上。</p><ul class="checks"><li><span>✓</span><span data-i18n="craft.c3">膠囊、圓粒、噴劑、眼部保養多元劑型</span></li><li><span>✓</span><span data-i18n="craft.c4">通路與代工文件準備</span></li></ul></div></div>
+</div></section>
+
+<section class="section soft" id="cases"><div class="wrap">
+  <div class="section-head reveal"><div class="eyebrow">SELECTED WORK / 05</div><h2 data-i18n="cases.title">實例分享</h2><p data-i18n="cases.sub">以下為依產業情境預填的示範案例，供老闆先看架構；正式對外前會換成真實案例與授權素材。</p></div>
+  <div class="case-grid">
+    <a class="case-card reveal" href="cases.html"><img src="assets/hero-lab.jpg" alt="通路合作示意照片" loading="lazy"><div><span data-i18n="case.t1">通路合作 · 2025</span><h3 data-i18n="case.n1">連鎖藥局上架專案</h3><p data-i18n="case.d1">三個月完成 12 間門市上架與教育訓練。</p></div></a>
+    <a class="case-card reveal d1 pet" href="cases.html"><img src="assets/pet-cat.jpg" alt="寵物品牌合作示意照片" loading="lazy"><div><span data-i18n="case.t2">ANUBIS 寵物 · 2025</span><h3 data-i18n="case.n2">毛孩保健通路推廣</h3><p data-i18n="case.d2">泌尿與眼部保養品項的說明與陳列優化。</p></div></a>
+    <a class="case-card reveal d2" href="cases.html"><img src="assets/product-real-pack.jpg" alt="品牌代工示意照片" loading="lazy"><div><span data-i18n="case.t3">OEM / ODM · 2025</span><h3 data-i18n="case.n3">新創品牌首款膠囊</h3><p data-i18n="case.d3">從配方到包裝，打造第一款主力商品。</p></div></a>
+  </div>
+  <div style="text-align:center;margin-top:24px"><a class="btn btn-ghost" href="cases.html" data-i18n="cases.more">查看全部實例 →</a></div>
+</div></section>
+
+<section class="portal"><div class="wrap portal-inner">
+  <div class="reveal"><div class="eyebrow">ORDER PORTAL / 06</div><h2 data-i18n="portal.title">訂單，<br>從此有一條清楚的路。</h2><p data-i18n="portal.sub">會員登入、線上訂購、訂單追蹤與售後服務集中在同一個入口，前端架構已備妥，等待後端串接。</p><a class="btn btn-primary" href="order.html" data-i18n="portal.cta">進入訂單系統 →</a></div>
+  <div class="glass reveal d1"><h4 data-i18n="portal.h">PORTAL FEATURES</h4><ul><li><b>01</b><span data-i18n="portal.f1">會員與經銷商身份識別</span></li><li><b>02</b><span data-i18n="portal.f2">線上訂購與價格試算</span></li><li><b>03</b><span data-i18n="portal.f3">出貨進度與物流追蹤</span></li><li><b>04</b><span data-i18n="portal.f4">售後申請與客服訊息</span></li></ul></div>
+</div></section>
+
+<section class="section" id="contact"><div class="wrap">
+  <div class="section-head reveal"><div class="eyebrow">CONTACT / 07</div><h2 data-i18n="contact.title">讓我們從一句話開始。</h2><p data-i18n="contact.sub">產品詢價、通路合作、代工開發或企業送禮，留下需求，我們會盡快回覆。</p></div>
+  <div class="contact-grid">
+    <div class="reveal"><div class="info-line"><b data-i18n="contact.company">公司</b><span>精鴻生醫 JING HONG BIOMEDICAL</span></div><div class="info-line"><b data-i18n="contact.tel">電話</b><span>08-000 0000（示意，待確認）</span></div><div class="info-line"><b>Email</b><span>hello@jhbiomedical.example（示意）</span></div><div class="info-line"><b data-i18n="contact.addr">地址</b><span>高雄市小港區岐山一路 14 號（公開登記地址，待確認）</span></div><p style="font-size:11px;margin-top:14px" data-i18n="contact.note">本站為老闆審閱用樣板；照片為 Unsplash 示意圖，非正式產品實拍。</p></div>
+    <form class="form reveal d1" id="inquiryForm"><div class="form-grid"><label class="field"><span data-i18n="form.person">聯絡人</span><input name="person" data-i18n-ph="form.personPh" placeholder="姓名或單位名稱" required></label><label class="field"><span data-i18n="form.company">公司 / 單位</span><input name="company" data-i18n-ph="form.companyPh" placeholder="公司名稱"></label></div><label class="field"><span data-i18n="form.topic">洽詢主題</span><select name="topic"><option data-i18n="form.t1">產品詢價</option><option data-i18n="form.t2">通路合作</option><option data-i18n="form.t3">OEM / ODM 代工</option><option data-i18n="form.t4">企業送禮</option><option data-i18n="form.t5">其他</option></select></label><label class="field"><span data-i18n="form.msg">需求說明</span><textarea name="message" data-i18n-ph="form.msgPh" placeholder="請簡述合作需求" required></textarea></label><button class="btn btn-primary" type="submit" data-i18n="form.submit">產生詢問稿</button><div class="status" id="inquiryStatus" role="status"></div></form>
+  </div>
+</div></section>
+</main>
+
+<footer class="footer"><div class="wrap"><div class="footer-grid">
+  <div><a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="11" fill="#0e9b87"/><path d="M20 31c0-9 3-15 9-19" stroke="#fff" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M20 24c-3-4-6-6-10-7" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="20" cy="31" r="2.4" fill="#fff"/><circle cx="29" cy="12" r="2" fill="#fff"/></svg></span><span><b>精鴻生醫</b><small>JING HONG BIOMEDICAL</small></span></a><p style="margin-top:12px" data-i18n="foot.about">自然，值得被精準對待。本站為設計提案樣板，內容與數據部分為示意，正式發布前請逐項確認。</p></div>
+  <div><h4 data-i18n="foot.links">快速連結</h4><div class="footer-links"><a href="#story" data-i18n="nav.story">品牌理念</a><a href="#news" data-i18n="nav.news">最新消息</a><a href="#products" data-i18n="nav.products">產品系列</a><a href="cases.html" data-i18n="nav.cases">實例分享</a><a href="order.html" data-i18n="nav.order">訂單系統</a></div></div>
+  <div><h4 data-i18n="foot.disclaimer">資料與免責</h4><p data-i18n="foot.text">公司與產品資訊參考公開商工登記、公開通路與展覽資料整理；示意照片來自 Unsplash。實際成分、規格、檢驗與聯絡資訊以公司核准文件為準。本站不作疾病診斷、治療或預防之宣稱。</p></div>
+</div><div class="footer-bottom"><span>© 2026 精鴻生醫 · 設計提案 v4</span><a href="#top" data-i18n="foot.top">回到頂端 ↑</a></div></div></footer>
+<script src="script.js"></script>
+</body>
+</html>
