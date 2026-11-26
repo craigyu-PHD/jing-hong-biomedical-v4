@@ -2,7 +2,7 @@
 
 依老闆第七輪回饋修正全站導覽、首頁視覺、商城／結帳流程，並新增 Q&A 專區。公開網址不變：`https://craigyu-PHD.github.io/jing-hong-biomedical-v4/`。
 
-> v13 本機完成、QA 全綠，**尚未推送**。部署需使用者逐次明確確認。
+> v13 已於 2026-11-26 經使用者明確確認後推送並部署，線上版本即 v13。
 
 ## 本輪改造（v13）
 
@@ -45,7 +45,7 @@ python3 -m http.server 8765
 
 ## 部署
 
-GitHub Pages 由 `main` 分支根目錄提供，無需建置。v8–v12 已分別推送；**v13 尚未推送**，待使用者明確確認後才 commit／push。
+GitHub Pages 由 `main` 分支根目錄提供，無需建置。v8–v13 已分別推送；v13 commit `b354d83`，Pages 建置完成並驗證五頁與素材皆回 200。
 
 ## 免責
 
