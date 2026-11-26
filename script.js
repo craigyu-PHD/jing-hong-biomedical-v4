@@ -1,4 +1,4 @@
-/* 精鴻生醫 v9 — 雙語、自然下拉、玻璃質感、全球地圖、防機器人註冊、完整拉布拉多、國際訂購 */
+/* 精鴻生醫 v10 — 清爽玻璃、可拖曳全螢幕客服、滑鼠 3D 分子、真實點陣地圖、防機器人註冊 */
 (function () {
   'use strict';
 
@@ -189,6 +189,7 @@
       'global.note': '此為示意試算，實際價格、運費與交期以正式報價單為準。',
       'global.btn': '產生國際訂購稿 →', 'global.ok': '已產生國際訂購稿（示範），請透過正式管道送出。',
       'global.currency': '顯示幣別',
+      'dd.more': '深入瞭解', 'chat.max': '放大', 'chat.min': '縮小',
       'op.register': '註冊新帳號', 'reg.title': '註冊會員帳號', 'reg.hint': '示範表單：資料僅在瀏覽器內驗證，不會傳送至伺服器。',
       'reg.name': '姓名／公司', 'reg.email': '電子郵件', 'reg.human': '我不是機器人', 'reg.challenge': '請計算：',
       'reg.submit': '送出註冊', 'reg.ok': '註冊成功（示範）：已通過人機驗證。', 'reg.fail': '請勾選人機驗證並輸入正確的計算結果。',
@@ -380,6 +381,7 @@
       'global.note': 'This is an illustrative estimate. Actual price, shipping and lead time follow a formal quotation.',
       'global.btn': 'Generate global order draft →', 'global.ok': 'Global order draft generated (demo); send it through the official channel.',
       'global.currency': 'Display currency',
+      'dd.more': 'Explore more', 'chat.max': 'Maximize', 'chat.min': 'Minimize',
       'op.register': 'Create account', 'reg.title': 'Member registration', 'reg.hint': 'Demo form: validated in-browser only, no data is sent.',
       'reg.name': 'Name / Company', 'reg.email': 'Email', 'reg.human': 'I am not a robot', 'reg.challenge': 'Please solve:',
       'reg.submit': 'Submit registration', 'reg.ok': 'Registration successful (demo): human verification passed.', 'reg.fail': 'Please confirm you are human and enter the correct answer.',
@@ -472,7 +474,7 @@
       for (var di = 0; di < items.length; di++) {
         var link = document.createElement('a');
         link.href = items[di][1];
-        link.innerHTML = '<span class="dd-label" data-i18n="' + items[di][0] + '">' + items[di][0] + '</span><span class="dd-arrow">↗</span>';
+        link.innerHTML = '<span class="dd-thumb">✦</span><span class="dd-label"><b data-i18n="' + items[di][0] + '">' + items[di][0] + '</b><small data-i18n="dd.more">深入瞭解</small></span>';
         dd.appendChild(link);
       }
       item.appendChild(dd);
@@ -671,39 +673,39 @@
   });
 
   /* ---------- 客服機器人：狗狗形象，預留 API／轉真人 ---------- */
-  var DOG_SVG = '<svg viewBox="-6 4 132 136" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' +
+  var DOG_SVG = '<svg viewBox="0 0 128 140" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' +
     '<defs>' +
-      '<linearGradient id="cbFur" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f0d4a3"/><stop offset=".55" stop-color="#d9a45c"/><stop offset="1" stop-color="#b57e3c"/></linearGradient>' +
-      '<linearGradient id="cbFur2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8c48a"/><stop offset="1" stop-color="#a97035"/></linearGradient>' +
-      '<radialGradient id="cbCheek"><stop stop-color="#e8a98d"/><stop offset="1" stop-color="#e8a98d" stop-opacity="0"/></radialGradient>' +
+      '<linearGradient id="cbFur" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe0ad"/><stop offset=".55" stop-color="#f0bf79"/><stop offset="1" stop-color="#d59a53"/></linearGradient>' +
+      '<linearGradient id="cbFur2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6cf95"/><stop offset="1" stop-color="#c98b45"/></linearGradient>' +
+      '<radialGradient id="cbCheek"><stop stop-color="#f3a7a0" stop-opacity=".85"/><stop offset="1" stop-color="#f3a7a0" stop-opacity="0"/></radialGradient>' +
+      '<linearGradient id="cbCollar" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#4b9a8d"/><stop offset="1" stop-color="#2f7a70"/></linearGradient>' +
     '</defs>' +
-    '<g class="cb-tail"><path d="M34 100c-16-2-24-14-20-26 2-7 9-9 13-5-6 4-7 11-2 15 6 5 13 5 18 3z" fill="url(#cbFur2)" stroke="#a97035" stroke-width="1"/></g>' +
+    '<g class="cb-tail"><path d="M38 104c-18-3-27-16-22-29 2-6 9-8 12-4-7 5-7 12-1 16 6 5 14 5 19 2z" fill="url(#cbFur2)" stroke="#c98b45" stroke-width="1"/></g>' +
     '<g class="cb-body">' +
-      '<ellipse cx="60" cy="86" rx="34" ry="38" fill="url(#cbFur)"/>' +
-      '<ellipse cx="60" cy="96" rx="21" ry="26" fill="url(#cbFur2)" opacity=".85"/>' +
-      '<ellipse cx="43" cy="112" rx="12" ry="9" fill="url(#cbFur2)"/>' +
-      '<ellipse cx="77" cy="112" rx="12" ry="9" fill="url(#cbFur2)"/>' +
-      '<ellipse cx="43" cy="116" rx="7" ry="4" fill="#f3dcb4"/>' +
-      '<ellipse cx="77" cy="116" rx="7" ry="4" fill="#f3dcb4"/>' +
+      '<ellipse cx="64" cy="105" rx="33" ry="30" fill="url(#cbFur)"/>' +
+      '<ellipse cx="64" cy="113" rx="22" ry="21" fill="#ffeac8" opacity=".95"/>' +
+      '<ellipse cx="45" cy="128" rx="12" ry="9" fill="url(#cbFur2)"/>' +
+      '<ellipse cx="83" cy="128" rx="12" ry="9" fill="url(#cbFur2)"/>' +
+      '<ellipse cx="45" cy="131" rx="7" ry="4" fill="#ffeac8"/><ellipse cx="83" cy="131" rx="7" ry="4" fill="#ffeac8"/>' +
+      '<path d="M42 90q22 12 44 0" stroke="url(#cbCollar)" stroke-width="7" fill="none" stroke-linecap="round"/>' +
+      '<circle cx="64" cy="98" r="5" fill="#8c9a63" stroke="#fff" stroke-width="1.2"/>' +
+      '<circle cx="64" cy="98" r="1.7" fill="#fff"/>' +
     '</g>' +
     '<g class="cb-head">' +
-      '<ellipse cx="60" cy="45" rx="29" ry="27" fill="url(#cbFur)"/>' +
-      '<g class="cb-ear-l"><path d="M35 33c-12-4-19 7-16 22 2 12 11 18 18 13 5-4 5-12 3-19z" fill="url(#cbFur2)" stroke="#a97035" stroke-width="1"/><path d="M33 38c-7 1-11 8-10 16" stroke="#a97035" stroke-width="1.2" fill="none" opacity=".55"/></g>' +
-      '<g class="cb-ear-r"><path d="M85 33c12-4 19 7 16 22-2 12-11 18-18 13-5-4-5-12-3-19z" fill="url(#cbFur2)" stroke="#a97035" stroke-width="1"/><path d="M87 38c7 1 11 8 10 16" stroke="#a97035" stroke-width="1.2" fill="none" opacity=".55"/></g>' +
-      '<ellipse cx="60" cy="58" rx="20" ry="15" fill="#f6e3c3"/>' +
-      '<circle cx="42" cy="56" r="9" fill="url(#cbCheek)"/><circle cx="78" cy="56" r="9" fill="url(#cbCheek)"/>' +
-      '<circle class="cb-eye" cx="51" cy="43" r="3.3" fill="#100d0c"/>' +
-      '<circle class="cb-eye" cx="70" cy="43" r="3.3" fill="#100d0c"/>' +
-      '<circle cx="52" cy="42" r="1" fill="#fff"/><circle cx="71" cy="42" r="1" fill="#fff"/>' +
-      '<path d="M46 36q5-3 9-1M66 35q5-2 9 1" stroke="#a97035" stroke-width="1.8" fill="none" stroke-linecap="round"/>' +
-      '<ellipse cx="60.5" cy="54" rx="6" ry="4.6" fill="#100d0c"/>' +
-      '<ellipse cx="58.5" cy="52.5" rx="1.6" ry="1" fill="#fff" opacity=".55"/>' +
-      '<path d="M60.5 58.5v4M60.5 62.5q-5 5-9 1M60.5 62.5q5 5 9 1" stroke="#100d0c" stroke-width="1.5" fill="none" stroke-linecap="round"/>' +
-      '<path d="M37 30q23-16 46 0" stroke="#70807e" stroke-width="2.2" fill="none" opacity=".7"/>' +
-      '<rect x="82" y="28" width="7" height="5" rx="2" fill="#70807e"/>' +
-      '<circle cx="85.5" cy="30.5" r="1.4" fill="#a19c65"/>' +
-      '<path d="M39 78q21 11 42 0" stroke="#a75743" stroke-width="6" fill="none" stroke-linecap="round"/>' +
-      '<circle cx="60" cy="86" r="4.6" fill="#a19c65"/><circle cx="60" cy="86" r="2.2" fill="#f2efe9"/>' +
+      '<path d="M48 27q16-12 32 0l-5 10H53z" fill="url(#cbFur2)"/>' +
+      '<ellipse cx="64" cy="56" rx="35" ry="32" fill="url(#cbFur)"/>' +
+      '<g class="cb-ear-l"><path d="M34 42c-13-4-21 8-18 24 2 13 11 19 18 14 6-5 6-14 4-21z" fill="url(#cbFur2)" stroke="#c98b45" stroke-width="1"/><path d="M32 49c-7 2-10 9-9 17" stroke="#c98b45" stroke-width="1.2" fill="none" opacity=".5"/></g>' +
+      '<g class="cb-ear-r"><path d="M94 42c13-4 21 8 18 24-2 13-11 19-18 14-6-5-6-14-4-21z" fill="url(#cbFur2)" stroke="#c98b45" stroke-width="1"/><path d="M96 49c7 2 10 9 9 17" stroke="#c98b45" stroke-width="1.2" fill="none" opacity=".5"/></g>' +
+      '<ellipse cx="64" cy="70" rx="22" ry="16" fill="#fff2da"/>' +
+      '<circle cx="39" cy="64" r="11" fill="url(#cbCheek)"/><circle cx="89" cy="64" r="11" fill="url(#cbCheek)"/>' +
+      '<circle class="cb-eye" cx="50" cy="52" r="5.4" fill="#3b2b23"/><circle class="cb-eye" cx="78" cy="52" r="5.4" fill="#3b2b23"/>' +
+      '<circle cx="51.8" cy="50" r="1.9" fill="#fff"/><circle cx="79.8" cy="50" r="1.9" fill="#fff"/>' +
+      '<circle cx="48.5" cy="54" r=".9" fill="#fff" opacity=".8"/><circle cx="76.5" cy="54" r=".9" fill="#fff" opacity=".8"/>' +
+      '<path d="M44 43q6-3 11-1M73 42q6-2 11 1" stroke="#c98b45" stroke-width="1.8" fill="none" stroke-linecap="round"/>' +
+      '<path d="M58 66q6-6 12 0 0 6-6 7-6-1-6-7z" fill="#3b2b23"/>' +
+      '<ellipse cx="61" cy="67" rx="2" ry="1.2" fill="#fff" opacity=".55"/>' +
+      '<path d="M64 73v3M64 76q-5 6-10 1M64 76q5 6 10 1" stroke="#3b2b23" stroke-width="1.6" fill="none" stroke-linecap="round"/>' +
+      '<path d="M22 35l2-4 2 4 4 2-4 2-2 4-2-4-4-2z" fill="#8c9a63" opacity=".8"/>' +
     '</g>' +
   '</svg>';
 
@@ -711,7 +713,7 @@
     '<section class="chat-panel" id="chatPanel">' +
       '<header class="chat-head"><span class="cb-ava">' + DOG_SVG + '</span>' +
         '<div><b data-i18n="chat.title">小鴻 · 客服助手</b><small class="cb-status"><i></i><span data-i18n="chat.status">線上 · 示範模式</span></small></div>' +
-        '<button class="chat-close" id="chatClose" type="button" aria-label="關閉">✕</button></header>' +
+        '<div class="cb-tools"><button class="chat-icon" id="chatMax" type="button" aria-label="放大" title="放大 / 縮小">⤢</button><button class="chat-icon chat-close" id="chatClose" type="button" aria-label="關閉">✕</button></div></header>' +
       '<div class="chat-body" id="chatBody"><div class="chat-msg bot" data-i18n="chat.welcome"></div></div>' +
       '<div class="chat-quick">' +
         '<button type="button" data-chat-q="1" data-i18n="chat.q1"></button>' +
@@ -737,18 +739,83 @@
     cb.classList.toggle('collapsed', !open);
     cbToggle.setAttribute('aria-expanded', String(open));
     cbToggle.setAttribute('aria-label', t(open ? 'chat.close' : 'chat.open'));
-    if (open) { cbInput.focus(); cbBody.scrollTop = cbBody.scrollHeight; }
+    if (open) {
+      if (!cb.classList.contains('fullscreen')) {
+        var panelH = cb.querySelector('.chat-panel').offsetHeight || 420;
+        var need = panelH + 22;
+        if (cb.offsetTop < need) applyChatPos(cb.offsetLeft, Math.min(need, window.innerHeight - 100));
+      }
+      cbInput.focus(); cbBody.scrollTop = cbBody.scrollHeight;
+    }
     try { localStorage.setItem('jh-chat-open', open ? '1' : '0'); } catch (e) {}
   }
   var cbSaved = false;
   try { cbSaved = localStorage.getItem('jh-chat-open') === '1'; } catch (e) {}
   setChatOpen(cbSaved);
 
-  cbToggle.addEventListener('click', function () { setChatOpen(cb.classList.contains('collapsed')); });
-  cbClose.addEventListener('click', function () { setChatOpen(false); });
+  var chatMax = document.getElementById('chatMax');
+  function chatClamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+  function applyChatPos(x, y) {
+    cb.style.left = chatClamp(x, 6, Math.max(6, window.innerWidth - 100)) + 'px';
+    cb.style.top = chatClamp(y, 6, Math.max(6, window.innerHeight - 100)) + 'px';
+    cb.style.right = 'auto'; cb.style.bottom = 'auto';
+  }
+  var savedPos = null;
+  try { savedPos = JSON.parse(localStorage.getItem('jh-chat-pos') || 'null'); } catch (e) {}
+  applyChatPos(savedPos && savedPos.x != null ? savedPos.x : window.innerWidth - 112,
+    savedPos && savedPos.y != null ? savedPos.y : window.innerHeight - 112);
+  window.addEventListener('resize', function () { if (!cb.classList.contains('fullscreen')) applyChatPos(cb.offsetLeft, cb.offsetTop); }, { passive: true });
+  var dragEl = null, dragStart = null, dragMoved = false;
+  function startChatDrag(e, el) {
+    if (cb.classList.contains('fullscreen') || (el !== cbToggle && e.target.closest('button'))) return;
+    dragEl = el; dragMoved = false;
+    dragStart = { x: e.clientX, y: e.clientY, left: cb.offsetLeft, top: cb.offsetTop };
+    el.classList.add('dragging');
+    if (el.setPointerCapture) el.setPointerCapture(e.pointerId);
+    e.preventDefault();
+  }
+  function moveChatDrag(e) {
+    if (!dragEl) return;
+    var dx = e.clientX - dragStart.x, dy = e.clientY - dragStart.y;
+    if (Math.abs(dx) + Math.abs(dy) > 5) dragMoved = true;
+    applyChatPos(dragStart.left + dx, dragStart.top + dy);
+  }
+  function endChatDrag() {
+    if (!dragEl) return;
+    dragEl.classList.remove('dragging');
+    if (dragMoved) {
+      cb.dataset.dragged = '1';
+      try { localStorage.setItem('jh-chat-pos', JSON.stringify({ x: cb.offsetLeft, y: cb.offsetTop })); } catch (e) {}
+      window.setTimeout(function () { cb.dataset.dragged = ''; }, 120);
+    }
+    dragEl = null;
+  }
+  var chatHead = cb.querySelector('.chat-head');
+  cbToggle.addEventListener('pointerdown', function (e) { startChatDrag(e, cbToggle); });
+  cbToggle.addEventListener('pointermove', moveChatDrag);
+  cbToggle.addEventListener('pointerup', endChatDrag);
+  cbToggle.addEventListener('pointercancel', endChatDrag);
+  chatHead.addEventListener('pointerdown', function (e) { startChatDrag(e, chatHead); });
+  chatHead.addEventListener('pointermove', moveChatDrag);
+  chatHead.addEventListener('pointerup', endChatDrag);
+  chatHead.addEventListener('pointercancel', endChatDrag);
+  function setChatFullscreen(on) {
+    cb.classList.toggle('fullscreen', on);
+    cb.classList.remove('collapsed');
+    cbToggle.setAttribute('aria-expanded', 'true');
+    if (chatMax) { chatMax.textContent = on ? '⤡' : '⤢'; chatMax.setAttribute('aria-label', on ? t('chat.min') : t('chat.max')); }
+    if (on) cbInput.focus();
+    try { localStorage.setItem('jh-chat-full', on ? '1' : '0'); } catch (e) {}
+  }
+  if (chatMax) chatMax.addEventListener('click', function (e) { e.stopPropagation(); setChatFullscreen(!cb.classList.contains('fullscreen')); });
+  cbToggle.addEventListener('click', function () { if (cb.dataset.dragged === '1') return; setChatOpen(cb.classList.contains('collapsed')); });
+  cbClose.addEventListener('click', function () { if (cb.classList.contains('fullscreen')) setChatFullscreen(false); setChatOpen(false); });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !cb.classList.contains('collapsed')) setChatOpen(false);
+    if (e.key === 'Escape' && !cb.classList.contains('collapsed')) { if (cb.classList.contains('fullscreen')) setChatFullscreen(false); setChatOpen(false); }
   });
+  var cbFullSaved = false;
+  try { cbFullSaved = localStorage.getItem('jh-chat-full') === '1'; } catch (e) {}
+  if (cbFullSaved) setChatFullscreen(true);
 
   function addChatMsg(who, text) {
     var d = document.createElement('div');
@@ -780,6 +847,11 @@
   if (canvas && canvas.getContext && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var ctx = canvas.getContext('2d');
     var pts = [], w = 0, h = 0, dpr = 1, raf = 0, visible = true;
+    var mx = 0, my = 0, tmx = 0, tmy = 0;
+    window.addEventListener('pointermove', function (e) {
+      tmx = (e.clientX / window.innerWidth - .5) * 2;
+      tmy = (e.clientY / window.innerHeight - .5) * 2;
+    }, { passive: true });
 
     function resize() {
       var rect = canvas.getBoundingClientRect();
@@ -807,10 +879,11 @@
       if (!visible) { raf = window.requestAnimationFrame(draw); return; }
       ctx.clearRect(0, 0, w, h);
       var t = Date.now();
-      var a = t * .00013;
+      mx += (tmx - mx) * .045; my += (tmy - my) * .045;
+      var a = t * .00006 + mx * .6;
       var cos = Math.cos(a), sin = Math.sin(a);
       var radius = Math.min(w, h) * .62;
-      var cx = w * (w < 900 ? .5 : .74), cy = h * .5;
+      var cx = w * (w < 900 ? .5 : .74) + mx * 26, cy = h * .5 + my * 20;
       var sx = [], sy = [], sz = [], i, j;
 
       for (i = 0; i < pts.length; i++) {
@@ -818,7 +891,7 @@
         var yaw = a + p.z * 1.6;
         var X = p.x * Math.cos(yaw) - p.z * Math.sin(yaw);
         var Z = p.x * Math.sin(yaw) + p.z * Math.cos(yaw);
-        var Y = p.y * Math.cos(p.z * .8) - p.z * Math.sin(p.z * .8);
+        var Y = p.y * Math.cos(p.z * .8) - p.z * Math.sin(p.z * .8) + (my * .55 + p.y * my * .35);
         var scale = 2.4 / (2.9 + Z);
         sx[i] = cx + X * radius * scale;
         sy[i] = cy + Y * radius * scale;
@@ -902,11 +975,11 @@
           var lon = x / mw * 360 - 180, lat = 78 - y / mh * 140;
           if (!isLand(lon, lat)) continue;
           var edge = 1 - Math.abs(x - mw / 2) / mw;
-          lc.fillStyle = 'rgba(112,128,126,' + (0.16 + edge * 0.22).toFixed(3) + ')';
-          lc.beginPath(); lc.arc(x, y, mw < 700 ? 1 : 1.3, 0, Math.PI * 2); lc.fill();
+          lc.fillStyle = 'rgba(63,141,127,' + (0.34 + edge * 0.34).toFixed(3) + ')';
+          lc.beginPath(); lc.arc(x, y, mw < 700 ? 1.5 : 1.8, 0, Math.PI * 2); lc.fill();
         }
       }
-      lc.strokeStyle = 'rgba(161,156,101,.10)'; lc.lineWidth = 1;
+      lc.strokeStyle = 'rgba(140,154,99,.16)'; lc.lineWidth = 1;
       for (var gx = 0; gx <= 6; gx++) { var px = mw * gx / 6; lc.beginPath(); lc.moveTo(px, 0); lc.lineTo(px, mh); lc.stroke(); }
       for (var gy = 0; gy <= 4; gy++) { var py = mh * gy / 4; lc.beginPath(); lc.moveTo(0, py); lc.lineTo(mw, py); lc.stroke(); }
     }
@@ -927,12 +1000,12 @@
       for (var i = 1; i < nodes.length; i++) {
         var p = project(nodes[i][0], nodes[i][1]);
         var mx = (hub[0] + p[0]) / 2, my = (hub[1] + p[1]) / 2 - Math.abs(p[0] - hub[0]) * .18;
-        mctx.strokeStyle = 'rgba(167,87,67,.22)'; mctx.lineWidth = 1;
+        mctx.strokeStyle = 'rgba(184,106,82,.34)'; mctx.lineWidth = 1.2;
         mctx.beginPath(); mctx.moveTo(hub[0], hub[1]); mctx.quadraticCurveTo(mx, my, p[0], p[1]); mctx.stroke();
         var u = (t + i * .13) % 1, iu = 1 - u;
         var qx = iu * iu * hub[0] + 2 * iu * u * mx + u * u * p[0];
         var qy = iu * iu * hub[1] + 2 * iu * u * my + u * u * p[1];
-        mctx.fillStyle = 'rgba(161,156,101,.85)';
+        mctx.fillStyle = 'rgba(140,154,99,.95)';
         mctx.shadowColor = 'rgba(161,156,101,.9)'; mctx.shadowBlur = 10;
         mctx.beginPath(); mctx.arc(qx, qy, 2.2, 0, Math.PI * 2); mctx.fill();
         mctx.shadowBlur = 0;
