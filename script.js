@@ -157,6 +157,16 @@
       'op.q4': '大量訂購或企業送禮怎麼處理？', 'op.a4': '請透過合作洽詢留下數量與期望交期，我們會由專人評估報價與排程。',
       'op.foot': '訂單系統入口為前端展示版，尚未串接金流、物流與後端資料庫。',
       'op.foot2': '示範帳號與訂單資料僅供畫面展示。正式上線前應完成資安、隱私權告知與支付流程測試。',
+      'chat.title': '小鴻 · 客服助手', 'chat.status': '線上 · 示範模式',
+      'chat.welcome': '你好！我是小鴻 🐶\n想找產品、查訂單，或洽談合作？點下面的快速問題，或直接輸入。',
+      'chat.q1': '產品資訊', 'chat.q2': '訂單查詢', 'chat.q3': '合作洽詢', 'chat.q4': '轉接真人',
+      'chat.a1': '人用保健與 ANUBIS 寵物保健分區展示，品項與成分整理自公開資料；實際標示以公司核准文件為準。\n（示範回覆 · 未來可接入 API）',
+      'chat.a2': '請到「訂單系統」頁輸入會員帳號與訂單編號查詢；目前為前端展示版，尚未串接後端。\n（示範回覆 · 未來可接入 API）',
+      'chat.a3': '歡迎留下需求：產品詢價、通路合作、OEM / ODM 或企業送禮，我們會盡快回覆。\n（示範回覆 · 未來可接入 API）',
+      'chat.a4': '已記錄轉接需求。正式上線後可於此轉接真人客服，目前為示範模式。\n（示範回覆 · 未來可串接客服系統）',
+      'chat.unknown': '收到！這則訊息先記錄下來。正式上線後可透過 API 自動問答或轉接真人處理。\n（示範回覆）',
+      'chat.placeholder': '輸入你的問題…', 'chat.open': '開啟客服助手', 'chat.close': '關閉客服助手',
+      'chat.send': '送出訊息',
       'msg.loginOk': '登入成功（示範）：身份已識別。', 'msg.loginFail': '示範帳號為 demo / demo123；未連接後端。',
       'msg.orderOk': '（示範）· 狀態：已出貨，配送中。', 'msg.inquiry': '已產生詢問稿（示範），請另行透過正式聯絡方式送出。'
     },
@@ -313,6 +323,16 @@
       'op.q4': 'How are bulk orders and corporate gifts handled?', 'op.a4': 'Leave quantity and desired delivery date in the contact form; a specialist will follow up.',
       'op.foot': 'This order portal is a front-end demo; payments, logistics and databases are not connected.',
       'op.foot2': 'Demo account and order data are for display only. Security, privacy notice and payment testing are required before launch.',
+      'chat.title': 'JH Bot · Assistant', 'chat.status': 'Online · demo mode',
+      'chat.welcome': 'Hi, I am JH Bot, your guide dog. Looking for products, an order, or a partnership? Tap a quick question or just type.',
+      'chat.q1': 'Products', 'chat.q2': 'Track order', 'chat.q3': 'Partnership', 'chat.q4': 'Talk to a human',
+      'chat.a1': 'Human wellness and ANUBIS pet care are shown in separate sections. Details come from public sources; approved documents prevail.\n(Demo reply - API ready to connect)',
+      'chat.a2': 'Open the Order Portal and enter your account and order number. This is a front-end demo; no back end is connected yet.\n(Demo reply - API ready to connect)',
+      'chat.a3': 'Leave your request: product enquiry, retail partnership, OEM / ODM or corporate gifting. We will get back to you.\n(Demo reply - API ready to connect)',
+      'chat.a4': 'Your handoff request is noted. A live agent can be connected here after launch; this is demo mode.\n(Demo reply - agent handoff ready)',
+      'chat.unknown': 'Got it. This message is recorded for now. After launch, API answers or a live agent can handle it.\n(Demo reply)',
+      'chat.placeholder': 'Type your question...', 'chat.open': 'Open assistant', 'chat.close': 'Close assistant',
+      'chat.send': 'Send message',
       'msg.loginOk': 'Login successful (demo): role identified.', 'msg.loginFail': 'Demo account is demo / demo123; no back end connected.',
       'msg.orderOk': '(demo) · Status: shipped, in transit.', 'msg.inquiry': 'Inquiry draft generated (demo); send it through the official contact channel.'
     }
@@ -468,6 +488,87 @@
     document.getElementById('orderStatus').textContent = f.get('orderNo') + t('msg.orderOk');
   });
 
+
+  /* ---------- 客服機器人：狗狗形象，預留 API／轉真人 ---------- */
+  var DOG_SVG = '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' +
+    '<ellipse cx="12" cy="15" rx="7" ry="9" fill="#2f6bff" transform="rotate(-18 12 15)"/>' +
+    '<ellipse cx="36" cy="15" rx="7" ry="9" fill="#2f6bff" transform="rotate(18 36 15)"/>' +
+    '<rect x="8" y="10" width="32" height="31" rx="14" fill="#fff" stroke="#dbe4f2" stroke-width="1.5"/>' +
+    '<circle class="cb-eye" cx="19" cy="25" r="2.4" fill="#12161f"/>' +
+    '<circle class="cb-eye" cx="29" cy="25" r="2.4" fill="#12161f"/>' +
+    '<ellipse cx="24" cy="32" rx="3.4" ry="2.6" fill="#12161f"/>' +
+    '<path d="M24 34.6v2M24 36.6c-2 2-5 2-6 0M24 36.6c2 2 5 2 6 0" stroke="#12161f" stroke-width="1.3" fill="none" stroke-linecap="round"/>' +
+    '<circle cx="14.5" cy="31" r="2" fill="#ffb3a0"/><circle cx="33.5" cy="31" r="2" fill="#ffb3a0"/>' +
+    '</svg>';
+
+  var chatHTML = '<aside class="chatbot collapsed" id="jhChatbot" aria-label="客服助手">' +
+    '<section class="chat-panel" id="chatPanel">' +
+      '<header class="chat-head"><span class="cb-ava">' + DOG_SVG + '</span>' +
+        '<div><b data-i18n="chat.title">小鴻 · 客服助手</b><small class="cb-status"><i></i><span data-i18n="chat.status">線上 · 示範模式</span></small></div>' +
+        '<button class="chat-close" id="chatClose" type="button" aria-label="關閉">✕</button></header>' +
+      '<div class="chat-body" id="chatBody"><div class="chat-msg bot" data-i18n="chat.welcome"></div></div>' +
+      '<div class="chat-quick">' +
+        '<button type="button" data-chat-q="1" data-i18n="chat.q1"></button>' +
+        '<button type="button" data-chat-q="2" data-i18n="chat.q2"></button>' +
+        '<button type="button" data-chat-q="3" data-i18n="chat.q3"></button>' +
+        '<button type="button" data-chat-q="4" data-i18n="chat.q4"></button></div>' +
+      '<form class="chat-foot" id="chatForm"><input id="chatInput" type="text" autocomplete="off" data-i18n-ph="chat.placeholder" placeholder="輸入你的問題…">' +
+        '<button type="submit" data-i18n-ph="chat.send" aria-label="送出訊息">➤</button></form>' +
+    '</section>' +
+    '<button class="chatbot-bubble" id="chatToggle" type="button" aria-label="開啟客服助手" aria-expanded="false" aria-controls="chatPanel">' + DOG_SVG + '</button>' +
+  '</aside>';
+  document.body.insertAdjacentHTML('beforeend', chatHTML);
+  applyLang(currentLang);
+
+  var cb = document.getElementById('jhChatbot');
+  var cbToggle = document.getElementById('chatToggle');
+  var cbClose = document.getElementById('chatClose');
+  var cbInput = document.getElementById('chatInput');
+  var cbBody = document.getElementById('chatBody');
+  var cbForm = document.getElementById('chatForm');
+
+  function setChatOpen(open) {
+    cb.classList.toggle('collapsed', !open);
+    cbToggle.setAttribute('aria-expanded', String(open));
+    cbToggle.setAttribute('aria-label', t(open ? 'chat.close' : 'chat.open'));
+    if (open) { cbInput.focus(); cbBody.scrollTop = cbBody.scrollHeight; }
+    try { localStorage.setItem('jh-chat-open', open ? '1' : '0'); } catch (e) {}
+  }
+  var cbSaved = false;
+  try { cbSaved = localStorage.getItem('jh-chat-open') === '1'; } catch (e) {}
+  setChatOpen(cbSaved);
+
+  cbToggle.addEventListener('click', function () { setChatOpen(cb.classList.contains('collapsed')); });
+  cbClose.addEventListener('click', function () { setChatOpen(false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !cb.classList.contains('collapsed')) setChatOpen(false);
+  });
+
+  function addChatMsg(who, text) {
+    var d = document.createElement('div');
+    d.className = 'chat-msg ' + who;
+    d.textContent = text;
+    cbBody.appendChild(d);
+    cbBody.scrollTop = cbBody.scrollHeight;
+  }
+  function replyChat(qnum) {
+    var question = qnum ? t('chat.q' + qnum) : cbInput.value.trim();
+    if (!question) return;
+    addChatMsg('user', question);
+    if (qnum) addChatMsg('bot', t('chat.a' + qnum));
+    else {
+      var v = question.toLowerCase();
+      if (/訂單|order|查詢|track/.test(v)) addChatMsg('bot', t('chat.a2'));
+      else if (/產品|product|保健|寵物|pet|狗|貓/.test(v)) addChatMsg('bot', t('chat.a1'));
+      else if (/合作|通路|代工|oem|送禮|gift/.test(v)) addChatMsg('bot', t('chat.a3'));
+      else addChatMsg('bot', t('chat.unknown'));
+    }
+    cbInput.value = '';
+  }
+  var qBtns = cb.querySelectorAll('[data-chat-q]');
+  for (var qb = 0; qb < qBtns.length; qb++) qBtns[qb].addEventListener('click', function () { replyChat(this.getAttribute('data-chat-q')); });
+  if (cbForm) cbForm.addEventListener('submit', function (e) { e.preventDefault(); replyChat(0); });
+
   /* ---------- Hero 生技粒子動畫 ---------- */
   var canvas = document.getElementById('bioCanvas');
   if (canvas && canvas.getContext && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -502,14 +603,14 @@
       for (i = 0; i < pts.length; i++) for (j = i + 1; j < pts.length; j++) {
         p = pts[i]; q = pts[j]; dx = p.x - q.x; dy = p.y - q.y; dist2 = dx * dx + dy * dy;
         if (dist2 < max) {
-          ctx.strokeStyle = 'rgba(14,140,127,' + (0.13 * (1 - dist2 / max)).toFixed(3) + ')';
+          ctx.strokeStyle = 'rgba(47,107,255,' + (0.13 * (1 - dist2 / max)).toFixed(3) + ')';
           ctx.lineWidth = 1;
           ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
         }
       }
       for (i = 0; i < pts.length; i++) {
         p = pts[i];
-        ctx.fillStyle = p.pet ? 'rgba(122,99,196,.38)' : 'rgba(14,140,127,.34)';
+        ctx.fillStyle = p.pet ? 'rgba(240,99,69,.38)' : 'rgba(47,107,255,.34)';
         ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
       }
       // 生物螺旋意象：兩條低對比正弦波
@@ -520,7 +621,7 @@
           var y = h * 0.52 + Math.sin(x * 0.006 + t + s * Math.PI) * (h * 0.12) + (s ? 34 : -34);
           if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
         }
-        ctx.strokeStyle = s ? 'rgba(122,99,196,.10)' : 'rgba(14,140,127,.12)';
+        ctx.strokeStyle = s ? 'rgba(240,99,69,.10)' : 'rgba(47,107,255,.12)';
         ctx.lineWidth = 1.4; ctx.stroke();
       }
       raf = window.requestAnimationFrame(draw);
