@@ -40,7 +40,7 @@
   <aside class="order-nav reveal"><h4 data-i18n="op.menu">QUICK MENU</h4><a href="#login"><b>01</b><span data-i18n="op.m1">會員登入</span></a><a href="#inquiry"><b>02</b><span data-i18n="op.m2">訂單查詢</span></a><a href="#flow"><b>03</b><span data-i18n="op.m3">訂購流程</span></a><a href="#service"><b>04</b><span data-i18n="op.m4">服務項目</span></a><a href="#faq"><b>05</b><span data-i18n="op.m5">常見問題</span></a><a href="#global"><b>06</b><span data-i18n="dd.o3">國際訂購</span></a></aside>
   <div>
     <div class="panel reveal" id="login"><div class="panel-head"><div><div class="eyebrow">MEMBER LOGIN</div><h3 data-i18n="op.loginTitle">會員 / 經銷商登入</h3><p class="hint" data-i18n="op.loginHint">示範帳號 demo／密碼 demo123，僅前端展示，不會傳送資料。</p></div></div>
-      <form id="loginForm"><div class="form-grid"><label class="field"><span data-i18n="op.account">帳號</span><input name="account" data-i18n-ph="op.accountPh" placeholder="統一編號或會員帳號" required></label><label class="field"><span data-i18n="op.password">密碼</span><input name="password" type="password" data-i18n-ph="op.passwordPh" placeholder="密碼" required></label></div><label class="field"><span data-i18n="op.role">身份</span><select name="role"><option data-i18n="op.role1">一般客戶</option><option data-i18n="op.role2">通路夥伴</option><option data-i18n="op.role3">經銷商</option></select></label><button class="btn btn-primary" type="submit" data-i18n="op.loginBtn">登入系統 →</button><div class="status" id="loginStatus" role="status"></div></form>
+      <form id="loginForm"><div class="form-grid"><label class="field"><span data-i18n="op.account">帳號</span><input name="account" data-i18n-ph="op.accountPh" placeholder="統一編號或會員帳號" required></label><label class="field"><span data-i18n="op.password">密碼</span><input name="password" type="password" data-i18n-ph="op.passwordPh" placeholder="密碼" required></label></div><label class="field"><span data-i18n="op.role">身份</span><select name="role"><option data-i18n="op.role1">一般客戶</option><option data-i18n="op.role2">通路夥伴</option><option data-i18n="op.role3">經銷商</option></select></label><div class="login-actions"><button class="btn btn-primary" type="submit" data-i18n="op.loginBtn">登入系統 →</button><button class="btn btn-ghost" type="button" id="openRegister" data-i18n="op.register">註冊新帳號</button></div><div class="status" id="loginStatus" role="status"></div></form>
     </div>
 
     <div class="panel reveal" id="inquiry"><div class="panel-head"><div><div class="eyebrow">ORDER INQUIRY</div><h3 data-i18n="op.queryTitle">訂單查詢</h3><p class="hint" data-i18n="op.queryHint">輸入訂單編號與聯絡電話，查看處理進度。</p></div></div>
@@ -128,7 +128,30 @@
   <div><a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="44" rx="12" fill="#100d0c"/><path d="M14 32V13" stroke="#faf8f5" stroke-width="3.2" stroke-linecap="round"/><path d="M30 32V13" stroke="#faf8f5" stroke-width="3.2" stroke-linecap="round"/><path d="M14 23c5-8 11 8 16 0" stroke="#a75743" stroke-width="3.2" stroke-linecap="round" fill="none"/><circle cx="30" cy="13" r="2.4" fill="#a19c65"/></svg></span><span><b>精鴻生醫</b><small>JING HONG BIOMEDICAL</small></span></a><p style="margin-top:12px" data-i18n="op.foot">訂單系統入口為前端展示版，尚未串接金流、物流與後端資料庫。</p></div>
   <div><h4 data-i18n="foot.links">快速連結</h4><div class="footer-links tech"><a href="index.html#products" data-i18n="nav.products">產品系列</a><a href="cases.html" data-i18n="nav.cases">實例分享</a><a href="order.html" data-i18n="nav.order">訂單系統</a><a href="index.html#contact" data-i18n="nav.contact">合作洽詢</a></div></div>
   <div><h4 data-i18n="foot.disclaimer">注意事項</h4><p data-i18n="op.foot2">示範帳號與訂單資料僅供畫面展示。正式上線前應完成資安、隱私權告知與支付流程測試。</p></div>
-</div><div class="footer-bottom"><span>© 2026 精鴻生醫 · 設計提案 v8</span><a href="#top" data-i18n="foot.top">回到頂端 ↑</a></div></div></footer>
+</div><div class="footer-bottom"><span>© 2026 精鴻生醫 · 設計提案 v9</span><a href="#top" data-i18n="foot.top">回到頂端 ↑</a></div></div></footer>
+<div class="modal" id="registerModal" role="dialog" aria-modal="true" aria-labelledby="registerTitle">
+  <div class="modal-card">
+    <button class="modal-close" type="button" id="closeRegister" aria-label="關閉">✕</button>
+    <div class="eyebrow">MEMBER REGISTRATION</div>
+    <h3 id="registerTitle" data-i18n="reg.title">註冊會員帳號</h3>
+    <p class="hint" data-i18n="reg.hint">示範表單：資料僅在瀏覽器內驗證，不會傳送至伺服器。</p>
+    <form id="registerForm">
+      <div class="form-grid">
+        <label class="field"><span data-i18n="reg.name">姓名／公司</span><input name="name" required></label>
+        <label class="field"><span data-i18n="reg.email">電子郵件</span><input name="email" type="email" required></label>
+      </div>
+      <label class="field"><span data-i18n="op.password">密碼</span><input name="password" type="password" minlength="6" required></label>
+      <div class="antibot">
+        <label class="human-check"><input type="checkbox" name="human" required><span data-i18n="reg.human">我不是機器人</span></label>
+        <label class="challenge"><span data-i18n="reg.challenge">請計算：</span><b id="captchaQ">3 + 4 =</b><input name="captcha" inputmode="numeric" required maxlength="3"></label>
+        <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      </div>
+      <button class="btn btn-primary" type="submit" data-i18n="reg.submit">送出註冊</button>
+      <div class="status" id="registerStatus" role="status"></div>
+    </form>
+  </div>
+</div>
 <script src="script.js"></script>
+
 </body>
 </html>

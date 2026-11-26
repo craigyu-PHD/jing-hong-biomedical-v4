@@ -1,4 +1,4 @@
-/* 精鴻生醫 v8 — 雙語、浮動功能視窗、放大分子與流光、編輯級字體、完整拉布拉多、國際訂購 */
+/* 精鴻生醫 v9 — 雙語、自然下拉、玻璃質感、全球地圖、防機器人註冊、完整拉布拉多、國際訂購 */
 (function () {
   'use strict';
 
@@ -189,7 +189,9 @@
       'global.note': '此為示意試算，實際價格、運費與交期以正式報價單為準。',
       'global.btn': '產生國際訂購稿 →', 'global.ok': '已產生國際訂購稿（示範），請透過正式管道送出。',
       'global.currency': '顯示幣別',
-      'nav.quick': '功能選單', 'quick.title': 'QUICK ACCESS / 快速功能', 'quick.chat': '呼叫客服',
+      'op.register': '註冊新帳號', 'reg.title': '註冊會員帳號', 'reg.hint': '示範表單：資料僅在瀏覽器內驗證，不會傳送至伺服器。',
+      'reg.name': '姓名／公司', 'reg.email': '電子郵件', 'reg.human': '我不是機器人', 'reg.challenge': '請計算：',
+      'reg.submit': '送出註冊', 'reg.ok': '註冊成功（示範）：已通過人機驗證。', 'reg.fail': '請勾選人機驗證並輸入正確的計算結果。',
       'msg.loginOk': '登入成功（示範）：身份已識別。', 'msg.loginFail': '示範帳號為 demo / demo123；未連接後端。',
       'msg.orderOk': '（示範）· 狀態：已出貨，配送中。', 'msg.inquiry': '已產生詢問稿（示範），請另行透過正式聯絡方式送出。'
     },
@@ -378,7 +380,9 @@
       'global.note': 'This is an illustrative estimate. Actual price, shipping and lead time follow a formal quotation.',
       'global.btn': 'Generate global order draft →', 'global.ok': 'Global order draft generated (demo); send it through the official channel.',
       'global.currency': 'Display currency',
-      'nav.quick': 'Quick menu', 'quick.title': 'QUICK ACCESS / SHORTCUTS', 'quick.chat': 'Chat with us',
+      'op.register': 'Create account', 'reg.title': 'Member registration', 'reg.hint': 'Demo form: validated in-browser only, no data is sent.',
+      'reg.name': 'Name / Company', 'reg.email': 'Email', 'reg.human': 'I am not a robot', 'reg.challenge': 'Please solve:',
+      'reg.submit': 'Submit registration', 'reg.ok': 'Registration successful (demo): human verification passed.', 'reg.fail': 'Please confirm you are human and enter the correct answer.',
       'msg.loginOk': 'Login successful (demo): role identified.', 'msg.loginFail': 'Demo account is demo / demo123; no back end connected.',
       'msg.orderOk': '(demo) · Status: shipped, in transit.', 'msg.inquiry': 'Inquiry draft generated (demo); send it through the official contact channel.'
     }
@@ -425,7 +429,7 @@
     document.querySelectorAll('[data-lang]')[b].addEventListener('click', function () { applyLang(this.getAttribute('data-lang')); });
   }
 
-  /* ---------- 懸浮下拉選單：依功能列表自動生成 ---------- */
+  /* ---------- 自然下拉：hover 延遲＋點擊＋鍵盤，不再突然跳動 ---------- */
   var DROP = {
     'nav.story': [['dd.s1', '#story'], ['dd.s2', '#craft'], ['dd.s3', '#craft']],
     'nav.news': [['dd.n1', '#news'], ['dd.n2', '#news'], ['dd.n3', '#products']],
@@ -436,6 +440,16 @@
     'nav.contact': [['dd.ct1', '#contact'], ['dd.ct2', '#contact'], ['dd.ct3', '#contact']]
   };
   var navRoot = document.querySelector('.nav-links');
+  var openTimer = 0, closeTimer = 0;
+  function closeNavAll(except) {
+    var all = document.querySelectorAll('.nav-item.open');
+    for (var k = 0; k < all.length; k++) if (all[k] !== except) all[k].classList.remove('open');
+  }
+  function openNav(item) { window.clearTimeout(closeTimer); closeNavAll(item); item.classList.add('open'); }
+  function scheduleClose(item) {
+    window.clearTimeout(closeTimer);
+    closeTimer = window.setTimeout(function () { item.classList.remove('open'); }, 220);
+  }
   if (navRoot) {
     var navAs = navRoot.querySelectorAll('a');
     for (var ni = 0; ni < navAs.length; ni++) {
@@ -458,66 +472,28 @@
       for (var di = 0; di < items.length; di++) {
         var link = document.createElement('a');
         link.href = items[di][1];
-        link.innerHTML = '<i></i><span data-i18n="' + items[di][0] + '">' + items[di][0] + '</span><span>↗</span>';
+        link.innerHTML = '<span class="dd-label" data-i18n="' + items[di][0] + '">' + items[di][0] + '</span><span class="dd-arrow">↗</span>';
         dd.appendChild(link);
       }
       item.appendChild(dd);
+      item.addEventListener('mouseenter', function () {
+        window.clearTimeout(openTimer);
+        var self = this;
+        openTimer = window.setTimeout(function () { openNav(self); }, 85);
+      });
+      item.addEventListener('mouseleave', function () { window.clearTimeout(openTimer); scheduleClose(this); });
+      item.addEventListener('focusin', function () { openNav(this); });
+      item.addEventListener('focusout', function (e) { if (!this.contains(e.relatedTarget)) scheduleClose(this); });
       caret.addEventListener('click', function (e) {
         e.preventDefault(); e.stopPropagation();
+        window.clearTimeout(openTimer); window.clearTimeout(closeTimer);
         var parent = this.parentNode;
-        var willOpen = !parent.classList.contains('open');
-        var all = document.querySelectorAll('.nav-item.open');
-        for (var q = 0; q < all.length; q++) all[q].classList.remove('open');
-        parent.classList.toggle('open', willOpen);
+        if (parent.classList.contains('open')) { parent.classList.remove('open'); }
+        else { openNav(parent); }
       });
     }
-    var qBtn = document.createElement('button');
-    qBtn.type = 'button'; qBtn.className = 'nav-quick'; qBtn.id = 'quickMenuBtn';
-    qBtn.setAttribute('aria-expanded', 'false');
-    qBtn.innerHTML = '<span class="q-dots"><i></i><i></i><i></i></span><span data-i18n="nav.quick">功能選單</span><b>⌄</b>';
-    navRoot.appendChild(qBtn);
-    var qPanel = document.createElement('div');
-    qPanel.className = 'quick-panel'; qPanel.id = 'quickPanel';
-    var quickLinks = [
-      ['nav.story', 'index.html#story'], ['nav.news', 'index.html#news'],
-      ['nav.products', 'index.html#products'], ['nav.craft', 'index.html#craft'],
-      ['nav.cases', 'cases.html'], ['nav.order', 'order.html#global']
-    ];
-    var qGrid = '<div class="quick-head"><b data-i18n="quick.title">QUICK ACCESS / 快速功能</b><small>01—06</small></div><div class="quick-grid">';
-    for (var qi = 0; qi < quickLinks.length; qi++) {
-      qGrid += '<a href="' + quickLinks[qi][1] + '"><em>0' + (qi + 1) + '</em><span data-i18n="' + quickLinks[qi][0] + '">' + quickLinks[qi][0] + '</span></a>';
-    }
-    qGrid += '</div><div class="quick-foot"><div class="lang-switch" role="group" aria-label="Language switch"><button type="button" data-lang="zh" aria-pressed="true">中文</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div><button type="button" class="quick-chat" id="quickChatBtn" data-i18n="quick.chat">呼叫客服</button></div>';
-    qPanel.innerHTML = qGrid;
-    navRoot.appendChild(qPanel);
-    var qLangs = qPanel.querySelectorAll('[data-lang]');
-    for (var ql = 0; ql < qLangs.length; ql++) qLangs[ql].addEventListener('click', function () { applyLang(this.getAttribute('data-lang')); });
-    qBtn.addEventListener('click', function (e) {
-      e.preventDefault(); e.stopPropagation();
-      var open = !qPanel.classList.contains('open');
-      qPanel.classList.toggle('open', open);
-      qBtn.setAttribute('aria-expanded', String(open));
-      var opened = document.querySelectorAll('.nav-item.open');
-      for (var z = 0; z < opened.length; z++) opened[z].classList.remove('open');
-    });
-    qPanel.addEventListener('click', function (e) {
-      if (e.target.closest('a')) { qPanel.classList.remove('open'); qBtn.setAttribute('aria-expanded', 'false'); }
-    });
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.nav-item')) {
-        var opened = document.querySelectorAll('.nav-item.open');
-        for (var i = 0; i < opened.length; i++) opened[i].classList.remove('open');
-      }
-      if (!e.target.closest('.nav-quick') && !e.target.closest('.quick-panel')) {
-        qPanel.classList.remove('open'); qBtn.setAttribute('aria-expanded', 'false');
-      }
-    });
+    document.addEventListener('click', function (e) { if (!e.target.closest('.nav-item')) closeNavAll(); });
   }
-  var quickChatBtn = document.getElementById('quickChatBtn');
-  if (quickChatBtn) quickChatBtn.addEventListener('click', function () {
-    var box = document.getElementById('jhChatbot');
-    if (box) { box.classList.remove('collapsed'); try { localStorage.setItem('jh-chat-open', '1'); } catch (e) {} }
-  });
   applyLang(currentLang);
 
   /* ---------- 選單／捲動 ---------- */
@@ -619,6 +595,39 @@
     var f = new FormData(login);
     var ok = f.get('account') === 'demo' && f.get('password') === 'demo123';
     document.getElementById('loginStatus').textContent = ok ? t('msg.loginOk') : t('msg.loginFail');
+  });
+
+  var regModal = document.getElementById('registerModal');
+  var regOpen = document.getElementById('openRegister');
+  var regClose = document.getElementById('closeRegister');
+  var regForm = document.getElementById('registerForm');
+  var captchaA = 0, captchaB = 0;
+  function refreshCaptcha() {
+    captchaA = Math.floor(Math.random() * 8) + 2;
+    captchaB = Math.floor(Math.random() * 8) + 1;
+    var q = document.getElementById('captchaQ');
+    if (q) q.textContent = captchaA + ' + ' + captchaB + ' =';
+  }
+  function setRegOpen(open) {
+    if (!regModal) return;
+    regModal.classList.toggle('open', open);
+    if (open) { refreshCaptcha(); var first = regModal.querySelector('input[name="name"]'); if (first) first.focus(); }
+  }
+  if (regOpen) regOpen.addEventListener('click', function () { setRegOpen(true); });
+  if (regClose) regClose.addEventListener('click', function () { setRegOpen(false); });
+  if (regModal) regModal.addEventListener('click', function (e) { if (e.target === regModal) setRegOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && regModal && regModal.classList.contains('open')) setRegOpen(false); });
+  if (regForm) regForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = new FormData(regForm);
+    var human = f.get('human') === 'on';
+    var honeypot = String(f.get('website') || '');
+    var answer = parseInt(f.get('captcha'), 10);
+    var ok = human && !honeypot && answer === captchaA + captchaB;
+    var st = document.getElementById('registerStatus');
+    if (st) st.textContent = ok ? t('reg.ok') : t('reg.fail');
+    if (ok) regForm.reset();
+    refreshCaptcha();
   });
 
   var order = document.getElementById('orderForm');
@@ -856,5 +865,94 @@
       vio.observe(canvas);
     }
     window.addEventListener('beforeunload', function () { window.cancelAnimationFrame(raf); });
+  }
+
+  /* ---------- Hero 全球連線地圖（科技線條＋發光節點） ---------- */
+  var mapCanvas = document.getElementById('globalMap');
+  if (mapCanvas && mapCanvas.getContext && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var mctx = mapCanvas.getContext('2d');
+    var mw = 0, mh = 0, mdpr = 1, mapLayer = document.createElement('canvas');
+    var mraf = 0, mvisible = true;
+    var land = [
+      [-100, 45, 34, 20], [-152, 64, 14, 8], [-86, 24, 14, 10], [-62, -16, 17, 27],
+      [12, 50, 19, 12], [20, 4, 21, 26], [88, 46, 47, 21], [78, 20, 13, 11],
+      [106, 9, 17, 10], [135, -25, 17, 11], [141, 39, 5, 8], [-42, 72, 11, 7]
+    ];
+    var nodes = [
+      [121.5, 25], [139.7, 35.7], [103.8, 1.3], [55.3, 25.2], [8.7, 50.1],
+      [-0.1, 51.5], [-74, 40.7], [-118, 34], [151, -33.8], [-46.6, -23.5]
+    ];
+    function isLand(lon, lat) {
+      for (var a = 0; a < land.length; a++) {
+        var L = land[a];
+        var dx = (lon - L[0]) / L[2], dy = (lat - L[1]) / L[3];
+        if (dx * dx + dy * dy < 1) return true;
+      }
+      return false;
+    }
+    function project(lon, lat) { return [(lon + 180) / 360 * mw, (78 - lat) / 140 * mh]; }
+    function buildMap() {
+      mapLayer.width = Math.round(mw * mdpr); mapLayer.height = Math.round(mh * mdpr);
+      var lc = mapLayer.getContext('2d');
+      lc.setTransform(mdpr, 0, 0, mdpr, 0, 0);
+      lc.clearRect(0, 0, mw, mh);
+      var step = mw < 700 ? 9 : 7;
+      for (var y = 14; y <= 64; y += step / 2) {
+        for (var x = step / 2; x < mw; x += step) {
+          var lon = x / mw * 360 - 180, lat = 78 - y / mh * 140;
+          if (!isLand(lon, lat)) continue;
+          var edge = 1 - Math.abs(x - mw / 2) / mw;
+          lc.fillStyle = 'rgba(112,128,126,' + (0.16 + edge * 0.22).toFixed(3) + ')';
+          lc.beginPath(); lc.arc(x, y, mw < 700 ? 1 : 1.3, 0, Math.PI * 2); lc.fill();
+        }
+      }
+      lc.strokeStyle = 'rgba(161,156,101,.10)'; lc.lineWidth = 1;
+      for (var gx = 0; gx <= 6; gx++) { var px = mw * gx / 6; lc.beginPath(); lc.moveTo(px, 0); lc.lineTo(px, mh); lc.stroke(); }
+      for (var gy = 0; gy <= 4; gy++) { var py = mh * gy / 4; lc.beginPath(); lc.moveTo(0, py); lc.lineTo(mw, py); lc.stroke(); }
+    }
+    function resizeMap() {
+      var rect = mapCanvas.getBoundingClientRect();
+      mdpr = Math.min(window.devicePixelRatio || 1, 2);
+      mw = Math.max(rect.width, 1); mh = Math.max(rect.height, 1);
+      mapCanvas.width = Math.round(mw * mdpr); mapCanvas.height = Math.round(mh * mdpr);
+      mctx.setTransform(mdpr, 0, 0, mdpr, 0, 0);
+      buildMap();
+    }
+    function drawMap() {
+      if (!mvisible) { mraf = window.requestAnimationFrame(drawMap); return; }
+      mctx.clearRect(0, 0, mw, mh);
+      mctx.drawImage(mapLayer, 0, 0, mw, mh);
+      var t = Date.now() * .00035;
+      var hub = project(nodes[0][0], nodes[0][1]);
+      for (var i = 1; i < nodes.length; i++) {
+        var p = project(nodes[i][0], nodes[i][1]);
+        var mx = (hub[0] + p[0]) / 2, my = (hub[1] + p[1]) / 2 - Math.abs(p[0] - hub[0]) * .18;
+        mctx.strokeStyle = 'rgba(167,87,67,.22)'; mctx.lineWidth = 1;
+        mctx.beginPath(); mctx.moveTo(hub[0], hub[1]); mctx.quadraticCurveTo(mx, my, p[0], p[1]); mctx.stroke();
+        var u = (t + i * .13) % 1, iu = 1 - u;
+        var qx = iu * iu * hub[0] + 2 * iu * u * mx + u * u * p[0];
+        var qy = iu * iu * hub[1] + 2 * iu * u * my + u * u * p[1];
+        mctx.fillStyle = 'rgba(161,156,101,.85)';
+        mctx.shadowColor = 'rgba(161,156,101,.9)'; mctx.shadowBlur = 10;
+        mctx.beginPath(); mctx.arc(qx, qy, 2.2, 0, Math.PI * 2); mctx.fill();
+        mctx.shadowBlur = 0;
+      }
+      for (var n = 0; n < nodes.length; n++) {
+        var q = project(nodes[n][0], nodes[n][1]);
+        var pulse = 2 + Math.sin(t * 2 + n) * 1.1;
+        mctx.fillStyle = n === 0 ? 'rgba(167,87,67,.9)' : 'rgba(112,128,126,.75)';
+        mctx.beginPath(); mctx.arc(q[0], q[1], 2.4, 0, Math.PI * 2); mctx.fill();
+        mctx.strokeStyle = n === 0 ? 'rgba(167,87,67,.35)' : 'rgba(112,128,126,.25)';
+        mctx.beginPath(); mctx.arc(q[0], q[1], 4 + pulse, 0, Math.PI * 2); mctx.stroke();
+      }
+      mraf = window.requestAnimationFrame(drawMap);
+    }
+    resizeMap(); drawMap();
+    window.addEventListener('resize', resizeMap, { passive: true });
+    if ('IntersectionObserver' in window) {
+      var mio = new IntersectionObserver(function (entries) { mvisible = entries[0].isIntersecting; }, { threshold: 0.01 });
+      mio.observe(mapCanvas);
+    }
+    window.addEventListener('beforeunload', function () { window.cancelAnimationFrame(mraf); });
   }
 })();
