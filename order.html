@@ -37,7 +37,7 @@
 <section class="page-hero"><div class="wrap"><div class="eyebrow">ORDER PORTAL / 訂單系統</div><h1 data-i18n="op.h1">一個入口，<br>掌握所有訂單。</h1><p data-i18n="op.sub">此頁為前端展示樣板，功能元件已預先建置；正式上線前需串接後端會員、庫存、金流與物流系統。</p></div></section>
 
 <section class="section"><div class="wrap order-layout">
-  <aside class="order-nav reveal"><h4 data-i18n="op.menu">QUICK MENU</h4><a href="#login"><b>01</b><span data-i18n="op.m1">會員登入</span></a><a href="#inquiry"><b>02</b><span data-i18n="op.m2">訂單查詢</span></a><a href="#flow"><b>03</b><span data-i18n="op.m3">訂購流程</span></a><a href="#service"><b>04</b><span data-i18n="op.m4">服務項目</span></a><a href="#faq"><b>05</b><span data-i18n="op.m5">常見問題</span></a></aside>
+  <aside class="order-nav reveal"><h4 data-i18n="op.menu">QUICK MENU</h4><a href="#login"><b>01</b><span data-i18n="op.m1">會員登入</span></a><a href="#inquiry"><b>02</b><span data-i18n="op.m2">訂單查詢</span></a><a href="#flow"><b>03</b><span data-i18n="op.m3">訂購流程</span></a><a href="#service"><b>04</b><span data-i18n="op.m4">服務項目</span></a><a href="#faq"><b>05</b><span data-i18n="op.m5">常見問題</span></a><a href="#global"><b>06</b><span data-i18n="dd.o3">國際訂購</span></a></aside>
   <div>
     <div class="panel reveal" id="login"><div class="panel-head"><div><div class="eyebrow">MEMBER LOGIN</div><h3 data-i18n="op.loginTitle">會員 / 經銷商登入</h3><p class="hint" data-i18n="op.loginHint">示範帳號 demo／密碼 demo123，僅前端展示，不會傳送資料。</p></div></div>
       <form id="loginForm"><div class="form-grid"><label class="field"><span data-i18n="op.account">帳號</span><input name="account" data-i18n-ph="op.accountPh" placeholder="統一編號或會員帳號" required></label><label class="field"><span data-i18n="op.password">密碼</span><input name="password" type="password" data-i18n-ph="op.passwordPh" placeholder="密碼" required></label></div><label class="field"><span data-i18n="op.role">身份</span><select name="role"><option data-i18n="op.role1">一般客戶</option><option data-i18n="op.role2">通路夥伴</option><option data-i18n="op.role3">經銷商</option></select></label><button class="btn btn-primary" type="submit" data-i18n="op.loginBtn">登入系統 →</button><div class="status" id="loginStatus" role="status"></div></form>
@@ -84,12 +84,51 @@
     <details class="faq reveal"><summary data-i18n="op.q4">大量訂購或企業送禮怎麼處理？</summary><p data-i18n="op.a4">請透過合作洽詢留下數量與期望交期，我們會由專人評估報價與排程。</p></details>
   </div>
 </div></section>
+
+<section class="section" id="global"><div class="wrap">
+  <div class="global-order reveal">
+    <div class="global-grid">
+      <div>
+        <div class="eyebrow" data-i18n="global.eyebrow">GLOBAL ORDER / 國際訂購</div>
+        <h2 data-i18n="global.title">讓訂購，<br>不受邊界限制。</h2>
+        <p data-i18n="global.sub">為海外客戶預留的訂購版面：國別與幣別、國際配送、報關文件與多語客服，皆已規劃。目前為前端展示，正式上線前需串接金流與物流。</p>
+        <div class="global-points">
+          <div class="global-point"><b>01</b><span><strong data-i18n="global.p1t">多幣別報價</strong><br><span data-i18n="global.p1d">TWD／USD／EUR／JPY 即時切換，價格試算為示意。</span></span></div>
+          <div class="global-point"><b>02</b><span><strong data-i18n="global.p2t">國際配送與報關</strong><br><span data-i18n="global.p2d">依目的國別顯示運費與文件需求；實際以報價為準。</span></span></div>
+          <div class="global-point"><b>03</b><span><strong data-i18n="global.p3t">英文單據與客服</strong><br><span data-i18n="global.p3d">英文發票、裝箱單與多語客服，接單流程更順暢。</span></span></div>
+        </div>
+      </div>
+      <div class="global-form">
+        <h3 style="font-size:16px;margin-bottom:13px" data-i18n="global.formTitle">國際訂購需求（示範）</h3>
+        <div class="field" style="margin-bottom:4px"><span data-i18n="global.currency">顯示幣別</span></div>
+        <div class="currency-row" role="group" aria-label="Currency">
+          <button type="button" class="active" data-currency="TWD">TWD</button>
+          <button type="button" data-currency="USD">USD</button>
+          <button type="button" data-currency="EUR">EUR</button>
+          <button type="button" data-currency="JPY">JPY</button>
+        </div>
+        <form id="globalForm">
+          <div class="form-grid">
+            <label class="field"><span data-i18n="global.country">目的國別 / 地區</span><select name="country"><option data-i18n="global.c1">台灣</option><option data-i18n="global.c2">日本</option><option data-i18n="global.c3">美國</option><option data-i18n="global.c4">歐洲</option><option data-i18n="global.c5">東南亞</option><option data-i18n="global.c6">其他地區</option></select></label>
+            <label class="field"><span data-i18n="global.email">聯絡 Email</span><input name="email" type="email" data-i18n-ph="global.emailPh" placeholder="name@example.com" required></label>
+          </div>
+          <label class="field"><span data-i18n="global.item">感興趣的產品線</span><select name="item"><option data-i18n="global.item1">人用保健</option><option data-i18n="global.item2">ANUBIS 寵物保健</option><option data-i18n="global.item3">OEM / ODM 代工</option></select></label>
+          <label class="field"><span data-i18n="global.qty">預計數量</span><input name="qty" data-i18n-ph="global.qtyPh" placeholder="例：500 盒"></label>
+          <div class="quote"><div><span data-i18n="global.quote">試算報價</span><br><small data-i18n="global.quoteNote">示範價格 · 非正式報價</small></div><b id="globalQuote">TWD 32,000</b></div>
+          <p style="font-size:11px;margin-bottom:12px" data-i18n="global.note">此為示意試算，實際價格、運費與交期以正式報價單為準。</p>
+          <button class="btn btn-primary" type="submit" data-i18n="global.btn">產生國際訂購稿 →</button>
+          <div class="status" id="globalStatus" role="status" style="color:#d9b9ad"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div></section>
 </main>
 <footer class="footer"><div class="wrap"><div class="footer-grid">
   <div><a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="44" rx="12" fill="#100d0c"/><path d="M14 32V13" stroke="#faf8f5" stroke-width="3.2" stroke-linecap="round"/><path d="M30 32V13" stroke="#faf8f5" stroke-width="3.2" stroke-linecap="round"/><path d="M14 23c5-8 11 8 16 0" stroke="#a75743" stroke-width="3.2" stroke-linecap="round" fill="none"/><circle cx="30" cy="13" r="2.4" fill="#a19c65"/></svg></span><span><b>精鴻生醫</b><small>JING HONG BIOMEDICAL</small></span></a><p style="margin-top:12px" data-i18n="op.foot">訂單系統入口為前端展示版，尚未串接金流、物流與後端資料庫。</p></div>
-  <div><h4 data-i18n="foot.links">快速連結</h4><div class="footer-links"><a href="index.html#products" data-i18n="nav.products">產品系列</a><a href="cases.html" data-i18n="nav.cases">實例分享</a><a href="order.html" data-i18n="nav.order">訂單系統</a><a href="index.html#contact" data-i18n="nav.contact">合作洽詢</a></div></div>
+  <div><h4 data-i18n="foot.links">快速連結</h4><div class="footer-links tech"><a href="index.html#products" data-i18n="nav.products">產品系列</a><a href="cases.html" data-i18n="nav.cases">實例分享</a><a href="order.html" data-i18n="nav.order">訂單系統</a><a href="index.html#contact" data-i18n="nav.contact">合作洽詢</a></div></div>
   <div><h4 data-i18n="foot.disclaimer">注意事項</h4><p data-i18n="op.foot2">示範帳號與訂單資料僅供畫面展示。正式上線前應完成資安、隱私權告知與支付流程測試。</p></div>
-</div><div class="footer-bottom"><span>© 2026 精鴻生醫 · 設計提案 v4</span><a href="#top" data-i18n="foot.top">回到頂端 ↑</a></div></div></footer>
+</div><div class="footer-bottom"><span>© 2026 精鴻生醫 · 設計提案 v7</span><a href="#top" data-i18n="foot.top">回到頂端 ↑</a></div></div></footer>
 <script src="script.js"></script>
 </body>
 </html>

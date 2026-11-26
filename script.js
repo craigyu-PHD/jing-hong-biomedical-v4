@@ -1,4 +1,4 @@
-/* 精鴻生醫 v4 — 雙語、互動、生技粒子動畫 */
+/* 精鴻生醫 v7 — 雙語、互動、懸浮下拉、3D 分子＋流光、全身拉布拉多、國際訂購 */
 (function () {
   'use strict';
 
@@ -167,6 +167,28 @@
       'chat.unknown': '收到！這則訊息先記錄下來。正式上線後可透過 API 自動問答或轉接真人處理。\n（示範回覆）',
       'chat.placeholder': '輸入你的問題…', 'chat.open': '開啟客服助手', 'chat.close': '關閉客服助手',
       'chat.send': '送出訊息',
+      'dd.s1': '品牌故事', 'dd.s2': '原料溯源', 'dd.s3': '品質承諾',
+      'dd.n1': '最新消息', 'dd.n2': '官網公告', 'dd.n3': '產品新知',
+      'dd.p1': '人用保健', 'dd.p2': 'ANUBIS 寵物保健', 'dd.p3': 'OEM / ODM 代工',
+      'dd.c1': '素材溯源', 'dd.c2': '科學配方', 'dd.c3': '檢驗與文件',
+      'dd.cs1': '全部實例', 'dd.cs2': '通路合作實例', 'dd.cs3': 'ANUBIS 寵物實例',
+      'dd.o1': '會員登入', 'dd.o2': '訂單查詢', 'dd.o3': '國際訂購',
+      'dd.ct1': '產品詢價', 'dd.ct2': '通路合作', 'dd.ct3': '企業送禮',
+      'global.eyebrow': 'GLOBAL ORDER / 國際訂購', 'global.title': '讓訂購，<br>不受邊界限制。',
+      'global.sub': '為海外客戶預留的訂購版面：國別與幣別、國際配送、報關文件與多語客服，皆已規劃。目前為前端展示，正式上線前需串接金流與物流。',
+      'global.p1t': '多幣別報價', 'global.p1d': 'TWD／USD／EUR／JPY 即時切換，價格試算為示意。',
+      'global.p2t': '國際配送與報關', 'global.p2d': '依目的國別顯示運費與文件需求；實際以報價為準。',
+      'global.p3t': '英文單據與客服', 'global.p3d': '英文發票、裝箱單與多語客服，接單流程更順暢。',
+      'global.formTitle': '國際訂購需求（示範）', 'global.country': '目的國別 / 地區',
+      'global.countryPh': '請選擇地區', 'global.c1': '台灣', 'global.c2': '日本', 'global.c3': '美國',
+      'global.c4': '歐洲', 'global.c5': '東南亞', 'global.c6': '其他地區',
+      'global.email': '聯絡 Email', 'global.emailPh': 'name@example.com',
+      'global.item': '感興趣的產品線', 'global.item1': '人用保健', 'global.item2': 'ANUBIS 寵物保健',
+      'global.item3': 'OEM / ODM 代工', 'global.qty': '預計數量', 'global.qtyPh': '例：500 盒',
+      'global.quote': '試算報價', 'global.quoteNote': '示範價格 · 非正式報價',
+      'global.note': '此為示意試算，實際價格、運費與交期以正式報價單為準。',
+      'global.btn': '產生國際訂購稿 →', 'global.ok': '已產生國際訂購稿（示範），請透過正式管道送出。',
+      'global.currency': '顯示幣別',
       'msg.loginOk': '登入成功（示範）：身份已識別。', 'msg.loginFail': '示範帳號為 demo / demo123；未連接後端。',
       'msg.orderOk': '（示範）· 狀態：已出貨，配送中。', 'msg.inquiry': '已產生詢問稿（示範），請另行透過正式聯絡方式送出。'
     },
@@ -333,6 +355,28 @@
       'chat.unknown': 'Got it. This message is recorded for now. After launch, API answers or a live agent can handle it.\n(Demo reply)',
       'chat.placeholder': 'Type your question...', 'chat.open': 'Open assistant', 'chat.close': 'Close assistant',
       'chat.send': 'Send message',
+      'dd.s1': 'Our story', 'dd.s2': 'Traceability', 'dd.s3': 'Quality commitment',
+      'dd.n1': 'Latest news', 'dd.n2': 'Site updates', 'dd.n3': 'Product insights',
+      'dd.p1': 'Human wellness', 'dd.p2': 'ANUBIS pet care', 'dd.p3': 'OEM / ODM',
+      'dd.c1': 'Traceability', 'dd.c2': 'Science', 'dd.c3': 'Test documents',
+      'dd.cs1': 'All case studies', 'dd.cs2': 'Retail cases', 'dd.cs3': 'ANUBIS pet cases',
+      'dd.o1': 'Member login', 'dd.o2': 'Order lookup', 'dd.o3': 'Global order',
+      'dd.ct1': 'Product inquiry', 'dd.ct2': 'Retail partnership', 'dd.ct3': 'Corporate gifting',
+      'global.eyebrow': 'GLOBAL ORDER / INTERNATIONAL', 'global.title': 'Ordering,<br>without borders.',
+      'global.sub': 'A layout prepared for overseas customers: country and currency, international shipping, customs documents and multilingual support. Front-end demo; payments and logistics need integration before launch.',
+      'global.p1t': 'Multi-currency pricing', 'global.p1d': 'Switch between TWD / USD / EUR / JPY; figures are illustrative.',
+      'global.p2t': 'Global shipping & customs', 'global.p2d': 'Shipping and document needs shown by destination; final quote prevails.',
+      'global.p3t': 'English documents & support', 'global.p3d': 'English invoices, packing lists and multilingual support for smoother ordering.',
+      'global.formTitle': 'Global order request (demo)', 'global.country': 'Destination',
+      'global.countryPh': 'Select a region', 'global.c1': 'Taiwan', 'global.c2': 'Japan', 'global.c3': 'United States',
+      'global.c4': 'Europe', 'global.c5': 'Southeast Asia', 'global.c6': 'Other regions',
+      'global.email': 'Contact email', 'global.emailPh': 'name@example.com',
+      'global.item': 'Product line of interest', 'global.item1': 'Human wellness', 'global.item2': 'ANUBIS pet care',
+      'global.item3': 'OEM / ODM', 'global.qty': 'Estimated quantity', 'global.qtyPh': 'e.g. 500 boxes',
+      'global.quote': 'Estimated price', 'global.quoteNote': 'Illustrative · not a formal quote',
+      'global.note': 'This is an illustrative estimate. Actual price, shipping and lead time follow a formal quotation.',
+      'global.btn': 'Generate global order draft →', 'global.ok': 'Global order draft generated (demo); send it through the official channel.',
+      'global.currency': 'Display currency',
       'msg.loginOk': 'Login successful (demo): role identified.', 'msg.loginFail': 'Demo account is demo / demo123; no back end connected.',
       'msg.orderOk': '(demo) · Status: shipped, in transit.', 'msg.inquiry': 'Inquiry draft generated (demo); send it through the official contact channel.'
     }
@@ -377,6 +421,56 @@
 
   for (var b = 0; b < document.querySelectorAll('[data-lang]').length; b++) {
     document.querySelectorAll('[data-lang]')[b].addEventListener('click', function () { applyLang(this.getAttribute('data-lang')); });
+  }
+
+  /* ---------- 懸浮下拉選單：依功能列表自動生成 ---------- */
+  var DROP = {
+    'nav.story': [['dd.s1', '#story'], ['dd.s2', '#craft'], ['dd.s3', '#craft']],
+    'nav.news': [['dd.n1', '#news'], ['dd.n2', '#news'], ['dd.n3', '#products']],
+    'nav.products': [['dd.p1', '#products'], ['dd.p2', '#products'], ['dd.p3', '#products']],
+    'nav.craft': [['dd.c1', '#craft'], ['dd.c2', '#craft'], ['dd.c3', '#craft']],
+    'nav.cases': [['dd.cs1', 'cases.html'], ['dd.cs2', 'cases.html'], ['dd.cs3', 'cases.html']],
+    'nav.order': [['dd.o1', 'order.html#login'], ['dd.o2', 'order.html#inquiry'], ['dd.o3', 'order.html#global']],
+    'nav.contact': [['dd.ct1', '#contact'], ['dd.ct2', '#contact'], ['dd.ct3', '#contact']]
+  };
+  var navRoot = document.querySelector('.nav-links');
+  if (navRoot) {
+    var navAs = navRoot.querySelectorAll('a');
+    for (var ni = 0; ni < navAs.length; ni++) {
+      var na = navAs[ni], key = na.getAttribute('data-i18n'), items = DROP[key];
+      if (!items) continue;
+      var item = document.createElement('div');
+      item.className = 'nav-item';
+      na.parentNode.insertBefore(item, na);
+      item.appendChild(na);
+      var caret = document.createElement('button');
+      caret.type = 'button'; caret.className = 'nav-caret'; caret.textContent = '⌄';
+      caret.setAttribute('aria-label', key === 'nav.products' ? 'Products menu' : 'Open menu');
+      item.appendChild(caret);
+      var dd = document.createElement('div');
+      dd.className = 'dropdown'; dd.setAttribute('role', 'menu');
+      for (var di = 0; di < items.length; di++) {
+        var link = document.createElement('a');
+        link.href = items[di][1];
+        link.innerHTML = '<i></i><span data-i18n="' + items[di][0] + '">' + items[di][0] + '</span><span>↗</span>';
+        dd.appendChild(link);
+      }
+      item.appendChild(dd);
+      caret.addEventListener('click', function (e) {
+        e.preventDefault(); e.stopPropagation();
+        var parent = this.parentNode;
+        var willOpen = !parent.classList.contains('open');
+        var all = document.querySelectorAll('.nav-item.open');
+        for (var q = 0; q < all.length; q++) all[q].classList.remove('open');
+        parent.classList.toggle('open', willOpen);
+      });
+    }
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.nav-item')) {
+        var opened = document.querySelectorAll('.nav-item.open');
+        for (var i = 0; i < opened.length; i++) opened[i].classList.remove('open');
+      }
+    });
   }
   applyLang(currentLang);
 
@@ -489,17 +583,74 @@
   });
 
 
+  /* ---------- 國際訂購：幣別試算與示範稿 ---------- */
+  var rate = { TWD: 1, USD: 32.5, EUR: 35, JPY: 0.22 };
+  var basePrice = 32000;
+  var curBtns = document.querySelectorAll('[data-currency]');
+  function updateQuote() {
+    var q = document.getElementById('globalQuote');
+    if (!q) return;
+    var active = document.querySelector('[data-currency].active');
+    var code = active ? active.getAttribute('data-currency') : 'TWD';
+    var val = Math.round(basePrice / rate[code]);
+    q.textContent = code + ' ' + val.toLocaleString('en-US');
+  }
+  for (var ci = 0; ci < curBtns.length; ci++) curBtns[ci].addEventListener('click', function () {
+    for (var j = 0; j < curBtns.length; j++) curBtns[j].classList.remove('active');
+    this.classList.add('active'); updateQuote();
+  });
+  updateQuote();
+  var globalForm = document.getElementById('globalForm');
+  if (globalForm) globalForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = new FormData(globalForm);
+    var code = (document.querySelector('[data-currency].active') || {}).getAttribute ? document.querySelector('[data-currency].active').getAttribute('data-currency') : 'TWD';
+    var text = 'JING HONG · GLOBAL ORDER (demo)\nCountry: ' + f.get('country') + '\nCurrency: ' + code +
+      '\nEmail: ' + f.get('email') + '\nProduct line: ' + f.get('item') + '\nQty: ' + (f.get('qty') || '-') + '\n';
+    try {
+      var url = URL.createObjectURL(new Blob([text], { type: 'text/plain;charset=utf-8' }));
+      var a = document.createElement('a'); a.href = url; a.download = 'jinghong-global-order.txt'; a.click();
+      window.setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+    } catch (err) {}
+    document.getElementById('globalStatus').textContent = t('global.ok');
+  });
+
   /* ---------- 客服機器人：狗狗形象，預留 API／轉真人 ---------- */
-  var DOG_SVG = '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' +
-    '<ellipse cx="12" cy="15" rx="7" ry="9" fill="#a75743" transform="rotate(-18 12 15)"/>' +
-    '<ellipse cx="36" cy="15" rx="7" ry="9" fill="#a75743" transform="rotate(18 36 15)"/>' +
-    '<rect x="8" y="10" width="32" height="31" rx="14" fill="#fff" stroke="#e6d8d0" stroke-width="1.5"/>' +
-    '<circle class="cb-eye" cx="19" cy="25" r="2.4" fill="#100d0c"/>' +
-    '<circle class="cb-eye" cx="29" cy="25" r="2.4" fill="#100d0c"/>' +
-    '<ellipse cx="24" cy="32" rx="3.4" ry="2.6" fill="#100d0c"/>' +
-    '<path d="M24 34.6v2M24 36.6c-2 2-5 2-6 0M24 36.6c2 2 5 2 6 0" stroke="#100d0c" stroke-width="1.3" fill="none" stroke-linecap="round"/>' +
-    '<circle cx="14.5" cy="31" r="2" fill="#d9b9ad"/><circle cx="33.5" cy="31" r="2" fill="#d9b9ad"/>' +
-    '</svg>';
+  var DOG_SVG = '<svg viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' +
+    '<defs>' +
+      '<linearGradient id="cbFur" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f0d4a3"/><stop offset=".55" stop-color="#d9a45c"/><stop offset="1" stop-color="#b57e3c"/></linearGradient>' +
+      '<linearGradient id="cbFur2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8c48a"/><stop offset="1" stop-color="#a97035"/></linearGradient>' +
+      '<radialGradient id="cbCheek"><stop stop-color="#e8a98d"/><stop offset="1" stop-color="#e8a98d" stop-opacity="0"/></radialGradient>' +
+    '</defs>' +
+    '<g class="cb-tail"><path d="M34 100c-16-2-24-14-20-26 2-7 9-9 13-5-6 4-7 11-2 15 6 5 13 5 18 3z" fill="url(#cbFur2)" stroke="#a97035" stroke-width="1"/></g>' +
+    '<g class="cb-body">' +
+      '<ellipse cx="60" cy="86" rx="34" ry="38" fill="url(#cbFur)"/>' +
+      '<ellipse cx="60" cy="96" rx="21" ry="26" fill="url(#cbFur2)" opacity=".85"/>' +
+      '<ellipse cx="43" cy="112" rx="12" ry="9" fill="url(#cbFur2)"/>' +
+      '<ellipse cx="77" cy="112" rx="12" ry="9" fill="url(#cbFur2)"/>' +
+      '<ellipse cx="43" cy="116" rx="7" ry="4" fill="#f3dcb4"/>' +
+      '<ellipse cx="77" cy="116" rx="7" ry="4" fill="#f3dcb4"/>' +
+    '</g>' +
+    '<g class="cb-head">' +
+      '<ellipse cx="60" cy="45" rx="29" ry="27" fill="url(#cbFur)"/>' +
+      '<g class="cb-ear-l"><path d="M35 33c-12-4-19 7-16 22 2 12 11 18 18 13 5-4 5-12 3-19z" fill="url(#cbFur2)" stroke="#a97035" stroke-width="1"/><path d="M33 38c-7 1-11 8-10 16" stroke="#a97035" stroke-width="1.2" fill="none" opacity=".55"/></g>' +
+      '<g class="cb-ear-r"><path d="M85 33c12-4 19 7 16 22-2 12-11 18-18 13-5-4-5-12-3-19z" fill="url(#cbFur2)" stroke="#a97035" stroke-width="1"/><path d="M87 38c7 1 11 8 10 16" stroke="#a97035" stroke-width="1.2" fill="none" opacity=".55"/></g>' +
+      '<ellipse cx="60" cy="58" rx="20" ry="15" fill="#f6e3c3"/>' +
+      '<circle cx="42" cy="56" r="9" fill="url(#cbCheek)"/><circle cx="78" cy="56" r="9" fill="url(#cbCheek)"/>' +
+      '<circle class="cb-eye" cx="51" cy="43" r="3.3" fill="#100d0c"/>' +
+      '<circle class="cb-eye" cx="70" cy="43" r="3.3" fill="#100d0c"/>' +
+      '<circle cx="52" cy="42" r="1" fill="#fff"/><circle cx="71" cy="42" r="1" fill="#fff"/>' +
+      '<path d="M46 36q5-3 9-1M66 35q5-2 9 1" stroke="#a97035" stroke-width="1.8" fill="none" stroke-linecap="round"/>' +
+      '<ellipse cx="60.5" cy="54" rx="6" ry="4.6" fill="#100d0c"/>' +
+      '<ellipse cx="58.5" cy="52.5" rx="1.6" ry="1" fill="#fff" opacity=".55"/>' +
+      '<path d="M60.5 58.5v4M60.5 62.5q-5 5-9 1M60.5 62.5q5 5 9 1" stroke="#100d0c" stroke-width="1.5" fill="none" stroke-linecap="round"/>' +
+      '<path d="M37 30q23-16 46 0" stroke="#70807e" stroke-width="2.2" fill="none" opacity=".7"/>' +
+      '<rect x="82" y="28" width="7" height="5" rx="2" fill="#70807e"/>' +
+      '<circle cx="85.5" cy="30.5" r="1.4" fill="#a19c65"/>' +
+      '<path d="M39 78q21 11 42 0" stroke="#a75743" stroke-width="6" fill="none" stroke-linecap="round"/>' +
+      '<circle cx="60" cy="86" r="4.6" fill="#a19c65"/><circle cx="60" cy="86" r="2.2" fill="#f2efe9"/>' +
+    '</g>' +
+  '</svg>';
 
   var chatHTML = '<aside class="chatbot collapsed" id="jhChatbot" aria-label="客服助手">' +
     '<section class="chat-panel" id="chatPanel">' +
