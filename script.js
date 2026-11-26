@@ -1,4 +1,4 @@
-/* 精鴻生醫 v10 — 清爽玻璃、可拖曳全螢幕客服、滑鼠 3D 分子、真實點陣地圖、防機器人註冊 */
+/* 精鴻生醫 v11 — 沿革時間軸、購物商城、立體貓咪視覺、暖陶 CTA、客服雙造型、真實世界地圖 */
 (function () {
   'use strict';
 
@@ -10,7 +10,7 @@
       'ticker.b': '11/26 網站樣板更新，新增雙語切換與訂單入口', 'ticker.c': '歡迎通路、代工與企業送禮合作洽詢',
       'ticker.d': '原料溯源 · 品質文件 · 第三方檢驗',
       'nav.story': '品牌理念', 'nav.news': '最新消息', 'nav.products': '產品系列', 'nav.craft': '技術與品質',
-      'nav.cases': '實例分享', 'nav.order': '訂單系統', 'nav.contact': '合作洽詢',
+      'nav.cases': '實例分享', 'nav.shop': '購物商城', 'nav.order': '訂單系統', 'nav.contact': '合作洽詢',
       'hero.eyebrow': 'NATURE × SCIENCE × LIFE', 'hero.l1': '自然的力量，', 'hero.l2': '用科學精準照護',
       'hero.l3': '每一個生命。', 'hero.lead': '從人用保健到毛孩的日常照護，精鴻生醫把原料、配方與檢驗，做成一套能被看見、能被信任的標準。',
       'hero.cta1': '探索產品系列 →', 'hero.cta2': '查看合作實例', 'hero.p1': '品牌起步年份',
@@ -190,6 +190,29 @@
       'global.btn': '產生國際訂購稿 →', 'global.ok': '已產生國際訂購稿（示範），請透過正式管道送出。',
       'global.currency': '顯示幣別',
       'dd.more': '深入瞭解', 'chat.max': '放大', 'chat.min': '縮小',
+      'hist.title': '一路走來，<br>把照護做得更清楚。', 'hist.sub': '從一個原料起點，到兩條產品線。以下時程為示意，正式資料待公司確認。',
+      'hist.y1': '品牌起步', 'hist.d1': '以牛樟芝與草本素材為起點，建立原料選購的第一步。',
+      'hist.y2': '產品線成形', 'hist.d2': '膠囊、複方與晶萃系列陸續整理，確立人用保健主軸。',
+      'hist.y3': '代工服務', 'hist.d3': '從配方到包裝，開始提供 OEM / ODM 開發支援。',
+      'hist.y4': 'ANUBIS 寵物保健', 'hist.d4': '將照護延伸到犬貓，建立泌尿、心血管與眼部品項。',
+      'hist.y5': '品質文件化', 'hist.d5': '原料溯源、三萜類標示與第三方檢驗資料逐步完備。',
+      'hist.y6': '雙語官網', 'hist.d6': '人用與寵物分區呈現，商城與訂單系統分流通路。',
+      'hist.note': '以上年份與事件為版面示意，正式沿革以公司核准資料為準。',
+      'portal.shop': '前往購物商城 →',
+      'shop.h1': '把安心，<br>放進購物車。', 'shop.sub': '人用保健與 ANUBIS 寵物保健全系列，散戶朋友可直接選購加入購物車。本頁為前端展示樣板，價格與結帳流程為示意，正式上線前需串接金流、庫存與物流。',
+      'shop.cta': '開始選購 →', 'shop.toOrder': '我是批發／大型會員 →', 'shop.title': '所有產品',
+      'shop.sub2': '品項與價格摘錄自公開資料，實際標示、價格與庫存以公司核准資訊為準。',
+      'shop.fHuman': '人用保健', 'shop.fPet': 'ANUBIS 寵物', 'shop.cart': '購物車',
+      'shop.empty': '還沒有商品，點選「加入購物車」開始選購。', 'shop.total': '小計',
+      'shop.cartNote': '價格與結帳為示意，不代表實際交易。', 'shop.checkout': '前往結帳（示意） →',
+      'shop.checkoutOk': '已產生購物清單（示範），尚未串接金流，請勿進行實際付款。',
+      'shop.added': '已加入購物車', 'shop.diffTitle': '兩個入口，各取所需。',
+      'shop.d1t': '購物商城', 'shop.d1': '所有人皆可瀏覽全系列產品，直接加入購物車選購，適合散戶與少量購買。',
+      'shop.d2t': '訂單系統', 'shop.d2': '偏向批發商與大型會員，提供身份識別、專屬價格、訂單追蹤與大量訂購服務。',
+      'shop.noteTitle': '選購前，請先了解', 'shop.q1': '商品資訊是否為正式資料？',
+      'shop.a1': '本站為設計提案樣板，品項、照片與價格摘錄自公開通路資料並作示意；實際成分、劑量、效期、價格與庫存以公司核准文件為準。',
+      'shop.q2': '可以到貨付款或大量訂購嗎？', 'shop.a2': '結帳流程目前為前端示範，尚未串接金流。大量訂購、企業送禮與批發需求請使用訂單系統或洽詢表單，由專人對接。',
+      'shop.disclaimer': '本站不作疾病診斷、治療或預防之宣稱；寵物產品請依獸醫師指示使用。',
       'op.register': '註冊新帳號', 'reg.title': '註冊會員帳號', 'reg.hint': '示範表單：資料僅在瀏覽器內驗證，不會傳送至伺服器。',
       'reg.name': '姓名／公司', 'reg.email': '電子郵件', 'reg.human': '我不是機器人', 'reg.challenge': '請計算：',
       'reg.submit': '送出註冊', 'reg.ok': '註冊成功（示範）：已通過人機驗證。', 'reg.fail': '請勾選人機驗證並輸入正確的計算結果。',
@@ -199,10 +222,10 @@
     en: {
       'top.note': 'JING HONG BIOMEDICAL · Nature × Science × Sustainability',
       'ticker.tag': 'LATEST', 'ticker.a': 'New site live — human wellness and ANUBIS pet care shown side by side',
-      'ticker.b': '11/26 sample update: bilingual switch and order portal added', 'ticker.c': 'Open for retail, OEM and corporate gifting inquiries',
+      'ticker.b': '11/26 sample update: bilingual switch, shop and order portals added', 'ticker.c': 'Open for retail, OEM and corporate gifting inquiries',
       'ticker.d': 'Traceable sourcing · Quality documents · Third-party testing',
       'nav.story': 'Our Story', 'nav.news': 'News', 'nav.products': 'Products', 'nav.craft': 'Science & Quality',
-      'nav.cases': 'Case Studies', 'nav.order': 'Order Portal', 'nav.contact': 'Contact Us',
+      'nav.cases': 'Case Studies', 'nav.shop': 'Online Shop', 'nav.order': 'Order Portal', 'nav.contact': 'Contact Us',
       'hero.eyebrow': 'NATURE × SCIENCE × LIFE', 'hero.l1': 'The power of nature,', 'hero.l2': 'refined by science',
       'hero.l3': 'for every life.', 'hero.lead': 'From human wellness to everyday pet care, Jing Hong turns sourcing, formulation and testing into a standard you can see and trust.',
       'hero.cta1': 'Explore products →', 'hero.cta2': 'See case studies', 'hero.p1': 'Founded in',
@@ -382,6 +405,29 @@
       'global.btn': 'Generate global order draft →', 'global.ok': 'Global order draft generated (demo); send it through the official channel.',
       'global.currency': 'Display currency',
       'dd.more': 'Explore more', 'chat.max': 'Maximize', 'chat.min': 'Minimize',
+      'hist.title': 'The journey so far,<br>made clearer.', 'hist.sub': 'From one ingredient to two product lines. Dates below are illustrative and pending company confirmation.',
+      'hist.y1': 'The beginning', 'hist.d1': 'Started with Antrodia cinnamomea and botanical ingredients.',
+      'hist.y2': 'Product lines take shape', 'hist.d2': 'Capsules, formulas and extracts established the human wellness line.',
+      'hist.y3': 'OEM / ODM services', 'hist.d3': 'From formulation to packaging, contract development began.',
+      'hist.y4': 'ANUBIS pet care', 'hist.d4': 'Care extended to dogs and cats with urinary, cardiac and eye items.',
+      'hist.y5': 'Quality documentation', 'hist.d5': 'Traceability, triterpenoid labeling and third-party testing completed.',
+      'hist.y6': 'Bilingual website', 'hist.d6': 'Human and pet lines separated; shop and order portals split.',
+      'hist.note': 'Years and events are illustrative; official history is subject to company approval.',
+      'portal.shop': 'Go to Online Shop →',
+      'shop.h1': 'Put peace of mind<br>in your cart.', 'shop.sub': 'Browse the full human wellness and ANUBIS pet care range and add items to your cart. This is a front-end sample; prices and checkout are illustrative pending payment, inventory and logistics integration.',
+      'shop.cta': 'Start shopping →', 'shop.toOrder': 'I am a wholesale / bulk member →', 'shop.title': 'All Products',
+      'shop.sub2': 'Items and prices are drawn from public sources; actual labeling, pricing and inventory are subject to company confirmation.',
+      'shop.fHuman': 'Human Wellness', 'shop.fPet': 'ANUBIS Pet', 'shop.cart': 'Cart',
+      'shop.empty': 'No items yet. Tap “Add to cart” to start.', 'shop.total': 'Subtotal',
+      'shop.cartNote': 'Prices and checkout are illustrative; no real transaction occurs.', 'shop.checkout': 'Checkout (demo) →',
+      'shop.checkoutOk': 'Shopping list generated (demo). No payment gateway connected — do not make any real payment.',
+      'shop.added': 'Added to cart', 'shop.diffTitle': 'Two entrances, each for its purpose.',
+      'shop.d1t': 'Online Shop', 'shop.d1': 'Everyone can browse the full range and add items to the cart — ideal for retail and small purchases.',
+      'shop.d2t': 'Order Portal', 'shop.d2': 'For wholesalers and large members: identity verification, exclusive pricing, order tracking and bulk orders.',
+      'shop.noteTitle': 'Before you shop', 'shop.q1': 'Are product details official?',
+      'shop.a1': 'This is a design sample. Items, photos and prices are illustrative from public sources; actual ingredients, dosage, shelf life, pricing and inventory are subject to company documents.',
+      'shop.q2': 'Can I pay on delivery or order in bulk?', 'shop.a2': 'Checkout is a front-end demo with no payment gateway. For bulk orders, gifting and wholesale, use the Order Portal or inquiry form for dedicated support.',
+      'shop.disclaimer': 'This site makes no claims of diagnosing, treating or preventing disease; pet products should be used as directed by a veterinarian.',
       'op.register': 'Create account', 'reg.title': 'Member registration', 'reg.hint': 'Demo form: validated in-browser only, no data is sent.',
       'reg.name': 'Name / Company', 'reg.email': 'Email', 'reg.human': 'I am not a robot', 'reg.challenge': 'Please solve:',
       'reg.submit': 'Submit registration', 'reg.ok': 'Registration successful (demo): human verification passed.', 'reg.fail': 'Please confirm you are human and enter the correct answer.',
@@ -392,7 +438,7 @@
 
   var HTML_KEYS = {
     'news.sideTitle': 1, 'story.title': 1, 'craft.title': 1, 'portal.title': 1,
-    'cp.h1': 1, 'op.h1': 1,
+    'cp.h1': 1, 'op.h1': 1, 'hist.title': 1, 'shop.h1': 1,
     'c1.ch': 1, 'c1.do': 1, 'c1.r': 1, 'c2.ch': 1, 'c2.do': 1, 'c2.r': 1,
     'c3.ch': 1, 'c3.do': 1, 'c3.r': 1, 'c4.ch': 1, 'c4.do': 1, 'c4.r': 1,
     'c5.ch': 1, 'c5.do': 1, 'c5.r': 1, 'c6.ch': 1, 'c6.do': 1, 'c6.r': 1
@@ -474,7 +520,7 @@
       for (var di = 0; di < items.length; di++) {
         var link = document.createElement('a');
         link.href = items[di][1];
-        link.innerHTML = '<span class="dd-thumb">✦</span><span class="dd-label"><b data-i18n="' + items[di][0] + '">' + items[di][0] + '</b><small data-i18n="dd.more">深入瞭解</small></span>';
+        link.innerHTML = '<span class="dd-num">0' + (di + 1) + '</span><span class="dd-label"><b data-i18n="' + items[di][0] + '">' + items[di][0] + '</b></span><span class="dd-arrow">↗</span>';
         dd.appendChild(link);
       }
       item.appendChild(dd);
@@ -497,6 +543,15 @@
     document.addEventListener('click', function (e) { if (!e.target.closest('.nav-item')) closeNavAll(); });
   }
   applyLang(currentLang);
+
+  /* ---------- 公司沿革時間軸動畫 ---------- */
+  var histSec = document.getElementById('history');
+  if (histSec && 'IntersectionObserver' in window) {
+    var histObs = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) { histSec.classList.add('in-view'); histObs.disconnect(); }
+    }, { threshold: .18 });
+    histObs.observe(histSec);
+  } else if (histSec) { histSec.classList.add('in-view'); }
 
   /* ---------- 選單／捲動 ---------- */
   var nav = document.getElementById('siteNav');
@@ -672,46 +727,178 @@
     document.getElementById('globalStatus').textContent = t('global.ok');
   });
 
+  /* ---------- 數據卡片導向產品線 ---------- */
+  var goLineLinks = document.querySelectorAll('[data-go-line]');
+  for (var gl = 0; gl < goLineLinks.length; gl++) {
+    goLineLinks[gl].addEventListener('click', function () {
+      var want = this.getAttribute('data-go-line');
+      var tab = document.querySelector('[data-line-tab="' + want + '"]');
+      if (tab) tab.click();
+    });
+  }
+
+  /* ---------- 購物商城：產品列表、購物車、結帳示範 ---------- */
+  var SHOP_PRODUCTS = [
+    { id:'h1', line:'human', tag:'CAPSULE / 膠囊', name:'p.h1n', desc:'p.h1d', img:'assets/product-real-pack.jpg', price:1280 },
+    { id:'h2', line:'human', tag:'FORMULA / 複方', name:'p.h2n', desc:'p.h2d', img:'assets/product-capsule.jpg', price:1080 },
+    { id:'h3', line:'human', tag:'FORMULA / 複方', name:'p.h3n', desc:'p.h3d', img:'assets/product-formula.jpg', price:1180 },
+    { id:'h4', line:'human', tag:'EXTRACT / 晶萃', name:'p.h4n', desc:'p.h4d', img:'assets/product-extract.jpg', price:1480 },
+    { id:'h5', line:'human', tag:'FORMULA / 複方', name:'p.h5n', desc:'p.h5d', img:'assets/product-natural.jpg', price:980 },
+    { id:'h6', line:'human', tag:'SERVICE / 服務', name:'p.h6n', desc:'p.h6d', img:'assets/lab.jpg', price:0 },
+    { id:'p1', line:'pet', tag:'CAT / 泌尿', name:'p.p1n', desc:'p.p1d', img:'assets/pet-cat.jpg', price:880 },
+    { id:'p2', line:'pet', tag:'CAT / 呵護', name:'p.p2n', desc:'p.p2d', img:'assets/pet-cat2.jpg', price:920 },
+    { id:'p3', line:'pet', tag:'DOG & CAT / 防護', name:'p.p3n', desc:'p.p3d', img:'assets/pet-dog.jpg', price:860 },
+    { id:'p4', line:'pet', tag:'DOG & CAT / 泌尿', name:'p.p4n', desc:'p.p4d', img:'assets/pet-puppy.jpg', price:760 },
+    { id:'p5', line:'pet', tag:'EYE / 眼部', name:'p.p5n', desc:'p.p5d', img:'assets/product-extract.jpg', price:690 },
+    { id:'p6', line:'pet', tag:'EYE / 眼部', name:'p.p6n', desc:'p.p6d', img:'assets/quality.jpg', price:690 },
+    { id:'p7', line:'pet', tag:'SKIN / 外用', name:'p.p7n', desc:'p.p7d', img:'assets/nature.jpg', price:580 },
+    { id:'p8', line:'pet', tag:'SKIN / 外用', name:'p.p8n', desc:'p.p8d', img:'assets/forest.jpg', price:580 },
+    { id:'p9', line:'pet', tag:'SKIN / 外用', name:'p.p9n', desc:'p.p9d', img:'assets/product-natural.jpg', price:520 }
+  ];
+  var shopList = document.getElementById('shopList');
+  if (shopList) {
+    var cart = [];
+    try { cart = JSON.parse(localStorage.getItem('jh-cart') || '[]') || []; } catch (e) { cart = []; }
+    var cartBody = document.getElementById('cartBody');
+    var cartCount = document.getElementById('cartCount');
+    var cartTotal = document.getElementById('cartTotal');
+
+    function money(n) { return 'TWD ' + Number(n).toLocaleString('en-US'); }
+    function saveCart() { try { localStorage.setItem('jh-cart', JSON.stringify(cart)); } catch (e) {} }
+    function renderCart() {
+      if (!cartBody) return;
+      var count = 0, total = 0;
+      for (var i = 0; i < cart.length; i++) { count += cart[i].qty; total += cart[i].qty * cart[i].price; }
+      cartCount.textContent = String(count);
+      cartTotal.textContent = money(total);
+      if (!cart.length) { cartBody.innerHTML = '<p class="cart-empty" data-i18n="shop.empty"></p>'; applyLang(currentLang); return; }
+      var html = '';
+      for (var j = 0; j < cart.length; j++) {
+        var row = cart[j], prod = null;
+        for (var k = 0; k < SHOP_PRODUCTS.length; k++) if (SHOP_PRODUCTS[k].id === row.id) prod = SHOP_PRODUCTS[k];
+        if (!prod) continue;
+        html += '<div class="cart-item"><div><b data-i18n="' + prod.name + '">' + t(prod.name) + '</b><small>' + money(prod.price) + ' · ' + t('shop.total') + ' ' + money(prod.price * row.qty) + '</small></div>' +
+          '<div class="cart-qty"><button type="button" data-cart-dec="' + row.id + '" aria-label="减少">−</button><span>' + row.qty + '</span><button type="button" data-cart-inc="' + row.id + '" aria-label="增加">＋</button></div></div>';
+      }
+      cartBody.innerHTML = html;
+      applyLang(currentLang);
+    }
+    function addToCart(id) {
+      var prod = null;
+      for (var i = 0; i < SHOP_PRODUCTS.length; i++) if (SHOP_PRODUCTS[i].id === id) prod = SHOP_PRODUCTS[i];
+      if (!prod || !prod.price) return;
+      var found = false;
+      for (var j = 0; j < cart.length; j++) if (cart[j].id === id) { cart[j].qty++; found = true; break; }
+      if (!found) cart.push({ id: id, qty: 1, price: prod.price });
+      saveCart(); renderCart();
+      var st = document.getElementById('cartStatus'); if (st) st.textContent = t('shop.added') + '：' + t(prod.name);
+    }
+    function renderProducts(filter) {
+      var html = '';
+      for (var i = 0; i < SHOP_PRODUCTS.length; i++) {
+        var p = SHOP_PRODUCTS[i];
+        if (filter && filter !== 'all' && p.line !== filter) continue;
+        var priceLabel = p.price ? money(p.price) : t('shop.toOrder');
+        html += '<article class="shop-card reveal"><div class="sc-media"><img src="' + p.img + '" alt="" loading="lazy"></div><div class="sc-body">' +
+          '<span class="sc-tag">' + p.tag + '</span><h3 data-i18n="' + p.name + '">' + t(p.name) + '</h3>' +
+          '<p class="sc-desc" data-i18n="' + p.desc + '">' + t(p.desc) + '</p>' +
+          '<div class="sc-row"><span class="sc-price">' + priceLabel + '</span>' +
+          (p.price ? '<button class="sc-add" type="button" data-add-cart="' + p.id + '">+ ' + t('shop.cart') + '</button>' : '') +
+          '</div></div></article>';
+      }
+      shopList.innerHTML = html;
+      applyLang(currentLang);
+      var adds = shopList.querySelectorAll('[data-add-cart]');
+      for (var a = 0; a < adds.length; a++) adds[a].addEventListener('click', function () { addToCart(this.getAttribute('data-add-cart')); });
+      if ('IntersectionObserver' in window) {
+        var ro = new IntersectionObserver(function (entries) {
+          for (var r = 0; r < entries.length; r++) if (entries[r].isIntersecting) { entries[r].target.classList.add('visible'); ro.unobserve(entries[r].target); }
+        }, { threshold: .08 });
+        var cards = shopList.querySelectorAll('.reveal');
+        for (var c = 0; c < cards.length; c++) ro.observe(cards[c]);
+      } else {
+        var cards2 = shopList.querySelectorAll('.reveal');
+        for (var c2 = 0; c2 < cards2.length; c2++) cards2[c2].classList.add('visible');
+      }
+    }
+    renderProducts('all'); renderCart();
+    var shopFilters = document.querySelectorAll('[data-shop-filter]');
+    for (var sf = 0; sf < shopFilters.length; sf++) {
+      shopFilters[sf].addEventListener('click', function () {
+        for (var x = 0; x < shopFilters.length; x++) shopFilters[x].classList.toggle('active', shopFilters[x] === this);
+        renderProducts(this.getAttribute('data-shop-filter'));
+      });
+    }
+    cartBody.addEventListener('click', function (e) {
+      var inc = e.target.getAttribute('data-cart-inc'), dec = e.target.getAttribute('data-cart-dec');
+      if (!inc && !dec) return;
+      var id = inc || dec;
+      for (var i = 0; i < cart.length; i++) if (cart[i].id === id) {
+        cart[i].qty += inc ? 1 : -1;
+        if (cart[i].qty <= 0) cart.splice(i, 1);
+        break;
+      }
+      saveCart(); renderCart();
+    });
+    var checkout = document.getElementById('cartCheckout');
+    if (checkout) checkout.addEventListener('click', function () {
+      var st = document.getElementById('cartStatus');
+      if (st) st.textContent = t('shop.checkoutOk');
+    });
+  }
+
   /* ---------- 客服機器人：狗狗形象，預留 API／轉真人 ---------- */
-  var DOG_SVG = '<svg viewBox="0 0 128 140" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' +
-    '<defs>' +
-      '<linearGradient id="cbFur" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe0ad"/><stop offset=".55" stop-color="#f0bf79"/><stop offset="1" stop-color="#d59a53"/></linearGradient>' +
-      '<linearGradient id="cbFur2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6cf95"/><stop offset="1" stop-color="#c98b45"/></linearGradient>' +
-      '<radialGradient id="cbCheek"><stop stop-color="#f3a7a0" stop-opacity=".85"/><stop offset="1" stop-color="#f3a7a0" stop-opacity="0"/></radialGradient>' +
-      '<linearGradient id="cbCollar" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#4b9a8d"/><stop offset="1" stop-color="#2f7a70"/></linearGradient>' +
-    '</defs>' +
-    '<g class="cb-tail"><path d="M38 104c-18-3-27-16-22-29 2-6 9-8 12-4-7 5-7 12-1 16 6 5 14 5 19 2z" fill="url(#cbFur2)" stroke="#c98b45" stroke-width="1"/></g>' +
-    '<g class="cb-body">' +
-      '<ellipse cx="64" cy="105" rx="33" ry="30" fill="url(#cbFur)"/>' +
-      '<ellipse cx="64" cy="113" rx="22" ry="21" fill="#ffeac8" opacity=".95"/>' +
-      '<ellipse cx="45" cy="128" rx="12" ry="9" fill="url(#cbFur2)"/>' +
-      '<ellipse cx="83" cy="128" rx="12" ry="9" fill="url(#cbFur2)"/>' +
-      '<ellipse cx="45" cy="131" rx="7" ry="4" fill="#ffeac8"/><ellipse cx="83" cy="131" rx="7" ry="4" fill="#ffeac8"/>' +
-      '<path d="M42 90q22 12 44 0" stroke="url(#cbCollar)" stroke-width="7" fill="none" stroke-linecap="round"/>' +
-      '<circle cx="64" cy="98" r="5" fill="#8c9a63" stroke="#fff" stroke-width="1.2"/>' +
-      '<circle cx="64" cy="98" r="1.7" fill="#fff"/>' +
-    '</g>' +
-    '<g class="cb-head">' +
-      '<path d="M48 27q16-12 32 0l-5 10H53z" fill="url(#cbFur2)"/>' +
-      '<ellipse cx="64" cy="56" rx="35" ry="32" fill="url(#cbFur)"/>' +
-      '<g class="cb-ear-l"><path d="M34 42c-13-4-21 8-18 24 2 13 11 19 18 14 6-5 6-14 4-21z" fill="url(#cbFur2)" stroke="#c98b45" stroke-width="1"/><path d="M32 49c-7 2-10 9-9 17" stroke="#c98b45" stroke-width="1.2" fill="none" opacity=".5"/></g>' +
-      '<g class="cb-ear-r"><path d="M94 42c13-4 21 8 18 24-2 13-11 19-18 14-6-5-6-14-4-21z" fill="url(#cbFur2)" stroke="#c98b45" stroke-width="1"/><path d="M96 49c7 2 10 9 9 17" stroke="#c98b45" stroke-width="1.2" fill="none" opacity=".5"/></g>' +
-      '<ellipse cx="64" cy="70" rx="22" ry="16" fill="#fff2da"/>' +
-      '<circle cx="39" cy="64" r="11" fill="url(#cbCheek)"/><circle cx="89" cy="64" r="11" fill="url(#cbCheek)"/>' +
-      '<circle class="cb-eye" cx="50" cy="52" r="5.4" fill="#3b2b23"/><circle class="cb-eye" cx="78" cy="52" r="5.4" fill="#3b2b23"/>' +
-      '<circle cx="51.8" cy="50" r="1.9" fill="#fff"/><circle cx="79.8" cy="50" r="1.9" fill="#fff"/>' +
-      '<circle cx="48.5" cy="54" r=".9" fill="#fff" opacity=".8"/><circle cx="76.5" cy="54" r=".9" fill="#fff" opacity=".8"/>' +
-      '<path d="M44 43q6-3 11-1M73 42q6-2 11 1" stroke="#c98b45" stroke-width="1.8" fill="none" stroke-linecap="round"/>' +
-      '<path d="M58 66q6-6 12 0 0 6-6 7-6-1-6-7z" fill="#3b2b23"/>' +
-      '<ellipse cx="61" cy="67" rx="2" ry="1.2" fill="#fff" opacity=".55"/>' +
-      '<path d="M64 73v3M64 76q-5 6-10 1M64 76q5 6 10 1" stroke="#3b2b23" stroke-width="1.6" fill="none" stroke-linecap="round"/>' +
-      '<path d="M22 35l2-4 2 4 4 2-4 2-2 4-2-4-4-2z" fill="#8c9a63" opacity=".8"/>' +
-    '</g>' +
-  '</svg>';
+  function dogSVG(kind, u) {
+    var defs = '<defs>' +
+      '<linearGradient id="' + u + 'Fur" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe3b4"/><stop offset=".55" stop-color="#f2c583"/><stop offset="1" stop-color="#d99f59"/></linearGradient>' +
+      '<linearGradient id="' + u + 'Fur2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7d29a"/><stop offset="1" stop-color="#c88945"/></linearGradient>' +
+      '<radialGradient id="' + u + 'Cheek"><stop stop-color="#f3a7a0" stop-opacity=".85"/><stop offset="1" stop-color="#f3a7a0" stop-opacity="0"/></radialGradient>' +
+      '<linearGradient id="' + u + 'Collar" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#4b9a8d"/><stop offset="1" stop-color="#2f7a70"/></linearGradient>' +
+    '</defs>';
+    var ears = '<g class="cb-ear-l"><path d="M34 40c-13-4-21 8-18 24 2 13 11 19 18 14 6-5 6-14 4-21z" fill="url(#' + u + 'Fur2)" stroke="#c88945" stroke-width="1"/><path d="M32 47c-7 2-10 9-9 17" stroke="#c88945" stroke-width="1.2" fill="none" opacity=".5"/></g>' +
+      '<g class="cb-ear-r"><path d="M94 40c13-4 21 8 18 24-2 13-11 19-18 14-6-5-6-14-4-21z" fill="url(#' + u + 'Fur2)" stroke="#c88945" stroke-width="1"/><path d="M96 47c7 2 10 9 9 17" stroke="#c88945" stroke-width="1.2" fill="none" opacity=".5"/></g>';
+    var face = '<path d="M48 24q16-11 32 0l-5 10H53z" fill="url(#' + u + 'Fur2)"/>' +
+      '<ellipse cx="64" cy="54" rx="35" ry="32" fill="url(#' + u + 'Fur)"/>' + ears +
+      '<ellipse cx="64" cy="68" rx="22" ry="16" fill="#fff4de"/>' +
+      '<circle cx="39" cy="62" r="11" fill="url(#' + u + 'Cheek)"/><circle cx="89" cy="62" r="11" fill="url(#' + u + 'Cheek)"/>' +
+      '<circle class="cb-eye" cx="50" cy="51" r="5.6" fill="#3b2b23"/><circle class="cb-eye" cx="78" cy="51" r="5.6" fill="#3b2b23"/>' +
+      '<circle cx="51.8" cy="49" r="2" fill="#fff"/><circle cx="79.8" cy="49" r="2" fill="#fff"/>' +
+      '<circle cx="48.6" cy="53" r=".9" fill="#fff" opacity=".85"/><circle cx="76.6" cy="53" r=".9" fill="#fff" opacity=".85"/>' +
+      '<path d="M44 42q6-3 11-1M73 41q6-2 11 1" stroke="#c88945" stroke-width="1.8" fill="none" stroke-linecap="round"/>' +
+      '<path d="M58 64q6-6 12 0 0 6-6 7-6-1-6-7z" fill="#3b2b23"/>' +
+      '<ellipse cx="61" cy="65" rx="2" ry="1.2" fill="#fff" opacity=".55"/>';
+    var sparkle = '<path d="M22 33l2-4 2 4 4 2-4 2-2 4-2-4-4-2z" fill="#8c9a63" opacity=".8"/>';
+    var body;
+    if (kind === 'sit') {
+      body = '<g class="cb-tail"><path d="M92 106c16-2 24-14 20-26-2-6-9-7-12-3 6 4 7 10 2 14-5 4-10 4-14 3z" fill="url(#' + u + 'Fur2)" stroke="#c88945" stroke-width="1"/></g>' +
+        '<g class="cb-body"><ellipse cx="64" cy="98" rx="31" ry="28" fill="url(#' + u + 'Fur)"/>' +
+        '<ellipse cx="64" cy="106" rx="21" ry="21" fill="#fff0d4"/>' +
+        '<ellipse cx="47" cy="121" rx="12" ry="8" fill="url(#' + u + 'Fur2)"/><ellipse cx="81" cy="121" rx="12" ry="8" fill="url(#' + u + 'Fur2)"/>' +
+        '<ellipse cx="47" cy="124" rx="7" ry="4" fill="#fff0d4"/><ellipse cx="81" cy="124" rx="7" ry="4" fill="#fff0d4"/>' +
+        '<path d="M42 84q22 12 44 0" stroke="url(#' + u + 'Collar)" stroke-width="7" fill="none" stroke-linecap="round"/>' +
+        '<circle cx="64" cy="92" r="5" fill="#8c9a63" stroke="#fff" stroke-width="1.2"/><circle cx="64" cy="92" r="1.7" fill="#fff"/></g>' +
+        '<g class="cb-head">' + face +
+        '<g class="cb-tongue"><path d="M59 72q5 4 10 0 1 12-5 14-6-2-5-14z" fill="#f08f95" stroke="#d9737c" stroke-width=".8"/><path d="M64 77v7" stroke="#d9737c" stroke-width=".8"/></g>' +
+        '<path d="M64 71v3" stroke="#3b2b23" stroke-width="1.4"/>' + sparkle + '</g>';
+    } else {
+      body = '<g class="cb-tail"><path d="M92 88c14-8 22-22 16-33-3-5-10-5-12-1 7 4 8 11 3 16-5 5-11 6-17 5z" fill="url(#' + u + 'Fur2)" stroke="#c88945" stroke-width="1"/></g>' +
+        '<g class="cb-body"><ellipse cx="64" cy="92" rx="32" ry="24" fill="url(#' + u + 'Fur)"/>' +
+        '<ellipse cx="64" cy="98" rx="21" ry="16" fill="#fff0d4"/>' +
+        '<rect x="38" y="104" width="13" height="26" rx="6.5" fill="url(#' + u + 'Fur2)"/><rect x="55" y="106" width="13" height="24" rx="6.5" fill="url(#' + u + 'Fur)"/>' +
+        '<rect x="72" y="106" width="13" height="24" rx="6.5" fill="url(#' + u + 'Fur)"/><rect x="87" y="104" width="13" height="26" rx="6.5" fill="url(#' + u + 'Fur2)"/>' +
+        '<ellipse cx="44.5" cy="129" rx="8" ry="4.5" fill="#fff0d4"/><ellipse cx="61.5" cy="129" rx="8" ry="4.5" fill="#fff0d4"/>' +
+        '<ellipse cx="78.5" cy="129" rx="8" ry="4.5" fill="#fff0d4"/><ellipse cx="93.5" cy="129" rx="8" ry="4.5" fill="#fff0d4"/>' +
+        '<path d="M40 76q24 13 48 0" stroke="url(#' + u + 'Collar)" stroke-width="7" fill="none" stroke-linecap="round"/>' +
+        '<circle cx="64" cy="84" r="5" fill="#8c9a63" stroke="#fff" stroke-width="1.2"/><circle cx="64" cy="84" r="1.7" fill="#fff"/></g>' +
+        '<g class="cb-head">' + face +
+        '<path d="M64 70v3M64 73q-6 7-12 1M64 73q6 7 12 1" stroke="#3b2b23" stroke-width="1.6" fill="none" stroke-linecap="round"/>' + sparkle + '</g>';
+    }
+    return '<svg viewBox="0 0 128 140" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' + defs + body + '</svg>';
+  }
 
   var chatHTML = '<aside class="chatbot collapsed" id="jhChatbot" aria-label="客服助手">' +
     '<section class="chat-panel" id="chatPanel">' +
-      '<header class="chat-head"><span class="cb-ava">' + DOG_SVG + '</span>' +
+      '<header class="chat-head"><span class="cb-ava">' + dogSVG('stand', 'cbava') + '</span>' +
         '<div><b data-i18n="chat.title">小鴻 · 客服助手</b><small class="cb-status"><i></i><span data-i18n="chat.status">線上 · 示範模式</span></small></div>' +
         '<div class="cb-tools"><button class="chat-icon" id="chatMax" type="button" aria-label="放大" title="放大 / 縮小">⤢</button><button class="chat-icon chat-close" id="chatClose" type="button" aria-label="關閉">✕</button></div></header>' +
       '<div class="chat-body" id="chatBody"><div class="chat-msg bot" data-i18n="chat.welcome"></div></div>' +
@@ -723,7 +910,7 @@
       '<form class="chat-foot" id="chatForm"><input id="chatInput" type="text" autocomplete="off" data-i18n-ph="chat.placeholder" placeholder="輸入你的問題…">' +
         '<button type="submit" data-i18n-ph="chat.send" aria-label="送出訊息">➤</button></form>' +
     '</section>' +
-    '<button class="chatbot-bubble" id="chatToggle" type="button" aria-label="開啟客服助手" aria-expanded="false" aria-controls="chatPanel">' + DOG_SVG + '</button>' +
+    '<button class="chatbot-bubble" id="chatToggle" type="button" aria-label="開啟客服助手" aria-expanded="false" aria-controls="chatPanel">' + dogSVG('sit', 'cbbub') + '</button>' +
   '</aside>';
   document.body.insertAdjacentHTML('beforeend', chatHTML);
   applyLang(currentLang);
@@ -737,6 +924,7 @@
 
   function setChatOpen(open) {
     cb.classList.toggle('collapsed', !open);
+    cbToggle.innerHTML = dogSVG(open ? 'stand' : 'sit', 'cbbub');
     cbToggle.setAttribute('aria-expanded', String(open));
     cbToggle.setAttribute('aria-label', t(open ? 'chat.close' : 'chat.open'));
     if (open) {
@@ -842,144 +1030,187 @@
   for (var qb = 0; qb < qBtns.length; qb++) qBtns[qb].addEventListener('click', function () { replyChat(this.getAttribute('data-chat-q')); });
   if (cbForm) cbForm.addEventListener('submit', function (e) { e.preventDefault(); replyChat(0); });
 
-  /* ---------- Hero 3D 分子網絡（Protera-style molecular visual） ---------- */
-  var canvas = document.getElementById('bioCanvas');
-  if (canvas && canvas.getContext && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var ctx = canvas.getContext('2d');
-    var pts = [], w = 0, h = 0, dpr = 1, raf = 0, visible = true;
-    var mx = 0, my = 0, tmx = 0, tmy = 0;
+  /* ---------- Hero 立體貓咪（線條＋節點，隨滑鼠開合旋轉） ---------- */
+  var catCanvas = document.getElementById('bioCanvas');
+  if (catCanvas && catCanvas.getContext && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var cc = catCanvas.getContext('2d');
+    var cw = 0, ch = 0, cdpr = 1, craf = 0, cvisible = true;
+    var cmx = 0, cmy = 0, ctmx = 0, ctmy = 0;
     window.addEventListener('pointermove', function (e) {
-      tmx = (e.clientX / window.innerWidth - .5) * 2;
-      tmy = (e.clientY / window.innerHeight - .5) * 2;
+      ctmx = (e.clientX / window.innerWidth - .5) * 2;
+      ctmy = (e.clientY / window.innerHeight - .5) * 2;
     }, { passive: true });
 
-    function resize() {
-      var rect = canvas.getBoundingClientRect();
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
-      w = Math.max(rect.width, 1); h = Math.max(rect.height, 1);
-      canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      var count = w < 700 ? 34 : 72;
-      pts = [];
-      for (var i = 0; i < count; i++) {
-        var theta = Math.random() * Math.PI * 2;
-        var phi = Math.acos(2 * Math.random() - 1);
-        var r = Math.random() * .78 + .22;
-        pts.push({
-          x: r * Math.sin(phi) * Math.cos(theta),
-          y: r * Math.sin(phi) * Math.sin(theta),
-          z: r * Math.cos(phi),
-          spin: (Math.random() - .5) * .00028,
-          tint: i % 7
-        });
-      }
+    var CAT_V = [
+      [-.86,-.14,.02],[-.80,-.50,.04],[-.54,-.80,.06],[-.22,-.94,.08],[.22,-.94,.08],[.54,-.80,.06],
+      [.80,-.50,.04],[.86,-.14,.02],[.74,.34,.02],[.40,.68,.06],[0,.82,.10],[-.40,.68,.06],[-.74,.34,.02],
+      [-.74,-1.08,.00],[-.44,-.74,.12],[.74,-1.08,.00],[.44,-.74,.12],
+      [-.34,-.18,.44],[.34,-.18,.44],[0,.16,.58],[0,.36,.50],
+      [-.58,.12,.18],[.58,.12,.18],[-1.28,.30,.02],[-1.20,.54,.02],[1.28,.30,.02],[1.20,.54,.02],
+      [-.28,-.24,.52],[.40,-.24,.52]
+    ];
+    var CAT_E = [];
+    for (var ei = 0; ei < 12; ei++) CAT_E.push([ei, ei + 1]);
+    CAT_E.push([12, 0]);
+    CAT_E.push([2, 13], [13, 14], [14, 3], [5, 15], [15, 16], [16, 4]);
+    CAT_E.push([14, 17], [16, 18], [17, 19], [18, 19], [19, 20], [20, 21], [20, 22], [17, 21], [18, 22]);
+    CAT_E.push([21, 23], [21, 24], [22, 25], [22, 26]);
+
+    function catResize() {
+      var rect = catCanvas.getBoundingClientRect();
+      cdpr = Math.min(window.devicePixelRatio || 1, 2);
+      cw = Math.max(rect.width, 1); ch = Math.max(rect.height, 1);
+      catCanvas.width = Math.round(cw * cdpr); catCanvas.height = Math.round(ch * cdpr);
+      cc.setTransform(cdpr, 0, 0, cdpr, 0, 0);
     }
+    function catDraw() {
+      if (!cvisible) { craf = window.requestAnimationFrame(catDraw); return; }
+      cc.clearRect(0, 0, cw, ch);
+      var now = Date.now();
+      cmx += (ctmx - cmx) * .055; cmy += (ctmy - cmy) * .055;
+      var yaw = now * .00010 + cmx * 1.15;
+      var pitch = cmy * .62;
+      var cy1 = Math.cos(yaw), sy1 = Math.sin(yaw), cp = Math.cos(pitch), sp = Math.sin(pitch);
+      var open = 1 + cmx * .26;
+      var ear = 1 + cmx * .55;
+      var wh = 1 + cmx * .90;
+      var cx = cw * .5 + cmx * 22, cy = ch * .52 + cmy * 18;
+      var radius = Math.min(cw * .30, ch * .46);
+      var px = [], py = [], pz = [];
 
-    function draw() {
-      if (!visible) { raf = window.requestAnimationFrame(draw); return; }
-      ctx.clearRect(0, 0, w, h);
-      var t = Date.now();
-      mx += (tmx - mx) * .045; my += (tmy - my) * .045;
-      var a = t * .00006 + mx * .6;
-      var cos = Math.cos(a), sin = Math.sin(a);
-      var radius = Math.min(w, h) * .62;
-      var cx = w * (w < 900 ? .5 : .74) + mx * 26, cy = h * .5 + my * 20;
-      var sx = [], sy = [], sz = [], i, j;
-
-      for (i = 0; i < pts.length; i++) {
-        var p = pts[i];
-        var yaw = a + p.z * 1.6;
-        var X = p.x * Math.cos(yaw) - p.z * Math.sin(yaw);
-        var Z = p.x * Math.sin(yaw) + p.z * Math.cos(yaw);
-        var Y = p.y * Math.cos(p.z * .8) - p.z * Math.sin(p.z * .8) + (my * .55 + p.y * my * .35);
-        var scale = 2.4 / (2.9 + Z);
-        sx[i] = cx + X * radius * scale;
-        sy[i] = cy + Y * radius * scale;
-        sz[i] = Z;
+      for (var i = 0; i < CAT_V.length; i++) {
+        var v = CAT_V[i], x = v[0], y = v[1], z = v[2];
+        if (i === 13) { x *= ear; y = y * (1 + cmy * .35); }
+        if (i === 15) { x *= ear; y = y * (1 + cmy * .35); }
+        if (i === 14) { x *= ear; }
+        if (i === 16) { x *= ear; }
+        if (i === 23 || i === 24) { x *= wh; y = y * (1 - cmy * .25); }
+        if (i === 25 || i === 26) { x *= wh; y = y * (1 - cmy * .25); }
+        x *= open; y *= open;
+        var x1 = x * cy1 - z * sy1, z1 = x * sy1 + z * cy1;
+        var y1 = y * cp - z1 * sp, z2 = y * sp + z1 * cp;
+        var persp = 2.7 / (3.0 + z2);
+        px[i] = cx + x1 * radius * persp;
+        py[i] = cy + y1 * radius * persp;
+        pz[i] = z2;
       }
 
-      // 鍵結：3D 距離相近的原子相連，透明玻璃感
-      for (i = 0; i < pts.length; i++) for (j = i + 1; j < pts.length; j++) {
-        var dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y, dz = pts[i].z - pts[j].z;
-        var d2 = dx * dx + dy * dy + dz * dz;
-        if (d2 < .30) {
-          var alpha = .26 * (1 - d2 / .30);
-          ctx.strokeStyle = 'rgba(112,128,126,' + alpha.toFixed(3) + ')';
-          ctx.lineWidth = 1.5;
-          ctx.beginPath(); ctx.moveTo(sx[i], sy[i]); ctx.lineTo(sx[j], sy[j]); ctx.stroke();
-        }
+      // 連線：薄荷／苔綠玻璃線，深度決定亮度
+      for (var e = 0; e < CAT_E.length; e++) {
+        var u = CAT_E[e][0], v2 = CAT_E[e][1];
+        var depth = (pz[u] + pz[v2] + 2) / 4;
+        var alpha = (.10 + depth * .42).toFixed(3);
+        cc.strokeStyle = e >= 24 && e <= 27 ? 'rgba(63,141,127,' + (.16 + depth * .40).toFixed(3) + ')'
+          : 'rgba(63,141,127,' + alpha + ')';
+        cc.lineWidth = e >= 24 && e <= 27 ? 1.1 : 1.5;
+        cc.beginPath(); cc.moveTo(px[u], py[u]); cc.lineTo(px[v2], py[v2]); cc.stroke();
       }
 
-      // 原子：陶土／鼠尾草／苔綠三色，透視決定大小與亮度
-      for (i = 0; i < pts.length; i++) {
-        var depth = (sz[i] + 1) / 2;
-        var r2 = (1.8 + depth * 3.4);
-        ctx.fillStyle = pts[i].tint === 0 ? 'rgba(167,87,67,' + (.30 + depth * .38).toFixed(3) + ')'
-          : pts[i].tint === 1 ? 'rgba(161,156,101,' + (.26 + depth * .36).toFixed(3) + ')'
-          : 'rgba(112,128,126,' + (.22 + depth * .34).toFixed(3) + ')';
-        ctx.beginPath(); ctx.arc(sx[i], sy[i], r2, 0, Math.PI * 2); ctx.fill();
+      // 節點：前面大而亮，後面小而淡
+      for (var n = 0; n < CAT_V.length; n++) {
+        var d = (pz[n] + 1) / 2;
+        var r = Math.max(.6, 1.6 + d * 3.2);
+        cc.fillStyle = (n === 19) ? 'rgba(210,106,76,' + (.55 + d * .4).toFixed(3) + ')'
+          : 'rgba(63,141,127,' + (.24 + d * .58).toFixed(3) + ')';
+        cc.beginPath(); cc.arc(px[n], py[n], r, 0, Math.PI * 2); cc.fill();
       }
 
-      // 核心光暈：緩慢呼吸
-      var pulse = .11 + .05 * Math.sin(t * .0009);
-      var g = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius * 1.1);
-      g.addColorStop(0, 'rgba(167,87,67,' + pulse.toFixed(3) + ')');
-      g.addColorStop(1, 'rgba(167,87,67,0)');
-      ctx.fillStyle = g;
-      ctx.beginPath(); ctx.arc(cx, cy, radius * 1.1, 0, Math.PI * 2); ctx.fill();
+      // 眼睛：深色橢圓＋高光
+      for (var q = 0; q < 2; q++) {
+        var ee = q === 0 ? 17 : 18, hi = q === 0 ? 27 : 28;
+        var ed = (pz[ee] + 1) / 2, er = Math.max(2.4, 5 + ed * 5);
+        cc.fillStyle = 'rgba(31,45,42,' + (.55 + ed * .42).toFixed(3) + ')';
+        cc.beginPath(); cc.ellipse(px[ee], py[ee], er * .82, er, 0, 0, Math.PI * 2); cc.fill();
+        cc.fillStyle = 'rgba(255,255,255,.9)';
+        cc.beginPath(); cc.arc(px[hi], py[hi], Math.max(1, 1.8 + ed * 1.6), 0, Math.PI * 2); cc.fill();
+      }
 
-      raf = window.requestAnimationFrame(draw);
+      // 鼻子：暖陶三角
+      cc.fillStyle = 'rgba(210,106,76,.86)';
+      cc.beginPath(); cc.moveTo(px[19], py[19] - 3);
+      cc.lineTo(px[19] - 5, py[19] + 3); cc.lineTo(px[19] + 5, py[19] + 3); cc.closePath(); cc.fill();
+
+      // 核心呼吸光暈
+      var pulse = .07 + .035 * Math.sin(now * .0008);
+      var g = cc.createRadialGradient(cx, cy, 0, cx, cy, radius * 1.35);
+      g.addColorStop(0, 'rgba(63,141,127,' + pulse.toFixed(3) + ')');
+      g.addColorStop(1, 'rgba(63,141,127,0)');
+      cc.fillStyle = g; cc.beginPath(); cc.arc(cx, cy, radius * 1.35, 0, Math.PI * 2); cc.fill();
+
+      craf = window.requestAnimationFrame(catDraw);
     }
-
-    resize(); draw();
-    window.addEventListener('resize', resize, { passive: true });
+    catResize(); catDraw();
+    window.addEventListener('resize', catResize, { passive: true });
     if ('IntersectionObserver' in window) {
-      var vio = new IntersectionObserver(function (entries) { visible = entries[0].isIntersecting; }, { threshold: 0.01 });
-      vio.observe(canvas);
+      var cio = new IntersectionObserver(function (entries) { cvisible = entries[0].isIntersecting; }, { threshold: .01 });
+      cio.observe(catCanvas);
     }
-    window.addEventListener('beforeunload', function () { window.cancelAnimationFrame(raf); });
+    window.addEventListener('beforeunload', function () { window.cancelAnimationFrame(craf); });
   }
 
-  /* ---------- Hero 全球連線地圖（科技線條＋發光節點） ---------- */
+  /* ---------- Hero 真實點陣世界地圖（多邊形大陸＋連線） ---------- */
   var mapCanvas = document.getElementById('globalMap');
   if (mapCanvas && mapCanvas.getContext && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var mctx = mapCanvas.getContext('2d');
     var mw = 0, mh = 0, mdpr = 1, mapLayer = document.createElement('canvas');
     var mraf = 0, mvisible = true;
-    var land = [
-      [-100, 45, 34, 20], [-152, 64, 14, 8], [-86, 24, 14, 10], [-62, -16, 17, 27],
-      [12, 50, 19, 12], [20, 4, 21, 26], [88, 46, 47, 21], [78, 20, 13, 11],
-      [106, 9, 17, 10], [135, -25, 17, 11], [141, 39, 5, 8], [-42, 72, 11, 7]
+    var CONTINENTS = [
+      [[-168,65],[-150,70],[-130,61],[-116,50],[-101,49],[-86,30],[-80,25],[-95,18],[-106,23],[-118,33],[-131,50],[-152,58]],
+      [[-52,82],[-22,78],[-26,68],[-48,60],[-60,70]],
+      [[-79,10],[-61,9],[-46,-4],[-35,-8],[-40,-22],[-52,-34],[-61,-50],[-70,-54],[-73,-40],[-78,-14]],
+      [[-10,36],[0,44],[10,46],[20,40],[28,41],[30,55],[18,60],[5,58],[-6,50]],
+      [[-17,35],[10,37],[32,31],[42,12],[50,10],[40,-15],[30,-30],[18,-35],[10,-28],[0,-10],[-10,5]],
+      [[28,40],[45,42],[60,55],[90,75],[120,72],[140,60],[136,46],[121,23],[106,10],[96,5],[80,8],[70,20],[55,25],[45,34]],
+      [[68,24],[80,22],[88,20],[82,8],[75,8]],
+      [[95,15],[110,10],[120,5],[116,-6],[105,-7],[100,5]],
+      [[113,-22],[130,-12],[145,-18],[150,-30],[140,-38],[120,-35],[113,-28]],
+      [[130,32],[140,36],[142,42],[137,38]]
     ];
     var nodes = [
       [121.5, 25], [139.7, 35.7], [103.8, 1.3], [55.3, 25.2], [8.7, 50.1],
       [-0.1, 51.5], [-74, 40.7], [-118, 34], [151, -33.8], [-46.6, -23.5]
     ];
-    function isLand(lon, lat) {
-      for (var a = 0; a < land.length; a++) {
-        var L = land[a];
-        var dx = (lon - L[0]) / L[2], dy = (lat - L[1]) / L[3];
-        if (dx * dx + dy * dy < 1) return true;
+    function inPoly(lon, lat, poly) {
+      var inside = false;
+      for (var i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+        var xi = poly[i][0], yi = poly[i][1], xj = poly[j][0], yj = poly[j][1];
+        if ((yi > lat) !== (yj > lat) && lon < (xj - xi) * (lat - yi) / (yj - yi) + xi) inside = !inside;
       }
+      return inside;
+    }
+    function isLand(lon, lat) {
+      for (var a = 0; a < CONTINENTS.length; a++) if (inPoly(lon, lat, CONTINENTS[a])) return true;
       return false;
     }
-    function project(lon, lat) { return [(lon + 180) / 360 * mw, (78 - lat) / 140 * mh]; }
+    function project(lon, lat) { return [(lon + 180) / 360 * mw, (82 - lat) / 146 * mh]; }
     function buildMap() {
       mapLayer.width = Math.round(mw * mdpr); mapLayer.height = Math.round(mh * mdpr);
       var lc = mapLayer.getContext('2d');
       lc.setTransform(mdpr, 0, 0, mdpr, 0, 0);
       lc.clearRect(0, 0, mw, mh);
+      // 淡大陸底色，讓地圖輪廓清楚
+      for (var c = 0; c < CONTINENTS.length; c++) {
+        var poly = CONTINENTS[c];
+        lc.beginPath();
+        for (var q = 0; q < poly.length; q++) {
+          var pt = project(poly[q][0], poly[q][1]);
+          if (q === 0) lc.moveTo(pt[0], pt[1]); else lc.lineTo(pt[0], pt[1]);
+        }
+        lc.closePath();
+        lc.fillStyle = 'rgba(63,141,127,.07)'; lc.fill();
+        lc.strokeStyle = 'rgba(63,141,127,.16)'; lc.lineWidth = 1; lc.stroke();
+      }
       var step = mw < 700 ? 9 : 7;
-      for (var y = 14; y <= 64; y += step / 2) {
+      for (var y = 12; y <= mh - 12; y += step) {
         for (var x = step / 2; x < mw; x += step) {
-          var lon = x / mw * 360 - 180, lat = 78 - y / mh * 140;
+          var lon = x / mw * 360 - 180, lat = 82 - y / mh * 146;
           if (!isLand(lon, lat)) continue;
           var edge = 1 - Math.abs(x - mw / 2) / mw;
-          lc.fillStyle = 'rgba(63,141,127,' + (0.34 + edge * 0.34).toFixed(3) + ')';
-          lc.beginPath(); lc.arc(x, y, mw < 700 ? 1.5 : 1.8, 0, Math.PI * 2); lc.fill();
+          lc.fillStyle = 'rgba(47,122,112,' + (.46 + edge * .34).toFixed(3) + ')';
+          lc.beginPath(); lc.arc(x, y, mw < 700 ? 1.5 : 1.9, 0, Math.PI * 2); lc.fill();
         }
       }
-      lc.strokeStyle = 'rgba(140,154,99,.16)'; lc.lineWidth = 1;
+      lc.strokeStyle = 'rgba(140,154,99,.12)'; lc.lineWidth = 1;
       for (var gx = 0; gx <= 6; gx++) { var px = mw * gx / 6; lc.beginPath(); lc.moveTo(px, 0); lc.lineTo(px, mh); lc.stroke(); }
       for (var gy = 0; gy <= 4; gy++) { var py = mh * gy / 4; lc.beginPath(); lc.moveTo(0, py); lc.lineTo(mw, py); lc.stroke(); }
     }
@@ -995,27 +1226,27 @@
       if (!mvisible) { mraf = window.requestAnimationFrame(drawMap); return; }
       mctx.clearRect(0, 0, mw, mh);
       mctx.drawImage(mapLayer, 0, 0, mw, mh);
-      var t = Date.now() * .00035;
+      var t = Date.now() * .00030;
       var hub = project(nodes[0][0], nodes[0][1]);
       for (var i = 1; i < nodes.length; i++) {
         var p = project(nodes[i][0], nodes[i][1]);
         var mx = (hub[0] + p[0]) / 2, my = (hub[1] + p[1]) / 2 - Math.abs(p[0] - hub[0]) * .18;
-        mctx.strokeStyle = 'rgba(184,106,82,.34)'; mctx.lineWidth = 1.2;
+        mctx.strokeStyle = 'rgba(210,106,76,.42)'; mctx.lineWidth = 1.2;
         mctx.beginPath(); mctx.moveTo(hub[0], hub[1]); mctx.quadraticCurveTo(mx, my, p[0], p[1]); mctx.stroke();
         var u = (t + i * .13) % 1, iu = 1 - u;
         var qx = iu * iu * hub[0] + 2 * iu * u * mx + u * u * p[0];
         var qy = iu * iu * hub[1] + 2 * iu * u * my + u * u * p[1];
         mctx.fillStyle = 'rgba(140,154,99,.95)';
-        mctx.shadowColor = 'rgba(161,156,101,.9)'; mctx.shadowBlur = 10;
-        mctx.beginPath(); mctx.arc(qx, qy, 2.2, 0, Math.PI * 2); mctx.fill();
+        mctx.shadowColor = 'rgba(140,154,99,.9)'; mctx.shadowBlur = 10;
+        mctx.beginPath(); mctx.arc(qx, qy, 2.4, 0, Math.PI * 2); mctx.fill();
         mctx.shadowBlur = 0;
       }
       for (var n = 0; n < nodes.length; n++) {
         var q = project(nodes[n][0], nodes[n][1]);
         var pulse = 2 + Math.sin(t * 2 + n) * 1.1;
-        mctx.fillStyle = n === 0 ? 'rgba(167,87,67,.9)' : 'rgba(112,128,126,.75)';
-        mctx.beginPath(); mctx.arc(q[0], q[1], 2.4, 0, Math.PI * 2); mctx.fill();
-        mctx.strokeStyle = n === 0 ? 'rgba(167,87,67,.35)' : 'rgba(112,128,126,.25)';
+        mctx.fillStyle = n === 0 ? 'rgba(210,106,76,.95)' : 'rgba(47,122,112,.8)';
+        mctx.beginPath(); mctx.arc(q[0], q[1], 2.6, 0, Math.PI * 2); mctx.fill();
+        mctx.strokeStyle = n === 0 ? 'rgba(210,106,76,.4)' : 'rgba(47,122,112,.3)';
         mctx.beginPath(); mctx.arc(q[0], q[1], 4 + pulse, 0, Math.PI * 2); mctx.stroke();
       }
       mraf = window.requestAnimationFrame(drawMap);
@@ -1023,7 +1254,7 @@
     resizeMap(); drawMap();
     window.addEventListener('resize', resizeMap, { passive: true });
     if ('IntersectionObserver' in window) {
-      var mio = new IntersectionObserver(function (entries) { mvisible = entries[0].isIntersecting; }, { threshold: 0.01 });
+      var mio = new IntersectionObserver(function (entries) { mvisible = entries[0].isIntersecting; }, { threshold: .01 });
       mio.observe(mapCanvas);
     }
     window.addEventListener('beforeunload', function () { window.cancelAnimationFrame(mraf); });
