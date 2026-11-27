@@ -1,0 +1,6 @@
+{
+  // 合規防呆設計／風險提醒：此設定只用於 SYNTHETIC_DEMO 原型，PROTOTYPE_NOT_APPROVED。
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": { "outDir": "./dist", "rootDir": "./src" },
+  "include": ["src/**/*.ts"]
+}

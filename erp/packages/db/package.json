@@ -1,0 +1,23 @@
+{
+  "name": "@anubis/db",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "ANUBIS ERP 資料庫連線與 migration｜合規防呆設計／風險提醒：全數合成資料，PROTOTYPE_NOT_APPROVED",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "migrate": "node ./dist/migrate.js"
+  },
+  "dependencies": {
+    "@anubis/contracts": "workspace:*",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/pg": "^8.11.10",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@anubis/reporting",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "報表與 BI 口徑｜合規防呆設計／風險提醒：Management/Statutory 分離、收款不等於營收、整數分、XLSX 公式注入防呆，PROTOTYPE_NOT_APPROVED",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "pnpm --filter @anubis/contracts build && node --import tsx --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@anubis/contracts": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2"
+  }
+}

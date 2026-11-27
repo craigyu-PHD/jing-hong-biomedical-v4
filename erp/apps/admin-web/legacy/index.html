@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:,">
+<title>商品主檔原型｜ANUBIS ERP（合成資料）</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-density="standard" data-font="100">
+<header class="topbar">
+  <div class="brand"><span class="mark">A</span> ANUBIS ERP <span class="sub">原型 · 合成資料</span></div>
+  <div class="top-actions">
+    <label>身份
+      <select id="role-select" aria-label="切換身份">
+        <option value="admin">管理員（可編輯）</option>
+        <option value="owner">老闆（唯讀）</option>
+      </select>
+    </label>
+    <label>密度
+      <select id="density-select" aria-label="切換密度">
+        <option value="comfortable">舒適</option>
+        <option value="standard" selected>標準</option>
+        <option value="compact">緊湊</option>
+      </select>
+    </label>
+    <label>字級
+      <select id="font-select" aria-label="切換字級">
+        <option value="90">90%</option><option value="100" selected>100%</option>
+        <option value="110">110%</option><option value="125">125%</option>
+        <option value="150">150%</option><option value="175">175%</option><option value="200">200%</option>
+      </select>
+    </label>
+  </div>
+</header>
+
+<div id="role-banner" class="banner" role="status">管理員（原型）｜可新增／編輯／刪除；所有資料皆為合成示意，無後端</div>
+
+<main>
+  <section class="head">
+    <div>
+      <h1>商品主檔 <small>Product Master</small></h1>
+      <p class="lede">示範畫面與增／刪／改流程。所有品項、價格、庫存、批號、效期均為合成假資料，非正式主檔、不可對帳、不上線。</p>
+    </div>
+    <button id="btn-add" class="primary" type="button">＋ 新增商品</button>
+  </section>
+
+  <section class="stats" aria-label="合成資料統計">
+    <div class="stat"><span class="k">品項總數</span><b id="stat-total">0</b></div>
+    <div class="stat"><span class="k">人用保健</span><b id="stat-human">0</b></div>
+    <div class="stat"><span class="k">寵物保健</span><b id="stat-pet">0</b></div>
+    <div class="stat"><span class="k">低庫存（&lt;10）</span><b id="stat-low">0</b></div>
+  </section>
+
+  <section class="filters" aria-label="篩選">
+    <label>搜尋 <input id="q-keyword" type="search" placeholder="名稱或 SKU" autocomplete="off"></label>
+    <label>線別
+      <select id="q-line"><option value="">全部</option><option value="human">人用保健</option><option value="pet">寵物保健</option></select>
+    </label>
+    <span class="hint">來源標籤：SYNTHETIC_DEMO</span>
+  </section>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr>
+        <th>SKU</th><th>名稱</th><th>線別</th><th>劑型</th>
+        <th class="num">價格</th><th class="num">庫存</th><th>批號</th><th>效期</th><th>狀態</th><th>操作</th>
+      </tr></thead>
+      <tbody id="catalog-body"></tbody>
+    </table>
+  </div>
+
+  <section class="two-col">
+    <div class="panel" id="form-wrap" hidden>
+      <h2 id="form-title">新增商品（合成資料）</h2>
+      <form id="product-form" novalidate>
+        <input type="hidden" id="f-id">
+        <div class="grid">
+          <label>SKU<input id="f-sku" required placeholder="DEMO-H009"></label>
+          <label>名稱<input id="f-name" required placeholder="示意品名"></label>
+          <label>線別<select id="f-line"><option value="human">人用保健</option><option value="pet">寵物保健</option></select></label>
+          <label>劑型<select id="f-form"><option value="capsule">膠囊</option><option value="powder">粉末</option><option value="tablet">錠劑</option></select></label>
+          <label>價格（NT$）<input id="f-price" type="number" min="0" step="1" required></label>
+          <label>庫存<input id="f-stock" type="number" min="0" step="1" required></label>
+          <label>批號<input id="f-batch" required></label>
+          <label>效期<input id="f-expiry" type="date" required></label>
+          <label>狀態<select id="f-status"><option value="draft">草稿（示意）</option><option value="active">已啟用</option><option value="archived">已停用</option></select></label>
+        </div>
+        <p id="form-msg" class="err" role="alert"></p>
+        <div class="form-actions"><button class="primary" type="submit">儲存（本機原型）</button><button id="f-cancel" type="button">取消</button></div>
+      </form>
+    </div>
+    <div class="panel">
+      <h2>操作紀錄（原型稽核）</h2>
+      <ul id="audit-list" class="audit"><li>尚無操作紀錄</li></ul>
+      <p class="note">此紀錄只在本頁記憶體，重載即消失；正式系統須寫入不可竄改稽核表。</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  PROTOTYPE_NOT_APPROVED · 僅本機網頁 · 無 App／PWA／Service Worker／離線同步 · 無真實後端 · 資料全為合成
+</footer>
+<script src="app.js"></script>
+<script>
+(function () {
+  var d = document.querySelector('#density-select'), f = document.querySelector('#font-select');
+  d.addEventListener('change', function () { document.body.dataset.density = d.value; });
+  f.addEventListener('change', function () { document.body.dataset.font = f.value; });
+})();
+</script>
+</body>
+</html>

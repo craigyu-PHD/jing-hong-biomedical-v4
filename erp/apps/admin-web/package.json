@@ -1,0 +1,25 @@
+{
+  "name": "@anubis/admin-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "ANUBIS ERP 管理後台｜合規防呆設計／風險提醒：全數合成資料 SYNTHETIC_DEMO，PROTOTYPE_NOT_APPROVED，非正式上線",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anubis/contracts": "workspace:*",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "^5.7.2",
+    "vite": "^7.1.0"
+  }
+}

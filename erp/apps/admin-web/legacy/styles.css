@@ -1,0 +1,71 @@
+/* ANUBIS ERP 商品主檔原型｜沿用官網 v17 設計 token，ERP 專用緊湊版
+   密度與字級分離；RWD；reduce-motion；狀態不只靠顏色。PROTOTYPE_NOT_APPROVED */
+:root{
+  --paper:#faf8f5; --soft:#f2efe9; --white:#fff; --ink:#100d0c; --muted:#554c40; --line:#e6e0d7;
+  --clay:#a75743; --clay-dark:#8c422f; --clay-soft:#f7ece7;
+  --sage:#70807e; --sage-dark:#586a68; --sage-soft:#eef2f0;
+  --warn-bg:#fff3e0; --warn-ink:#8a4b00; --danger:#b3261e;
+  --sp-1:8px; --sp-2:16px; --sp-3:24px; --sp-4:32px;
+  --dur-fast:.22s; --ease:cubic-bezier(.2,.8,.2,1);
+  --cell:10px; --row:38px; --fs:14px; --font:100;
+}
+body[data-font="90"]{--font:90} body[data-font="110"]{--font:110}
+body[data-font="125"]{--font:125} body[data-font="150"]{--font:150}
+body[data-font="175"]{--font:175} body[data-font="200"]{--font:200}
+body[data-density="comfortable"]{--cell:14px;--row:52px}
+body[data-density="compact"]{--cell:6px;--row:30px}
+body{font-size:calc(var(--fs) * var(--font) / 100)}
+@media (prefers-reduced-motion:no-preference){*{transition:background var(--dur-fast) var(--ease),color var(--dur-fast) var(--ease)}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif;line-height:1.5}
+.topbar{display:flex;flex-wrap:wrap;gap:var(--sp-2);align-items:center;justify-content:space-between;padding:var(--sp-2) var(--sp-3);background:var(--ink);color:var(--white)}
+.brand{font-weight:700;letter-spacing:.04em;display:flex;align-items:center;gap:var(--sp-1)}
+.mark{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;background:var(--clay);font-size:13px}
+.sub{font-weight:400;opacity:.7;font-size:.8em}
+.top-actions{display:flex;flex-wrap:wrap;gap:var(--sp-2)}
+.top-actions label,.filters label{display:flex;align-items:center;gap:6px;font-size:.85em}
+select,input,button{font:inherit}
+select,input{padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--white);color:var(--ink)}
+.topbar select{background:#1d1917;color:var(--white);border-color:#3a332f}
+.banner{padding:10px var(--sp-3);background:var(--clay-soft);color:var(--clay-dark);border-bottom:1px solid var(--line);font-size:.9em}
+.banner.readonly{background:var(--sage-soft);color:var(--sage-dark)}
+main{padding:var(--sp-3);max-width:1440px;margin:0 auto}
+.head{display:flex;flex-wrap:wrap;gap:var(--sp-2);align-items:end;justify-content:space-between;margin-bottom:var(--sp-2)}
+h1{margin:0;font-size:1.7em}h1 small{font-size:.45em;color:var(--muted);font-weight:400;margin-left:8px}
+.lede{margin:6px 0 0;color:var(--muted);max-width:70ch;font-size:.9em}
+button{padding:8px 14px;border:1px solid var(--line);border-radius:8px;background:var(--white);cursor:pointer;color:var(--ink)}
+button.primary{background:var(--clay);border-color:var(--clay);color:#fff;font-weight:600}
+button.danger{color:var(--danger)}
+button:disabled{opacity:.4;cursor:not-allowed}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--sage);outline-offset:2px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--sp-2);margin-bottom:var(--sp-2)}
+.stat{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:12px 16px;display:flex;flex-direction:column;gap:4px}
+.stat .k{color:var(--muted);font-size:.8em}.stat b{font-size:1.5em;font-variant-numeric:tabular-nums}
+.filters{display:flex;flex-wrap:wrap;gap:var(--sp-2);align-items:center;margin-bottom:var(--sp-2)}
+.hint{color:var(--muted);font-size:.8em;margin-left:auto}
+.table-wrap{overflow:auto;background:var(--white);border:1px solid var(--line);border-radius:14px;box-shadow:0 10px 30px rgba(18,22,31,.05)}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:960px;font-size:.92em}
+th,td{padding:var(--cell) 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{background:var(--soft);font-size:.85em;color:var(--muted);position:sticky;top:0;z-index:1}
+tbody tr:hover{background:#fcfaf7}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em}
+.warn{background:var(--warn-bg);color:var(--warn-ink);font-weight:700;border-radius:6px;padding:2px 6px}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.78em;border:1px solid var(--line)}
+.tag.draft{background:var(--soft)}.tag.active{background:var(--sage-soft);color:var(--sage-dark)}
+.tag.archived{background:#eee;color:#666;text-decoration:line-through}
+.ops{display:flex;gap:6px}.ops button{padding:4px 10px;font-size:.85em}
+.empty{text-align:center;color:var(--muted);padding:var(--sp-4)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-2);margin-top:var(--sp-2)}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:var(--sp-2)}
+.panel h2{margin:0 0 var(--sp-2);font-size:1.05em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.grid label{display:flex;flex-direction:column;gap:4px;font-size:.82em;color:var(--muted)}
+.form-actions{display:flex;gap:8px;margin-top:var(--sp-2)}
+.err{color:var(--danger);min-height:1.2em;font-size:.85em}
+.audit{list-style:none;padding:0;margin:0;font-size:.82em;max-height:220px;overflow:auto}
+.audit li{padding:6px 0;border-bottom:1px dashed var(--line)}
+.note{color:var(--muted);font-size:.78em;margin-bottom:0}
+footer{padding:var(--sp-2) var(--sp-3);color:var(--muted);font-size:.78em;border-top:1px solid var(--line);text-align:center}
+@media (max-width:820px){.two-col{grid-template-columns:1fr}main{padding:var(--sp-2)}.hint{margin-left:0;width:100%}}
+@media (max-width:520px){.topbar{padding:10px}.head{align-items:start}.table-wrap{border-radius:10px}}

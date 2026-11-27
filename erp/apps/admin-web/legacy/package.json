@@ -1,0 +1,6 @@
+{
+  "name": "@anubis/admin-web-legacy-prototype",
+  "private": true,
+  "type": "commonjs",
+  "description": "舊商品主檔原型（UMD app.js）｜合規防呆設計／風險提醒：全數 SYNTHETIC_DEMO，PROTOTYPE_NOT_APPROVED。type=commonjs 讓 UMD 的 module.exports 可被 node --test require。"
+}

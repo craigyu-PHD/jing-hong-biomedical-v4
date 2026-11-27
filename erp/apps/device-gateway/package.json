@@ -1,0 +1,19 @@
+{
+  "name": "@anubis/device-gateway",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "設備事件唯讀閘道｜合規防呆設計／風險提醒：全數 DEFERRED、NOT_CONNECTED，不放假資料，PROTOTYPE_NOT_APPROVED",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --import tsx --test tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2"
+  }
+}

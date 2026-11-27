@@ -1,1 +1,11 @@
 .DS_Store
+
+# 合規防呆設計／風險提醒：ERP 本機憑證與建置產物不得進公开 repo
+erp/**/node_modules/
+erp/**/dist/
+erp/.env
+erp/**/.env
+erp/**/.env.local
+erp/**/*.log
+erp/**/.playwright-mcp/
+erp/**/*.tsbuildinfo
